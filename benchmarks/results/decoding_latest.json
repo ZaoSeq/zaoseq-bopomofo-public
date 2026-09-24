@@ -1,0 +1,870 @@
+{
+  "items": 452,
+  "noise_items": {
+    "tone_missing": 449,
+    "tone_wrong": 452,
+    "insertion": 411,
+    "deletion": 448,
+    "substitution": 452,
+    "adjacent_key": 452
+  },
+  "systems": {
+    "lexicon-exact": {
+      "exact": {
+        "hand": {
+          "items": 131,
+          "sentence_accuracy": 0.6259541984732825,
+          "character_accuracy": 0.8557213930348259,
+          "recall_at": {
+            "1": 0.6259541984732825,
+            "5": 0.9847328244274809,
+            "10": 1.0
+          },
+          "corrected_top": 0,
+          "latency": {
+            "samples": 131,
+            "mean_ms": 0.29634503747215707,
+            "p50_ms": 0.17749983817338943,
+            "p95_ms": 0.7491500582545996
+          }
+        },
+        "silver": {
+          "items": 321,
+          "sentence_accuracy": 0.018691588785046728,
+          "character_accuracy": 0.4762626262626263,
+          "recall_at": {
+            "1": 0.018691588785046728,
+            "5": 0.0529595015576324,
+            "10": 0.059190031152647975
+          },
+          "corrected_top": 0,
+          "latency": {
+            "samples": 321,
+            "mean_ms": 1.0164249209669707,
+            "p50_ms": 0.8640999440103769,
+            "p95_ms": 2.0001998636871576
+          }
+        }
+      },
+      "exact_all": {
+        "items": 452,
+        "sentence_accuracy": 0.19469026548672566,
+        "character_accuracy": 0.5403022670025189,
+        "recall_at": {
+          "1": 0.19469026548672566,
+          "5": 0.3230088495575221,
+          "10": 0.33185840707964603
+        },
+        "corrected_top": 0,
+        "latency": {
+          "samples": 452,
+          "mean_ms": 0.8077292025204649,
+          "p50_ms": 0.6466499762609601,
+          "p95_ms": 1.8208349938504387
+        }
+      },
+      "typo": {
+        "tone_missing": {
+          "items": 449,
+          "sentence_accuracy": 0.008908685968819599,
+          "character_accuracy": 0.4119629317607414,
+          "recall_at": {
+            "1": 0.008908685968819599,
+            "5": 0.013363028953229399,
+            "10": 0.013363028953229399
+          },
+          "corrected_top": 0,
+          "latency": {
+            "samples": 449,
+            "mean_ms": 0.7033044516932393,
+            "p50_ms": 0.582000007852912,
+            "p95_ms": 1.533879991620779
+          }
+        },
+        "tone_wrong": {
+          "items": 452,
+          "sentence_accuracy": 0.004424778761061947,
+          "character_accuracy": 0.4051217464315701,
+          "recall_at": {
+            "1": 0.004424778761061947,
+            "5": 0.011061946902654867,
+            "10": 0.011061946902654867
+          },
+          "corrected_top": 0,
+          "latency": {
+            "samples": 452,
+            "mean_ms": 0.74656770473956,
+            "p50_ms": 0.6180498749017715,
+            "p95_ms": 1.71658496838063
+          }
+        },
+        "insertion": {
+          "items": 411,
+          "sentence_accuracy": 0.0,
+          "character_accuracy": 0.39911111111111114,
+          "recall_at": {
+            "1": 0.0,
+            "5": 0.0,
+            "10": 0.0
+          },
+          "corrected_top": 0,
+          "latency": {
+            "samples": 411,
+            "mean_ms": 0.8514644816028376,
+            "p50_ms": 0.6645999383181334,
+            "p95_ms": 1.782999956049025
+          }
+        },
+        "deletion": {
+          "items": 448,
+          "sentence_accuracy": 0.0,
+          "character_accuracy": 0.41768421052631577,
+          "recall_at": {
+            "1": 0.0,
+            "5": 0.0,
+            "10": 0.0
+          },
+          "corrected_top": 0,
+          "latency": {
+            "samples": 448,
+            "mean_ms": 0.7836359296301713,
+            "p50_ms": 0.6641499930992723,
+            "p95_ms": 1.7156849848106501
+          }
+        },
+        "substitution": {
+          "items": 452,
+          "sentence_accuracy": 0.0,
+          "character_accuracy": 0.39252728799328296,
+          "recall_at": {
+            "1": 0.0,
+            "5": 0.0,
+            "10": 0.0
+          },
+          "corrected_top": 0,
+          "latency": {
+            "samples": 452,
+            "mean_ms": 0.6691457923147333,
+            "p50_ms": 0.5440500099211931,
+            "p95_ms": 1.5057249926030634
+          }
+        },
+        "adjacent_key": {
+          "items": 452,
+          "sentence_accuracy": 0.0,
+          "character_accuracy": 0.4080604534005038,
+          "recall_at": {
+            "1": 0.0,
+            "5": 0.0,
+            "10": 0.0
+          },
+          "corrected_top": 0,
+          "latency": {
+            "samples": 452,
+            "mean_ms": 0.7084588395571748,
+            "p50_ms": 0.6177499890327454,
+            "p95_ms": 1.6038848203606901
+          }
+        }
+      },
+      "clean_input_safety": {
+        "items": 452,
+        "false_correction_rate": 0.0,
+        "exact_input_regressions": 281,
+        "exact_input_regression_rate": 0.6216814159292036
+      }
+    },
+    "corpus-exact": {
+      "exact": {
+        "hand": {
+          "items": 131,
+          "sentence_accuracy": 0.5190839694656488,
+          "character_accuracy": 0.7761194029850746,
+          "recall_at": {
+            "1": 0.5190839694656488,
+            "5": 0.816793893129771,
+            "10": 0.8625954198473282
+          },
+          "corrected_top": 0,
+          "latency": {
+            "samples": 131,
+            "mean_ms": 18.273089322766275,
+            "p50_ms": 9.421700146049261,
+            "p95_ms": 51.18960014078766
+          }
+        },
+        "silver": {
+          "items": 321,
+          "sentence_accuracy": 0.8442367601246106,
+          "character_accuracy": 0.9616161616161616,
+          "recall_at": {
+            "1": 0.8442367601246106,
+            "5": 0.9470404984423676,
+            "10": 0.9719626168224299
+          },
+          "corrected_top": 0,
+          "latency": {
+            "samples": 321,
+            "mean_ms": 64.90469220996692,
+            "p50_ms": 44.705000007525086,
+            "p95_ms": 284.7368000075221
+          }
+        }
+      },
+      "exact_all": {
+        "items": 452,
+        "sentence_accuracy": 0.75,
+        "character_accuracy": 0.9303106633081444,
+        "recall_at": {
+          "1": 0.75,
+          "5": 0.9092920353982301,
+          "10": 0.9402654867256637
+        },
+        "corrected_top": 0,
+        "latency": {
+          "samples": 452,
+          "mean_ms": 51.389780753720714,
+          "p50_ms": 34.15539988782257,
+          "p95_ms": 240.01725503476334
+        }
+      },
+      "typo": {
+        "tone_missing": {
+          "items": 449,
+          "sentence_accuracy": 0.044543429844097995,
+          "character_accuracy": 0.7375737152485257,
+          "recall_at": {
+            "1": 0.044543429844097995,
+            "5": 0.051224944320712694,
+            "10": 0.053452115812917596
+          },
+          "corrected_top": 0,
+          "latency": {
+            "samples": 449,
+            "mean_ms": 42.5323171495462,
+            "p50_ms": 24.497200036421418,
+            "p95_ms": 188.97899994626692
+          }
+        },
+        "tone_wrong": {
+          "items": 452,
+          "sentence_accuracy": 0.035398230088495575,
+          "character_accuracy": 0.7258606213266163,
+          "recall_at": {
+            "1": 0.035398230088495575,
+            "5": 0.04424778761061947,
+            "10": 0.04424778761061947
+          },
+          "corrected_top": 0,
+          "latency": {
+            "samples": 452,
+            "mean_ms": 52.18539469096546,
+            "p50_ms": 32.953200046904385,
+            "p95_ms": 195.90522993821648
+          }
+        },
+        "insertion": {
+          "items": 411,
+          "sentence_accuracy": 0.0,
+          "character_accuracy": 0.7324444444444445,
+          "recall_at": {
+            "1": 0.0,
+            "5": 0.0,
+            "10": 0.0
+          },
+          "corrected_top": 0,
+          "latency": {
+            "samples": 411,
+            "mean_ms": 47.12675207457675,
+            "p50_ms": 25.008500088006258,
+            "p95_ms": 147.38954999484122
+          }
+        },
+        "deletion": {
+          "items": 448,
+          "sentence_accuracy": 0.0,
+          "character_accuracy": 0.7149473684210527,
+          "recall_at": {
+            "1": 0.0,
+            "5": 0.0,
+            "10": 0.0
+          },
+          "corrected_top": 0,
+          "latency": {
+            "samples": 448,
+            "mean_ms": 32.44911495338393,
+            "p50_ms": 19.020000007003546,
+            "p95_ms": 199.2013400653377
+          }
+        },
+        "substitution": {
+          "items": 452,
+          "sentence_accuracy": 0.0,
+          "character_accuracy": 0.7082283795130143,
+          "recall_at": {
+            "1": 0.0,
+            "5": 0.0,
+            "10": 0.0
+          },
+          "corrected_top": 0,
+          "latency": {
+            "samples": 452,
+            "mean_ms": 33.644459292754135,
+            "p50_ms": 19.124950049445033,
+            "p95_ms": 115.71900002891182
+          }
+        },
+        "adjacent_key": {
+          "items": 452,
+          "sentence_accuracy": 0.0,
+          "character_accuracy": 0.7229219143576826,
+          "recall_at": {
+            "1": 0.0,
+            "5": 0.0,
+            "10": 0.0
+          },
+          "corrected_top": 0,
+          "latency": {
+            "samples": 452,
+            "mean_ms": 56.556196013296564,
+            "p50_ms": 36.37284995056689,
+            "p95_ms": 164.2259599524548
+          }
+        }
+      },
+      "clean_input_safety": {
+        "items": 452,
+        "false_correction_rate": 0.0,
+        "exact_input_regressions": 0,
+        "exact_input_regression_rate": 0.0
+      }
+    },
+    "corpus-tolerant": {
+      "exact": {
+        "hand": {
+          "items": 131,
+          "sentence_accuracy": 0.45038167938931295,
+          "character_accuracy": 0.7189054726368159,
+          "recall_at": {
+            "1": 0.45038167938931295,
+            "5": 0.7786259541984732,
+            "10": 0.8320610687022901
+          },
+          "corrected_top": 23,
+          "latency": {
+            "samples": 131,
+            "mean_ms": 39.718152672578476,
+            "p50_ms": 16.181000042706728,
+            "p95_ms": 141.10120001714677
+          }
+        },
+        "silver": {
+          "items": 321,
+          "sentence_accuracy": 0.8442367601246106,
+          "character_accuracy": 0.9611111111111111,
+          "recall_at": {
+            "1": 0.8442367601246106,
+            "5": 0.9439252336448598,
+            "10": 0.9688473520249221
+          },
+          "corrected_top": 3,
+          "latency": {
+            "samples": 321,
+            "mean_ms": 79.87058629293423,
+            "p50_ms": 57.23590007983148,
+            "p95_ms": 309.48429997079074
+          }
+        }
+      },
+      "exact_all": {
+        "items": 452,
+        "sentence_accuracy": 0.7300884955752213,
+        "character_accuracy": 0.9202350965575147,
+        "recall_at": {
+          "1": 0.7300884955752213,
+          "5": 0.8960176991150443,
+          "10": 0.9292035398230089
+        },
+        "corrected_top": 26,
+        "latency": {
+          "samples": 452,
+          "mean_ms": 68.2334871684506,
+          "p50_ms": 46.340150060132146,
+          "p95_ms": 299.9280549236572
+        }
+      },
+      "typo": {
+        "tone_missing": {
+          "items": 449,
+          "sentence_accuracy": 0.0957683741648107,
+          "character_accuracy": 0.7497893850042123,
+          "recall_at": {
+            "1": 0.0957683741648107,
+            "5": 0.14699331848552338,
+            "10": 0.15812917594654788
+          },
+          "corrected_top": 67,
+          "latency": {
+            "samples": 449,
+            "mean_ms": 63.52850957877337,
+            "p50_ms": 42.679499834775925,
+            "p95_ms": 287.35189996659756
+          }
+        },
+        "tone_wrong": {
+          "items": 452,
+          "sentence_accuracy": 0.06415929203539823,
+          "character_accuracy": 0.7355163727959698,
+          "recall_at": {
+            "1": 0.06415929203539823,
+            "5": 0.1261061946902655,
+            "10": 0.13716814159292035
+          },
+          "corrected_top": 64,
+          "latency": {
+            "samples": 452,
+            "mean_ms": 73.6233150453587,
+            "p50_ms": 46.21884995140135,
+            "p95_ms": 295.3910699347034
+          }
+        },
+        "insertion": {
+          "items": 411,
+          "sentence_accuracy": 0.046228710462287104,
+          "character_accuracy": 0.7417777777777778,
+          "recall_at": {
+            "1": 0.046228710462287104,
+            "5": 0.072992700729927,
+            "10": 0.08029197080291971
+          },
+          "corrected_top": 55,
+          "latency": {
+            "samples": 411,
+            "mean_ms": 66.4538087588429,
+            "p50_ms": 42.92299994267523,
+            "p95_ms": 267.0051500899717
+          }
+        },
+        "deletion": {
+          "items": 448,
+          "sentence_accuracy": 0.022321428571428572,
+          "character_accuracy": 0.72,
+          "recall_at": {
+            "1": 0.022321428571428572,
+            "5": 0.033482142857142856,
+            "10": 0.044642857142857144
+          },
+          "corrected_top": 52,
+          "latency": {
+            "samples": 448,
+            "mean_ms": 80.95941920068331,
+            "p50_ms": 56.854700087569654,
+            "p95_ms": 350.62299992423493
+          }
+        },
+        "substitution": {
+          "items": 452,
+          "sentence_accuracy": 0.03761061946902655,
+          "character_accuracy": 0.7187237615449202,
+          "recall_at": {
+            "1": 0.03761061946902655,
+            "5": 0.06415929203539823,
+            "10": 0.07079646017699115
+          },
+          "corrected_top": 58,
+          "latency": {
+            "samples": 452,
+            "mean_ms": 69.83893739154348,
+            "p50_ms": 47.68090008292347,
+            "p95_ms": 312.22503506578505
+          }
+        },
+        "adjacent_key": {
+          "items": 452,
+          "sentence_accuracy": 0.046460176991150445,
+          "character_accuracy": 0.7334172963895886,
+          "recall_at": {
+            "1": 0.046460176991150445,
+            "5": 0.07743362831858407,
+            "10": 0.09513274336283185
+          },
+          "corrected_top": 69,
+          "latency": {
+            "samples": 452,
+            "mean_ms": 67.91774779393346,
+            "p50_ms": 45.802899985574186,
+            "p95_ms": 307.6188299222849
+          }
+        }
+      },
+      "clean_input_safety": {
+        "items": 452,
+        "false_correction_rate": 0.05752212389380531,
+        "exact_input_regressions": 9,
+        "exact_input_regression_rate": 0.01991150442477876
+      }
+    },
+    "corpus+lexicon-tolerant": {
+      "exact": {
+        "hand": {
+          "items": 131,
+          "sentence_accuracy": 0.6335877862595419,
+          "character_accuracy": 0.8557213930348259,
+          "recall_at": {
+            "1": 0.6335877862595419,
+            "5": 0.9389312977099237,
+            "10": 0.9770992366412213
+          },
+          "corrected_top": 9,
+          "latency": {
+            "samples": 131,
+            "mean_ms": 41.68973969587103,
+            "p50_ms": 18.369199940934777,
+            "p95_ms": 157.80470008030534
+          }
+        },
+        "silver": {
+          "items": 321,
+          "sentence_accuracy": 0.838006230529595,
+          "character_accuracy": 0.9601010101010101,
+          "recall_at": {
+            "1": 0.838006230529595,
+            "5": 0.9470404984423676,
+            "10": 0.9657320872274143
+          },
+          "corrected_top": 3,
+          "latency": {
+            "samples": 321,
+            "mean_ms": 81.0899486050091,
+            "p50_ms": 55.78729999251664,
+            "p95_ms": 340.2939001098275
+          }
+        }
+      },
+      "exact_all": {
+        "items": 452,
+        "sentence_accuracy": 0.7787610619469026,
+        "character_accuracy": 0.9424853064651554,
+        "recall_at": {
+          "1": 0.7787610619469026,
+          "5": 0.9446902654867256,
+          "10": 0.9690265486725663
+        },
+        "corrected_top": 12,
+        "latency": {
+          "samples": 452,
+          "mean_ms": 69.67086150966156,
+          "p50_ms": 46.16085009183735,
+          "p95_ms": 314.9064450524745
+        }
+      },
+      "typo": {
+        "tone_missing": {
+          "items": 449,
+          "sentence_accuracy": 0.133630289532294,
+          "character_accuracy": 0.7695871946082561,
+          "recall_at": {
+            "1": 0.133630289532294,
+            "5": 0.19821826280623608,
+            "10": 0.21380846325167038
+          },
+          "corrected_top": 80,
+          "latency": {
+            "samples": 449,
+            "mean_ms": 38.405964364668975,
+            "p50_ms": 21.855599945411086,
+            "p95_ms": 201.83649994432946
+          }
+        },
+        "tone_wrong": {
+          "items": 452,
+          "sentence_accuracy": 0.10176991150442478,
+          "character_accuracy": 0.760705289672544,
+          "recall_at": {
+            "1": 0.10176991150442478,
+            "5": 0.1836283185840708,
+            "10": 0.19690265486725664
+          },
+          "corrected_top": 80,
+          "latency": {
+            "samples": 452,
+            "mean_ms": 67.68517367092612,
+            "p50_ms": 41.36415012180805,
+            "p95_ms": 307.2667450411245
+          }
+        },
+        "insertion": {
+          "items": 411,
+          "sentence_accuracy": 0.0827250608272506,
+          "character_accuracy": 0.7591111111111111,
+          "recall_at": {
+            "1": 0.0827250608272506,
+            "5": 0.12165450121654502,
+            "10": 0.13381995133819952
+          },
+          "corrected_top": 66,
+          "latency": {
+            "samples": 411,
+            "mean_ms": 66.52564209446292,
+            "p50_ms": 43.223700020462275,
+            "p95_ms": 302.1892999531701
+          }
+        },
+        "deletion": {
+          "items": 448,
+          "sentence_accuracy": 0.049107142857142856,
+          "character_accuracy": 0.7368421052631579,
+          "recall_at": {
+            "1": 0.049107142857142856,
+            "5": 0.08035714285714286,
+            "10": 0.09598214285714286
+          },
+          "corrected_top": 60,
+          "latency": {
+            "samples": 448,
+            "mean_ms": 79.07955044772409,
+            "p50_ms": 55.536650004796684,
+            "p95_ms": 312.2150448849425
+          }
+        },
+        "substitution": {
+          "items": 452,
+          "sentence_accuracy": 0.07300884955752213,
+          "character_accuracy": 0.7363560033585222,
+          "recall_at": {
+            "1": 0.07300884955752213,
+            "5": 0.11283185840707964,
+            "10": 0.13053097345132744
+          },
+          "corrected_top": 73,
+          "latency": {
+            "samples": 452,
+            "mean_ms": 81.46026902842394,
+            "p50_ms": 56.203450076282024,
+            "p95_ms": 324.2390550090931
+          }
+        },
+        "adjacent_key": {
+          "items": 452,
+          "sentence_accuracy": 0.07300884955752213,
+          "character_accuracy": 0.7556675062972292,
+          "recall_at": {
+            "1": 0.07300884955752213,
+            "5": 0.13495575221238937,
+            "10": 0.15486725663716813
+          },
+          "corrected_top": 75,
+          "latency": {
+            "samples": 452,
+            "mean_ms": 75.19707146133668,
+            "p50_ms": 50.20905006676912,
+            "p95_ms": 325.3052799962461
+          }
+        }
+      },
+      "clean_input_safety": {
+        "items": 452,
+        "false_correction_rate": 0.02654867256637168,
+        "exact_input_regressions": 13,
+        "exact_input_regression_rate": 0.028761061946902654
+      }
+    },
+    "corpus-tolerant+laya-hybrid": {
+      "exact": {
+        "hand": {
+          "items": 131,
+          "sentence_accuracy": 0.45038167938931295,
+          "character_accuracy": 0.7189054726368159,
+          "recall_at": {
+            "1": 0.45038167938931295,
+            "5": 0.7786259541984732,
+            "10": 0.8320610687022901
+          },
+          "corrected_top": 23,
+          "latency": {
+            "samples": 131,
+            "mean_ms": 118.31552060925267,
+            "p50_ms": 91.5383999235928,
+            "p95_ms": 263.13480001408607
+          }
+        },
+        "silver": {
+          "items": 321,
+          "sentence_accuracy": 0.8442367601246106,
+          "character_accuracy": 0.9611111111111111,
+          "recall_at": {
+            "1": 0.8442367601246106,
+            "5": 0.9439252336448598,
+            "10": 0.9688473520249221
+          },
+          "corrected_top": 3,
+          "latency": {
+            "samples": 321,
+            "mean_ms": 163.2701426859063,
+            "p50_ms": 136.37849991209805,
+            "p95_ms": 408.3338000345975
+          }
+        }
+      },
+      "exact_all": {
+        "items": 452,
+        "sentence_accuracy": 0.7300884955752213,
+        "character_accuracy": 0.9202350965575147,
+        "recall_at": {
+          "1": 0.7300884955752213,
+          "5": 0.8960176991150443,
+          "10": 0.9292035398230089
+        },
+        "corrected_top": 26,
+        "latency": {
+          "samples": 452,
+          "mean_ms": 150.2412588539558,
+          "p50_ms": 126.26689998432994,
+          "p95_ms": 397.95270494651044
+        }
+      },
+      "typo": {
+        "tone_missing": {
+          "items": 449,
+          "sentence_accuracy": 0.09799554565701558,
+          "character_accuracy": 0.7502106149957877,
+          "recall_at": {
+            "1": 0.09799554565701558,
+            "5": 0.14699331848552338,
+            "10": 0.15812917594654788
+          },
+          "corrected_top": 67,
+          "latency": {
+            "samples": 449,
+            "mean_ms": 146.57056325048887,
+            "p50_ms": 121.57640000805259,
+            "p95_ms": 367.9329399019483
+          }
+        },
+        "tone_wrong": {
+          "items": 452,
+          "sentence_accuracy": 0.06415929203539823,
+          "character_accuracy": 0.735936188077246,
+          "recall_at": {
+            "1": 0.06415929203539823,
+            "5": 0.1261061946902655,
+            "10": 0.13716814159292035
+          },
+          "corrected_top": 64,
+          "latency": {
+            "samples": 452,
+            "mean_ms": 122.3228081836225,
+            "p50_ms": 105.05310003645718,
+            "p95_ms": 322.78688992373594
+          }
+        },
+        "insertion": {
+          "items": 411,
+          "sentence_accuracy": 0.046228710462287104,
+          "character_accuracy": 0.7417777777777778,
+          "recall_at": {
+            "1": 0.046228710462287104,
+            "5": 0.072992700729927,
+            "10": 0.08029197080291971
+          },
+          "corrected_top": 55,
+          "latency": {
+            "samples": 411,
+            "mean_ms": 145.45796034118916,
+            "p50_ms": 120.45380007475615,
+            "p95_ms": 353.3686998998746
+          }
+        },
+        "deletion": {
+          "items": 448,
+          "sentence_accuracy": 0.022321428571428572,
+          "character_accuracy": 0.72,
+          "recall_at": {
+            "1": 0.022321428571428572,
+            "5": 0.033482142857142856,
+            "10": 0.044642857142857144
+          },
+          "corrected_top": 52,
+          "latency": {
+            "samples": 448,
+            "mean_ms": 156.33093326219492,
+            "p50_ms": 127.3173998342827,
+            "p95_ms": 417.84757511923067
+          }
+        },
+        "substitution": {
+          "items": 452,
+          "sentence_accuracy": 0.03761061946902655,
+          "character_accuracy": 0.7191435768261965,
+          "recall_at": {
+            "1": 0.03761061946902655,
+            "5": 0.06415929203539823,
+            "10": 0.07079646017699115
+          },
+          "corrected_top": 58,
+          "latency": {
+            "samples": 452,
+            "mean_ms": 169.6360265409607,
+            "p50_ms": 134.45195008534938,
+            "p95_ms": 405.55711506167404
+          }
+        },
+        "adjacent_key": {
+          "items": 452,
+          "sentence_accuracy": 0.046460176991150445,
+          "character_accuracy": 0.7334172963895886,
+          "recall_at": {
+            "1": 0.046460176991150445,
+            "5": 0.07743362831858407,
+            "10": 0.09513274336283185
+          },
+          "corrected_top": 69,
+          "latency": {
+            "samples": 452,
+            "mean_ms": 191.3817106185695,
+            "p50_ms": 153.05964997969568,
+            "p95_ms": 448.7018799642101
+          }
+        }
+      },
+      "clean_input_safety": {
+        "items": 452,
+        "false_correction_rate": 0.05752212389380531,
+        "exact_input_regressions": 9,
+        "exact_input_regression_rate": 0.01991150442477876
+      }
+    }
+  },
+  "annotation": {
+    "archives_edoc_faq": {
+      "ambiguous_polyphone": 14,
+      "accepted": 3
+    },
+    "gsn_qa": {
+      "ambiguous_polyphone": 1,
+      "accepted": 1
+    },
+    "itaiwan_qa": {},
+    "mofa_press_zh": {
+      "ambiguous_polyphone": 791,
+      "accepted": 260
+    },
+    "moj_law_zh": {
+      "ambiguous_polyphone": 11583,
+      "accepted": 3727
+    },
+    "tipo_trade_secret_qa": {
+      "ambiguous_polyphone": 46,
+      "accepted": 17
+    }
+  },
+  "item_origins": {
+    "hand:dev": 104,
+    "hand:sanity": 27,
+    "silver:archives_edoc_faq": 3,
+    "silver:gsn_qa": 1,
+    "silver:mofa_press_zh": 150,
+    "silver:moj_law_zh": 150,
+    "silver:tipo_trade_secret_qa": 17
+  }
+}

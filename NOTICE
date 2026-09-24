@@ -1,0 +1,22 @@
+造序注音 ZaoSeq Bopomofo — public core v0.1.0
+Copyright 2026 ZaoSeq Technologies (造序科技，籌備中)
+
+The source code in this repository (src/, tests/) is licensed under the Apache License, Version 2.0.
+See LICENSE.
+
+Data in data/ and benchmarks/ is NOT covered by the Apache License unless stated otherwise:
+
+- data/cns11643/
+  Derived from CNS11643 中文標準交換碼全字庫, 數位發展部 (Ministry of Digital Affairs, Taiwan),
+  used under the Open Government Data License, version 1.0 (政府資料開放授權條款-第1版),
+  https://data.gov.tw/license . Source: https://data.gov.tw/dataset/5961
+
+- data/corpus/
+  Manifests and statistics derived from Taiwan government open datasets, each under the license recorded
+  for that source in data/sources.json and data/SOURCES.md (Open Government Data License, version 1.0).
+
+- data/builtin/, benchmarks/ (hand-written evaluation sets and results)
+  Written by the ZaoSeq Bopomofo project and licensed under the Apache License, Version 2.0.
+
+This distribution does not contain any model weights. The production contextual ranker, its training code
+and its model artifacts are not part of this repository and are not released under the Apache License.

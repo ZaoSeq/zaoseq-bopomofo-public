@@ -1,0 +1,24 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "zaoseq-bopomofo"
+version = "0.1.0"
+description = "造序注音 ZaoSeq Bopomofo: context-aware candidate ranking for Traditional Chinese Bopomofo input."
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "Apache-2.0" }
+authors = [{ name = "ZaoSeq Technologies" }]
+dependencies = ["numpy>=1.24"]
+
+[project.optional-dependencies]
+research = ["psutil>=5.9"]
+dev = ["pytest>=8"]
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["src"]

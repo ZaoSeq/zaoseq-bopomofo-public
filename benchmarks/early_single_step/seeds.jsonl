@@ -1,0 +1,136 @@
+# 造序注音 benchmark seeds：前文、讀音與期望文字由本專案人工撰寫。候選由 build 指令從詞庫產生。
+{"id": "b001", "left_context": "我明天會", "readings": ["ㄗㄞˋ"], "expected": "再", "tags": ["spec_case_a", "single_syllable"]}
+{"id": "b002", "left_context": "我現在", "readings": ["ㄗㄞˋ"], "expected": "在", "tags": ["spec_case_b", "single_syllable"]}
+{"id": "b003", "left_context": "我明天會", "readings": ["ㄗㄞˋ", "ㄑㄩˋ"], "expected": "再去", "tags": ["phrase", "multi_syllable"]}
+{"id": "b004", "left_context": "我現在", "readings": ["ㄗㄞˋ", "ㄍㄨㄥ", "ㄙ"], "expected": "在公司", "tags": ["phrase", "multi_syllable"]}
+{"id": "b005", "left_context": "請你", "readings": ["ㄗㄞˋ", "ㄕㄨㄛ"], "expected": "再說", "tags": ["phrase", "multi_syllable"]}
+{"id": "b006", "left_context": "他把貨物", "readings": ["ㄗㄞˋ"], "expected": "載", "tags": ["single_syllable"]}
+{"id": "b007", "left_context": "我們下次", "readings": ["ㄗㄞˋ"], "expected": "再", "tags": ["single_syllable"]}
+{"id": "b008", "left_context": "他", "readings": ["ㄕˋ"], "expected": "是", "tags": ["single_syllable"]}
+{"id": "b009", "left_context": "我昨天去醫院做了健康", "readings": ["ㄐㄧㄢˇ", "ㄔㄚˊ"], "expected": "檢查", "tags": ["multi_syllable"]}
+{"id": "b010", "left_context": "這起案件由", "readings": ["ㄐㄧㄢˇ", "ㄔㄚˊ", "ㄍㄨㄢ"], "expected": "檢察官", "tags": ["multi_syllable"]}
+{"id": "b011", "left_context": "這個", "readings": ["ㄕˋ", "ㄐㄧㄢˋ"], "expected": "事件", "tags": ["multi_syllable"]}
+{"id": "b012", "left_context": "他在公司負責產品", "readings": ["ㄧㄢˊ", "ㄈㄚ"], "expected": "研發", "tags": ["multi_syllable"]}
+{"id": "b013", "left_context": "請把這份文件", "readings": ["ㄌㄧㄝˋ", "ㄧㄣˋ"], "expected": "列印", "tags": ["multi_syllable"]}
+{"id": "b014", "left_context": "我們下週要去日本", "readings": ["ㄌㄩˇ", "ㄒㄧㄥˊ"], "expected": "旅行", "tags": ["multi_syllable"]}
+{"id": "b015", "left_context": "政府應該", "readings": ["ㄌㄩˇ", "ㄒㄧㄥˊ"], "expected": "履行", "tags": ["multi_syllable"]}
+{"id": "b016", "left_context": "颱風即將登陸，請民眾注意", "readings": ["ㄢ", "ㄑㄩㄢˊ"], "expected": "安全", "tags": ["multi_syllable"]}
+{"id": "b017", "left_context": "老師要我們寫一篇讀書", "readings": ["ㄒㄧㄣ", "ㄉㄜˊ"], "expected": "心得", "tags": ["multi_syllable"]}
+{"id": "b018", "left_context": "這道數學", "readings": ["ㄍㄨㄥ", "ㄕˋ"], "expected": "公式", "tags": ["multi_syllable"]}
+{"id": "b019", "left_context": "他出差去處理", "readings": ["ㄍㄨㄥ", "ㄕˋ"], "expected": "公事", "tags": ["multi_syllable"]}
+{"id": "b020", "left_context": "敵軍發動猛烈的", "readings": ["ㄍㄨㄥ", "ㄕˋ"], "expected": "攻勢", "tags": ["multi_syllable"]}
+{"id": "b021", "left_context": "這家餐廳的", "readings": ["ㄐㄧㄚˋ", "ㄍㄜˊ"], "expected": "價格", "tags": ["multi_syllable"]}
+{"id": "b022", "left_context": "他每天在實驗室做", "readings": ["ㄕˊ", "ㄧㄢˋ"], "expected": "實驗", "tags": ["multi_syllable"]}
+{"id": "b023", "left_context": "政府宣布新的經濟", "readings": ["ㄓㄥˋ", "ㄘㄜˋ"], "expected": "政策", "tags": ["multi_syllable"]}
+{"id": "b024", "left_context": "這部電影的", "readings": ["ㄐㄩˋ", "ㄑㄧㄥˊ"], "expected": "劇情", "tags": ["multi_syllable"]}
+{"id": "b025", "left_context": "請輸入您的", "readings": ["ㄇㄧˋ", "ㄇㄚˇ"], "expected": "密碼", "tags": ["multi_syllable"]}
+{"id": "b026", "left_context": "我們要尊重每個人的", "readings": ["ㄧˋ", "ㄐㄧㄢˋ"], "expected": "意見", "tags": ["multi_syllable"]}
+{"id": "b027", "left_context": "他因為生病所以", "readings": ["ㄑㄧㄥˇ", "ㄐㄧㄚˋ"], "expected": "請假", "tags": ["multi_syllable"]}
+{"id": "b028", "left_context": "下雨天路很滑，請小心", "readings": ["ㄐㄧㄚˋ", "ㄕˇ"], "expected": "駕駛", "tags": ["multi_syllable"]}
+{"id": "b029", "left_context": "這次考試的", "readings": ["ㄔㄥˊ", "ㄐㄧ"], "expected": "成績", "tags": ["multi_syllable"]}
+{"id": "b030", "left_context": "兩個數相乘的結果叫做", "readings": ["ㄔㄥˊ", "ㄐㄧ"], "expected": "乘積", "tags": ["multi_syllable"]}
+{"id": "b031", "left_context": "這座城市的", "readings": ["ㄐㄧㄠ", "ㄊㄨㄥ"], "expected": "交通", "tags": ["multi_syllable"]}
+{"id": "b032", "left_context": "他正在寫電腦", "readings": ["ㄔㄥˊ", "ㄕˋ"], "expected": "程式", "tags": ["multi_syllable"]}
+{"id": "b033", "left_context": "台北是一座大", "readings": ["ㄔㄥˊ", "ㄕˋ"], "expected": "城市", "tags": ["multi_syllable"]}
+{"id": "b034", "left_context": "他對歷史很有", "readings": ["ㄒㄧㄥˋ", "ㄑㄩˋ"], "expected": "興趣", "tags": ["multi_syllable"]}
+{"id": "b035", "left_context": "醫生說他需要多", "readings": ["ㄒㄧㄡ", "ㄒㄧˊ"], "expected": "休息", "tags": ["multi_syllable"]}
+{"id": "b036", "left_context": "公司今年的營收大幅", "readings": ["ㄔㄥˊ", "ㄓㄤˇ"], "expected": "成長", "tags": ["multi_syllable"]}
+{"id": "b037", "left_context": "下個月就是期末", "readings": ["ㄎㄠˇ", "ㄕˋ"], "expected": "考試", "tags": ["multi_syllable"]}
+{"id": "b038", "left_context": "他是一位很有名的", "readings": ["ㄏㄨㄚˋ", "ㄐㄧㄚ"], "expected": "畫家", "tags": ["multi_syllable"]}
+{"id": "b039", "left_context": "媽媽正在廚房", "readings": ["ㄓㄨˇ", "ㄈㄢˋ"], "expected": "煮飯", "tags": ["multi_syllable"]}
+{"id": "b040", "left_context": "警方逮捕了這起案件的", "readings": ["ㄓㄨˇ", "ㄈㄢˋ"], "expected": "主犯", "tags": ["multi_syllable"]}
+{"id": "b041", "left_context": "我每天早上都會去公園", "readings": ["ㄩㄣˋ", "ㄉㄨㄥˋ"], "expected": "運動", "tags": ["multi_syllable"]}
+{"id": "b042", "left_context": "週末我們去", "readings": ["ㄍㄨㄥ", "ㄩㄢˊ"], "expected": "公園", "tags": ["multi_syllable"]}
+{"id": "b043", "left_context": "這個問題需要仔細", "readings": ["ㄙ", "ㄎㄠˇ"], "expected": "思考", "tags": ["multi_syllable"]}
+{"id": "b044", "left_context": "加班到半夜，我今天很", "readings": ["ㄌㄟˋ"], "expected": "累", "tags": ["single_syllable"]}
+{"id": "b045", "left_context": "她感動得流下眼", "readings": ["ㄌㄟˋ"], "expected": "淚", "tags": ["single_syllable"]}
+{"id": "b046", "left_context": "今天的天氣很", "readings": ["ㄌㄥˇ"], "expected": "冷", "tags": ["single_syllable"]}
+{"id": "b047", "left_context": "他在書店買了一", "readings": ["ㄅㄣˇ"], "expected": "本", "tags": ["single_syllable"]}
+{"id": "b048", "left_context": "這件衣服太", "readings": ["ㄍㄨㄟˋ"], "expected": "貴", "tags": ["single_syllable"]}
+{"id": "b049", "left_context": "我好渴，想喝一杯", "readings": ["ㄕㄨㄟˇ"], "expected": "水", "tags": ["single_syllable"]}
+{"id": "b050", "left_context": "他跑得很", "readings": ["ㄎㄨㄞˋ"], "expected": "快", "tags": ["single_syllable"]}
+{"id": "b051", "left_context": "歡迎光臨，請", "readings": ["ㄗㄨㄛˋ"], "expected": "坐", "tags": ["single_syllable"]}
+{"id": "b052", "left_context": "趕快把功課", "readings": ["ㄗㄨㄛˋ"], "expected": "做", "tags": ["single_syllable"]}
+{"id": "b053", "left_context": "請回到你的", "readings": ["ㄗㄨㄛˋ", "ㄨㄟˋ"], "expected": "座位", "tags": ["multi_syllable"]}
+{"id": "b054", "left_context": "我不太", "readings": ["ㄏㄨㄟˋ"], "expected": "會", "tags": ["single_syllable"]}
+{"id": "b055", "left_context": "明天下午三點要", "readings": ["ㄎㄞ", "ㄏㄨㄟˋ"], "expected": "開會", "tags": ["multi_syllable"]}
+{"id": "b056", "left_context": "我等一下要去銀行", "readings": ["ㄏㄨㄟˋ", "ㄎㄨㄢˇ"], "expected": "匯款", "tags": ["multi_syllable"]}
+{"id": "b057", "left_context": "他拿起畫筆開始", "readings": ["ㄏㄨㄚˋ"], "expected": "畫", "tags": ["single_syllable"]}
+{"id": "b058", "left_context": "我會記住你說的", "readings": ["ㄏㄨㄚˋ"], "expected": "話", "tags": ["single_syllable"]}
+{"id": "b059", "left_context": "最近天氣的", "readings": ["ㄅㄧㄢˋ", "ㄏㄨㄚˋ"], "expected": "變化", "tags": ["multi_syllable"]}
+{"id": "b060", "left_context": "過了這麼多年，我還", "readings": ["ㄐㄧˋ", "ㄉㄜ˙"], "expected": "記得", "tags": ["multi_syllable"]}
+{"id": "b061", "left_context": "這家公司的", "readings": ["ㄕˋ", "ㄔㄤˇ"], "expected": "市場", "tags": ["multi_syllable"]}
+{"id": "b062", "left_context": "這條規定不", "readings": ["ㄕˋ", "ㄩㄥˋ"], "expected": "適用", "tags": ["multi_syllable"]}
+{"id": "b063", "left_context": "新進員工需要三個月的", "readings": ["ㄕˋ", "ㄩㄥˋ"], "expected": "試用", "tags": ["multi_syllable"]}
+{"id": "b064", "left_context": "這台電腦的", "readings": ["ㄒㄧㄠˋ", "ㄋㄥˊ"], "expected": "效能", "tags": ["multi_syllable"]}
+{"id": "b065", "left_context": "他的英文", "readings": ["ㄔㄥˊ", "ㄉㄨˋ"], "expected": "程度", "tags": ["multi_syllable"]}
+{"id": "b066", "left_context": "他目前在台北", "readings": ["ㄍㄨㄥ", "ㄗㄨㄛˋ"], "expected": "工作", "tags": ["multi_syllable"]}
+{"id": "b067", "left_context": "這件事情的", "readings": ["ㄓㄣ", "ㄒㄧㄤˋ"], "expected": "真相", "tags": ["multi_syllable"]}
+{"id": "b068", "left_context": "我們需要找出問題的", "readings": ["ㄩㄢˊ", "ㄧㄣ"], "expected": "原因", "tags": ["multi_syllable"]}
+{"id": "b069", "left_context": "他對這份工作很", "readings": ["ㄇㄢˇ", "ㄧˋ"], "expected": "滿意", "tags": ["multi_syllable"]}
+{"id": "b070", "left_context": "這個產品的", "readings": ["ㄆㄧㄣˇ", "ㄓˊ"], "expected": "品質", "tags": ["multi_syllable"]}
+{"id": "b071", "left_context": "你來晚了，他", "readings": ["ㄧˇ", "ㄐㄧㄥ"], "expected": "已經", "tags": ["multi_syllable"]}
+{"id": "b072", "left_context": "上下樓梯請", "readings": ["ㄓㄨˋ", "ㄧˋ"], "expected": "注意", "tags": ["multi_syllable"]}
+{"id": "b073", "left_context": "他在比賽中打破了世界", "readings": ["ㄐㄧˋ", "ㄌㄨˋ"], "expected": "紀錄", "tags": ["multi_syllable"]}
+{"id": "b074", "left_context": "為了按時完成，我們", "readings": ["ㄅㄧˋ", "ㄒㄩ"], "expected": "必須", "tags": ["multi_syllable"]}
+{"id": "b075", "left_context": "水和空氣是生活", "readings": ["ㄅㄧˋ", "ㄒㄩ"], "expected": "必需", "tags": ["multi_syllable"]}
+{"id": "b076", "left_context": "聽得出來他說話的", "readings": ["ㄩˇ", "ㄑㄧˋ"], "expected": "語氣", "tags": ["multi_syllable"]}
+{"id": "b077", "left_context": "祝你好", "readings": ["ㄩㄣˋ"], "expected": "運", "tags": ["single_syllable"]}
+{"id": "b078", "left_context": "這條", "readings": ["ㄏㄜˊ"], "expected": "河", "tags": ["single_syllable"]}
+{"id": "b079", "left_context": "爸爸", "readings": ["ㄏㄜˊ"], "expected": "和", "tags": ["single_syllable"]}
+{"id": "b080", "left_context": "請把餅乾放進", "readings": ["ㄏㄜˊ", "ㄗ˙"], "expected": "盒子", "tags": ["multi_syllable"]}
+{"id": "b081", "left_context": "我出門忘了帶", "readings": ["ㄕㄡˇ", "ㄐㄧ"], "expected": "手機", "tags": ["multi_syllable"]}
+{"id": "b082", "left_context": "我在門口", "readings": ["ㄉㄥˇ"], "expected": "等", "tags": ["single_syllable"]}
+{"id": "b083", "left_context": "這次考試的", "readings": ["ㄊㄧˊ", "ㄇㄨˋ"], "expected": "題目", "tags": ["multi_syllable"]}
+{"id": "b084", "left_context": "在會議上他", "readings": ["ㄊㄧˊ", "ㄔㄨ"], "expected": "提出", "tags": ["multi_syllable"]}
+{"id": "b085", "left_context": "這家店的", "readings": ["ㄈㄨˊ", "ㄨˋ"], "expected": "服務", "tags": ["multi_syllable"]}
+{"id": "b086", "left_context": "這個專案由他", "readings": ["ㄈㄨˋ", "ㄗㄜˊ"], "expected": "負責", "tags": ["multi_syllable"]}
+{"id": "b087", "left_context": "我們應該", "readings": ["ㄅㄠˇ", "ㄏㄨˋ"], "expected": "保護", "tags": ["multi_syllable"]}
+{"id": "b088", "left_context": "保險公司會通知所有", "readings": ["ㄅㄠˇ", "ㄏㄨˋ"], "expected": "保戶", "tags": ["multi_syllable"]}
+{"id": "b089", "left_context": "明天要交期末", "readings": ["ㄅㄠˋ", "ㄍㄠˋ"], "expected": "報告", "tags": ["multi_syllable"]}
+{"id": "b090", "left_context": "這是一個很", "readings": ["ㄓㄨㄥˋ", "ㄧㄠˋ"], "expected": "重要", "tags": ["multi_syllable"]}
+{"id": "b091", "left_context": "我昨天", "readings": ["ㄕㄡ", "ㄉㄠˋ"], "expected": "收到", "tags": ["multi_syllable"]}
+{"id": "b092", "left_context": "我很喜歡這", "readings": ["ㄕㄡˇ"], "expected": "首", "tags": ["single_syllable"]}
+{"id": "b093", "left_context": "有問題的同學請", "readings": ["ㄐㄩˇ", "ㄕㄡˇ"], "expected": "舉手", "tags": ["multi_syllable"]}
+{"id": "b094", "left_context": "他是我的", "readings": ["ㄊㄨㄥˊ", "ㄕˋ"], "expected": "同事", "tags": ["multi_syllable"]}
+{"id": "b095", "left_context": "這兩件事不能", "readings": ["ㄊㄨㄥˊ", "ㄕˊ"], "expected": "同時", "tags": ["multi_syllable"]}
+{"id": "b096", "left_context": "有任何消息請盡快", "readings": ["ㄊㄨㄥ", "ㄓ"], "expected": "通知", "tags": ["multi_syllable"]}
+{"id": "b097", "left_context": "他在", "readings": ["ㄧㄣˊ", "ㄏㄤˊ"], "expected": "銀行", "tags": ["multi_syllable"]}
+{"id": "b098", "left_context": "實驗正在", "readings": ["ㄐㄧㄣˋ", "ㄒㄧㄥˊ"], "expected": "進行", "tags": ["multi_syllable"]}
+{"id": "b099", "left_context": "根據氣象局的", "readings": ["ㄩˋ", "ㄅㄠˋ"], "expected": "預報", "tags": ["multi_syllable"]}
+{"id": "b100", "left_context": "他聽到這個消息非常", "readings": ["ㄕㄥ", "ㄑㄧˋ"], "expected": "生氣", "tags": ["multi_syllable"]}
+{"id": "b101", "left_context": "山上的", "readings": ["ㄎㄨㄥ", "ㄑㄧˋ"], "expected": "空氣", "tags": ["multi_syllable"]}
+{"id": "b102", "left_context": "大家都很", "readings": ["ㄑㄧˊ", "ㄉㄞˋ"], "expected": "期待", "tags": ["multi_syllable"]}
+{"id": "b103", "left_context": "他全心投入自己的", "readings": ["ㄕˋ", "ㄧㄝˋ"], "expected": "事業", "tags": ["multi_syllable"]}
+{"id": "b104", "left_context": "登高望遠可以開闊", "readings": ["ㄕˋ", "ㄧㄝˇ"], "expected": "視野", "tags": ["multi_syllable"]}
+{"id": "b105", "left_context": "我把錢存進", "readings": ["ㄓㄤˋ", "ㄏㄨˋ"], "expected": "帳戶", "tags": ["multi_syllable"]}
+{"id": "b106", "left_context": "這場比賽的", "readings": ["ㄐㄧㄝˊ", "ㄍㄨㄛˇ"], "expected": "結果", "tags": ["multi_syllable"]}
+{"id": "b107", "left_context": "天氣變冷了，小心", "readings": ["ㄍㄢˇ", "ㄇㄠˋ"], "expected": "感冒", "tags": ["multi_syllable"]}
+{"id": "b108", "left_context": "他非常", "readings": ["ㄋㄨˇ", "ㄌㄧˋ"], "expected": "努力", "tags": ["multi_syllable"]}
+{"id": "b109", "left_context": "這是我第一次出國，心情很", "readings": ["ㄐㄧㄣˇ", "ㄓㄤ"], "expected": "緊張", "tags": ["multi_syllable"]}
+{"id": "b110", "left_context": "下週就是", "readings": ["ㄑㄧˊ", "ㄓㄨㄥ"], "expected": "期中", "tags": ["multi_syllable"]}
+{"id": "b111", "left_context": "我們班有三個人通過，他是", "readings": ["ㄑㄧˊ", "ㄓㄨㄥ"], "expected": "其中", "tags": ["multi_syllable"]}
+{"id": "b112", "left_context": "每個公民都有投票的", "readings": ["ㄑㄩㄢˊ", "ㄌㄧˋ"], "expected": "權利", "tags": ["multi_syllable"]}
+{"id": "b113", "left_context": "總統掌握了很大的", "readings": ["ㄑㄩㄢˊ", "ㄌㄧˋ"], "expected": "權力", "tags": ["multi_syllable"]}
+{"id": "b114", "left_context": "年輕人總是", "readings": ["ㄐㄧㄥ", "ㄌㄧˋ"], "expected": "精力", "tags": ["multi_syllable"]}
+{"id": "b115", "left_context": "他有豐富的工作", "readings": ["ㄐㄧㄥ", "ㄌㄧˋ"], "expected": "經歷", "tags": ["multi_syllable"]}
+{"id": "b116", "left_context": "遇到突發狀況，他的", "readings": ["ㄈㄢˇ", "ㄧㄥˋ"], "expected": "反應", "tags": ["multi_syllable"]}
+{"id": "b117", "left_context": "這部電影真實地", "readings": ["ㄈㄢˇ", "ㄧㄥˋ"], "expected": "反映", "tags": ["multi_syllable"]}
+{"id": "b118", "left_context": "目前的國際", "readings": ["ㄒㄧㄥˊ", "ㄕˋ"], "expected": "形勢", "tags": ["multi_syllable"]}
+{"id": "b119", "left_context": "報告的格式與", "readings": ["ㄒㄧㄥˊ", "ㄕˋ"], "expected": "形式", "tags": ["multi_syllable"]}
+{"id": "b120", "left_context": "昨天晚上這裡", "readings": ["ㄈㄚ", "ㄕㄥ"], "expected": "發生", "tags": ["multi_syllable"]}
+{"id": "b121", "left_context": "受害者勇敢站出來", "readings": ["ㄈㄚ", "ㄕㄥ"], "expected": "發聲", "tags": ["multi_syllable"]}
+{"id": "b122", "left_context": "請依照老師的", "readings": ["ㄓˇ", "ㄕˋ"], "expected": "指示", "tags": ["multi_syllable"]}
+{"id": "b123", "left_context": "別生氣，我", "readings": ["ㄓˇ", "ㄕˋ"], "expected": "只是", "tags": ["multi_syllable"]}
+{"id": "b124", "left_context": "這個結果對我們很", "readings": ["ㄧㄡˇ", "ㄌㄧˋ"], "expected": "有利", "tags": ["multi_syllable"]}
+{"id": "b125", "left_context": "他的論點強而", "readings": ["ㄧㄡˇ", "ㄌㄧˋ"], "expected": "有力", "tags": ["multi_syllable"]}
+{"id": "b126", "left_context": "這件事對我有很大的", "readings": ["ㄧˋ", "ㄧˋ"], "expected": "意義", "tags": ["multi_syllable"]}
+{"id": "b127", "left_context": "有人對這項決議提出", "readings": ["ㄧˋ", "ㄧˋ"], "expected": "異議", "tags": ["multi_syllable"]}
+{"id": "b128", "left_context": "高速公路發生交通", "readings": ["ㄕˋ", "ㄍㄨˋ"], "expected": "事故", "tags": ["multi_syllable"]}
+{"id": "b129", "left_context": "他從小就", "readings": ["ㄐㄧㄣˋ", "ㄕˋ"], "expected": "近視", "tags": ["multi_syllable"]}
+{"id": "b130", "left_context": "在疫情", "readings": ["ㄑㄧˊ", "ㄐㄧㄢ"], "expected": "期間", "tags": ["multi_syllable"]}
+{"id": "b131", "left_context": "今天", "readings": ["ㄊㄧㄢ", "ㄑㄧˋ", "ㄏㄣˇ", "ㄏㄠˇ"], "expected": "天氣很好", "tags": ["phrase", "multi_syllable"]}
+{"id": "b132", "left_context": "他", "readings": ["ㄕˋ", "ㄨㄛˇ", "ㄉㄜ˙", "ㄊㄨㄥˊ", "ㄕˋ"], "expected": "是我的同事", "tags": ["phrase", "multi_syllable"]}
+{"id": "b133", "left_context": "我覺得這個", "readings": ["ㄨㄣˋ", "ㄊㄧˊ", "ㄏㄣˇ", "ㄓㄨㄥˋ", "ㄧㄠˋ"], "expected": "問題很重要", "tags": ["phrase", "multi_syllable"]}
+{"id": "b134", "left_context": "那本書", "readings": ["ㄗㄞˋ", "ㄋㄚˇ", "ㄌㄧˇ"], "expected": "在哪裡", "tags": ["phrase", "multi_syllable"]}
+{"id": "b135", "left_context": "我們", "readings": ["ㄧˋ", "ㄑㄧˇ", "ㄑㄩˋ"], "expected": "一起去", "tags": ["phrase", "multi_syllable"]}

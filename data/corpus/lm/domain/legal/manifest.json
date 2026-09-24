@@ -1,0 +1,9 @@
+{
+  "schema": "zaoseq-bopomofo/corpus-lm/v2",
+  "configuration": "domain/legal",
+  "train_sentences": 134140,
+  "char_tokens": 4720861,
+  "char_vocabulary": 3009,
+  "char_bigrams": 169659,
+  "char_trigrams_kept": 347463
+}

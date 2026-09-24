@@ -1,0 +1,101 @@
+{
+  "created_at": "2026-09-23",
+  "files": {
+    "benchmarks/test/everyday_source.tsv": {
+      "sha256": "efc46a36ded63910af442133f9140040d415c58a31ccd959f1bf19ff107be328"
+    },
+    "benchmarks/test/everyday.jsonl": {
+      "sha256": "055970e0766511a212f0a05ce5027aeff7bf5d739c97597351e5de2d5455f969",
+      "items": 264,
+      "by_category": {
+        "daily_life": 22,
+        "dialogue": 22,
+        "homophone": 22,
+        "long_composition": 22,
+        "proper_noun": 22,
+        "schedule": 22,
+        "school": 22,
+        "shopping": 22,
+        "tech": 22,
+        "transport": 22,
+        "weather": 22,
+        "work": 22
+      }
+    },
+    "benchmarks/test/gov.jsonl": {
+      "sha256": "e7c46f447aef11aa6b2dda1b1e84cc87d8fb6e6840d93229a97afdcef803505b",
+      "items": 800,
+      "by_category": {
+        "government_faq": 200,
+        "legal": 200,
+        "press_release": 200,
+        "public_service": 200
+      }
+    },
+    "benchmarks/test/typo.jsonl": {
+      "sha256": "beabe4d9517b99464cc229b5f1aaca77a7d085ab22f01f33be8931b5c8f72356",
+      "items": 1583,
+      "by_noise_kind": {
+        "adjacent_key": 264,
+        "deletion": 264,
+        "insertion": 263,
+        "substitution": 264,
+        "tone_missing": 264,
+        "tone_wrong": 264
+      }
+    }
+  },
+  "policy": {
+    "sealed": true,
+    "rule": "TEST is not evaluated during fine-tuning or hyperparameter selection. It is run once, after the model checkpoint, training config, inference mode and Hybrid config are frozen in benchmarks/frozen/FINAL.json. If anything is changed after seeing TEST results, this TEST becomes a DEV set and a new TEST must be built.",
+    "test_gov_split": "dev",
+    "gov_dev_split": "test",
+    "everyday_authoring": "hand-written 2026-09-23 without consulting decoder output or DEV failure cases",
+    "typo_correction_default": "off; TEST-TYPO is for future evaluation only, not for tuning thresholds"
+  },
+  "leakage": {
+    "near_duplicate": "char 4-gram MinHash LSH, Jaccard >= 0.6 on Han-only normalized text",
+    "everyday_checked_against": [
+      "corpus train/dev/test splits",
+      "benchmarks/dev",
+      "benchmarks/sanity"
+    ],
+    "gov_checked_against": [
+      "corpus train split",
+      "GOV-DEV split",
+      "benchmarks/dev",
+      "benchmarks/sanity",
+      "TEST-EVERYDAY"
+    ],
+    "gov_stats": {
+      "legal": {
+        "sentences": 6947,
+        "rejected_ambiguous_polyphone": 8383,
+        "near_duplicate": 662,
+        "selected": 200,
+        "documents": 70
+      },
+      "government_faq": {
+        "sentences": 1514,
+        "rejected_ambiguous_polyphone": 2334,
+        "near_duplicate": 79,
+        "selected": 200,
+        "documents": 116
+      },
+      "public_service": {
+        "sentences": 1653,
+        "rejected_ambiguous_polyphone": 2655,
+        "near_duplicate": 121,
+        "selected": 200,
+        "documents": 121
+      },
+      "press_release": {
+        "sentences": 2378,
+        "rejected_ambiguous_polyphone": 4972,
+        "near_duplicate": 116,
+        "selected": 200,
+        "documents": 109
+      }
+    }
+  }
+}

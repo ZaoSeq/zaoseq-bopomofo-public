@@ -1,0 +1,9 @@
+{
+  "cases": 102,
+  "orders_per_case": 24,
+  "top1_flip_rate": 0.9803921568627451,
+  "first_position_win_rate": 0.5196078431372549,
+  "chance_rate": 0.25,
+  "mean_probability_spread": 0.42523651960784314,
+  "single_order_agreement": 0.5294117647058824
+}

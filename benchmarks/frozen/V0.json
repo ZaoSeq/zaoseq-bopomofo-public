@@ -1,0 +1,75 @@
+{
+  "name": "V0",
+  "frozen_at": "2026-09-23",
+  "statement": "Frozen V0 baseline: licensed government corpus pipeline, GeneralCorpusLanguageModel, builtin lexicon, CandidateFamily, exact decoder, typo correction OFF. Not modified based on any later TEST result. DEV results have influenced architecture decisions and are not final test results.",
+  "settings": {
+    "language_model": "GeneralCorpusLanguageModel",
+    "domain_weights": {
+      "government_faq": 0.3,
+      "legal": 0.1,
+      "press_release": 0.3,
+      "public_service": 0.3
+    },
+    "scorer": {
+      "corpus_weight": 1.0,
+      "lexical_weight": 1.0,
+      "edit_lambda": 1.0
+    },
+    "lattice": {
+      "beam": 48,
+      "nbest": 20,
+      "edit_entries_per_span": 8,
+      "max_alternatives_per_syllable": 24
+    },
+    "typo_correction": false,
+    "candidate_family": "data/builtin/variants.tsv"
+  },
+  "tracked_files": {
+    "data/builtin/lexicon.tsv": "4eacbf2931735b1cc5c1d29aab6c9c27e674d4949867e919b9c610ca1318fdac",
+    "data/builtin/variants.tsv": "df6fb37dd84fefb90a53633aa2a8ee2652561c8d7205dcc03f16c454760115c4",
+    "data/cns11643/cns_char_readings.tsv": "b5206f234d6bb2bcf15b114c480f6e3e87abbaf7acf6d1aaa17a16da3625e7af",
+    "src/zaoseq_bopomofo/corpus/domains.py": "870cd6c10ae5134083dd05e480d3a5de30ef5ce83bc01b772b972c6eae7fee39",
+    "src/zaoseq_bopomofo/corpus/statistics.py": "6652bebe7210bb23faf65d50039320dc323267cee56bec6bb5e3cfde35bb68ec",
+    "src/zaoseq_bopomofo/decoding/candidate.py": "50eb57c548e994cbbb56a05763ba2a4dd450eea382012d2e10aeebab32b12c25",
+    "src/zaoseq_bopomofo/decoding/errors.py": "6dc0b99ae45861bc983ccb9a6eab520943cf371e0a5254004e879923e402af83",
+    "src/zaoseq_bopomofo/decoding/family.py": "d0f3a6fac762d53b165b8fc86b10e3501b917be308cb4520fa486cedfe53036e",
+    "src/zaoseq_bopomofo/decoding/lattice.py": "88c0a62ec24818e1a9719d6d4900f8101c9c0584f5b1bd99413822a384733c51",
+    "src/zaoseq_bopomofo/decoding/scoring.py": "381f2d4a2920e9f581c19e26bb7acddf3e263ec672e605967d1a9957ec890e72",
+    "src/zaoseq_bopomofo/decoding/tolerant.py": "8605131f86a90fb14b9b6d735cd7d730fdf8bc7c97a66506ddca9fa6fdf78290",
+    "src/zaoseq_bopomofo/lexicon/builder.py": "280ec7837793e7338057629a60cc066681bb6f2adcf5f7faee9b742c540082d6",
+    "src/zaoseq_bopomofo/lexicon/lexicon.py": "ee8bb43fba77ee5ca5a7498df1d1e25b36d20f41f906a22276a95ff729d067e9",
+    "src/zaoseq_bopomofo/lexicon/loader.py": "a87bb351856067daef4cbd23ec6f95ce8001851d29f2f5429863b5ab3c1ac2a5",
+    "src/zaoseq_bopomofo/ranking/corpus.py": "a8943579649939ed5fc50e0eeadd57f04a3062508001e5c7de9651b1c34b2eb1"
+  },
+  "derived_files": {
+    "data/corpus/lm/domain/government_faq/bigrams.tsv.gz": "4d8c4dea528c7cc8a42a167e0c7b9c54162d4eb5ae4e39304a880ae1e5102fca",
+    "data/corpus/lm/domain/government_faq/followers.tsv.gz": "6f289edc715a374d2e3370fd71c5be560734d5c5546326b0a94070d0821812d8",
+    "data/corpus/lm/domain/government_faq/trigrams.tsv.gz": "90eee146b636a2671247527a0fb28416c656d2569bc51e0c831ec25f7b6d76ea",
+    "data/corpus/lm/domain/government_faq/unigrams.tsv.gz": "68eeadb746e5624857a89cdf56cc217e2e8c222c759ea75e70d23dcd5d98d367",
+    "data/corpus/lm/domain/government_faq/words.tsv.gz": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "data/corpus/lm/domain/legal/bigrams.tsv.gz": "c8fad9b2cef550dabbb70efa45ca8589f668fe9e21efd12bdb680103b3b5e6fa",
+    "data/corpus/lm/domain/legal/followers.tsv.gz": "7fd2a63f3e9ad9c5ea661de622f06242316553bd17b6bbf2f9eb09228670a1df",
+    "data/corpus/lm/domain/legal/trigrams.tsv.gz": "6288753cb80785962ad94dfbeb0e651683a1e5d2e277fd777db95f6a7af4f5b8",
+    "data/corpus/lm/domain/legal/unigrams.tsv.gz": "dc7475d35bc43977b8bc70a2bd6b9cdf47aec9e731a2aacd2e68a98853c21857",
+    "data/corpus/lm/domain/legal/words.tsv.gz": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "data/corpus/lm/domain/press_release/bigrams.tsv.gz": "0a90abd13a96f73fedba5943038b9d1f70331f3d3f1826e56aeda013e80b9683",
+    "data/corpus/lm/domain/press_release/followers.tsv.gz": "067a7fbdf6b2cc7a497749cc503977f0fe99dcda26fd37fd419592df6ccf9cfe",
+    "data/corpus/lm/domain/press_release/trigrams.tsv.gz": "fd0bbea3a851f59c25a8243ec44588aeddf703e3724e9bf6162967845f2affde",
+    "data/corpus/lm/domain/press_release/unigrams.tsv.gz": "268e42757cf37e03713e7b997dc0bdecaac4e8173fe558943a3b76c7cfcc7237",
+    "data/corpus/lm/domain/press_release/words.tsv.gz": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "data/corpus/lm/domain/public_service/bigrams.tsv.gz": "bd4975d333a66cc0815fc6a818dc980e64713073f1aa03c514c406ec05c52da9",
+    "data/corpus/lm/domain/public_service/followers.tsv.gz": "47c2451b293c0a72f21b4aa6bbe343abf7ffd822b23f27043f2ba0961f1450ca",
+    "data/corpus/lm/domain/public_service/trigrams.tsv.gz": "f1dd77845aae050494ac24ad7387619162118d4f3039f924ce3a58e0481a0df6",
+    "data/corpus/lm/domain/public_service/unigrams.tsv.gz": "6d0e063e53cd2785e58d2c804d3937b41e4ed2e2c1aa01ffc1f60c7d31c7451e",
+    "data/corpus/lm/domain/public_service/words.tsv.gz": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "data/corpus/lm/raw/bigrams.tsv.gz": "19f3209fcbfde1fa1c5f8d526a670a81be000a9a54da59c08fed9ee3a953c029",
+    "data/corpus/lm/raw/followers.tsv.gz": "963894854c9621d58b5e3fa5bf133028d7ab337c5f557de0e3bcdcb8e3f0b25f",
+    "data/corpus/lm/raw/trigrams.tsv.gz": "014a8a4771249fd590d0066913badbfa5eeaa8f14333d6e7705e9bb6db4d50b8",
+    "data/corpus/lm/raw/unigrams.tsv.gz": "2c9d4f3e7887baf513f63cc5d786da7fa638ed0c6fac9842675d1ed555f038a8",
+    "data/corpus/lm/raw/words.tsv.gz": "de1b3a0829843115c56c13d1a9128ab094b2244459db21891bf01c699f1de755"
+  },
+  "dev_reports": [
+    "benchmarks/results/domain_latest.md",
+    "benchmarks/results/dev_invariant_fix.json"
+  ]
+}

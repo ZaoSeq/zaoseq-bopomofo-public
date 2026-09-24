@@ -1,0 +1,9 @@
+{
+  "schema": "zaoseq-bopomofo/corpus-lm/v2",
+  "configuration": "domain/press_release",
+  "train_sentences": 52504,
+  "char_tokens": 2902159,
+  "char_vocabulary": 4674,
+  "char_bigrams": 303468,
+  "char_trigrams_kept": 327450
+}

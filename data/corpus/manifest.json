@@ -1,0 +1,1008 @@
+{
+  "schema": "zaoseq-bopomofo/corpus/v2",
+  "sources": {
+    "archives_edoc_faq": {
+      "domain": "government_faq",
+      "provider": "國家發展委員會檔案管理局",
+      "documents": 230,
+      "sentence_count": 624,
+      "sentences_by_split": {
+        "dev": 17,
+        "test": 12,
+        "train": 595
+      },
+      "token_count": 23853,
+      "train_token_count": 22793,
+      "sha256": "9fe32030e76b15d15cd5e5d73e56f80e10fe9bb066c3cb44be96175b73a1766d",
+      "domain_weight": 0.3,
+      "weight": 0.007299
+    },
+    "dgt_11024": {
+      "domain": "government_faq",
+      "provider": "金融監督管理委員會",
+      "documents": 277,
+      "sentence_count": 1324,
+      "sentences_by_split": {
+        "dev": 84,
+        "test": 66,
+        "train": 1174
+      },
+      "token_count": 71185,
+      "train_token_count": 63555,
+      "sha256": "992d71ac283e40305a5d9a2ab9776635048c18a1905f05422d2f489445312b8f",
+      "domain_weight": 0.3,
+      "weight": 0.020351
+    },
+    "dgt_11185": {
+      "domain": "government_faq",
+      "provider": "中央存款保險股份有限公司",
+      "documents": 32,
+      "sentence_count": 153,
+      "sentences_by_split": {
+        "dev": 12,
+        "test": 22,
+        "train": 119
+      },
+      "token_count": 7442,
+      "train_token_count": 5422,
+      "sha256": "fa42b9a4c2b03581b2a2516649d8b8b81b0a261258cc521036b133ae2cc11e56",
+      "domain_weight": 0.3,
+      "weight": 0.001736
+    },
+    "dgt_11838": {
+      "domain": "government_faq",
+      "provider": "資訊服務司",
+      "documents": 2878,
+      "sentence_count": 14455,
+      "sentences_by_split": {
+        "dev": 769,
+        "test": 764,
+        "train": 12922
+      },
+      "token_count": 557770,
+      "train_token_count": 498428,
+      "sha256": "6e3345e243b243547cf8993ae46ca01423ea0e1af74e6b4409f27a7da529b1fa",
+      "domain_weight": 0.3,
+      "weight": 0.159606
+    },
+    "dgt_123084": {
+      "domain": "government_faq",
+      "provider": "新北市政府財政局",
+      "documents": 229,
+      "sentence_count": 890,
+      "sentences_by_split": {
+        "dev": 56,
+        "test": 33,
+        "train": 801
+      },
+      "token_count": 35423,
+      "train_token_count": 32146,
+      "sha256": "e43c7562ee141392a26fcb6cf0de7a22f1af7dc1d457aa972ba03ffc33421a8e",
+      "domain_weight": 0.3,
+      "weight": 0.010294
+    },
+    "dgt_133047": {
+      "domain": "government_faq",
+      "provider": "臺北市稅捐稽徵處",
+      "documents": 84,
+      "sentence_count": 286,
+      "sentences_by_split": {
+        "dev": 16,
+        "test": 12,
+        "train": 258
+      },
+      "token_count": 12108,
+      "train_token_count": 10403,
+      "sha256": "d23c746cc3174adc964e0831933b3536196ce157405fd5bef786fe4a3356c145",
+      "domain_weight": 0.3,
+      "weight": 0.003331
+    },
+    "dgt_145013": {
+      "domain": "government_faq",
+      "provider": "國家發展委員會",
+      "documents": 30,
+      "sentence_count": 307,
+      "sentences_by_split": {
+        "dev": 17,
+        "test": 29,
+        "train": 261
+      },
+      "token_count": 19182,
+      "train_token_count": 16520,
+      "sha256": "3e2c9dd22367868dae9c3df652b78f7de6dab013f3b4fe5106cc7b51b6aa588b",
+      "domain_weight": 0.3,
+      "weight": 0.00529
+    },
+    "dgt_171427": {
+      "domain": "government_faq",
+      "provider": "數位發展部",
+      "documents": 22,
+      "sentence_count": 64,
+      "sentences_by_split": {
+        "dev": 3,
+        "train": 61
+      },
+      "token_count": 1910,
+      "train_token_count": 1837,
+      "sha256": "6d0166521e0deff695cd60f5f91ba49d6769369e54532928a48084ff3cdb3c8d",
+      "domain_weight": 0.3,
+      "weight": 0.000588
+    },
+    "dgt_171432": {
+      "domain": "government_faq",
+      "provider": "數位發展部",
+      "documents": 13,
+      "sentence_count": 28,
+      "sentences_by_split": {
+        "train": 28
+      },
+      "token_count": 440,
+      "train_token_count": 440,
+      "sha256": "8a98582e01a39602995dd1e734fcddee8f7c18a1adba5eaad5d0e1fb8d5825dd",
+      "domain_weight": 0.3,
+      "weight": 0.000141
+    },
+    "dgt_173229": {
+      "domain": "government_faq",
+      "provider": "數位發展部",
+      "documents": 5,
+      "sentence_count": 17,
+      "sentences_by_split": {
+        "dev": 2,
+        "train": 15
+      },
+      "token_count": 550,
+      "train_token_count": 511,
+      "sha256": "6861fa325e43836b9554a283c2c28925456c2adca2abd9038990acc35191771d",
+      "domain_weight": 0.3,
+      "weight": 0.000164
+    },
+    "dgt_175294": {
+      "domain": "government_faq",
+      "provider": "數位發展部",
+      "documents": 47,
+      "sentence_count": 316,
+      "sentences_by_split": {
+        "dev": 6,
+        "test": 8,
+        "train": 302
+      },
+      "token_count": 8623,
+      "train_token_count": 8267,
+      "sha256": "00cb5d834444f6973da792c5d8ec8afced317d6d36c04360334e57c052a53e4d",
+      "domain_weight": 0.3,
+      "weight": 0.002647
+    },
+    "dgt_175295": {
+      "domain": "government_faq",
+      "provider": "數位發展部",
+      "documents": 6,
+      "sentence_count": 57,
+      "sentences_by_split": {
+        "dev": 3,
+        "train": 54
+      },
+      "token_count": 1193,
+      "train_token_count": 1134,
+      "sha256": "ae10a073b0ef3738c9a338c80fcb6d3a6831956438ecba0e894553cdb1b929bc",
+      "domain_weight": 0.3,
+      "weight": 0.000363
+    },
+    "dgt_175306": {
+      "domain": "government_faq",
+      "provider": "數位發展部",
+      "documents": 21,
+      "sentence_count": 99,
+      "sentences_by_split": {
+        "test": 10,
+        "train": 89
+      },
+      "token_count": 5438,
+      "train_token_count": 5208,
+      "sha256": "2591773420057df81dca6006239731bcb77cfe94fb7a7386e6550a59b3ced34a",
+      "domain_weight": 0.3,
+      "weight": 0.001668
+    },
+    "dgt_22314": {
+      "domain": "government_faq",
+      "provider": "經濟部智慧財產局",
+      "documents": 325,
+      "sentence_count": 1735,
+      "sentences_by_split": {
+        "dev": 136,
+        "test": 122,
+        "train": 1477
+      },
+      "token_count": 51246,
+      "train_token_count": 44214,
+      "sha256": "cb136c97e69045dff8ec90b2736dd9ff336c513deaef2f26eee7d37ba8f728e8",
+      "domain_weight": 0.3,
+      "weight": 0.014158
+    },
+    "dgt_24107": {
+      "domain": "government_faq",
+      "provider": "財政部國有財產署",
+      "documents": 81,
+      "sentence_count": 554,
+      "sentences_by_split": {
+        "dev": 88,
+        "test": 29,
+        "train": 437
+      },
+      "token_count": 25583,
+      "train_token_count": 20452,
+      "sha256": "61169f6ce537512a5488a22807bd37bbe0ae556c80c1a2a00efba77948f133ac",
+      "domain_weight": 0.3,
+      "weight": 0.006549
+    },
+    "dgt_25479": {
+      "domain": "government_faq",
+      "provider": "財政部中區國稅局",
+      "documents": 51,
+      "sentence_count": 289,
+      "sentences_by_split": {
+        "dev": 3,
+        "test": 14,
+        "train": 272
+      },
+      "token_count": 12215,
+      "train_token_count": 11564,
+      "sha256": "b202a1637c3b0a088db3de7d714a6a9ba87fd1e16f5a00ddb9b1efe154ea4eb7",
+      "domain_weight": 0.3,
+      "weight": 0.003703
+    },
+    "dgt_25520": {
+      "domain": "government_faq",
+      "provider": "財政部南區國稅局",
+      "documents": 160,
+      "sentence_count": 632,
+      "sentences_by_split": {
+        "dev": 14,
+        "test": 43,
+        "train": 575
+      },
+      "token_count": 28411,
+      "train_token_count": 26028,
+      "sha256": "7543696c9d616e5419fb4f8e339b2fa061bbb6181654c0bbfa3504cd4c7bb095",
+      "domain_weight": 0.3,
+      "weight": 0.008335
+    },
+    "dgt_25590": {
+      "domain": "government_faq",
+      "provider": "財政部臺北國稅局",
+      "documents": 47,
+      "sentence_count": 260,
+      "sentences_by_split": {
+        "dev": 15,
+        "test": 8,
+        "train": 237
+      },
+      "token_count": 12389,
+      "train_token_count": 11424,
+      "sha256": "bc09d517c0b0acb620ed03752d24929ecade3e3dd5c449a11050ff72d4940c2b",
+      "domain_weight": 0.3,
+      "weight": 0.003658
+    },
+    "dgt_41245": {
+      "domain": "government_faq",
+      "provider": "國家科學及技術委員會新竹科學園區管理局",
+      "documents": 349,
+      "sentence_count": 1074,
+      "sentences_by_split": {
+        "dev": 52,
+        "test": 28,
+        "train": 994
+      },
+      "token_count": 42157,
+      "train_token_count": 39433,
+      "sha256": "11c10781f033a51e679bdbdf9640adbc52b1ce703aeae321c72d47895f45db05",
+      "domain_weight": 0.3,
+      "weight": 0.012627
+    },
+    "dgt_43609": {
+      "domain": "government_faq",
+      "provider": "國家發展委員會檔案管理局",
+      "documents": 39,
+      "sentence_count": 131,
+      "sentences_by_split": {
+        "test": 5,
+        "train": 126
+      },
+      "token_count": 5575,
+      "train_token_count": 5368,
+      "sha256": "cfb8ddd3c05c8ed44bc5923f6772563ce4c8b907e4bbb49d661caa3e2e76fbdd",
+      "domain_weight": 0.3,
+      "weight": 0.001719
+    },
+    "dgt_45362": {
+      "domain": "government_faq",
+      "provider": "經濟部中小及新創企業署",
+      "documents": 271,
+      "sentence_count": 2774,
+      "sentences_by_split": {
+        "dev": 204,
+        "test": 72,
+        "train": 2498
+      },
+      "token_count": 99988,
+      "train_token_count": 90120,
+      "sha256": "c880569b55f90bba2a632b49dd2a59b6b5bc95687934a3d66802fd46573387ab",
+      "domain_weight": 0.3,
+      "weight": 0.028858
+    },
+    "dgt_45909": {
+      "domain": "government_faq",
+      "provider": "經濟部標準檢驗局",
+      "documents": 43,
+      "sentence_count": 186,
+      "sentences_by_split": {
+        "dev": 9,
+        "test": 3,
+        "train": 174
+      },
+      "token_count": 7728,
+      "train_token_count": 7111,
+      "sha256": "942289e18045ab538b762ca3f6f42600a6e30fbc2c4edb1c489d96f8be447e97",
+      "domain_weight": 0.3,
+      "weight": 0.002277
+    },
+    "dgt_57713": {
+      "domain": "government_faq",
+      "provider": "財政部南區國稅局",
+      "documents": 12,
+      "sentence_count": 36,
+      "sentences_by_split": {
+        "dev": 2,
+        "train": 34
+      },
+      "token_count": 1130,
+      "train_token_count": 1089,
+      "sha256": "1a08082980a1cc63bfe8e5a9dfdfc41984eda627c006c14f3ada8dcca4236f90",
+      "domain_weight": 0.3,
+      "weight": 0.000349
+    },
+    "gsn_qa": {
+      "domain": "government_faq",
+      "provider": "數位發展部",
+      "documents": 59,
+      "sentence_count": 104,
+      "sentences_by_split": {
+        "dev": 6,
+        "test": 2,
+        "train": 96
+      },
+      "token_count": 2892,
+      "train_token_count": 2703,
+      "sha256": "5ad2eb689044e36ba7ddedd288720f2a47250e5f0ade8003557a7f04753f5d7f",
+      "domain_weight": 0.3,
+      "weight": 0.000866
+    },
+    "itaiwan_qa": {
+      "domain": "government_faq",
+      "provider": "數位發展部",
+      "documents": 11,
+      "sentence_count": 45,
+      "sentences_by_split": {
+        "train": 45
+      },
+      "token_count": 1708,
+      "train_token_count": 1708,
+      "sha256": "3e5f3c1862ec040bb1c99a3bee32a1183db38800d2e7addac3d81c5bfa50c9ba",
+      "domain_weight": 0.3,
+      "weight": 0.000547
+    },
+    "tipo_trade_secret_qa": {
+      "domain": "government_faq",
+      "provider": "經濟部智慧財產局",
+      "documents": 22,
+      "sentence_count": 202,
+      "sentences_by_split": {
+        "test": 24,
+        "train": 178
+      },
+      "token_count": 10095,
+      "train_token_count": 8982,
+      "sha256": "bafa1e71c88fee68afa3d4b8ee571c1411879226240a1a422b8c4eb405f3713c",
+      "domain_weight": 0.3,
+      "weight": 0.002876
+    },
+    "dgt_110972": {
+      "domain": "public_service",
+      "provider": "台灣糖業股份有限公司",
+      "documents": 255,
+      "sentence_count": 729,
+      "sentences_by_split": {
+        "dev": 30,
+        "test": 52,
+        "train": 647
+      },
+      "token_count": 20552,
+      "train_token_count": 17925,
+      "sha256": "7e61d47227af0bc04723cf892203c829829f243628730ac9d6a355e0c52813ca",
+      "domain_weight": 0.3,
+      "weight": 0.005539
+    },
+    "dgt_11442": {
+      "domain": "public_service",
+      "provider": "金融監督管理委員會保險局",
+      "documents": 125,
+      "sentence_count": 404,
+      "sentences_by_split": {
+        "dev": 10,
+        "test": 35,
+        "train": 359
+      },
+      "token_count": 23566,
+      "train_token_count": 21068,
+      "sha256": "f35e230d7b833643cd8c150d756036f291047447de3683321f6895a69816e632",
+      "domain_weight": 0.3,
+      "weight": 0.00651
+    },
+    "dgt_114846": {
+      "domain": "public_service",
+      "provider": "農業部",
+      "documents": 955,
+      "sentence_count": 9156,
+      "sentences_by_split": {
+        "dev": 698,
+        "test": 606,
+        "train": 7852
+      },
+      "token_count": 367655,
+      "train_token_count": 316555,
+      "sha256": "8dc37b1d433a90e5b5df413ee515868b1430cd87ffb812d31fc4a97f5c9bdaa4",
+      "domain_weight": 0.3,
+      "weight": 0.097814
+    },
+    "dgt_11519": {
+      "domain": "public_service",
+      "provider": "金融監督管理委員會保險局",
+      "documents": 1156,
+      "sentence_count": 1829,
+      "sentences_by_split": {
+        "dev": 109,
+        "test": 71,
+        "train": 1649
+      },
+      "token_count": 74561,
+      "train_token_count": 67398,
+      "sha256": "41acf36f2868cb56657aa67b51eec492fd80d2d908e61eb75c0d6c3344e0dcc8",
+      "domain_weight": 0.3,
+      "weight": 0.020826
+    },
+    "dgt_123080": {
+      "domain": "public_service",
+      "provider": "新北市政府捷運工程局",
+      "documents": 50,
+      "sentence_count": 292,
+      "sentences_by_split": {
+        "dev": 17,
+        "test": 8,
+        "train": 267
+      },
+      "token_count": 11754,
+      "train_token_count": 10911,
+      "sha256": "5dbae20241b5aa73c3d7cf087248cb2fb2a102c4ff4b733a076bfe748d4a20bb",
+      "domain_weight": 0.3,
+      "weight": 0.003371
+    },
+    "dgt_14519": {
+      "domain": "public_service",
+      "provider": "金融監督管理委員會保險局",
+      "documents": 93,
+      "sentence_count": 694,
+      "sentences_by_split": {
+        "dev": 37,
+        "test": 22,
+        "train": 635
+      },
+      "token_count": 34664,
+      "train_token_count": 31475,
+      "sha256": "f3f8d724ec7d0895e4a5f2da941587e7ac608a4c4a1485771f9bc75126f13b75",
+      "domain_weight": 0.3,
+      "weight": 0.009726
+    },
+    "dgt_171525": {
+      "domain": "public_service",
+      "provider": "研究發展考核委員會",
+      "documents": 683,
+      "sentence_count": 3854,
+      "sentences_by_split": {
+        "dev": 160,
+        "test": 137,
+        "train": 3557
+      },
+      "token_count": 155005,
+      "train_token_count": 142959,
+      "sha256": "e059c85855f678058946a7437742995874e6049cf7de64e32310b527228c53d3",
+      "domain_weight": 0.3,
+      "weight": 0.044174
+    },
+    "dgt_175360": {
+      "domain": "public_service",
+      "provider": "國營臺灣鐵路股份有限公司",
+      "documents": 133,
+      "sentence_count": 537,
+      "sentences_by_split": {
+        "dev": 69,
+        "test": 26,
+        "train": 442
+      },
+      "token_count": 19385,
+      "train_token_count": 16358,
+      "sha256": "31c41ab21829bbcae6afd724593299354980551b8c8270bba3f37e64420d596f",
+      "domain_weight": 0.3,
+      "weight": 0.005055
+    },
+    "dgt_175519": {
+      "domain": "public_service",
+      "provider": "國立科學工藝博物館",
+      "documents": 22,
+      "sentence_count": 80,
+      "sentences_by_split": {
+        "dev": 2,
+        "test": 4,
+        "train": 74
+      },
+      "token_count": 2127,
+      "train_token_count": 1896,
+      "sha256": "a6446cbaefb24e6c513e7c931b812c053fe605490fea6762817544f7567fe626",
+      "domain_weight": 0.3,
+      "weight": 0.000586
+    },
+    "dgt_176413": {
+      "domain": "public_service",
+      "provider": "臺北市政府法務局",
+      "documents": 3,
+      "sentence_count": 4,
+      "sentences_by_split": {
+        "train": 4
+      },
+      "token_count": 116,
+      "train_token_count": 116,
+      "sha256": "70adc8b291c05e61ba82798cdc4cb36d8bfd46749d45956e0d1a12e1c9bbe113",
+      "domain_weight": 0.3,
+      "weight": 3.6e-05
+    },
+    "dgt_177465": {
+      "domain": "public_service",
+      "provider": "數位研考處",
+      "documents": 18,
+      "sentence_count": 37,
+      "sentences_by_split": {
+        "dev": 2,
+        "test": 4,
+        "train": 31
+      },
+      "token_count": 1555,
+      "train_token_count": 1259,
+      "sha256": "f08f45dd2cae4f84f226701557191456417aa4646d21552a2e131f6756b93dbc",
+      "domain_weight": 0.3,
+      "weight": 0.000389
+    },
+    "dgt_24392": {
+      "domain": "public_service",
+      "provider": "農業部",
+      "documents": 9999,
+      "sentence_count": 4748,
+      "sentences_by_split": {
+        "dev": 253,
+        "test": 256,
+        "train": 4239
+      },
+      "token_count": 199255,
+      "train_token_count": 177158,
+      "sha256": "1b8537b726c2e7a1939b654ddd25d7e21adb975773fea2ae0865ca22b7541ddb",
+      "domain_weight": 0.3,
+      "weight": 0.054741
+    },
+    "dgt_38262": {
+      "domain": "public_service",
+      "provider": "警政署",
+      "documents": 89,
+      "sentence_count": 505,
+      "sentences_by_split": {
+        "dev": 18,
+        "test": 41,
+        "train": 446
+      },
+      "token_count": 19493,
+      "train_token_count": 17204,
+      "sha256": "03d1cc63b1704fad9535493f2340f249e96851e42e14db49812112c9aab5e8d2",
+      "domain_weight": 0.3,
+      "weight": 0.005316
+    },
+    "dgt_41446": {
+      "domain": "public_service",
+      "provider": "農業部",
+      "documents": 173,
+      "sentence_count": 701,
+      "sentences_by_split": {
+        "dev": 41,
+        "test": 27,
+        "train": 633
+      },
+      "token_count": 24201,
+      "train_token_count": 21766,
+      "sha256": "07e8af0c3ce7cf1ff2989f3a1fe9ed95bfa1990486bc74d052d9554a96bd3789",
+      "domain_weight": 0.3,
+      "weight": 0.006726
+    },
+    "dgt_7301": {
+      "domain": "public_service",
+      "provider": "農業部",
+      "documents": 662,
+      "sentence_count": 1409,
+      "sentences_by_split": {
+        "dev": 72,
+        "test": 51,
+        "train": 1286
+      },
+      "token_count": 37281,
+      "train_token_count": 34325,
+      "sha256": "53ca1e0d4017273e22fcd6c1a2d852ba51e6a6bde14e017ab2d282a087c7934d",
+      "domain_weight": 0.3,
+      "weight": 0.010606
+    },
+    "dgt_9536": {
+      "domain": "public_service",
+      "provider": "農業部",
+      "documents": 350,
+      "sentence_count": 1613,
+      "sentences_by_split": {
+        "dev": 90,
+        "test": 82,
+        "train": 1441
+      },
+      "token_count": 62342,
+      "train_token_count": 55213,
+      "sha256": "44e586bc673ac7976dbbd656fa8430b58b7e50ce7f2753f7928e5997b21ef05d",
+      "domain_weight": 0.3,
+      "weight": 0.017061
+    },
+    "dgt_9807": {
+      "domain": "public_service",
+      "provider": "農業部",
+      "documents": 122,
+      "sentence_count": 1152,
+      "sentences_by_split": {
+        "dev": 45,
+        "test": 116,
+        "train": 991
+      },
+      "token_count": 42665,
+      "train_token_count": 37298,
+      "sha256": "f86deedca7a65bd32b40de5b61fbd4f5e1759fb0f16990af76c6326cae6be1b1",
+      "domain_weight": 0.3,
+      "weight": 0.011525
+    },
+    "dgt_128337": {
+      "domain": "press_release",
+      "provider": "臺北市政府資訊局",
+      "documents": 50,
+      "sentence_count": 693,
+      "sentences_by_split": {
+        "dev": 57,
+        "test": 50,
+        "train": 586
+      },
+      "token_count": 39951,
+      "train_token_count": 33724,
+      "sha256": "72276b808a4e4448fe0356c4f657d0ea58ac8f57dc676092f9de92f0e639020a",
+      "domain_weight": 0.3,
+      "weight": 0.00355
+    },
+    "dgt_166117": {
+      "domain": "press_release",
+      "provider": "國家文官學院",
+      "documents": 5,
+      "sentence_count": 62,
+      "sentences_by_split": {
+        "dev": 11,
+        "test": 21,
+        "train": 30
+      },
+      "token_count": 3323,
+      "train_token_count": 1628,
+      "sha256": "f91fb981a1e78c6e4ddd577d1412db749a68f3bc724e91d3ec16ed59d258101c",
+      "domain_weight": 0.3,
+      "weight": 0.000171
+    },
+    "dgt_174199": {
+      "domain": "press_release",
+      "provider": "經濟部國際貿易署",
+      "documents": 84,
+      "sentence_count": 1066,
+      "sentences_by_split": {
+        "dev": 45,
+        "test": 49,
+        "train": 972
+      },
+      "token_count": 61883,
+      "train_token_count": 56688,
+      "sha256": "9e3823149b594b63d86796715a9f7b04cba3de858a6ad191bd879b73c2483973",
+      "domain_weight": 0.3,
+      "weight": 0.005968
+    },
+    "dgt_175903": {
+      "domain": "press_release",
+      "provider": "台灣中油股份有限公司",
+      "documents": 735,
+      "sentence_count": 4045,
+      "sentences_by_split": {
+        "dev": 153,
+        "test": 281,
+        "train": 3611
+      },
+      "token_count": 260679,
+      "train_token_count": 232528,
+      "sha256": "9f7298eae613b0b1162e23bcde3ab9aa050aae61cba00b06183c050814a1de30",
+      "domain_weight": 0.3,
+      "weight": 0.02448
+    },
+    "dgt_22927": {
+      "domain": "press_release",
+      "provider": "國家發展委員會",
+      "documents": 100,
+      "sentence_count": 1844,
+      "sentences_by_split": {
+        "dev": 13,
+        "test": 118,
+        "train": 1713
+      },
+      "token_count": 101671,
+      "train_token_count": 94369,
+      "sha256": "b3c532d6421913917b20b4daf309c7ecc540d71473a3d1e316491cd13aa328e5",
+      "domain_weight": 0.3,
+      "weight": 0.009935
+    },
+    "dgt_25848": {
+      "domain": "press_release",
+      "provider": "農業部",
+      "documents": 321,
+      "sentence_count": 2326,
+      "sentences_by_split": {
+        "dev": 91,
+        "test": 61,
+        "train": 2174
+      },
+      "token_count": 137238,
+      "train_token_count": 128231,
+      "sha256": "bb13278f39256f1b11a057d94d4566cee9ac28f690c735a1a007bce72bdc9b78",
+      "domain_weight": 0.3,
+      "weight": 0.0135
+    },
+    "dgt_32021": {
+      "domain": "press_release",
+      "provider": "臺灣金融控股股份有限公司",
+      "documents": 8,
+      "sentence_count": 76,
+      "sentences_by_split": {
+        "train": 76
+      },
+      "token_count": 4744,
+      "train_token_count": 4744,
+      "sha256": "27eb07699c86646ff3280b143b8ace5504c42bf1d468d3894ee0ccc28b769579",
+      "domain_weight": 0.3,
+      "weight": 0.000499
+    },
+    "dgt_55229": {
+      "domain": "press_release",
+      "provider": "大陸委員會",
+      "documents": 576,
+      "sentence_count": 5383,
+      "sentences_by_split": {
+        "dev": 262,
+        "test": 296,
+        "train": 4825
+      },
+      "token_count": 317777,
+      "train_token_count": 284133,
+      "sha256": "ddfc40632123dc1dd25ce690fd6893b0def76e74d47c71c9f98da959626d5d0a",
+      "domain_weight": 0.3,
+      "weight": 0.029912
+    },
+    "dgt_6421": {
+      "domain": "press_release",
+      "provider": "行政院",
+      "documents": 78,
+      "sentence_count": 1246,
+      "sentences_by_split": {
+        "dev": 113,
+        "train": 1133
+      },
+      "token_count": 70560,
+      "train_token_count": 64591,
+      "sha256": "f00faf420fab0f786bc6d0586cc676897c1d8527f8557b7ac84b38d085c50141",
+      "domain_weight": 0.3,
+      "weight": 0.0068
+    },
+    "dgt_68551": {
+      "domain": "press_release",
+      "provider": "農業部",
+      "documents": 15,
+      "sentence_count": 217,
+      "sentences_by_split": {
+        "dev": 35,
+        "train": 182
+      },
+      "token_count": 10957,
+      "train_token_count": 9204,
+      "sha256": "8c44cbccf1b958cf394f9fec8076200945fcbd3602ef16d9eb7913929b1e116e",
+      "domain_weight": 0.3,
+      "weight": 0.000969
+    },
+    "dgt_7505": {
+      "domain": "press_release",
+      "provider": "警政署",
+      "documents": 1006,
+      "sentence_count": 9438,
+      "sentences_by_split": {
+        "dev": 514,
+        "test": 492,
+        "train": 8432
+      },
+      "token_count": 546595,
+      "train_token_count": 491240,
+      "sha256": "92ef378cb6dd80547b90207b9f26ca59cbc5e31a1160734ea98ab997f8d350a2",
+      "domain_weight": 0.3,
+      "weight": 0.051716
+    },
+    "dgt_94024": {
+      "domain": "press_release",
+      "provider": "資訊服務處",
+      "documents": 1430,
+      "sentence_count": 22100,
+      "sentences_by_split": {
+        "dev": 702,
+        "test": 1027,
+        "train": 20371
+      },
+      "token_count": 1039346,
+      "train_token_count": 956453,
+      "sha256": "39add267ca9774c57f5f66e34bb97305cdc39ea5be200d4a97456be7db313b9d",
+      "domain_weight": 0.3,
+      "weight": 0.100691
+    },
+    "mofa_press_zh": {
+      "domain": "press_release",
+      "provider": "外交部",
+      "documents": 1000,
+      "sentence_count": 9348,
+      "sentences_by_split": {
+        "dev": 382,
+        "test": 567,
+        "train": 8399
+      },
+      "token_count": 546055,
+      "train_token_count": 492122,
+      "sha256": "8fe18b8cf136f25d52dc3431eec2ac0ac3f7c55fab684ee1bd0094f1664a102e",
+      "domain_weight": 0.3,
+      "weight": 0.051809
+    },
+    "moj_law_zh": {
+      "domain": "legal",
+      "provider": "法務部資訊處",
+      "documents": 1347,
+      "sentence_count": 151133,
+      "sentences_by_split": {
+        "dev": 6947,
+        "test": 10046,
+        "train": 134140
+      },
+      "token_count": 5157852,
+      "train_token_count": 4586721,
+      "sha256": "d8d634f7fddc40d3fe0bad7d5ba8cc9b0311caa4311998470dbf1ba98c629811",
+      "domain_weight": 0.1,
+      "weight": 0.1
+    },
+    "naer_terms_public_admin": {
+      "domain": "terminology",
+      "provider": "國家教育研究院",
+      "terms_added": 3767,
+      "sha256": "8faf844b2393fbb27f432a8a5df8e4194c6e64c8a0c7754b0a6242a7b2e4f05b",
+      "domain_weight": 0.0,
+      "weight": 0.0
+    },
+    "naer_terms_info_k12": {
+      "domain": "terminology",
+      "provider": "國家教育研究院",
+      "terms_added": 940,
+      "sha256": "9931846343405436c5487a1c491a75c7522d93436d75722816cf2e23a6dc10fc",
+      "domain_weight": 0.0,
+      "weight": 0.0
+    },
+    "naer_terms_management": {
+      "domain": "terminology",
+      "provider": "國家教育研究院",
+      "terms_added": 11579,
+      "sha256": "2f323ca6b4cf2a5a83dc01b1b044551c809e73f2f025858fd0b69c7b99e2bf4d",
+      "domain_weight": 0.0,
+      "weight": 0.0
+    },
+    "naer_terms_math": {
+      "domain": "terminology",
+      "provider": "國家教育研究院",
+      "terms_added": 15984,
+      "sha256": "7d87046b66433e4e9331065473b7b1d3f03cddfab4540e3b2315239ad47e802c",
+      "domain_weight": 0.0,
+      "weight": 0.0
+    }
+  },
+  "domains": {
+    "government_faq": {
+      "train_tokens": 936860,
+      "train_sentences": 23822,
+      "general_weight": 0.3
+    },
+    "public_service": {
+      "train_tokens": 970884,
+      "train_sentences": 24553,
+      "general_weight": 0.3
+    },
+    "press_release": {
+      "train_tokens": 2849655,
+      "train_sentences": 52504,
+      "general_weight": 0.3
+    },
+    "other_formal": {
+      "train_tokens": 0,
+      "train_sentences": 0,
+      "general_weight": 0.0
+    },
+    "legal": {
+      "train_tokens": 4586721,
+      "train_sentences": 134140,
+      "general_weight": 0.1
+    }
+  },
+  "configurations": {
+    "raw": {
+      "train_sentences": 235019,
+      "char_tokens": 9579139,
+      "char_vocabulary": 5354,
+      "char_bigrams": 488794,
+      "char_trigrams_kept": 835017
+    },
+    "capped": {
+      "train_sentences": 80000,
+      "char_tokens": 3430061,
+      "char_vocabulary": 4869,
+      "char_bigrams": 346597,
+      "char_trigrams_kept": 395923
+    },
+    "domain/government_faq": {
+      "train_sentences": 23822,
+      "char_tokens": 960682,
+      "char_vocabulary": 2910,
+      "char_bigrams": 128911,
+      "char_trigrams_kept": 126128
+    },
+    "domain/public_service": {
+      "train_sentences": 24553,
+      "char_tokens": 995437,
+      "char_vocabulary": 3800,
+      "char_bigrams": 167386,
+      "char_trigrams_kept": 127271
+    },
+    "domain/press_release": {
+      "train_sentences": 52504,
+      "char_tokens": 2902159,
+      "char_vocabulary": 4674,
+      "char_bigrams": 303468,
+      "char_trigrams_kept": 327450
+    },
+    "domain/legal": {
+      "train_sentences": 134140,
+      "char_tokens": 4720861,
+      "char_vocabulary": 3009,
+      "char_bigrams": 169659,
+      "char_trigrams_kept": 347463
+    }
+  },
+  "domain_cap_sentences": 20000,
+  "min_trigram_count": 2,
+  "word_vocabulary": 32494,
+  "segmentation": "longest match over builtin lexicon + NAER terms; unvalidated, word bigram not built",
+  "duplicate_policy": "global exact dedupe on Han-only key; non-legal domains processed first"
+}

@@ -1,0 +1,107 @@
+# 造序注音 temporal benchmark DEV SET（人工撰寫）。已用於發現 lexicon 缺詞、修改評估設計與調整 Laya 呈現方式，不是 untouched test set。
+# target 是使用者最終想打的文字；suffix 是之後才輸入的讀音（可為空）；
+# acceptable_at_t0 是只看已確認前文與 target 讀音時仍合理的候選，多於一個即為 ambiguous。
+{"id": "t001", "context": "我明天會", "target": "再", "target_readings": ["ㄗㄞˋ"], "suffix": "去台北", "suffix_readings": ["ㄑㄩˋ", "ㄊㄞˊ", "ㄅㄟˇ"], "acceptable_at_t0": ["在", "再", "載"], "tags": ["spec_case_a"]}
+{"id": "t002", "context": "我現在", "target": "在", "target_readings": ["ㄗㄞˋ"], "suffix": "公司", "suffix_readings": ["ㄍㄨㄥ", "ㄙ"], "acceptable_at_t0": ["在", "再"], "tags": ["spec_case_b"]}
+{"id": "t003", "context": "請你", "target": "再", "target_readings": ["ㄗㄞˋ"], "suffix": "說一次", "suffix_readings": ["ㄕㄨㄛ", "ㄧˊ", "ㄘˋ"], "acceptable_at_t0": ["在", "再"], "tags": []}
+{"id": "t004", "context": "我們下次", "target": "再", "target_readings": ["ㄗㄞˋ"], "suffix": "來", "suffix_readings": ["ㄌㄞˊ"], "acceptable_at_t0": ["再"], "tags": []}
+{"id": "t005", "context": "他把貨物", "target": "載", "target_readings": ["ㄗㄞˋ"], "suffix": "走了", "suffix_readings": ["ㄗㄡˇ", "ㄌㄜ˙"], "acceptable_at_t0": ["再", "載"], "tags": []}
+{"id": "t006", "context": "他", "target": "在", "target_readings": ["ㄗㄞˋ"], "suffix": "家裡", "suffix_readings": ["ㄐㄧㄚ", "ㄌㄧˇ"], "acceptable_at_t0": ["在", "再"], "tags": []}
+{"id": "t007", "context": "我", "target": "是", "target_readings": ["ㄕˋ"], "suffix": "學生", "suffix_readings": ["ㄒㄩㄝˊ", "ㄕㄥ"], "acceptable_at_t0": ["是"], "tags": []}
+{"id": "t008", "context": "我昨天去醫院做了健康", "target": "檢查", "target_readings": ["ㄐㄧㄢˇ", "ㄔㄚˊ"], "suffix": "結果很好", "suffix_readings": ["ㄐㄧㄝˊ", "ㄍㄨㄛˇ", "ㄏㄣˇ", "ㄏㄠˇ"], "acceptable_at_t0": ["檢查"], "tags": []}
+{"id": "t009", "context": "這起案件由", "target": "檢察官", "target_readings": ["ㄐㄧㄢˇ", "ㄔㄚˊ", "ㄍㄨㄢ"], "suffix": "負責", "suffix_readings": ["ㄈㄨˋ", "ㄗㄜˊ"], "acceptable_at_t0": ["檢察官"], "tags": []}
+{"id": "t010", "context": "這個", "target": "事件", "target_readings": ["ㄕˋ", "ㄐㄧㄢˋ"], "suffix": "很重要", "suffix_readings": ["ㄏㄣˇ", "ㄓㄨㄥˋ", "ㄧㄠˋ"], "acceptable_at_t0": ["事件"], "tags": []}
+{"id": "t011", "context": "我們下週要去日本", "target": "旅行", "target_readings": ["ㄌㄩˇ", "ㄒㄧㄥˊ"], "suffix": "三天", "suffix_readings": ["ㄙㄢ", "ㄊㄧㄢ"], "acceptable_at_t0": ["旅行"], "tags": []}
+{"id": "t012", "context": "政府應該", "target": "履行", "target_readings": ["ㄌㄩˇ", "ㄒㄧㄥˊ"], "suffix": "承諾", "suffix_readings": ["ㄔㄥˊ", "ㄋㄨㄛˋ"], "acceptable_at_t0": ["履行"], "tags": []}
+{"id": "t013", "context": "這道數學", "target": "公式", "target_readings": ["ㄍㄨㄥ", "ㄕˋ"], "suffix": "很難", "suffix_readings": ["ㄏㄣˇ", "ㄋㄢˊ"], "acceptable_at_t0": ["公式"], "tags": []}
+{"id": "t014", "context": "他出差去處理", "target": "公事", "target_readings": ["ㄍㄨㄥ", "ㄕˋ"], "suffix": "了", "suffix_readings": ["ㄌㄜ˙"], "acceptable_at_t0": ["公事"], "tags": []}
+{"id": "t015", "context": "敵軍發動猛烈的", "target": "攻勢", "target_readings": ["ㄍㄨㄥ", "ㄕˋ"], "suffix": "", "suffix_readings": [], "acceptable_at_t0": ["攻勢"], "tags": []}
+{"id": "t016", "context": "這家餐廳的", "target": "價格", "target_readings": ["ㄐㄧㄚˋ", "ㄍㄜˊ"], "suffix": "很貴", "suffix_readings": ["ㄏㄣˇ", "ㄍㄨㄟˋ"], "acceptable_at_t0": ["價格"], "tags": []}
+{"id": "t017", "context": "政府宣布新的經濟", "target": "政策", "target_readings": ["ㄓㄥˋ", "ㄘㄜˋ"], "suffix": "", "suffix_readings": [], "acceptable_at_t0": ["政策"], "tags": []}
+{"id": "t018", "context": "我們要尊重每個人的", "target": "意見", "target_readings": ["ㄧˋ", "ㄐㄧㄢˋ"], "suffix": "", "suffix_readings": [], "acceptable_at_t0": ["意見"], "tags": []}
+{"id": "t019", "context": "他因為生病所以", "target": "請假", "target_readings": ["ㄑㄧㄥˇ", "ㄐㄧㄚˋ"], "suffix": "一天", "suffix_readings": ["ㄧˋ", "ㄊㄧㄢ"], "acceptable_at_t0": ["請假"], "tags": []}
+{"id": "t020", "context": "這次考試的", "target": "成績", "target_readings": ["ㄔㄥˊ", "ㄐㄧ"], "suffix": "很好", "suffix_readings": ["ㄏㄣˇ", "ㄏㄠˇ"], "acceptable_at_t0": ["成績"], "tags": []}
+{"id": "t021", "context": "兩個數相乘的結果叫做", "target": "乘積", "target_readings": ["ㄔㄥˊ", "ㄐㄧ"], "suffix": "", "suffix_readings": [], "acceptable_at_t0": ["乘積"], "tags": []}
+{"id": "t022", "context": "他正在寫電腦", "target": "程式", "target_readings": ["ㄔㄥˊ", "ㄕˋ"], "suffix": "", "suffix_readings": [], "acceptable_at_t0": ["程式"], "tags": []}
+{"id": "t023", "context": "台北是一座大", "target": "城市", "target_readings": ["ㄔㄥˊ", "ㄕˋ"], "suffix": "", "suffix_readings": [], "acceptable_at_t0": ["城市"], "tags": []}
+{"id": "t024", "context": "做人要", "target": "誠實", "target_readings": ["ㄔㄥˊ", "ㄕˊ"], "suffix": "", "suffix_readings": [], "acceptable_at_t0": ["誠實"], "tags": []}
+{"id": "t025", "context": "他對歷史很有", "target": "興趣", "target_readings": ["ㄒㄧㄥˋ", "ㄑㄩˋ"], "suffix": "", "suffix_readings": [], "acceptable_at_t0": ["興趣"], "tags": []}
+{"id": "t026", "context": "醫生說他需要多", "target": "休息", "target_readings": ["ㄒㄧㄡ", "ㄒㄧˊ"], "suffix": "", "suffix_readings": [], "acceptable_at_t0": ["休息"], "tags": []}
+{"id": "t027", "context": "媽媽正在廚房", "target": "煮飯", "target_readings": ["ㄓㄨˇ", "ㄈㄢˋ"], "suffix": "", "suffix_readings": [], "acceptable_at_t0": ["煮飯"], "tags": []}
+{"id": "t028", "context": "警方逮捕了這起案件的", "target": "主犯", "target_readings": ["ㄓㄨˇ", "ㄈㄢˋ"], "suffix": "", "suffix_readings": [], "acceptable_at_t0": ["主犯"], "tags": []}
+{"id": "t029", "context": "我每天早上都去", "target": "公園", "target_readings": ["ㄍㄨㄥ", "ㄩㄢˊ"], "suffix": "運動", "suffix_readings": ["ㄩㄣˋ", "ㄉㄨㄥˋ"], "acceptable_at_t0": ["公園"], "tags": []}
+{"id": "t030", "context": "加班到半夜，我今天很", "target": "累", "target_readings": ["ㄌㄟˋ"], "suffix": "", "suffix_readings": [], "acceptable_at_t0": ["累"], "tags": []}
+{"id": "t031", "context": "她感動得流下眼", "target": "淚", "target_readings": ["ㄌㄟˋ"], "suffix": "", "suffix_readings": [], "acceptable_at_t0": ["淚"], "tags": []}
+{"id": "t032", "context": "我們是同一", "target": "類", "target_readings": ["ㄌㄟˋ"], "suffix": "人", "suffix_readings": ["ㄖㄣˊ"], "acceptable_at_t0": ["類"], "tags": []}
+{"id": "t033", "context": "今天的天氣很", "target": "冷", "target_readings": ["ㄌㄥˇ"], "suffix": "", "suffix_readings": [], "acceptable_at_t0": ["冷"], "tags": []}
+{"id": "t034", "context": "他在書店買了一", "target": "本", "target_readings": ["ㄅㄣˇ"], "suffix": "書", "suffix_readings": ["ㄕㄨ"], "acceptable_at_t0": ["本"], "tags": []}
+{"id": "t035", "context": "這件衣服太", "target": "貴", "target_readings": ["ㄍㄨㄟˋ"], "suffix": "了", "suffix_readings": ["ㄌㄜ˙"], "acceptable_at_t0": ["貴"], "tags": []}
+{"id": "t036", "context": "我好渴，想喝", "target": "水", "target_readings": ["ㄕㄨㄟˇ"], "suffix": "", "suffix_readings": [], "acceptable_at_t0": ["水"], "tags": []}
+{"id": "t037", "context": "他跑得很", "target": "快", "target_readings": ["ㄎㄨㄞˋ"], "suffix": "", "suffix_readings": [], "acceptable_at_t0": ["快"], "tags": []}
+{"id": "t038", "context": "歡迎光臨，請", "target": "坐", "target_readings": ["ㄗㄨㄛˋ"], "suffix": "", "suffix_readings": [], "acceptable_at_t0": ["坐", "做"], "tags": []}
+{"id": "t039", "context": "趕快把功課", "target": "做", "target_readings": ["ㄗㄨㄛˋ"], "suffix": "完", "suffix_readings": ["ㄨㄢˊ"], "acceptable_at_t0": ["做"], "tags": []}
+{"id": "t040", "context": "我們", "target": "坐", "target_readings": ["ㄗㄨㄛˋ"], "suffix": "車去", "suffix_readings": ["ㄔㄜ", "ㄑㄩˋ"], "acceptable_at_t0": ["坐", "做", "作"], "tags": []}
+{"id": "t041", "context": "我們", "target": "做", "target_readings": ["ㄗㄨㄛˋ"], "suffix": "功課", "suffix_readings": ["ㄍㄨㄥ", "ㄎㄜˋ"], "acceptable_at_t0": ["坐", "做", "作"], "tags": []}
+{"id": "t042", "context": "我不太", "target": "會", "target_readings": ["ㄏㄨㄟˋ"], "suffix": "說英文", "suffix_readings": ["ㄕㄨㄛ", "ㄧㄥ", "ㄨㄣˊ"], "acceptable_at_t0": ["會"], "tags": []}
+{"id": "t043", "context": "明天下午要", "target": "開會", "target_readings": ["ㄎㄞ", "ㄏㄨㄟˋ"], "suffix": "", "suffix_readings": [], "acceptable_at_t0": ["開會"], "tags": []}
+{"id": "t044", "context": "他拿起畫筆開始", "target": "畫", "target_readings": ["ㄏㄨㄚˋ"], "suffix": "", "suffix_readings": [], "acceptable_at_t0": ["畫"], "tags": []}
+{"id": "t045", "context": "我會記住你說的", "target": "話", "target_readings": ["ㄏㄨㄚˋ"], "suffix": "", "suffix_readings": [], "acceptable_at_t0": ["話"], "tags": []}
+{"id": "t046", "context": "他很會", "target": "畫", "target_readings": ["ㄏㄨㄚˋ"], "suffix": "畫", "suffix_readings": ["ㄏㄨㄚˋ"], "acceptable_at_t0": ["畫", "話"], "tags": []}
+{"id": "t047", "context": "他很會說", "target": "話", "target_readings": ["ㄏㄨㄚˋ"], "suffix": "", "suffix_readings": [], "acceptable_at_t0": ["話"], "tags": []}
+{"id": "t048", "context": "最近天氣的", "target": "變化", "target_readings": ["ㄅㄧㄢˋ", "ㄏㄨㄚˋ"], "suffix": "很大", "suffix_readings": ["ㄏㄣˇ", "ㄉㄚˋ"], "acceptable_at_t0": ["變化"], "tags": []}
+{"id": "t049", "context": "過了這麼多年，我還", "target": "記得", "target_readings": ["ㄐㄧˋ", "ㄉㄜ˙"], "suffix": "", "suffix_readings": [], "acceptable_at_t0": ["記得"], "tags": []}
+{"id": "t050", "context": "這條規定不", "target": "適用", "target_readings": ["ㄕˋ", "ㄩㄥˋ"], "suffix": "", "suffix_readings": [], "acceptable_at_t0": ["適用"], "tags": []}
+{"id": "t051", "context": "新員工需要三個月的", "target": "試用", "target_readings": ["ㄕˋ", "ㄩㄥˋ"], "suffix": "期", "suffix_readings": ["ㄑㄧˊ"], "acceptable_at_t0": ["試用"], "tags": []}
+{"id": "t052", "context": "這個方法", "target": "適用", "target_readings": ["ㄕˋ", "ㄩㄥˋ"], "suffix": "於所有情況", "suffix_readings": ["ㄩˊ", "ㄙㄨㄛˇ", "ㄧㄡˇ", "ㄑㄧㄥˊ", "ㄎㄨㄤˋ"], "acceptable_at_t0": ["適用", "試用"], "tags": []}
+{"id": "t053", "context": "我們需要找出問題的", "target": "原因", "target_readings": ["ㄩㄢˊ", "ㄧㄣ"], "suffix": "", "suffix_readings": [], "acceptable_at_t0": ["原因"], "tags": []}
+{"id": "t054", "context": "他對這份工作很", "target": "滿意", "target_readings": ["ㄇㄢˇ", "ㄧˋ"], "suffix": "", "suffix_readings": [], "acceptable_at_t0": ["滿意"], "tags": []}
+{"id": "t055", "context": "這個產品的", "target": "品質", "target_readings": ["ㄆㄧㄣˇ", "ㄓˊ"], "suffix": "很好", "suffix_readings": ["ㄏㄣˇ", "ㄏㄠˇ"], "acceptable_at_t0": ["品質"], "tags": []}
+{"id": "t056", "context": "你來晚了，他", "target": "已經", "target_readings": ["ㄧˇ", "ㄐㄧㄥ"], "suffix": "走了", "suffix_readings": ["ㄗㄡˇ", "ㄌㄜ˙"], "acceptable_at_t0": ["已經"], "tags": []}
+{"id": "t057", "context": "上下樓梯請", "target": "注意", "target_readings": ["ㄓㄨˋ", "ㄧˋ"], "suffix": "安全", "suffix_readings": ["ㄢ", "ㄑㄩㄢˊ"], "acceptable_at_t0": ["注意"], "tags": []}
+{"id": "t058", "context": "他打破了世界", "target": "紀錄", "target_readings": ["ㄐㄧˋ", "ㄌㄨˋ"], "suffix": "", "suffix_readings": [], "acceptable_at_t0": ["紀錄"], "tags": []}
+{"id": "t059", "context": "請把會議內容", "target": "記錄", "target_readings": ["ㄐㄧˋ", "ㄌㄨˋ"], "suffix": "下來", "suffix_readings": ["ㄒㄧㄚˋ", "ㄌㄞˊ"], "acceptable_at_t0": ["記錄"], "tags": []}
+{"id": "t060", "context": "為了按時完成，我們", "target": "必須", "target_readings": ["ㄅㄧˋ", "ㄒㄩ"], "suffix": "加班", "suffix_readings": ["ㄐㄧㄚ", "ㄅㄢ"], "acceptable_at_t0": ["必須"], "tags": []}
+{"id": "t061", "context": "水是生活", "target": "必需", "target_readings": ["ㄅㄧˋ", "ㄒㄩ"], "suffix": "品", "suffix_readings": ["ㄆㄧㄣˇ"], "acceptable_at_t0": ["必需"], "tags": []}
+{"id": "t062", "context": "祝你好", "target": "運", "target_readings": ["ㄩㄣˋ"], "suffix": "", "suffix_readings": [], "acceptable_at_t0": ["運"], "tags": []}
+{"id": "t063", "context": "這條", "target": "河", "target_readings": ["ㄏㄜˊ"], "suffix": "很長", "suffix_readings": ["ㄏㄣˇ", "ㄔㄤˊ"], "acceptable_at_t0": ["河"], "tags": []}
+{"id": "t064", "context": "爸爸", "target": "和", "target_readings": ["ㄏㄜˊ"], "suffix": "媽媽", "suffix_readings": ["ㄇㄚ", "ㄇㄚ"], "acceptable_at_t0": ["和"], "tags": []}
+{"id": "t065", "context": "我出門忘了帶", "target": "手機", "target_readings": ["ㄕㄡˇ", "ㄐㄧ"], "suffix": "", "suffix_readings": [], "acceptable_at_t0": ["手機"], "tags": []}
+{"id": "t066", "context": "我在門口", "target": "等", "target_readings": ["ㄉㄥˇ"], "suffix": "你", "suffix_readings": ["ㄋㄧˇ"], "acceptable_at_t0": ["等"], "tags": []}
+{"id": "t067", "context": "這次考試的", "target": "題目", "target_readings": ["ㄊㄧˊ", "ㄇㄨˋ"], "suffix": "很難", "suffix_readings": ["ㄏㄣˇ", "ㄋㄢˊ"], "acceptable_at_t0": ["題目"], "tags": []}
+{"id": "t068", "context": "在會議上他", "target": "提出", "target_readings": ["ㄊㄧˊ", "ㄔㄨ"], "suffix": "問題", "suffix_readings": ["ㄨㄣˋ", "ㄊㄧˊ"], "acceptable_at_t0": ["提出"], "tags": []}
+{"id": "t069", "context": "我們應該", "target": "保護", "target_readings": ["ㄅㄠˇ", "ㄏㄨˋ"], "suffix": "環境", "suffix_readings": ["ㄏㄨㄢˊ", "ㄐㄧㄥˋ"], "acceptable_at_t0": ["保護"], "tags": []}
+{"id": "t070", "context": "保險公司會通知所有", "target": "保戶", "target_readings": ["ㄅㄠˇ", "ㄏㄨˋ"], "suffix": "", "suffix_readings": [], "acceptable_at_t0": ["保戶"], "tags": []}
+{"id": "t071", "context": "明天要交期末", "target": "報告", "target_readings": ["ㄅㄠˋ", "ㄍㄠˋ"], "suffix": "", "suffix_readings": [], "acceptable_at_t0": ["報告"], "tags": []}
+{"id": "t072", "context": "我很喜歡這", "target": "首", "target_readings": ["ㄕㄡˇ"], "suffix": "歌", "suffix_readings": ["ㄍㄜ"], "acceptable_at_t0": ["首"], "tags": []}
+{"id": "t073", "context": "他是我的", "target": "同事", "target_readings": ["ㄊㄨㄥˊ", "ㄕˋ"], "suffix": "", "suffix_readings": [], "acceptable_at_t0": ["同事"], "tags": []}
+{"id": "t074", "context": "這兩件事不能", "target": "同時", "target_readings": ["ㄊㄨㄥˊ", "ㄕˊ"], "suffix": "進行", "suffix_readings": ["ㄐㄧㄣˋ", "ㄒㄧㄥˊ"], "acceptable_at_t0": ["同時"], "tags": []}
+{"id": "t075", "context": "他在", "target": "銀行", "target_readings": ["ㄧㄣˊ", "ㄏㄤˊ"], "suffix": "工作", "suffix_readings": ["ㄍㄨㄥ", "ㄗㄨㄛˋ"], "acceptable_at_t0": ["銀行"], "tags": []}
+{"id": "t076", "context": "他聽到這個消息非常", "target": "生氣", "target_readings": ["ㄕㄥ", "ㄑㄧˋ"], "suffix": "", "suffix_readings": [], "acceptable_at_t0": ["生氣"], "tags": []}
+{"id": "t077", "context": "山上的", "target": "空氣", "target_readings": ["ㄎㄨㄥ", "ㄑㄧˋ"], "suffix": "很好", "suffix_readings": ["ㄏㄣˇ", "ㄏㄠˇ"], "acceptable_at_t0": ["空氣"], "tags": []}
+{"id": "t078", "context": "他全心投入自己的", "target": "事業", "target_readings": ["ㄕˋ", "ㄧㄝˋ"], "suffix": "", "suffix_readings": [], "acceptable_at_t0": ["事業"], "tags": []}
+{"id": "t079", "context": "登高望遠可以開闊", "target": "視野", "target_readings": ["ㄕˋ", "ㄧㄝˇ"], "suffix": "", "suffix_readings": [], "acceptable_at_t0": ["視野"], "tags": []}
+{"id": "t080", "context": "下週就是", "target": "期中", "target_readings": ["ㄑㄧˊ", "ㄓㄨㄥ"], "suffix": "考試", "suffix_readings": ["ㄎㄠˇ", "ㄕˋ"], "acceptable_at_t0": ["期中", "其中"], "tags": []}
+{"id": "t081", "context": "我們班有三個人通過，他是", "target": "其中", "target_readings": ["ㄑㄧˊ", "ㄓㄨㄥ"], "suffix": "一個", "suffix_readings": ["ㄧˊ", "ㄍㄜ˙"], "acceptable_at_t0": ["其中"], "tags": []}
+{"id": "t082", "context": "每個公民都有投票的", "target": "權利", "target_readings": ["ㄑㄩㄢˊ", "ㄌㄧˋ"], "suffix": "", "suffix_readings": [], "acceptable_at_t0": ["權利"], "tags": []}
+{"id": "t083", "context": "總統掌握了很大的", "target": "權力", "target_readings": ["ㄑㄩㄢˊ", "ㄌㄧˋ"], "suffix": "", "suffix_readings": [], "acceptable_at_t0": ["權力"], "tags": []}
+{"id": "t084", "context": "他有豐富的工作", "target": "經歷", "target_readings": ["ㄐㄧㄥ", "ㄌㄧˋ"], "suffix": "", "suffix_readings": [], "acceptable_at_t0": ["經歷"], "tags": []}
+{"id": "t085", "context": "年輕人總是充滿", "target": "精力", "target_readings": ["ㄐㄧㄥ", "ㄌㄧˋ"], "suffix": "", "suffix_readings": [], "acceptable_at_t0": ["精力"], "tags": []}
+{"id": "t086", "context": "遇到突發狀況，他的", "target": "反應", "target_readings": ["ㄈㄢˇ", "ㄧㄥˋ"], "suffix": "很快", "suffix_readings": ["ㄏㄣˇ", "ㄎㄨㄞˋ"], "acceptable_at_t0": ["反應"], "tags": []}
+{"id": "t087", "context": "這部電影真實地", "target": "反映", "target_readings": ["ㄈㄢˇ", "ㄧㄥˋ"], "suffix": "社會問題", "suffix_readings": ["ㄕㄜˋ", "ㄏㄨㄟˋ", "ㄨㄣˋ", "ㄊㄧˊ"], "acceptable_at_t0": ["反映"], "tags": []}
+{"id": "t088", "context": "目前的國際", "target": "形勢", "target_readings": ["ㄒㄧㄥˊ", "ㄕˋ"], "suffix": "", "suffix_readings": [], "acceptable_at_t0": ["形勢"], "tags": []}
+{"id": "t089", "context": "昨天晚上這裡", "target": "發生", "target_readings": ["ㄈㄚ", "ㄕㄥ"], "suffix": "車禍", "suffix_readings": ["ㄔㄜ", "ㄏㄨㄛˋ"], "acceptable_at_t0": ["發生"], "tags": []}
+{"id": "t090", "context": "請依照老師的", "target": "指示", "target_readings": ["ㄓˇ", "ㄕˋ"], "suffix": "", "suffix_readings": [], "acceptable_at_t0": ["指示"], "tags": []}
+{"id": "t091", "context": "別生氣，我", "target": "只是", "target_readings": ["ㄓˇ", "ㄕˋ"], "suffix": "開玩笑", "suffix_readings": ["ㄎㄞ", "ㄨㄢˊ", "ㄒㄧㄠˋ"], "acceptable_at_t0": ["只是"], "tags": []}
+{"id": "t092", "context": "這個結果對我們很", "target": "有利", "target_readings": ["ㄧㄡˇ", "ㄌㄧˋ"], "suffix": "", "suffix_readings": [], "acceptable_at_t0": ["有利"], "tags": []}
+{"id": "t093", "context": "他的論點強而", "target": "有力", "target_readings": ["ㄧㄡˇ", "ㄌㄧˋ"], "suffix": "", "suffix_readings": [], "acceptable_at_t0": ["有力"], "tags": []}
+{"id": "t094", "context": "這件事對我有很大的", "target": "意義", "target_readings": ["ㄧˋ", "ㄧˋ"], "suffix": "", "suffix_readings": [], "acceptable_at_t0": ["意義"], "tags": []}
+{"id": "t095", "context": "有人對這項決議提出", "target": "異議", "target_readings": ["ㄧˋ", "ㄧˋ"], "suffix": "", "suffix_readings": [], "acceptable_at_t0": ["異議"], "tags": []}
+{"id": "t096", "context": "高速公路發生交通", "target": "事故", "target_readings": ["ㄕˋ", "ㄍㄨˋ"], "suffix": "", "suffix_readings": [], "acceptable_at_t0": ["事故"], "tags": []}
+{"id": "t097", "context": "他從小就", "target": "近視", "target_readings": ["ㄐㄧㄣˋ", "ㄕˋ"], "suffix": "", "suffix_readings": [], "acceptable_at_t0": ["近視"], "tags": []}
+{"id": "t098", "context": "在疫情", "target": "期間", "target_readings": ["ㄑㄧˊ", "ㄐㄧㄢ"], "suffix": "", "suffix_readings": [], "acceptable_at_t0": ["期間"], "tags": []}
+{"id": "t099", "context": "", "target": "我", "target_readings": ["ㄨㄛˇ"], "suffix": "明天會再去台北", "suffix_readings": ["ㄇㄧㄥˊ", "ㄊㄧㄢ", "ㄏㄨㄟˋ", "ㄗㄞˋ", "ㄑㄩˋ", "ㄊㄞˊ", "ㄅㄟˇ"], "acceptable_at_t0": ["我"], "tags": ["full_bopomofo"]}
+{"id": "t100", "context": "", "target": "今天", "target_readings": ["ㄐㄧㄣ", "ㄊㄧㄢ"], "suffix": "天氣很好", "suffix_readings": ["ㄊㄧㄢ", "ㄑㄧˋ", "ㄏㄣˇ", "ㄏㄠˇ"], "acceptable_at_t0": ["今天"], "tags": ["full_bopomofo"]}
+{"id": "t101", "context": "", "target": "他", "target_readings": ["ㄊㄚ"], "suffix": "是我的同事", "suffix_readings": ["ㄕˋ", "ㄨㄛˇ", "ㄉㄜ˙", "ㄊㄨㄥˊ", "ㄕˋ"], "acceptable_at_t0": ["他", "她", "它"], "tags": ["full_bopomofo"]}
+{"id": "t102", "context": "", "target": "我們", "target_readings": ["ㄨㄛˇ", "ㄇㄣ˙"], "suffix": "一起去公園", "suffix_readings": ["ㄧˋ", "ㄑㄧˇ", "ㄑㄩˋ", "ㄍㄨㄥ", "ㄩㄢˊ"], "acceptable_at_t0": ["我們"], "tags": ["full_bopomofo"]}
+{"id": "t103", "context": "", "target": "請", "target_readings": ["ㄑㄧㄥˇ"], "suffix": "再說一次", "suffix_readings": ["ㄗㄞˋ", "ㄕㄨㄛ", "ㄧˊ", "ㄘˋ"], "acceptable_at_t0": ["請"], "tags": ["full_bopomofo"]}
+{"id": "t104", "context": "", "target": "那本書", "target_readings": ["ㄋㄚˋ", "ㄅㄣˇ", "ㄕㄨ"], "suffix": "在哪裡", "suffix_readings": ["ㄗㄞˋ", "ㄋㄚˇ", "ㄌㄧˇ"], "acceptable_at_t0": ["那本書"], "tags": ["full_bopomofo"]}

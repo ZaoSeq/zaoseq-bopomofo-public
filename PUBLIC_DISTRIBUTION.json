@@ -1,0 +1,269 @@
+{
+  "schema": "zaoseq-bopomofo/public-distribution/v1",
+  "name": "zaoseq-bopomofo public core v0.1.0",
+  "tool": "zaoseq-public-export/1",
+  "policy_sha256": "afee75ba5bfe79dc689cea04dc86ac953a933c6fb8fc4892822673fffa4d2734",
+  "exported_at": "2026-09-24T15:39:24+00:00",
+  "source": {
+    "repository": "ZaoSeq internal zaoseq-bopomofo (private)",
+    "commit": "0f81fc6c6656b0c0a40e516878f2deb31bda3e6b",
+    "commit_date": "2026-09-23T22:51:24+08:00",
+    "ancestor_tags": [
+      "v0.1.0-research-preview"
+    ]
+  },
+  "verification": {
+    "public_distribution": "every file listed under 'files' matches its SHA-256 (text files hashed with LF line endings); run `python -m zaoseq_bopomofo.distribution verify` in the internal repo or recompute the hashes",
+    "historical_full_source": "v0.1 FINAL.json and the fine-tuned model need private files and weights; they are verified only in the internal repository. The hashes under 'private_commitments' let the internal records be matched later without disclosing them; excluded components are listed by category only.",
+    "not_claimed": "this distribution cannot reproduce the v0.1 production ranking path or any metric of the private fine-tuned teacher"
+  },
+  "private_commitments": {
+    "v0.1 private freeze record": "ed781f57a0bac99b4be25f7144f6fedd7ccd076bceb46673963c1f51d5ce8826",
+    "v0.1 private training plan": "4b1040595db9de333c15853b2bcea3a8b82a1c84f7c2fe845c69aeedef392cf5"
+  },
+  "excluded_components": [
+    {
+      "name": "production ranker training",
+      "destination": "zaoseq-ranker (private)",
+      "reason": "training recipe, hard-negative mining and training data composition are production assets"
+    },
+    {
+      "name": "production ranker runtime and model artifacts",
+      "destination": "zaoseq-ranker (private)",
+      "reason": "model loading, inference format and weights of the fine-tuned ranker are not public"
+    },
+    {
+      "name": "service, release and deployment",
+      "destination": "zaoseq-ranker (private) until the public API interface is split out",
+      "reason": "these files load the private model directly; a public API layer with a pluggable ranker is planned after the v0.2 freeze"
+    },
+    {
+      "name": "IME prototype",
+      "destination": "zaoseq-ime-windows (private)",
+      "reason": "IME product behaviour"
+    },
+    {
+      "name": "v0.1 historical full-source verification",
+      "destination": "internal repository only",
+      "reason": "FINAL.json locks private code and model weights; its hash is published under private_commitments"
+    },
+    {
+      "name": "tests of excluded components",
+      "destination": "stay with the component they test",
+      "reason": "they import excluded modules or verify private records"
+    },
+    {
+      "name": "internal history and notes",
+      "destination": "internal repository",
+      "reason": "public versions are generated from distribution/templates"
+    }
+  ],
+  "transformed": {
+    ".gitignore": [
+      "replace_text"
+    ],
+    "THIRD_PARTY_NOTICES.md": [
+      "drop_markdown_sections",
+      "replace_text"
+    ],
+    "benchmarks/results/dev_balanced.json": [
+      "replace_text"
+    ],
+    "benchmarks/results/dev_corpus.json": [
+      "replace_text"
+    ],
+    "benchmarks/results/dev_invariant_fix.json": [
+      "replace_text"
+    ],
+    "benchmarks/results/dev_latest.json": [
+      "replace_text"
+    ],
+    "benchmarks/results/dev_pairwise.json": [
+      "replace_text"
+    ],
+    "benchmarks/results/sanity_balanced.json": [
+      "replace_text"
+    ],
+    "benchmarks/results/sanity_corpus.json": [
+      "replace_text"
+    ],
+    "benchmarks/results/sanity_pairwise.json": [
+      "replace_text"
+    ],
+    "data/SOURCES.md": [
+      "replace_text"
+    ],
+    "data/corpus/README.md": [
+      "replace_text"
+    ],
+    "pyproject.toml": [
+      "replace_text"
+    ],
+    "src/zaoseq_bopomofo/corpus/__main__.py": [
+      "replace_text"
+    ],
+    "src/zaoseq_bopomofo/corpus/sources_md.py": [
+      "replace_text"
+    ],
+    "src/zaoseq_bopomofo/evaluation/benchmark.py": [
+      "stub_python_definitions",
+      "replace_text"
+    ],
+    "src/zaoseq_bopomofo/evaluation/decoding.py": [
+      "replace_text"
+    ],
+    "src/zaoseq_bopomofo/evaluation/freeze.py": [
+      "replace_text"
+    ],
+    "CHANGELOG.md": [
+      "generated_from_template"
+    ],
+    "NOTICE": [
+      "generated_from_template"
+    ],
+    "README.md": [
+      "generated_from_template"
+    ],
+    "RELEASE_NOTES.md": [
+      "generated_from_template"
+    ],
+    "docs/PUBLIC_BOUNDARY.md": [
+      "generated_from_template"
+    ]
+  },
+  "files": {
+    ".gitignore": "70807eda35f7457ebdda1eb16230968256563b8af171428474feb015c34eb559",
+    "CHANGELOG.md": "8ed6e5496aae137e3b616a895e5ea021c7541de56ac279f100039371e9976911",
+    "LICENSE": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
+    "NOTICE": "47a5cd36acc312655a23680cd63300cfd08c6df563a4629a0a8bd9f5da46bad3",
+    "README.md": "3705b686fdfa3e2e3702c42e4e6d5454ac22344f19f3c98a25294853ae3665d7",
+    "RELEASE_NOTES.md": "14a9d9ca094632a7a9a73ef5600880a3b3e3f0ac2ff126ce3489993085417280",
+    "THIRD_PARTY_NOTICES.md": "f4b0412dedda1300003fb08705e27d57a885554c589b1830b6f48ab1d27c47e8",
+    "benchmarks/dev/composition.jsonl": "8a38530f6dff5d66589f67cef2292703799051de0d353490439ea4f2d6f4c90c",
+    "benchmarks/dev/immediate.jsonl": "285a7cdca4913d1e55ab8f214b627bad37b1543c993d943a1230a9dab3f53f59",
+    "benchmarks/dev/seeds.jsonl": "41ef8b4d8fd5be07637048e7ad3af5563afeab04445116723b844fba01e7f783",
+    "benchmarks/early_single_step/RESULTS.md": "ed50321abcf7b738f586fda55aba7fe80dd33ed1b45c5741e4e46a55c474408b",
+    "benchmarks/early_single_step/cases.jsonl": "0b0af9fc11963cecb435e1b71519f2a7790f6a26c37afcb98e4a033eb0b25539",
+    "benchmarks/early_single_step/seeds.jsonl": "ff3574b308647229b64fb7895a739b299cb4aba5bb1bdea6a5acdcddb8a2d1fa",
+    "benchmarks/frozen/V0.json": "4be20a13aeb7169b28df6cd841de55f081ee2afa80291cf2bfb23e2cec0d56aa",
+    "benchmarks/results/decoding_gate_diagnostic.md": "20db4bc575c67a8f9f63740d4f69159ec5a28a82d690c1d5e31de419c78bf2c7",
+    "benchmarks/results/decoding_latest.json": "2887c9621422aa9afd5dd63af13677e01963cf95f7f7b065f243a654d1829c96",
+    "benchmarks/results/decoding_latest.md": "fb680258aebd55a9562cd8a38a9d9a364d3e1a8267afac1e5108485d8869167a",
+    "benchmarks/results/dev_balanced.json": "c5799eb80e3dd1cc2f07fefe5785a4785fdc40ef1eb744f77d6eab7c2fe363c9",
+    "benchmarks/results/dev_balanced.md": "96ea75e9661ac8ad025cb58b4313fb97c448dc01def5827ae0f7e756e3c33223",
+    "benchmarks/results/dev_corpus.json": "f2ec95b86ad29adb2a67d8d55542680a1117f8f478b86abe1018e31f1894c6ac",
+    "benchmarks/results/dev_corpus.md": "84b3e8933877620d5c5064ea634dc774f1e055ceca8462682085e3f71dd54584",
+    "benchmarks/results/dev_invariant_fix.json": "bce73f59ce8b0f7be18f363ef0c0fc7aa749248fe60b25ff10f48974b2cd6f2a",
+    "benchmarks/results/dev_latest.json": "91221eb1929ddc24b0d3e64173b71afc909b90ca72aed115c83bc5a6f4e8c5dd",
+    "benchmarks/results/dev_latest.md": "ffd9dc07a86db3ab76bd76b84af46f6180ebcb5346c05d7fb20da73b3e27034a",
+    "benchmarks/results/dev_order_bias.json": "acaceff0cdad31bdb49da99645143b5a357995909f3d3d38f9d464ddb8fb2f15",
+    "benchmarks/results/dev_pairwise.json": "d295972ace091847b5c0b1370bbd206d7a48b05a307325f3f56ff40ad12540d8",
+    "benchmarks/results/dev_pairwise.md": "a0e072fbde7b6f80c1a9e9fc07c13ac880daee600a90da9f37712e75313a9580",
+    "benchmarks/results/domain_latest.json": "6b93528efc65eb7547c1c68b8a0121b60ce9eb9bf9296b2d49c4b171399cc589",
+    "benchmarks/results/domain_latest.md": "63b8688789a4cec682311a25767e9762d36b994dc4ad50064bb12cd81ffd0c43",
+    "benchmarks/results/sanity_balanced.json": "45107631dfac8479ed893eca4c3a0b20447d241e1f950ee19bbde2f5d500dc65",
+    "benchmarks/results/sanity_balanced.md": "0be359d519ec4be3f08c01ad49a1ff1472ade889bfc0e81cb56cda064752d2b8",
+    "benchmarks/results/sanity_corpus.json": "ec33ee6171f437e2cd0b910807a5c0256a62b04c6ea840a150670e171fa98a10",
+    "benchmarks/results/sanity_corpus.md": "4a3410a3f6bd522ff86d64459168b973b2c7a4393ae4df41e638e1205371cb75",
+    "benchmarks/results/sanity_pairwise.json": "335a606799fb2f5f37c1b80ef8a80d9503a6e72a458d5bee8c2f87d3d738cdc1",
+    "benchmarks/results/sanity_pairwise.md": "ffff7d1186a8249911443bcf3e31a51677102845e305a327111ef0b4152efaf3",
+    "benchmarks/results/test_final.md": "f679729d2035bb255bf2aa7162129ab8623ba7b1dd29f8b4955ad3b7a980a32e",
+    "benchmarks/sanity/composition.jsonl": "411ca923296c6b689123ec99e3da1201a4802dcc55c0083e6958e77aa4946fe5",
+    "benchmarks/sanity/immediate.jsonl": "243221c638bbab2a028f648dafd2b8b1083072cbf178ffebcc2dbf506cb0f07c",
+    "benchmarks/sanity/seeds.jsonl": "b78213c3b5b48e2fdac855361c89be8989212e473e67ed1607435aacde6884cc",
+    "benchmarks/test/MANIFEST.json": "62cf544720303d8a61226c013b2ee57d4305cf1fe7deae53169914dd2c08211d",
+    "benchmarks/test/README.md": "3e454bee0a8f9626345c75c06387610b87e1633656f96c1b09ae8933735058b0",
+    "benchmarks/test/everyday.jsonl": "055970e0766511a212f0a05ce5027aeff7bf5d739c97597351e5de2d5455f969",
+    "benchmarks/test/everyday_source.tsv": "efc46a36ded63910af442133f9140040d415c58a31ccd959f1bf19ff107be328",
+    "benchmarks/test/gov.jsonl": "e7c46f447aef11aa6b2dda1b1e84cc87d8fb6e6840d93229a97afdcef803505b",
+    "benchmarks/test/typo.jsonl": "beabe4d9517b99464cc229b5f1aaca77a7d085ab22f01f33be8931b5c8f72356",
+    "data/SOURCES.md": "5386cb2f3210a6e3ddbfd5e3500af8fe288814bad6afc7a0682a6d9662e7d2ff",
+    "data/builtin/function_word_groups.tsv": "9d1915bc68810e90e58607f4cb942b2a62a9a2e52098fa90c4cc5a594ad9b57a",
+    "data/builtin/lexicon.tsv": "4eacbf2931735b1cc5c1d29aab6c9c27e674d4949867e919b9c610ca1318fdac",
+    "data/builtin/variants.tsv": "df6fb37dd84fefb90a53633aa2a8ee2652561c8d7205dcc03f16c454760115c4",
+    "data/cns11643/README.md": "fbfb773e6e66e812f525b1b39e2ec42b2b98f17b10f82862084609db17274705",
+    "data/cns11643/cns_char_readings.tsv": "b5206f234d6bb2bcf15b114c480f6e3e87abbaf7acf6d1aaa17a16da3625e7af",
+    "data/corpus/README.md": "3d170fdcfc29c639419baed907fe48b2edd329386b15778c891c29d313d8127f",
+    "data/corpus/lm/capped/manifest.json": "74f13c440f78b7b8956919ac9cbbcd5c5a1b7fb8811d3f9832a1c555e3d51b2a",
+    "data/corpus/lm/domain/government_faq/manifest.json": "f1817042132feda01a70815ccfe66c0dfbe3536268b553010e53b6677f885d34",
+    "data/corpus/lm/domain/legal/manifest.json": "58abcb7b95d75f95defbd280f8fd7e632c10695f2517425dc2c18036a509cbd9",
+    "data/corpus/lm/domain/press_release/manifest.json": "a5528ebaaddf3b14fd6ed80dd120aa0283c6ad21b6cd1e6be7bf63ab6c66ad8c",
+    "data/corpus/lm/domain/public_service/manifest.json": "6940a13b0408db955e0b19717924494512c34524e35e0f52f22f97e19e43d9ae",
+    "data/corpus/lm/raw/manifest.json": "23f785d82e81c283656bb5ca181224530d18d9cc161daf5348576f539022323e",
+    "data/corpus/manifest.json": "ed2df793547d5486488081e3d2e72017e78ab379c7197e4be11d9d73de61a343",
+    "data/raw/cns11643/README.md": "28492c51f4fb4cbe4463f9e2cd30cb52076292d5cb511b6e361e8b6bcc15e782",
+    "data/sources.json": "5bfb1bd68bc9e029bacce4b78d7f22c7b3ab11155e0e1e1cc501086101fd318a",
+    "docs/API.md": "b98dded0f294936015812c8b103919e7f201735604f8fcc64eee46f790e2cc64",
+    "docs/PUBLIC_BOUNDARY.md": "aa760b6fa467834138a12d8ec27359a658e68931d2dc6fbe7938f5b7b3ee93b6",
+    "pyproject.toml": "9e0ea116e89f3f827bfa24404130dd32a06d13e9bcb6d060f26c7b548194706b",
+    "src/zaoseq_bopomofo/__init__.py": "65a82b1a1652d6a369f5917c879f611272ce2f91706c22ac7815237d7d7fa1f8",
+    "src/zaoseq_bopomofo/corpus/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "src/zaoseq_bopomofo/corpus/__main__.py": "67294eb010cbb0c4d80d0e85670c521d1053e447ccf3eeb8db036cbbf0b373c9",
+    "src/zaoseq_bopomofo/corpus/annotate.py": "ca35660e9edd6f3a8bcd23407ea0aab597e52a4ad4e17e83a09c789d7d27e066",
+    "src/zaoseq_bopomofo/corpus/domains.py": "870cd6c10ae5134083dd05e480d3a5de30ef5ce83bc01b772b972c6eae7fee39",
+    "src/zaoseq_bopomofo/corpus/importer.py": "5ff0fee36c484f114391e47cb2a731b4af666cea8d981fa5b68a15050104c8a1",
+    "src/zaoseq_bopomofo/corpus/neardup.py": "0d057c740334a06658689378fbe033814b287f7ac7ef93a3c4829d911bb4a5e5",
+    "src/zaoseq_bopomofo/corpus/normalize.py": "1f07ca69434ecd1391a49bda1bd78cbe2295e2a38323f15176be7b76a26d43ab",
+    "src/zaoseq_bopomofo/corpus/records.py": "07d7f91aaf75387b35fdc645ffd298d651b5e10ecd856dff4be2a6ff33de2f39",
+    "src/zaoseq_bopomofo/corpus/sentences.py": "208343ab07c3eba02121b20e383a2d4e51e1bf053a99a44daa3563d00e2c2834",
+    "src/zaoseq_bopomofo/corpus/source.py": "97720b854f62f4f560504b09d9f5f68b12fd806df2a0733984fe5a8a25f76249",
+    "src/zaoseq_bopomofo/corpus/sources_md.py": "721174f183cfefc31a3bee4c1cc71dcb0d2ca72b66ed8c4b6308315d25c44e79",
+    "src/zaoseq_bopomofo/corpus/statistics.py": "6652bebe7210bb23faf65d50039320dc323267cee56bec6bb5e3cfde35bb68ec",
+    "src/zaoseq_bopomofo/decoding/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "src/zaoseq_bopomofo/decoding/candidate.py": "50eb57c548e994cbbb56a05763ba2a4dd450eea382012d2e10aeebab32b12c25",
+    "src/zaoseq_bopomofo/decoding/correction.py": "a21920006029c66ad2a7e43cf1a8bc3aa259eb201b12f1727234b79c2596454c",
+    "src/zaoseq_bopomofo/decoding/decoder.py": "c5f010670e03fd4ebfedd1cff9d8ebf25ad3be496bf99dd69207236490f94496",
+    "src/zaoseq_bopomofo/decoding/errors.py": "6dc0b99ae45861bc983ccb9a6eab520943cf371e0a5254004e879923e402af83",
+    "src/zaoseq_bopomofo/decoding/family.py": "d0f3a6fac762d53b165b8fc86b10e3501b917be308cb4520fa486cedfe53036e",
+    "src/zaoseq_bopomofo/decoding/generator.py": "bb2b4f3583a8f816b84dce637c55e067f5d2e90aeed9998036ab323b48228dac",
+    "src/zaoseq_bopomofo/decoding/lattice.py": "88c0a62ec24818e1a9719d6d4900f8101c9c0584f5b1bd99413822a384733c51",
+    "src/zaoseq_bopomofo/decoding/pipeline.py": "c8dff23565ec38ae5c8a50704963c60a4dd5b473a1bdb6e2f3a35382a8733d72",
+    "src/zaoseq_bopomofo/decoding/scoring.py": "381f2d4a2920e9f581c19e26bb7acddf3e263ec672e605967d1a9957ec890e72",
+    "src/zaoseq_bopomofo/decoding/tolerant.py": "8605131f86a90fb14b9b6d735cd7d730fdf8bc7c97a66506ddca9fa6fdf78290",
+    "src/zaoseq_bopomofo/evaluation/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "src/zaoseq_bopomofo/evaluation/benchmark.py": "bdae3e30242770389f5eed98162d9b63bda5e368da8c96c67300236219564037",
+    "src/zaoseq_bopomofo/evaluation/coverage.py": "f0834a318b003e23879035cfedcd9babe8b1b4268d039d3c88b3e3f12828abf0",
+    "src/zaoseq_bopomofo/evaluation/dataset.py": "46a47f2258e21827b66078e916b7fcab56f2a7d18970b46494b681a61f1bec67",
+    "src/zaoseq_bopomofo/evaluation/decoding.py": "770c21797f540227eed946c0d797434f604b71fa6bda66d72d7b0087531b4903",
+    "src/zaoseq_bopomofo/evaluation/domains.py": "c6e69e56149721fb758f88b473af08fb221257561369c6ca66586e23c2555359",
+    "src/zaoseq_bopomofo/evaluation/freeze.py": "7876ed6ea13e0d2c766e77511b6370d118f07454547b7d974eb864bf132fa824",
+    "src/zaoseq_bopomofo/evaluation/metrics.py": "e83c58190aaa7d956d9c1aa4001bd4b564143f3c4f00170a6519b193f1580386",
+    "src/zaoseq_bopomofo/evaluation/order_bias.py": "9f3127e76dc9d3a72fc3f5e6ade6af7bc2df789a50e42ab21cc8473a0980c723",
+    "src/zaoseq_bopomofo/evaluation/testsets.py": "f8a8696ea0a03211518793f1f6ef5d60afc661f1e84a6ca31f2d7c1f870e5293",
+    "src/zaoseq_bopomofo/lexicon/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "src/zaoseq_bopomofo/lexicon/builder.py": "280ec7837793e7338057629a60cc066681bb6f2adcf5f7faee9b742c540082d6",
+    "src/zaoseq_bopomofo/lexicon/entry.py": "a65c88c93623b0477d4ad9a9d2f5608410ae1da6c23900059f1aceec5d7c7826",
+    "src/zaoseq_bopomofo/lexicon/lexicon.py": "ee8bb43fba77ee5ca5a7498df1d1e25b36d20f41f906a22276a95ff729d067e9",
+    "src/zaoseq_bopomofo/lexicon/loader.py": "a87bb351856067daef4cbd23ec6f95ce8001851d29f2f5429863b5ab3c1ac2a5",
+    "src/zaoseq_bopomofo/phonetics/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "src/zaoseq_bopomofo/phonetics/keyboard.py": "9dca94a5fa9228c8fe2ecb84730a041313371f31fa7aab9f58bfa0cfe2a7eb2e",
+    "src/zaoseq_bopomofo/phonetics/parser.py": "68e771385c8d5bb249261be85f1881de304900ed89d5593c12cc8c5491bf5017",
+    "src/zaoseq_bopomofo/phonetics/syllable.py": "445be5cf2b91291ed4cf1f3754eb38a583dc1b1015370ad971d18c524a817959",
+    "src/zaoseq_bopomofo/phonetics/symbol.py": "55c99e3d2eb0b68ae9e0bb6f9d36cd531a430cfa3b7871aca30464754222fac5",
+    "src/zaoseq_bopomofo/ranking/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "src/zaoseq_bopomofo/ranking/base.py": "8ec6e06f2c981c47b5879e3aab84debeb79a93f68fbbf97ec71aaccdce526a51",
+    "src/zaoseq_bopomofo/ranking/confidence.py": "cb7c33d95e62a18d8ce5ae213bbdb9524fa344e4637097e71b9437f9d59ce0f2",
+    "src/zaoseq_bopomofo/ranking/contextual.py": "3377bacf889959cf5a8898c3152bd359bf5fd87d28469b79d59a22c3ae6d0ea1",
+    "src/zaoseq_bopomofo/ranking/corpus.py": "a8943579649939ed5fc50e0eeadd57f04a3062508001e5c7de9651b1c34b2eb1",
+    "src/zaoseq_bopomofo/ranking/frequency.py": "9d3c3c8afc601c4bd20ef544ae5efb7e470442348dfb4700a68926c1530d8e3f",
+    "src/zaoseq_bopomofo/ranking/hybrid.py": "01f22d6fcca59499c5ef98306d6e3c2b3f25ab2db2982ca8cfe59bbf7d8d9a66",
+    "src/zaoseq_bopomofo/ranking/pairwise.py": "fabc5e49d8dcb9a8c19c5e454fb80e26ae75f73866ecb75753238129bb75c16f",
+    "src/zaoseq_bopomofo/ranking/signal.py": "cbc19026148cdf36fd430121fcaf6f903025d4d7d0efe89657ec2093c6b2b76d",
+    "tests/conftest.py": "811a968015a380b84e045aebb9c65533f831e378a9e176d8ac338e350f84d6b6",
+    "tests/test_confidence.py": "1afe80e50318d7d3cc7545355cff292afbeb766038de62cc0ee2820ae8203fad",
+    "tests/test_corpus.py": "9b7442b620b99ce3a8c971d209f0df799daf08ee61e8644bec702fcb4075c614",
+    "tests/test_decoding.py": "fb3a48f455fc2fef827a4e1ec9406327b73310e1a95d11cfc0bac99750ce5da2",
+    "tests/test_domains.py": "9d66b8407bd21fd7fde916d93ee0bd4c051b7d7ae67a2469b44b27573a4fafaf",
+    "tests/test_evaluation.py": "f72a89bd9c4c737f6c2c1496086c62c24f420d20e5c149e3f72692f54305aed7",
+    "tests/test_hybrid_invariant.py": "cc1b257ef348786fdc3a1da2699e5f309c84b17e672ee7c1bdfe52e8d0ceb8c6",
+    "tests/test_lexicon.py": "e8cfe9329b80bddba32e3b2f6b7006a3abd32f8e619a355fa1e193a0f5314c5b",
+    "tests/test_phonetics.py": "97484bf64c9efa4092d69ed43835c8a6748feb1fd72b4b68f4eb2f7663e23737",
+    "tests/test_sanity_data.py": "c7f00aa0d3a2a7328f92ad51cbc2df402ae7a02b9ff368b8c0acd9582a17c243",
+    "tests/test_tolerant.py": "c84bb5f9088bc333f4af9f6d2d8b11387b35ace6a185537f91fae4b8123919b1"
+  },
+  "audit": {
+    "ok": true,
+    "errors": [],
+    "files_with_optional_private_imports": []
+  }
+}

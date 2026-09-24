@@ -1,0 +1,865 @@
+{
+  "sets": {
+    "everyday_dev": 131,
+    "legal": 200,
+    "faq_public_service": 400,
+    "press_release": 200,
+    "mixed": 800
+  },
+  "report": {
+    "lexicon (old baseline)": {
+      "everyday_dev": {
+        "items": 131,
+        "sentence_top1": 0.6259541984732825,
+        "character_accuracy": 0.8557213930348259,
+        "recall_at_5": 0.9847328244274809,
+        "lexicon_oov_rate": 0.0,
+        "corpus_oov_rate": 0.0,
+        "decoder_latency": {
+          "samples": 131,
+          "mean_ms": 0.3382625993170584,
+          "p50_ms": 0.20890007726848125,
+          "p95_ms": 0.792150036431849
+        },
+        "lm_latency": {
+          "samples": 131,
+          "mean_ms": 0.0,
+          "p50_ms": 0.0,
+          "p95_ms": 0.0
+        },
+        "errors_by_group": {
+          "在再": 9,
+          "做作": 5,
+          "的得地": 4,
+          "他她它": 2,
+          "是事": 2
+        },
+        "homophone_errors_outside_groups": 36,
+        "non_homophone_errors": 0
+      },
+      "legal": {
+        "items": 200,
+        "sentence_top1": 0.015,
+        "character_accuracy": 0.4885193982581156,
+        "recall_at_5": 0.045,
+        "lexicon_oov_rate": 0.0,
+        "corpus_oov_rate": 0.0,
+        "decoder_latency": {
+          "samples": 200,
+          "mean_ms": 1.0058590024709702,
+          "p50_ms": 0.9691499872133136,
+          "p95_ms": 1.73962009139359
+        },
+        "lm_latency": {
+          "samples": 200,
+          "mean_ms": 0.0,
+          "p50_ms": 0.0,
+          "p95_ms": 0.0
+        },
+        "errors_by_group": {
+          "是事": 7,
+          "才財": 6,
+          "在再": 5,
+          "為位": 2
+        },
+        "homophone_errors_outside_groups": 626,
+        "non_homophone_errors": 0
+      },
+      "faq_public_service": {
+        "items": 400,
+        "sentence_top1": 0.0425,
+        "character_accuracy": 0.4626994394135403,
+        "recall_at_5": 0.0975,
+        "lexicon_oov_rate": 0.0,
+        "corpus_oov_rate": 0.0,
+        "decoder_latency": {
+          "samples": 400,
+          "mean_ms": 0.8658855000976473,
+          "p50_ms": 0.7453999714925885,
+          "p95_ms": 1.726724987383932
+        },
+        "lm_latency": {
+          "samples": 400,
+          "mean_ms": 0.0,
+          "p50_ms": 0.0,
+          "p95_ms": 0.0
+        },
+        "errors_by_group": {
+          "是事": 29,
+          "為位": 4,
+          "已以": 3,
+          "在再": 2,
+          "會匯": 2,
+          "做作": 1,
+          "才財": 1
+        },
+        "homophone_errors_outside_groups": 1204,
+        "non_homophone_errors": 0
+      },
+      "press_release": {
+        "items": 200,
+        "sentence_top1": 0.035,
+        "character_accuracy": 0.44229149115417016,
+        "recall_at_5": 0.095,
+        "lexicon_oov_rate": 0.0,
+        "corpus_oov_rate": 0.0,
+        "decoder_latency": {
+          "samples": 200,
+          "mean_ms": 0.9490224870387465,
+          "p50_ms": 0.8045498980209231,
+          "p95_ms": 1.9048549467697742
+        },
+        "lm_latency": {
+          "samples": 200,
+          "mean_ms": 0.0,
+          "p50_ms": 0.0,
+          "p95_ms": 0.0
+        },
+        "errors_by_group": {
+          "是事": 6,
+          "為位": 6,
+          "才財": 3,
+          "做作": 2,
+          "在再": 1,
+          "會匯": 1
+        },
+        "homophone_errors_outside_groups": 643,
+        "non_homophone_errors": 0
+      },
+      "mixed": {
+        "items": 800,
+        "sentence_top1": 0.03375,
+        "character_accuracy": 0.46445795764311176,
+        "recall_at_5": 0.08375,
+        "lexicon_oov_rate": 0.0,
+        "corpus_oov_rate": 0.0,
+        "decoder_latency": {
+          "samples": 800,
+          "mean_ms": 0.8589143728022464,
+          "p50_ms": 0.7567499997094274,
+          "p95_ms": 1.668655010871589
+        },
+        "lm_latency": {
+          "samples": 800,
+          "mean_ms": 0.0,
+          "p50_ms": 0.0,
+          "p95_ms": 0.0
+        },
+        "errors_by_group": {
+          "是事": 42,
+          "為位": 12,
+          "才財": 10,
+          "在再": 8,
+          "做作": 3,
+          "已以": 3,
+          "會匯": 3
+        },
+        "homophone_errors_outside_groups": 2473,
+        "non_homophone_errors": 0
+      }
+    },
+    "raw corpus": {
+      "everyday_dev": {
+        "items": 131,
+        "sentence_top1": 0.6564885496183206,
+        "character_accuracy": 0.8432835820895522,
+        "recall_at_5": 0.916030534351145,
+        "lexicon_oov_rate": 0.0,
+        "corpus_oov_rate": 0.0,
+        "decoder_latency": {
+          "samples": 131,
+          "mean_ms": 18.94005420013466,
+          "p50_ms": 10.015999898314476,
+          "p95_ms": 62.22179997712374
+        },
+        "lm_latency": {
+          "samples": 131,
+          "mean_ms": 4.4369873011356775,
+          "p50_ms": 2.7707982808351517,
+          "p95_ms": 13.76419945154339
+        },
+        "errors_by_group": {
+          "在再": 7,
+          "做作": 3,
+          "他她它": 2,
+          "的得地": 2,
+          "已以": 1,
+          "是事": 1
+        },
+        "homophone_errors_outside_groups": 47,
+        "non_homophone_errors": 0
+      },
+      "legal": {
+        "items": 200,
+        "sentence_top1": 0.92,
+        "character_accuracy": 0.9794140934283452,
+        "recall_at_5": 0.965,
+        "lexicon_oov_rate": 0.0,
+        "corpus_oov_rate": 0.0,
+        "decoder_latency": {
+          "samples": 200,
+          "mean_ms": 66.42793399398215,
+          "p50_ms": 62.83330009318888,
+          "p95_ms": 130.31350505771115
+        },
+        "lm_latency": {
+          "samples": 200,
+          "mean_ms": 16.002111170673743,
+          "p50_ms": 16.4651891682297,
+          "p95_ms": 29.051791771780703
+        },
+        "errors_by_group": {
+          "在再": 1
+        },
+        "homophone_errors_outside_groups": 25,
+        "non_homophone_errors": 0
+      },
+      "faq_public_service": {
+        "items": 400,
+        "sentence_top1": 0.7875,
+        "character_accuracy": 0.9391979301423027,
+        "recall_at_5": 0.9275,
+        "lexicon_oov_rate": 0.0,
+        "corpus_oov_rate": 0.0,
+        "decoder_latency": {
+          "samples": 400,
+          "mean_ms": 56.31804900360294,
+          "p50_ms": 44.14224997162819,
+          "p95_ms": 134.67636503046378
+        },
+        "lm_latency": {
+          "samples": 400,
+          "mean_ms": 13.522180814761668,
+          "p50_ms": 10.946749011054635,
+          "p95_ms": 31.986917788162835
+        },
+        "errors_by_group": {
+          "在再": 4,
+          "已以": 3,
+          "做作": 1,
+          "是事": 1,
+          "的得地": 1
+        },
+        "homophone_errors_outside_groups": 131,
+        "non_homophone_errors": 0
+      },
+      "press_release": {
+        "items": 200,
+        "sentence_top1": 0.805,
+        "character_accuracy": 0.9629317607413648,
+        "recall_at_5": 0.96,
+        "lexicon_oov_rate": 0.0,
+        "corpus_oov_rate": 0.0,
+        "decoder_latency": {
+          "samples": 200,
+          "mean_ms": 54.42583499243483,
+          "p50_ms": 45.978549984283745,
+          "p95_ms": 122.05282988725233
+        },
+        "lm_latency": {
+          "samples": 200,
+          "mean_ms": 12.934564193710685,
+          "p50_ms": 11.503051966428757,
+          "p95_ms": 26.275441690813754
+        },
+        "errors_by_group": {},
+        "homophone_errors_outside_groups": 44,
+        "non_homophone_errors": 0
+      },
+      "mixed": {
+        "items": 800,
+        "sentence_top1": 0.825,
+        "character_accuracy": 0.9557559236737262,
+        "recall_at_5": 0.945,
+        "lexicon_oov_rate": 0.0,
+        "corpus_oov_rate": 0.0,
+        "decoder_latency": {
+          "samples": 800,
+          "mean_ms": 57.28428887872724,
+          "p50_ms": 48.409200040623546,
+          "p95_ms": 127.60714987525712
+        },
+        "lm_latency": {
+          "samples": 800,
+          "mean_ms": 13.73647229425842,
+          "p50_ms": 11.856297496706247,
+          "p95_ms": 30.0163153442554
+        },
+        "errors_by_group": {
+          "在再": 5,
+          "已以": 3,
+          "做作": 1,
+          "是事": 1,
+          "的得地": 1
+        },
+        "homophone_errors_outside_groups": 200,
+        "non_homophone_errors": 0
+      }
+    },
+    "raw corpus + lexicon": {
+      "everyday_dev": {
+        "items": 131,
+        "sentence_top1": 0.7709923664122137,
+        "character_accuracy": 0.9054726368159204,
+        "recall_at_5": 0.9923664122137404,
+        "lexicon_oov_rate": 0.0,
+        "corpus_oov_rate": 0.0,
+        "decoder_latency": {
+          "samples": 131,
+          "mean_ms": 17.865191597690565,
+          "p50_ms": 10.589499957859516,
+          "p95_ms": 62.054899986833334
+        },
+        "lm_latency": {
+          "samples": 131,
+          "mean_ms": 4.299293828502525,
+          "p50_ms": 2.6227058842778206,
+          "p95_ms": 14.050402794964612
+        },
+        "errors_by_group": {
+          "在再": 7,
+          "他她它": 2,
+          "做作": 2,
+          "的得地": 2,
+          "是事": 1
+        },
+        "homophone_errors_outside_groups": 24,
+        "non_homophone_errors": 0
+      },
+      "legal": {
+        "items": 200,
+        "sentence_top1": 0.89,
+        "character_accuracy": 0.9730799683293745,
+        "recall_at_5": 0.95,
+        "lexicon_oov_rate": 0.0,
+        "corpus_oov_rate": 0.0,
+        "decoder_latency": {
+          "samples": 200,
+          "mean_ms": 63.50271649193019,
+          "p50_ms": 61.652100062929094,
+          "p95_ms": 121.78400509292264
+        },
+        "lm_latency": {
+          "samples": 200,
+          "mean_ms": 15.35071569844149,
+          "p50_ms": 15.731045161373913,
+          "p95_ms": 27.696418086998165
+        },
+        "errors_by_group": {
+          "在再": 1,
+          "為位": 1
+        },
+        "homophone_errors_outside_groups": 32,
+        "non_homophone_errors": 0
+      },
+      "faq_public_service": {
+        "items": 400,
+        "sentence_top1": 0.795,
+        "character_accuracy": 0.9422164726175075,
+        "recall_at_5": 0.9225,
+        "lexicon_oov_rate": 0.0,
+        "corpus_oov_rate": 0.0,
+        "decoder_latency": {
+          "samples": 400,
+          "mean_ms": 55.275530500221066,
+          "p50_ms": 44.26619992591441,
+          "p95_ms": 141.6001449804753
+        },
+        "lm_latency": {
+          "samples": 400,
+          "mean_ms": 13.39167638856452,
+          "p50_ms": 11.045094230212271,
+          "p95_ms": 32.771454739850014
+        },
+        "errors_by_group": {
+          "為位": 2,
+          "做作": 1,
+          "在再": 1,
+          "已以": 1,
+          "是事": 1,
+          "的得地": 1
+        },
+        "homophone_errors_outside_groups": 127,
+        "non_homophone_errors": 0
+      },
+      "press_release": {
+        "items": 200,
+        "sentence_top1": 0.775,
+        "character_accuracy": 0.9519797809604044,
+        "recall_at_5": 0.935,
+        "lexicon_oov_rate": 0.0,
+        "corpus_oov_rate": 0.0,
+        "decoder_latency": {
+          "samples": 200,
+          "mean_ms": 55.387042491929606,
+          "p50_ms": 47.33139998279512,
+          "p95_ms": 119.96229508658875
+        },
+        "lm_latency": {
+          "samples": 200,
+          "mean_ms": 13.383735391544178,
+          "p50_ms": 12.270752107724547,
+          "p95_ms": 27.73359338752926
+        },
+        "errors_by_group": {
+          "為位": 3
+        },
+        "homophone_errors_outside_groups": 54,
+        "non_homophone_errors": 0
+      },
+      "mixed": {
+        "items": 800,
+        "sentence_top1": 0.81375,
+        "character_accuracy": 0.952820297756343,
+        "recall_at_5": 0.9325,
+        "lexicon_oov_rate": 0.0,
+        "corpus_oov_rate": 0.0,
+        "decoder_latency": {
+          "samples": 800,
+          "mean_ms": 56.66209449816961,
+          "p50_ms": 47.51649999525398,
+          "p95_ms": 124.52879508491606
+        },
+        "lm_latency": {
+          "samples": 800,
+          "mean_ms": 13.680638366495259,
+          "p50_ms": 11.462045717053115,
+          "p95_ms": 30.802400957327333
+        },
+        "errors_by_group": {
+          "為位": 6,
+          "在再": 2,
+          "做作": 1,
+          "已以": 1,
+          "是事": 1,
+          "的得地": 1
+        },
+        "homophone_errors_outside_groups": 213,
+        "non_homophone_errors": 0
+      }
+    },
+    "capped corpus": {
+      "everyday_dev": {
+        "items": 131,
+        "sentence_top1": 0.6717557251908397,
+        "character_accuracy": 0.8532338308457711,
+        "recall_at_5": 0.9312977099236641,
+        "lexicon_oov_rate": 0.0,
+        "corpus_oov_rate": 0.0,
+        "decoder_latency": {
+          "samples": 131,
+          "mean_ms": 17.22631221708223,
+          "p50_ms": 9.176300140097737,
+          "p95_ms": 56.93380010779947
+        },
+        "lm_latency": {
+          "samples": 131,
+          "mean_ms": 4.061029710316363,
+          "p50_ms": 2.5039962492883205,
+          "p95_ms": 12.504750862717628
+        },
+        "errors_by_group": {
+          "在再": 5,
+          "做作": 4,
+          "他她它": 3,
+          "已以": 1,
+          "是事": 1,
+          "的得地": 1
+        },
+        "homophone_errors_outside_groups": 44,
+        "non_homophone_errors": 0
+      },
+      "legal": {
+        "items": 200,
+        "sentence_top1": 0.88,
+        "character_accuracy": 0.9714964370546318,
+        "recall_at_5": 0.96,
+        "lexicon_oov_rate": 0.0,
+        "corpus_oov_rate": 0.0,
+        "decoder_latency": {
+          "samples": 200,
+          "mean_ms": 63.262520493008196,
+          "p50_ms": 61.786500038579106,
+          "p95_ms": 120.70200501475486
+        },
+        "lm_latency": {
+          "samples": 200,
+          "mean_ms": 15.098666071426123,
+          "p50_ms": 14.98519629240036,
+          "p95_ms": 27.535841928329326
+        },
+        "errors_by_group": {
+          "在再": 1,
+          "為位": 1
+        },
+        "homophone_errors_outside_groups": 34,
+        "non_homophone_errors": 0
+      },
+      "faq_public_service": {
+        "items": 400,
+        "sentence_top1": 0.805,
+        "character_accuracy": 0.9435101336783096,
+        "recall_at_5": 0.9175,
+        "lexicon_oov_rate": 0.0,
+        "corpus_oov_rate": 0.0,
+        "decoder_latency": {
+          "samples": 400,
+          "mean_ms": 54.242581014405005,
+          "p50_ms": 41.94709996227175,
+          "p95_ms": 127.8137500281446
+        },
+        "lm_latency": {
+          "samples": 400,
+          "mean_ms": 13.00101859786082,
+          "p50_ms": 10.461151017807424,
+          "p95_ms": 31.69698615092784
+        },
+        "errors_by_group": {
+          "做作": 1,
+          "在再": 1,
+          "的得地": 1
+        },
+        "homophone_errors_outside_groups": 128,
+        "non_homophone_errors": 0
+      },
+      "press_release": {
+        "items": 200,
+        "sentence_top1": 0.775,
+        "character_accuracy": 0.9528222409435552,
+        "recall_at_5": 0.945,
+        "lexicon_oov_rate": 0.0,
+        "corpus_oov_rate": 0.0,
+        "decoder_latency": {
+          "samples": 200,
+          "mean_ms": 56.74702949007042,
+          "p50_ms": 48.04399993736297,
+          "p95_ms": 125.02236994914712
+        },
+        "lm_latency": {
+          "samples": 200,
+          "mean_ms": 13.394687466789037,
+          "p50_ms": 12.167507782578468,
+          "p95_ms": 27.971664315555252
+        },
+        "errors_by_group": {
+          "是事": 2,
+          "在再": 1
+        },
+        "homophone_errors_outside_groups": 53,
+        "non_homophone_errors": 0
+      },
+      "mixed": {
+        "items": 800,
+        "sentence_top1": 0.81625,
+        "character_accuracy": 0.9532396728873977,
+        "recall_at_5": 0.935,
+        "lexicon_oov_rate": 0.0,
+        "corpus_oov_rate": 0.0,
+        "decoder_latency": {
+          "samples": 800,
+          "mean_ms": 56.422019374149386,
+          "p50_ms": 50.272650085389614,
+          "p95_ms": 129.64408493135124
+        },
+        "lm_latency": {
+          "samples": 800,
+          "mean_ms": 13.417354820121545,
+          "p50_ms": 11.813795659691095,
+          "p95_ms": 29.899279284290966
+        },
+        "errors_by_group": {
+          "在再": 3,
+          "是事": 2,
+          "做作": 1,
+          "為位": 1,
+          "的得地": 1
+        },
+        "homophone_errors_outside_groups": 215,
+        "non_homophone_errors": 0
+      }
+    },
+    "balanced corpus (general)": {
+      "everyday_dev": {
+        "items": 131,
+        "sentence_top1": 0.6870229007633588,
+        "character_accuracy": 0.8582089552238806,
+        "recall_at_5": 0.9007633587786259,
+        "lexicon_oov_rate": 0.0,
+        "corpus_oov_rate": 0.0,
+        "decoder_latency": {
+          "samples": 131,
+          "mean_ms": 27.082588555618326,
+          "p50_ms": 16.04270003736019,
+          "p95_ms": 82.68130000215024
+        },
+        "lm_latency": {
+          "samples": 131,
+          "mean_ms": 14.904947395130764,
+          "p50_ms": 7.97440274618566,
+          "p95_ms": 52.913904655724764
+        },
+        "errors_by_group": {
+          "在再": 5,
+          "他她它": 4,
+          "做作": 3,
+          "是事": 1,
+          "的得地": 1
+        },
+        "homophone_errors_outside_groups": 43,
+        "non_homophone_errors": 0
+      },
+      "legal": {
+        "items": 200,
+        "sentence_top1": 0.89,
+        "character_accuracy": 0.9707046714172605,
+        "recall_at_5": 0.955,
+        "lexicon_oov_rate": 0.0,
+        "corpus_oov_rate": 0.0,
+        "decoder_latency": {
+          "samples": 200,
+          "mean_ms": 100.78734799404629,
+          "p50_ms": 97.63069986365736,
+          "p95_ms": 180.58926499215886
+        },
+        "lm_latency": {
+          "samples": 200,
+          "mean_ms": 57.38987579010427,
+          "p50_ms": 53.93414420541376,
+          "p95_ms": 107.15174190700057
+        },
+        "errors_by_group": {
+          "在再": 1
+        },
+        "homophone_errors_outside_groups": 36,
+        "non_homophone_errors": 0
+      },
+      "faq_public_service": {
+        "items": 400,
+        "sentence_top1": 0.8225,
+        "character_accuracy": 0.9525657611039241,
+        "recall_at_5": 0.9225,
+        "lexicon_oov_rate": 0.0,
+        "corpus_oov_rate": 0.0,
+        "decoder_latency": {
+          "samples": 400,
+          "mean_ms": 83.63473499601241,
+          "p50_ms": 66.76405004691333,
+          "p95_ms": 216.49665501900017
+        },
+        "lm_latency": {
+          "samples": 400,
+          "mean_ms": 47.10941224358976,
+          "p50_ms": 35.93589458614588,
+          "p95_ms": 127.89872002322228
+        },
+        "errors_by_group": {
+          "做作": 1,
+          "在再": 1,
+          "已以": 1,
+          "是事": 1,
+          "為位": 1,
+          "的得地": 1
+        },
+        "homophone_errors_outside_groups": 104,
+        "non_homophone_errors": 0
+      },
+      "press_release": {
+        "items": 200,
+        "sentence_top1": 0.85,
+        "character_accuracy": 0.9679865206402696,
+        "recall_at_5": 0.95,
+        "lexicon_oov_rate": 0.0,
+        "corpus_oov_rate": 0.0,
+        "decoder_latency": {
+          "samples": 200,
+          "mean_ms": 86.59560699365102,
+          "p50_ms": 74.1132500115782,
+          "p95_ms": 190.7076399889775
+        },
+        "lm_latency": {
+          "samples": 200,
+          "mean_ms": 48.96903268294409,
+          "p50_ms": 40.24150164332241,
+          "p95_ms": 117.33537446707487
+        },
+        "errors_by_group": {
+          "是事": 1
+        },
+        "homophone_errors_outside_groups": 37,
+        "non_homophone_errors": 0
+      },
+      "mixed": {
+        "items": 800,
+        "sentence_top1": 0.84625,
+        "character_accuracy": 0.9612078003774376,
+        "recall_at_5": 0.9375,
+        "lexicon_oov_rate": 0.0,
+        "corpus_oov_rate": 0.0,
+        "decoder_latency": {
+          "samples": 800,
+          "mean_ms": 88.73662250203779,
+          "p50_ms": 78.33589997608215,
+          "p95_ms": 198.24718487216154
+        },
+        "lm_latency": {
+          "samples": 800,
+          "mean_ms": 49.83530058496399,
+          "p50_ms": 41.939889546483755,
+          "p95_ms": 115.3756759711541
+        },
+        "errors_by_group": {
+          "在再": 2,
+          "是事": 2,
+          "做作": 1,
+          "已以": 1,
+          "為位": 1,
+          "的得地": 1
+        },
+        "homophone_errors_outside_groups": 177,
+        "non_homophone_errors": 0
+      }
+    },
+    "balanced corpus + lexicon": {
+      "everyday_dev": {
+        "items": 131,
+        "sentence_top1": 0.7633587786259542,
+        "character_accuracy": 0.9079601990049752,
+        "recall_at_5": 0.9847328244274809,
+        "lexicon_oov_rate": 0.0,
+        "corpus_oov_rate": 0.0,
+        "decoder_latency": {
+          "samples": 131,
+          "mean_ms": 27.461569447013485,
+          "p50_ms": 16.851200023666024,
+          "p95_ms": 101.11915005836636
+        },
+        "lm_latency": {
+          "samples": 131,
+          "mean_ms": 15.210640655816285,
+          "p50_ms": 8.201402146369219,
+          "p95_ms": 66.15710747428238
+        },
+        "errors_by_group": {
+          "在再": 7,
+          "他她它": 2,
+          "做作": 2,
+          "的得地": 2
+        },
+        "homophone_errors_outside_groups": 24,
+        "non_homophone_errors": 0
+      },
+      "legal": {
+        "items": 200,
+        "sentence_top1": 0.85,
+        "character_accuracy": 0.9596199524940617,
+        "recall_at_5": 0.94,
+        "lexicon_oov_rate": 0.0,
+        "corpus_oov_rate": 0.0,
+        "decoder_latency": {
+          "samples": 200,
+          "mean_ms": 103.9152045105584,
+          "p50_ms": 102.11395006626844,
+          "p95_ms": 195.2175850863569
+        },
+        "lm_latency": {
+          "samples": 200,
+          "mean_ms": 59.861337087349966,
+          "p50_ms": 57.334210025146604,
+          "p95_ms": 122.16714498354122
+        },
+        "errors_by_group": {
+          "在再": 1,
+          "是事": 1,
+          "為位": 1
+        },
+        "homophone_errors_outside_groups": 48,
+        "non_homophone_errors": 0
+      },
+      "faq_public_service": {
+        "items": 400,
+        "sentence_top1": 0.775,
+        "character_accuracy": 0.9366106080206986,
+        "recall_at_5": 0.91,
+        "lexicon_oov_rate": 0.0,
+        "corpus_oov_rate": 0.0,
+        "decoder_latency": {
+          "samples": 400,
+          "mean_ms": 87.2353987506358,
+          "p50_ms": 70.33000001683831,
+          "p95_ms": 215.72694012429577
+        },
+        "lm_latency": {
+          "samples": 400,
+          "mean_ms": 49.32765266916249,
+          "p50_ms": 37.72640833631158,
+          "p95_ms": 130.22845844971016
+        },
+        "errors_by_group": {
+          "是事": 2,
+          "為位": 2,
+          "做作": 1,
+          "在再": 1,
+          "的得地": 1
+        },
+        "homophone_errors_outside_groups": 140,
+        "non_homophone_errors": 0
+      },
+      "press_release": {
+        "items": 200,
+        "sentence_top1": 0.8,
+        "character_accuracy": 0.949452401010952,
+        "recall_at_5": 0.925,
+        "lexicon_oov_rate": 0.0,
+        "corpus_oov_rate": 0.0,
+        "decoder_latency": {
+          "samples": 200,
+          "mean_ms": 88.10439849621616,
+          "p50_ms": 76.69224997516721,
+          "p95_ms": 178.34680003579706
+        },
+        "lm_latency": {
+          "samples": 200,
+          "mean_ms": 49.5946600404568,
+          "p50_ms": 43.609353015199304,
+          "p95_ms": 110.13177185086535
+        },
+        "errors_by_group": {
+          "是事": 2,
+          "為位": 2,
+          "做作": 1
+        },
+        "homophone_errors_outside_groups": 55,
+        "non_homophone_errors": 0
+      },
+      "mixed": {
+        "items": 800,
+        "sentence_top1": 0.8,
+        "character_accuracy": 0.94590060809394,
+        "recall_at_5": 0.92125,
+        "lexicon_oov_rate": 0.0,
+        "corpus_oov_rate": 0.0,
+        "decoder_latency": {
+          "samples": 800,
+          "mean_ms": 89.58802262641257,
+          "p50_ms": 76.40599994920194,
+          "p95_ms": 198.4979150351137
+        },
+        "lm_latency": {
+          "samples": 800,
+          "mean_ms": 50.834369985968806,
+          "p50_ms": 41.832292336039245,
+          "p95_ms": 119.95714157819741
+        },
+        "errors_by_group": {
+          "是事": 5,
+          "為位": 5,
+          "做作": 2,
+          "在再": 2,
+          "的得地": 1
+        },
+        "homophone_errors_outside_groups": 243,
+        "non_homophone_errors": 0
+      }
+    }
+  }
+}

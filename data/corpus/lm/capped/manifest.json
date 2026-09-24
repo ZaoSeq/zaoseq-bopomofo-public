@@ -1,0 +1,9 @@
+{
+  "schema": "zaoseq-bopomofo/corpus-lm/v2",
+  "configuration": "capped",
+  "train_sentences": 80000,
+  "char_tokens": 3430061,
+  "char_vocabulary": 4869,
+  "char_bigrams": 346597,
+  "char_trigrams_kept": 395923
+}

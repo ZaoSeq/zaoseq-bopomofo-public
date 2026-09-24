@@ -1,0 +1,29 @@
+# 造序注音 sanity cases（人工撰寫）。用來檢查基本句子是否得到合理結果；不得依個別案例調參。
+# 欄位同 DEV seeds；final_answers 列出 t1 時可接受的完整句子（例如台北／臺北）。
+{"id": "s001", "context": "我明天會", "target": "再", "target_readings": ["ㄗㄞˋ"], "suffix": "去台北", "suffix_readings": ["ㄑㄩˋ", "ㄊㄞˊ", "ㄅㄟˇ"], "acceptable_at_t0": ["在", "再", "載"], "tags": ["在再"], "final_answers": ["再去台北", "再去臺北"]}
+{"id": "s002", "context": "我現在", "target": "在", "target_readings": ["ㄗㄞˋ"], "suffix": "公司", "suffix_readings": ["ㄍㄨㄥ", "ㄙ"], "acceptable_at_t0": ["在", "再"], "tags": ["在再"]}
+{"id": "s003", "context": "請你", "target": "再", "target_readings": ["ㄗㄞˋ"], "suffix": "說一次", "suffix_readings": ["ㄕㄨㄛ", "ㄧˊ", "ㄘˋ"], "acceptable_at_t0": ["在", "再"], "tags": ["在再"]}
+{"id": "s004", "context": "他", "target": "在", "target_readings": ["ㄗㄞˋ"], "suffix": "看書", "suffix_readings": ["ㄎㄢˋ", "ㄕㄨ"], "acceptable_at_t0": ["在", "再"], "tags": ["在再"]}
+{"id": "s005", "context": "我們下次", "target": "再", "target_readings": ["ㄗㄞˋ"], "suffix": "來", "suffix_readings": ["ㄌㄞˊ"], "acceptable_at_t0": ["再"], "tags": ["在再"]}
+{"id": "s006", "context": "他跑", "target": "得", "target_readings": ["ㄉㄜ˙"], "suffix": "很快", "suffix_readings": ["ㄏㄣˇ", "ㄎㄨㄞˋ"], "acceptable_at_t0": ["得", "的"], "tags": ["的得地"]}
+{"id": "s007", "context": "這是我", "target": "的", "target_readings": ["ㄉㄜ˙"], "suffix": "書", "suffix_readings": ["ㄕㄨ"], "acceptable_at_t0": ["的"], "tags": ["的得地"]}
+{"id": "s008", "context": "他慢慢", "target": "地", "target_readings": ["ㄉㄜ˙"], "suffix": "走", "suffix_readings": ["ㄗㄡˇ"], "acceptable_at_t0": ["地", "的"], "tags": ["的得地"], "final_answers": ["地走", "的走"]}
+{"id": "s009", "context": "她高興", "target": "地", "target_readings": ["ㄉㄜ˙"], "suffix": "笑了", "suffix_readings": ["ㄒㄧㄠˋ", "ㄌㄜ˙"], "acceptable_at_t0": ["地", "的", "得"], "tags": ["的得地"], "final_answers": ["地笑了", "的笑了"]}
+{"id": "s010", "context": "這是我的姊姊，", "target": "她", "target_readings": ["ㄊㄚ"], "suffix": "很漂亮", "suffix_readings": ["ㄏㄣˇ", "ㄆㄧㄠˋ", "ㄌㄧㄤˋ"], "acceptable_at_t0": ["她"], "tags": ["他她它"]}
+{"id": "s011", "context": "我弟弟說", "target": "他", "target_readings": ["ㄊㄚ"], "suffix": "很累", "suffix_readings": ["ㄏㄣˇ", "ㄌㄟˋ"], "acceptable_at_t0": ["他"], "tags": ["他她它"]}
+{"id": "s012", "context": "這隻貓很可愛，", "target": "它", "target_readings": ["ㄊㄚ"], "suffix": "很小", "suffix_readings": ["ㄏㄣˇ", "ㄒㄧㄠˇ"], "acceptable_at_t0": ["它", "牠"], "tags": ["他她它"], "final_answers": ["它很小", "牠很小"]}
+{"id": "s013", "context": "我在", "target": "做", "target_readings": ["ㄗㄨㄛˋ"], "suffix": "功課", "suffix_readings": ["ㄍㄨㄥ", "ㄎㄜˋ"], "acceptable_at_t0": ["做", "坐", "作"], "tags": ["做作"]}
+{"id": "s014", "context": "他是一位", "target": "作家", "target_readings": ["ㄗㄨㄛˋ", "ㄐㄧㄚ"], "suffix": "", "suffix_readings": [], "acceptable_at_t0": ["作家"], "tags": ["做作"]}
+{"id": "s015", "context": "他每天", "target": "工作", "target_readings": ["ㄍㄨㄥ", "ㄗㄨㄛˋ"], "suffix": "到很晚", "suffix_readings": ["ㄉㄠˋ", "ㄏㄣˇ", "ㄨㄢˇ"], "acceptable_at_t0": ["工作"], "tags": ["做作"]}
+{"id": "s016", "context": "我住在", "target": "台北", "target_readings": ["ㄊㄞˊ", "ㄅㄟˇ"], "suffix": "", "suffix_readings": [], "acceptable_at_t0": ["台北", "臺北"], "tags": ["台臺"], "final_answers": ["台北", "臺北"]}
+{"id": "s017", "context": "他在", "target": "臺灣", "target_readings": ["ㄊㄞˊ", "ㄨㄢ"], "suffix": "大學", "suffix_readings": ["ㄉㄚˋ", "ㄒㄩㄝˊ"], "acceptable_at_t0": ["台灣", "臺灣"], "tags": ["台臺"], "final_answers": ["台灣大學", "臺灣大學"]}
+{"id": "s018", "context": "他", "target": "長", "target_readings": ["ㄓㄤˇ"], "suffix": "得很高", "suffix_readings": ["ㄉㄜ˙", "ㄏㄣˇ", "ㄍㄠ"], "acceptable_at_t0": ["長"], "tags": ["多音字"]}
+{"id": "s019", "context": "這條路很", "target": "長", "target_readings": ["ㄔㄤˊ"], "suffix": "", "suffix_readings": [], "acceptable_at_t0": ["長"], "tags": ["多音字"]}
+{"id": "s020", "context": "他是", "target": "銀行", "target_readings": ["ㄧㄣˊ", "ㄏㄤˊ"], "suffix": "的員工", "suffix_readings": ["ㄉㄜ˙", "ㄩㄢˊ", "ㄍㄨㄥ"], "acceptable_at_t0": ["銀行"], "tags": ["多音字"]}
+{"id": "s021", "context": "大家都", "target": "睡覺", "target_readings": ["ㄕㄨㄟˋ", "ㄐㄧㄠˋ"], "suffix": "了", "suffix_readings": ["ㄌㄜ˙"], "acceptable_at_t0": ["睡覺"], "tags": ["多音字"]}
+{"id": "s022", "context": "請你", "target": "重新", "target_readings": ["ㄔㄨㄥˊ", "ㄒㄧㄣ"], "suffix": "開始", "suffix_readings": ["ㄎㄞ", "ㄕˇ"], "acceptable_at_t0": ["重新"], "tags": ["多音字"]}
+{"id": "s023", "context": "這個問題很", "target": "重要", "target_readings": ["ㄓㄨㄥˋ", "ㄧㄠˋ"], "suffix": "", "suffix_readings": [], "acceptable_at_t0": ["重要"], "tags": ["多音字"]}
+{"id": "s024", "context": "我想", "target": "吃飯", "target_readings": ["ㄔ", "ㄈㄢˋ"], "suffix": "了", "suffix_readings": ["ㄌㄜ˙"], "acceptable_at_t0": ["吃飯"], "tags": ["分詞"]}
+{"id": "s025", "context": "", "target": "今天", "target_readings": ["ㄐㄧㄣ", "ㄊㄧㄢ"], "suffix": "天氣很好", "suffix_readings": ["ㄊㄧㄢ", "ㄑㄧˋ", "ㄏㄣˇ", "ㄏㄠˇ"], "acceptable_at_t0": ["今天"], "tags": ["分詞"]}
+{"id": "s026", "context": "", "target": "我們", "target_readings": ["ㄨㄛˇ", "ㄇㄣ˙"], "suffix": "一起去公園", "suffix_readings": ["ㄧˋ", "ㄑㄧˇ", "ㄑㄩˋ", "ㄍㄨㄥ", "ㄩㄢˊ"], "acceptable_at_t0": ["我們"], "tags": ["分詞"]}
+{"id": "s027", "context": "明天", "target": "下午", "target_readings": ["ㄒㄧㄚˋ", "ㄨˇ"], "suffix": "三點開會", "suffix_readings": ["ㄙㄢ", "ㄉㄧㄢˇ", "ㄎㄞ", "ㄏㄨㄟˋ"], "acceptable_at_t0": ["下午"], "tags": ["分詞"]}
