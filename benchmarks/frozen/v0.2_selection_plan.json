@@ -1,0 +1,118 @@
+{
+  "name": "ZaoSeq Bopomofo v0.2 Round 2 selection plan",
+  "frozen_at": "2026-09-24",
+  "scope": "Daily Corpus Round 2 + Production Lexicon Cleanup (v0.2 development). Written and committed before any Round 2 experiment; it must not change after results are seen.",
+  "dev_sets": {
+    "coverage_dev": "Coverage-DEV v1.1 (benchmarks/coverage_v1_1, 300 items)",
+    "gov_dev": "GOV-DEV: coverage.analysis.gov_dev_cases(per_domain=100), corpus split 'test', 400 items"
+  },
+  "never_used_for_selection": [
+    "v0.1 TEST-EVERYDAY / TEST-GOV / TYPO-REFERENCE-v0 (leakage exclusion and historical reference only)",
+    "daily corpus 'test' splits",
+    "teacher window size K (production teacher stays K=4)",
+    "memory / runtime representation (must be exactly equivalent; not a selection axis)"
+  ],
+  "references": {
+    "baseline": "frozen V0 (benchmarks/frozen/V0.json): GeneralCorpusLanguageModel + builtin lexicon, beam 48, nbest 20",
+    "teacher": "frozen fine-tuned Laya (benchmarks/frozen/FINAL.json), engine.build_production_ranker, K=4 families",
+    "reference_values": "measured in the same run as the candidates (V0 decoder and V0 + frozen teacher on both DEV sets)"
+  },
+  "rule": [
+    {
+      "layer": 1,
+      "name": "production_eligibility",
+      "requirement": "Every daily source used by the config (LM and lexicon) passes LicenseGate with Purpose.PRODUCTION (status APPROVED, approval_scope production, all rights fields determined, SHA-256 verified). Configs that use HOLD or dev_experiment sources (e.g. OASST1) are reported as diagnostics and can never be selected."
+    },
+    {
+      "layer": 2,
+      "name": "regression_gates",
+      "gov_baseline_top1_max_drop": 0.02,
+      "gov_teacher_top1_max_drop": 0.02,
+      "tests": "full pytest suite and ruff pass; V0.json and FINAL.json verify",
+      "definition": "drop = reference value - candidate value on GOV-DEV (absolute, fraction of 400 items); a config fails if either drop is > 0.02"
+    },
+    {
+      "layer": 3,
+      "name": "primary",
+      "metric": "coverage_dev frozen-teacher Top-1 (K=4) on the config's candidate list",
+      "direction": "maximize"
+    },
+    {
+      "layer": 4,
+      "name": "tie_break",
+      "tie_set": "all gate-passing configs whose primary is within 1 sentence (<= 1/300) of the best primary",
+      "order": [
+        {"metric": "coverage_dev teacher correct_to_wrong vs the V0 teacher", "direction": "minimize"},
+        {"metric": "coverage_dev baseline (decoder) Top-1", "direction": "maximize"},
+        {"metric": "coverage_dev baseline MRR", "direction": "maximize"},
+        {"metric": "coverage_dev R@5", "direction": "maximize"},
+        {"metric": "coverage_dev top-4-family teacher-window gold coverage", "direction": "maximize"},
+        {"metric": "coverage_dev decoder p95 latency ms", "direction": "minimize"},
+        {"metric": "incremental RSS MB of the runtime artifacts", "direction": "minimize"},
+        {"metric": "artifact size MB (daily LM + compact lexicon)", "direction": "minimize"},
+        {"metric": "config name", "direction": "ascending (deterministic last resort)"}
+      ],
+      "comparison": "lexicographic; each criterion compares exact values rounded to 6 decimals"
+    }
+  ],
+  "stages": [
+    {
+      "stage": 1,
+      "axis": "reading policy",
+      "fixed": {"extraction": "L1", "prior": "flat", "lm": "gov 0.75 / daily 0.25 (production daily sources)"},
+      "candidates": {
+        "R0": "previous Cartesian product of CNS readings (<= 4 combinations). Diagnostic only, never selectable.",
+        "R1": "unambiguous-only: every character has exactly one CNS reading; the word gets that single reading sequence.",
+        "R2": "known-word-reading: characters with several CNS readings are allowed only inside a span covered by a builtin multi-character word that has exactly one explicit reading (longest match); all other characters must have exactly one CNS reading.",
+        "R3": "bounded-reading: R2 plus builtin single-character rows that list exactly one explicit reading. Still one reading sequence per word; never a Cartesian product."
+      }
+    },
+    {
+      "stage": 2,
+      "axis": "extraction / filtering",
+      "fixed": {"reading": "stage-1 winner", "prior": "flat", "lm": "gov 0.75 / daily 0.25"},
+      "common": "Han-only 2..4 characters inside Han runs, not already a builtin word, fragment share < 0.9 (a single one-character extension covering >= 90% of occurrences marks a fragment)",
+      "candidates": {
+        "L1": "government + daily: pooled frequency >= 2 per million, documents >= 2",
+        "L2": "daily-only: counts from production daily sources only; daily count >= 3, daily documents >= 3, daily PMI >= 3",
+        "L3": "daily-supported: L1 words that also occur in >= 2 daily documents",
+        "L4": "domain-ratio filtered: L1 minus words whose normalised-rate concentration (max_d r_d / sum_d r_d over the 4 government domains and daily, r_d = count_d / tokens_d) is >= 0.8 in a government domain, minus words with numeral-adjacent occurrence share >= 0.5",
+        "L5": "doc-frequency filtered: L1 with documents >= 5 and distinct sources >= 3"
+      }
+    },
+    {
+      "stage": 3,
+      "axis": "lexical prior (weight mapping); every mapping clipped to [3, 200]",
+      "fixed": {"reading": "stage-1 winner", "extraction": "stage-2 winner", "lm": "gov 0.75 / daily 0.25"},
+      "candidates": {
+        "flat": "w = 10",
+        "raw": "w = 10 * f / median(f), f = pooled relative frequency",
+        "log": "w = 10 * (1 + log10(f / median(f)))",
+        "doc": "w = 10 * df / median(df), df = document count",
+        "daily_only": "w = 10 * f_daily / median(f_daily over words with f_daily > 0); words with f_daily = 0 get 3",
+        "interpolated": "w = 10 * f / median(f), f = 0.25 * P_daily + 0.75 * sum_d w_d * P_d (GENERAL domain weights)",
+        "rank_bucket": "by pooled f among eligible words: top 10% -> 50, next 20% -> 20, next 40% -> 10, bottom 30% -> 3"
+      }
+    },
+    {
+      "stage": 4,
+      "axis": "daily LM weight",
+      "fixed": {"lexicon": "stage-1..3 winners"},
+      "candidates": {"daily weight": [0.0, 0.1, 0.25, 0.5]},
+      "note": "0.0 = frozen V0 language model with the clean lexicon"
+    },
+    {
+      "stage": 5,
+      "axis": "corpus ablation (only when two or more production-approved daily sources exist)",
+      "candidates": "each production-approved daily source alone, then all production-approved sources together; lexicon rebuilt from the same sources; stage-4 weight",
+      "note": "sources approved during this round only enter here; stages 1-4 use the sources approved when this plan was frozen (tatoeba_cmn_hant)"
+    }
+  ],
+  "final_selection": "Apply the rule to every production-eligible config evaluated in stages 1-5 plus A (V0). The winner of each stage fixes that axis for the next stage.",
+  "diagnostics_not_selectable": [
+    "R0 Cartesian readings",
+    "OASST1 or any dev_experiment / HOLD source",
+    "teacher K = 8 re-check (only if the candidate distribution changes substantially)"
+  ],
+  "false_competitor_definition": "a derived (text, reading) whose reading is not supported by the reading policy's evidence and that shares its reading sequence with a different lexicon word of the same length"
+}

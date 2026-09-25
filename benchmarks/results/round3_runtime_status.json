@@ -1,0 +1,29 @@
+{
+  "runtime_cache_capacity": "PROVISIONAL / NOT_PART_OF_SEMANTIC_FREEZE",
+  "system": "round3_winner (S5_tatoeba_common_voice)",
+  "output_equivalence": {
+    "capacities_checked": [
+      "disabled",
+      "bounded_8mb",
+      "bounded_16mb",
+      "bounded_32mb",
+      "unbounded_reference"
+    ],
+    "signature": "aef3680ca7efdbb43e13120024e0689d3d6ca7d4464e0d6fe1aff759e8a2132f",
+    "identical_across_all": true,
+    "sources": [
+      "benchmarks/results/round3_final_cache.json",
+      "benchmarks/results/round3_quiet_latency.json"
+    ]
+  },
+  "statement": "The LM cache is an output-equivalent runtime policy: disabled, 8 MB, 16 MB, 32 MB and unbounded caches give the same candidate texts and scores on all 700 DEV cases. Cache capacity is not part of the v0.2 semantic freeze and will be frozen separately in runtime closure. Accuracy / sealed evaluation uses the cache-disabled reference path.",
+  "final_cache_run": {
+    "file": "benchmarks/results/round3_final_cache.json",
+    "rule_output": "bounded_32mb",
+    "status": "INVALID_FOR_CAPACITY_SELECTION",
+    "reason": "the machine was not quiet during the run (Balanced power plan; OBS Studio, ChatGPT/Codex computer-use, Task Manager, Discord, Chrome, Word and LINE running). Evidence: bimodal repetitions within single runs (bounded_8mb per-repetition p50 71.1/72.9/71.6/71.6/38.5 ms; GPU teacher-only p50 22.1/50.0/39.3/21.3/49.3 ms vs a stable 46-49 ms earlier the same day).",
+    "next": "re-run `python -m zaoseq_bopomofo.daily.round3 final-cache` on a verified quiet machine during runtime closure and accept the frozen rule's result"
+  },
+  "provisional_capacity_in_code": "bounded_8mb (daily.round3.PROVISIONAL_CAPACITY; used only by the quiet-winner diagnostic run)",
+  "recorded_at": "2026-09-25"
+}

@@ -1,0 +1,72 @@
+{
+  "name": "ZaoSeq Bopomofo v0.2 Round 3 addendum",
+  "frozen_at": "2026-09-25",
+  "scope": "Round 3 (final v0.2 DEV round). Written before any Round 3 experiment, before the Common Voice archive was obtained and before any cache latency was measured. It does not modify the parent plan.",
+  "parent_plan": {
+    "file": "benchmarks/frozen/v0.2_selection_plan.json",
+    "sha256": "83c59d9b35d56b76ab0bfe81daa39b5ddb25549f8b269e76c0a606cc4e23e852",
+    "commit": "dfed442"
+  },
+  "stage5_corpus_ablation": {
+    "basis": "parent plan stage 5: each production-approved daily source alone, then all production-approved sources together; lexicon rebuilt from the same sources; stage-4 weight. This addendum only fixes the details the parent plan leaves open.",
+    "stage4_weight": 0.5,
+    "fixed": {
+      "reading": "R2_known_word",
+      "extraction": "L5_doc_frequency",
+      "prior": "daily_only",
+      "teacher": "frozen fine-tuned Laya, production ranker, K=4",
+      "decoder": "V0 settings (beam 48, nbest 20, typo correction off)"
+    },
+    "candidates": {
+      "S5_tatoeba": "gov 0.5 + Tatoeba 0.5 (the Round 2 winner, re-evaluated in the same run)",
+      "S5_common_voice": "gov 0.5 + Common Voice 27.0 zh-TW 0.5",
+      "S5_tatoeba_common_voice": "gov 0.5 + pooled Tatoeba and Common Voice 0.5"
+    },
+    "daily_lm": "character trigram LM built from the pooled train split of the included daily sources with the existing builder (min trigram count 2); no per-source weights",
+    "lexicon": "candidate statistics from the government train split plus the train split of the included daily sources; R2 / L5 / daily_only exactly as frozen",
+    "reference": "V0 decoder and V0 + frozen teacher measured in the same run",
+    "selection": "parent plan rule unchanged: production eligibility, GOV decoder and GOV teacher regression <= 0.02, primary = Coverage-DEV v1.1 teacher Top-1, parent-plan tie-breaks. The winner among the S5 candidates is the Round 3 DEV configuration.",
+    "if_common_voice_unavailable_or_not_approved": "only S5_tatoeba is evaluated and the Round 2 winner is kept"
+  },
+  "common_voice_source": {
+    "dataset": "Common Voice Scripted Speech 27.0 - Chinese (Taiwan)",
+    "dataset_id": "cmu5wkw5i00c6o107jnm3t51u",
+    "url": "https://mozilladatacollective.com/datasets/cmu5wkw5i00c6o107jnm3t51u",
+    "version": "cv-corpus-27.0-2026-09-11, released 2026-09-17",
+    "archive": "common-voice-scripted-speech-27-0-chines-aea50ebd.tar.gz",
+    "approval": "exact-version specific; never applies to the GitHub Sentence Collector export, mirrors, other releases or other languages",
+    "text_source": "the zh-TW validated sentence table of the archive (validated_sentences.tsv); if the archive has no such table, the unique sentence texts of validated.tsv",
+    "fields_used": "sentence id and sentence text only; client_id, demographic fields, clip paths and audio are never read into the corpus",
+    "dedup": "one record per sentence id, then one record per NFC exact text; multiple recordings of one sentence count once",
+    "filters": "existing DailyCorpusBuilder rules (NFC, no simplified-to-traditional conversion, script check, markup / URL / ID removal, evaluation-set near-duplicate exclusion, cross-source dedup, document-level split by sentence id)",
+    "storage": "raw archive and extracted text stay under data/raw/daily and data/daily/corpus (gitignored); MDC platform terms forbid re-hosting"
+  },
+  "cache_policy": {
+    "measurement": "benchmarks/results/round3_cache_cost.json: 377.7 bytes per entry; an unbounded cache reached 2,362,533 entries (about 892 MB) after one pass over the 700 DEV cases",
+    "candidates": {
+      "disabled": 0,
+      "bounded_8mb": 22000,
+      "bounded_16mb": 44000,
+      "bounded_32mb": 88000,
+      "unbounded_reference": null
+    },
+    "eviction": "LRU (daily.mixture.BoundedLanguageModelCache); one cache per process, kept across requests",
+    "invariant": "every capacity must give exactly the same candidate texts and scores on all 700 DEV cases; otherwise the benchmark is invalid",
+    "selection_rule": "Only bounded capacities (> 0) are eligible; the unbounded reference and the disabled cache are reported only. For each capacity take the median over repetitions of the per-repetition decoder-only p50, p95 and p99. Let best_p50, best_p95, best_p99 be the minima over bounded capacities. A capacity is acceptable if p50 <= 1.05 * best_p50, p95 <= 1.05 * best_p95 and p99 <= 1.10 * best_p99. Choose the smallest acceptable capacity.",
+    "system": "the Round 3 DEV winner; if the Common Voice step is still pending, the Round 2 winner, re-run on the Round 3 winner if it differs"
+  },
+  "quiet_latency": {
+    "case_set": "Coverage-DEV v1.1 (300) followed by GOV-DEV (400), fixed order",
+    "warmup_cases": 20,
+    "repetitions": 5,
+    "isolation": "one benchmark at a time in a fresh process; no training, corpus build, GPU work or other benchmark while the decoder is timed",
+    "segments": {
+      "decoder_only": "CPU wall time of one generate() per case",
+      "teacher_only": "frozen teacher K=4 rank() on candidate lists precomputed by the same decoder (GPU)",
+      "end_to_end": "generate() followed by rank() per case"
+    },
+    "systems": ["V0", "Round 2 winner", "Round 3 winner if different"],
+    "reported": "mean / p50 / p95 / p99 per repetition and the median across repetitions; load time and RSS after load",
+    "environment": "CPU, RAM, OS, Python, numpy, torch and GPU recorded with every run"
+  }
+}

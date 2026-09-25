@@ -1,25 +1,26 @@
 {
   "schema": "zaoseq-bopomofo/public-distribution/v1",
-  "name": "zaoseq-bopomofo public core v0.1.0",
+  "name": "zaoseq-bopomofo public core",
   "tool": "zaoseq-public-export/1",
-  "policy_sha256": "afee75ba5bfe79dc689cea04dc86ac953a933c6fb8fc4892822673fffa4d2734",
-  "exported_at": "2026-09-24T15:39:24+00:00",
+  "policy_sha256": "a3176a066607c44523aac32d3c4f8b5ed3bf1deaeca08f73921c3d1208f11e1e",
+  "exported_at": "2026-09-25T12:31:02+00:00",
   "source": {
     "repository": "ZaoSeq internal zaoseq-bopomofo (private)",
-    "commit": "0f81fc6c6656b0c0a40e516878f2deb31bda3e6b",
-    "commit_date": "2026-09-23T22:51:24+08:00",
+    "commit": "64fdaa0c400306fe0fbf7a141dde67c0562ce08d",
+    "commit_date": "2026-09-25T20:30:34+08:00",
     "ancestor_tags": [
       "v0.1.0-research-preview"
     ]
   },
   "verification": {
     "public_distribution": "every file listed under 'files' matches its SHA-256 (text files hashed with LF line endings); run `python -m zaoseq_bopomofo.distribution verify` in the internal repo or recompute the hashes",
-    "historical_full_source": "v0.1 FINAL.json and the fine-tuned model need private files and weights; they are verified only in the internal repository. The hashes under 'private_commitments' let the internal records be matched later without disclosing them; excluded components are listed by category only.",
-    "not_claimed": "this distribution cannot reproduce the v0.1 production ranking path or any metric of the private fine-tuned teacher"
+    "historical_full_source": "v0.1 FINAL.json, the v0.2 semantic freeze record and the fine-tuned model need private files and weights; they are verified only in the internal repository. The hashes under 'private_commitments' let the internal records be matched later without disclosing them; excluded components are listed by category only.",
+    "not_claimed": "this distribution cannot reproduce the production ranking path or any metric of the private fine-tuned teacher, and it contains no runtime validation or official latency"
   },
   "private_commitments": {
     "v0.1 private freeze record": "ed781f57a0bac99b4be25f7144f6fedd7ccd076bceb46673963c1f51d5ce8826",
-    "v0.1 private training plan": "4b1040595db9de333c15853b2bcea3a8b82a1c84f7c2fe845c69aeedef392cf5"
+    "v0.1 private training plan": "4b1040595db9de333c15853b2bcea3a8b82a1c84f7c2fe845c69aeedef392cf5",
+    "v0.2 private semantic freeze record": "c2010ec2ae48d3b2d6b39f73fad0c605933344b0e32846f44f0b274994bb4019"
   },
   "excluded_components": [
     {
@@ -48,6 +49,16 @@
       "reason": "FINAL.json locks private code and model weights; its hash is published under private_commitments"
     },
     {
+      "name": "deferred runtime closure",
+      "destination": "internal repository",
+      "reason": "v0.2 runtime closure is deferred (benchmarks/results/v0.2_runtime_status.json); latency measured on a non-quiet machine is not published and no official latency is claimed"
+    },
+    {
+      "name": "v0.2 full-source verification",
+      "destination": "internal repository only",
+      "reason": "V0.2_SEMANTIC.json locks the private ranker checkpoint and its training configuration, and the verifier and sealed-evaluation runner load private modules; the semantic freeze hash is published under private_commitments and the sealed TEST, plans, gate and seal are public"
+    },
+    {
       "name": "tests of excluded components",
       "destination": "stay with the component they test",
       "reason": "they import excluded modules or verify private records"
@@ -65,6 +76,18 @@
     "THIRD_PARTY_NOTICES.md": [
       "drop_markdown_sections",
       "replace_text"
+    ],
+    "benchmarks/results/daily_round2_raw.json": [
+      "strip_json_keys"
+    ],
+    "benchmarks/results/daily_round3_manual_sanity.json": [
+      "strip_json_keys"
+    ],
+    "benchmarks/results/daily_round3_stage5_raw.json": [
+      "strip_json_keys"
+    ],
+    "benchmarks/results/daily_v1_raw.json": [
+      "strip_json_keys"
     ],
     "benchmarks/results/dev_balanced.json": [
       "replace_text"
@@ -90,13 +113,22 @@
     "benchmarks/results/sanity_pairwise.json": [
       "replace_text"
     ],
+    "benchmarks/results/v0.2_sealed_test.json": [
+      "strip_json_keys"
+    ],
     "data/SOURCES.md": [
       "replace_text"
     ],
     "data/corpus/README.md": [
       "replace_text"
     ],
+    "data/daily/SOURCES.json": [
+      "replace_text"
+    ],
     "pyproject.toml": [
+      "replace_text"
+    ],
+    "src/zaoseq_bopomofo/__init__.py": [
       "replace_text"
     ],
     "src/zaoseq_bopomofo/corpus/__main__.py": [
@@ -104,6 +136,12 @@
     ],
     "src/zaoseq_bopomofo/corpus/sources_md.py": [
       "replace_text"
+    ],
+    "src/zaoseq_bopomofo/coverage/analysis.py": [
+      "stub_python_definitions"
+    ],
+    "src/zaoseq_bopomofo/daily/experiments.py": [
+      "stub_python_definitions"
     ],
     "src/zaoseq_bopomofo/evaluation/benchmark.py": [
       "stub_python_definitions",
@@ -132,20 +170,51 @@
     ]
   },
   "files": {
-    ".gitignore": "70807eda35f7457ebdda1eb16230968256563b8af171428474feb015c34eb559",
-    "CHANGELOG.md": "8ed6e5496aae137e3b616a895e5ea021c7541de56ac279f100039371e9976911",
+    ".gitignore": "436b6379695f6c2486ab469a97dfc0b041752ebf59a71875dadef7bf158e713b",
+    "CHANGELOG.md": "344c3d8c2da0fe072c3b65cc4fef36d58dc968dd2640c80947c66e0e192d8a3c",
     "LICENSE": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
-    "NOTICE": "47a5cd36acc312655a23680cd63300cfd08c6df563a4629a0a8bd9f5da46bad3",
-    "README.md": "3705b686fdfa3e2e3702c42e4e6d5454ac22344f19f3c98a25294853ae3665d7",
-    "RELEASE_NOTES.md": "14a9d9ca094632a7a9a73ef5600880a3b3e3f0ac2ff126ce3489993085417280",
+    "NOTICE": "2712060324a08e8740cdd8a338b1a714b9546945dff13e61cf80ecb347ca48dd",
+    "README.md": "d60b23fb16e1824a4deb552c7d66b4425d294a50409f640465c60d37bae4e852",
+    "RELEASE_NOTES.md": "ab1535be103c6d6c0b1104c741f7158c8d03e453143cccf51afea7336fec1d7f",
     "THIRD_PARTY_NOTICES.md": "f4b0412dedda1300003fb08705e27d57a885554c589b1830b6f48ab1d27c47e8",
+    "benchmarks/coverage_v1/MANIFEST.json": "5e749e9a6bdd59614644b10615ea3f4f0e981aa337fd864694649385f4cc17b2",
+    "benchmarks/coverage_v1/coverage_dev.jsonl": "c387a11eddcd7f3a5fc0953752ef1117d9ecdb0c911139362a5758646520706f",
+    "benchmarks/coverage_v1/source.tsv": "81f9d4240f15211e50c861f831beb075dcec592c6ec71c6351106dbde96ee97f",
+    "benchmarks/coverage_v1_1/MANIFEST.json": "ba7c2ca4e66fc59e595fb927541ccb4ef45a166f0cc11d7524f95014d87ace3c",
+    "benchmarks/coverage_v1_1/coverage_dev.jsonl": "ee81518e977d64424ec9bf5b2cdd369346b656841eff7dc15caa97fd239c628b",
+    "benchmarks/coverage_v1_1/source.tsv": "085bce6f4d349cf359a07ca4919ac82f5bb1ee3002f9003d2db3f01f3c6c2c8f",
     "benchmarks/dev/composition.jsonl": "8a38530f6dff5d66589f67cef2292703799051de0d353490439ea4f2d6f4c90c",
     "benchmarks/dev/immediate.jsonl": "285a7cdca4913d1e55ab8f214b627bad37b1543c993d943a1230a9dab3f53f59",
     "benchmarks/dev/seeds.jsonl": "41ef8b4d8fd5be07637048e7ad3af5563afeab04445116723b844fba01e7f783",
     "benchmarks/early_single_step/RESULTS.md": "ed50321abcf7b738f586fda55aba7fe80dd33ed1b45c5741e4e46a55c474408b",
     "benchmarks/early_single_step/cases.jsonl": "0b0af9fc11963cecb435e1b71519f2a7790f6a26c37afcb98e4a033eb0b25539",
     "benchmarks/early_single_step/seeds.jsonl": "ff3574b308647229b64fb7895a739b299cb4aba5bb1bdea6a5acdcddb8a2d1fa",
+    "benchmarks/frozen/V0.2_PLAN.json": "a3de3bb3a8ac7eb2a2d1c27bd78dfaa17f7f51086036eb65e69e1fc317cdde56",
+    "benchmarks/frozen/V0.2_ROUND3.json": "16fd269f20e6af0fe219abeb0205ee87dd47e4202cbd8cf52c053cb0ef94d42b",
+    "benchmarks/frozen/V0.2_SEALED.json": "93e24dc366dd831ad0014541405743d5d775636a4a300bd6bad6c349bfa1c347",
+    "benchmarks/frozen/V0.2_TEST_GATE.json": "e26166408d0b6974b834658bf3d6d92aecf8e2f5bc5ee1f42c00ba5b0e1c077a",
     "benchmarks/frozen/V0.json": "4be20a13aeb7169b28df6cd841de55f081ee2afa80291cf2bfb23e2cec0d56aa",
+    "benchmarks/frozen/v0.2_round3_addendum.json": "fe043808b0eafa8d6923c8c3545a53e7e437cd13493ae5533bcab68e68a8dd19",
+    "benchmarks/frozen/v0.2_runtime_plan.json": "de5832aa27f60d4c0f12acf99fa6544e95afd935aaa684ad5f753f020c3c389f",
+    "benchmarks/frozen/v0.2_sealed_decision_plan.json": "cc1b0c008dafe4bbeff47febcd4b30b1b514229f988da5af7a98e19e56525ec4",
+    "benchmarks/frozen/v0.2_selection_plan.json": "83c59d9b35d56b76ab0bfe81daa39b5ddb25549f8b269e76c0a606cc4e23e852",
+    "benchmarks/frozen/v0.2_test_plan.json": "2cec92c799f5c4f30b610976bd74fcae55a3f8aa317a7b7687b54eeee9b1e723",
+    "benchmarks/results/coverage_v1.json": "82d6e1a3f356f2492c026d7ea1d10771619acb8f3d8950be61a90e2acfe261e2",
+    "benchmarks/results/coverage_v1.md": "34d24d4a26cbee3977834932fb13bb3d37f297e6b35d70cbef99d1319ca7ae1a",
+    "benchmarks/results/coverage_v1_1_delta.json": "c028a6f135e6ca085d81b66046a7a31e133c7d21c5868d640314c1e712ab34cb",
+    "benchmarks/results/coverage_v1_derived.json": "36fd378ebe8df6986e5f68ad4ace38cda20098518701655a2c747a06eaf68d1d",
+    "benchmarks/results/coverage_v1_raw.json": "4b27174aa54cb7146636884fde1e5e118af1e53e3cbbb34eca4b79f05c76fe96",
+    "benchmarks/results/coverage_v1_teacher.json": "225b8611a4d710f0423e9292f402c5eb48f61a46497e71a5a41734a0df48b507",
+    "benchmarks/results/daily_round2.json": "edf6426f5f2e80516856d1b9713eb7e4d751fc7e054f2ece0294ff47c31e2a84",
+    "benchmarks/results/daily_round2.md": "852516dc9c0604a6d43d64a518c23a5ac692dc3aa1492b883286315e3965f264",
+    "benchmarks/results/daily_round2_raw.json": "c3a4433ae73e48cb8f4de8651a76988e0a9012bd9151610ed446c20be559730c",
+    "benchmarks/results/daily_round3_corpus_compare.json": "9659c82e30eea65fbe6b60ce2926b2ad99ea89c26281d0d22dccf51f46256757",
+    "benchmarks/results/daily_round3_manual_sanity.json": "7d1bab012473c066960fc754207d3ff1f46e6f9ad34ecf819370d3ef4ded74a8",
+    "benchmarks/results/daily_round3_stage5_raw.json": "9ce4d2695775b3ede843b8d7e216ccbc74610c0212f22dc557265d40d26135a5",
+    "benchmarks/results/daily_v1.json": "dab25ea115abb61ce79769b3497d6e507cee730177d682999edb66ed25b95464",
+    "benchmarks/results/daily_v1.md": "5b8b0d2864412ff8a3b9e4132ede82f8f00d9dba6083a203ffa8182cf0e35cf3",
+    "benchmarks/results/daily_v1_ablation.json": "4aee86eeb44ac2295117c44829cb0cd9301cb8f20bc9a981f0c9a6826fbe07ce",
+    "benchmarks/results/daily_v1_raw.json": "a2b716baec3126c5d55b8ad19f70ea3f7078ce371a97e8167e30cc9221129eab",
     "benchmarks/results/decoding_gate_diagnostic.md": "20db4bc575c67a8f9f63740d4f69159ec5a28a82d690c1d5e31de419c78bf2c7",
     "benchmarks/results/decoding_latest.json": "2887c9621422aa9afd5dd63af13677e01963cf95f7f7b065f243a654d1829c96",
     "benchmarks/results/decoding_latest.md": "fb680258aebd55a9562cd8a38a9d9a364d3e1a8267afac1e5108485d8869167a",
@@ -161,6 +230,8 @@
     "benchmarks/results/dev_pairwise.md": "a0e072fbde7b6f80c1a9e9fc07c13ac880daee600a90da9f37712e75313a9580",
     "benchmarks/results/domain_latest.json": "6b93528efc65eb7547c1c68b8a0121b60ce9eb9bf9296b2d49c4b171399cc589",
     "benchmarks/results/domain_latest.md": "63b8688789a4cec682311a25767e9762d36b994dc4ad50064bb12cd81ffd0c43",
+    "benchmarks/results/round3_cache_cost.json": "7c1c86bf7c4657fe378ee300c63e71a998da89bc892c0d7a0297cdb5fe1abbf7",
+    "benchmarks/results/round3_runtime_status.json": "8f59554798353fc6238f0bd3a0faa669ada6fd24e26de89edf8fac921a367b6b",
     "benchmarks/results/sanity_balanced.json": "45107631dfac8479ed893eca4c3a0b20447d241e1f950ee19bbde2f5d500dc65",
     "benchmarks/results/sanity_balanced.md": "0be359d519ec4be3f08c01ad49a1ff1472ade889bfc0e81cb56cda064752d2b8",
     "benchmarks/results/sanity_corpus.json": "ec33ee6171f437e2cd0b910807a5c0256a62b04c6ea840a150670e171fa98a10",
@@ -168,6 +239,9 @@
     "benchmarks/results/sanity_pairwise.json": "335a606799fb2f5f37c1b80ef8a80d9503a6e72a458d5bee8c2f87d3d738cdc1",
     "benchmarks/results/sanity_pairwise.md": "ffff7d1186a8249911443bcf3e31a51677102845e305a327111ef0b4152efaf3",
     "benchmarks/results/test_final.md": "f679729d2035bb255bf2aa7162129ab8623ba7b1dd29f8b4955ad3b7a980a32e",
+    "benchmarks/results/v0.2_runtime_status.json": "150d09eb07a8bc67a6abb03a5682470ebc168d88407cbd0c5ff7562730121225",
+    "benchmarks/results/v0.2_sealed_test.json": "c3af43181aa4d09f2bc64577fe941d98e3e65befcc6995ebfc98302219d64948",
+    "benchmarks/results/v0.2_sealed_test.md": "98592d417d4d23aeb5391226bb5e55bb85df9a1be2884299b4ab64b049fb229b",
     "benchmarks/sanity/composition.jsonl": "411ca923296c6b689123ec99e3da1201a4802dcc55c0083e6958e77aa4946fe5",
     "benchmarks/sanity/immediate.jsonl": "243221c638bbab2a028f648dafd2b8b1083072cbf178ffebcc2dbf506cb0f07c",
     "benchmarks/sanity/seeds.jsonl": "b78213c3b5b48e2fdac855361c89be8989212e473e67ed1607435aacde6884cc",
@@ -177,6 +251,11 @@
     "benchmarks/test/everyday_source.tsv": "efc46a36ded63910af442133f9140040d415c58a31ccd959f1bf19ff107be328",
     "benchmarks/test/gov.jsonl": "e7c46f447aef11aa6b2dda1b1e84cc87d8fb6e6840d93229a97afdcef803505b",
     "benchmarks/test/typo.jsonl": "beabe4d9517b99464cc229b5f1aaca77a7d085ab22f01f33be8931b5c8f72356",
+    "benchmarks/test_v1/DEDUP_REPORT.json": "3cfe70f181d2873018808bf3309827dc0f46ec9180a6ac30c832d506faeb643a",
+    "benchmarks/test_v1/MANIFEST.json": "8355cbc350ef4a388a9f400afc2044dd62667c465d92381d9b9ab2705d6b7c28",
+    "benchmarks/test_v1/everyday.jsonl": "f0c9cb78978d8125b26ef9dbf1cad4658203d29870a7fb1ab5afd64000d8a1e9",
+    "benchmarks/test_v1/everyday_source.tsv": "232117ed15c9e597aca16a2f2cdea4ad32ad379597dbf9941188de0b48f44a80",
+    "benchmarks/test_v1/gov.jsonl": "edea27cfae1ff5f6284aba8978a3f10125e5f5b7f1f1588e0e9c6dcb305ba88e",
     "data/SOURCES.md": "5386cb2f3210a6e3ddbfd5e3500af8fe288814bad6afc7a0682a6d9662e7d2ff",
     "data/builtin/function_word_groups.tsv": "9d1915bc68810e90e58607f4cb942b2a62a9a2e52098fa90c4cc5a594ad9b57a",
     "data/builtin/lexicon.tsv": "4eacbf2931735b1cc5c1d29aab6c9c27e674d4949867e919b9c610ca1318fdac",
@@ -191,12 +270,23 @@
     "data/corpus/lm/domain/public_service/manifest.json": "6940a13b0408db955e0b19717924494512c34524e35e0f52f22f97e19e43d9ae",
     "data/corpus/lm/raw/manifest.json": "23f785d82e81c283656bb5ca181224530d18d9cc161daf5348576f539022323e",
     "data/corpus/manifest.json": "ed2df793547d5486488081e3d2e72017e78ab379c7197e4be11d9d73de61a343",
+    "data/daily/SOURCES.json": "fbd25c04129d3d10110554ab27d82a336a5d39d63e4536e19b861edf74099b66",
+    "data/daily/attribution/tatoeba_cmn_hant.tsv": "f41316e7d59d6f1dcaa277543e357dde498cb245c1b2a48be77520d6b7b262cc",
+    "data/daily/corpus/manifest.json": "65a6a4c01616513b79c4ed58dcef1cfb57d280957cf83a143708bd648d4be42c",
+    "data/daily/lm/daily_all/manifest.json": "d31ee48e0ccc77edfdf4aaefcdeefdac5838b8e5222ef42b5769922b33e2cdab",
+    "data/daily/lm/daily_production/manifest.json": "e8309579964fa23819a0e957b66cf66ecc108e276038035ecd89c53ba7bf34b0",
+    "data/daily/lm/mdc_common_voice_zh_tw_27_0/manifest.json": "d75e573817ef11876858c7733c3a257073eeb36db2b2adf85ff9d57276b5b604",
+    "data/daily/lm/oasst1_zh_prompter/manifest.json": "8c7b36d94ef73feabd7c0185900fa43110b0e783df4392e2555665cdbd6c7fff",
+    "data/daily/lm/tatoeba_cmn_hant/manifest.json": "d4bce5de8ca1cbbf09202834f26aed879e43ba2e5988658b26ce5970d0af1b0d",
     "data/raw/cns11643/README.md": "28492c51f4fb4cbe4463f9e2cd30cb52076292d5cb511b6e361e8b6bcc15e782",
     "data/sources.json": "5bfb1bd68bc9e029bacce4b78d7f22c7b3ab11155e0e1e1cc501086101fd318a",
     "docs/API.md": "b98dded0f294936015812c8b103919e7f201735604f8fcc64eee46f790e2cc64",
-    "docs/PUBLIC_BOUNDARY.md": "aa760b6fa467834138a12d8ec27359a658e68931d2dc6fbe7938f5b7b3ee93b6",
-    "pyproject.toml": "9e0ea116e89f3f827bfa24404130dd32a06d13e9bcb6d060f26c7b548194706b",
-    "src/zaoseq_bopomofo/__init__.py": "65a82b1a1652d6a369f5917c879f611272ce2f91706c22ac7815237d7d7fa1f8",
+    "docs/CANDIDATE_COVERAGE.md": "fc5ffb8b6c742dd8a20172be28db8a90898f2ac10865aa3492082bd0ddcfe4f7",
+    "docs/DAILY_CORPUS.md": "25482df40557c0ebc7ea03240f338c6b6a0c5cbf2f5b0043bef23e796f9768eb",
+    "docs/DAILY_CORPUS_ROUND2.md": "0af9a0129d27ab21b0de8ac47592a002ab27008fe4a62383e1672dcac1c431b1",
+    "docs/PUBLIC_BOUNDARY.md": "80aae076fc878f5d4a367c275fb7a781b9c0a834a71a1a536be11b600936ea3a",
+    "pyproject.toml": "94621118b04f4819f7d8bc34079d59d7c13cdef78154f35866b64678d904faf9",
+    "src/zaoseq_bopomofo/__init__.py": "a672711bf1596c456b60118e06bcd12ced797e5216b2dcf41f6a2f80fe6bad8c",
     "src/zaoseq_bopomofo/corpus/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
     "src/zaoseq_bopomofo/corpus/__main__.py": "67294eb010cbb0c4d80d0e85670c521d1053e447ccf3eeb8db036cbbf0b373c9",
     "src/zaoseq_bopomofo/corpus/annotate.py": "ca35660e9edd6f3a8bcd23407ea0aab597e52a4ad4e17e83a09c789d7d27e066",
@@ -209,6 +299,33 @@
     "src/zaoseq_bopomofo/corpus/source.py": "97720b854f62f4f560504b09d9f5f68b12fd806df2a0733984fe5a8a25f76249",
     "src/zaoseq_bopomofo/corpus/sources_md.py": "721174f183cfefc31a3bee4c1cc71dcb0d2ca72b66ed8c4b6308315d25c44e79",
     "src/zaoseq_bopomofo/corpus/statistics.py": "6652bebe7210bb23faf65d50039320dc323267cee56bec6bb5e3cfde35bb68ec",
+    "src/zaoseq_bopomofo/coverage/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "src/zaoseq_bopomofo/coverage/analysis.py": "290d46a6c592badfa2b1b2eaf7cd94887f94f97f8e44d0f1875d27de80064209",
+    "src/zaoseq_bopomofo/coverage/dataset.py": "01e409ce5b164260d3e5837c20f2083d54ccf48188cbba95988ec8354bddb986",
+    "src/zaoseq_bopomofo/coverage/derived_lexicon.py": "e3be0d114445052295dcb4f82c0be94e0522f73aeb6b65f291695d6fb81ee99b",
+    "src/zaoseq_bopomofo/coverage/lattice.py": "8f52e56d4e01f366b539eba91d3a09ffc1a844e5c1419a4e6da0a9e2be0c0999",
+    "src/zaoseq_bopomofo/coverage/report.py": "645c1ba67991fda1d832cee2a2fcdb6e66b85959f2b4800f44e0bdcd991aaaf8",
+    "src/zaoseq_bopomofo/daily/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "src/zaoseq_bopomofo/daily/__main__.py": "e2f61cf413116ecd023f341272d58b767f27c9d2405edb9eaaf8b6660c9143a5",
+    "src/zaoseq_bopomofo/daily/clean_lexicon.py": "b30161d5dc4d921cd78b48a292ff6ed8e3d7d810df8aa205e3b35d4af65c4b7f",
+    "src/zaoseq_bopomofo/daily/compact.py": "032a980bd03635d91b22e47528dfb478a35a2413177f203c0788216a7207e5b1",
+    "src/zaoseq_bopomofo/daily/corpus.py": "1185318dbcb85c972af63813ecad3445dcdbc7c698c84760f76d2432c491edcd",
+    "src/zaoseq_bopomofo/daily/corpus_ablation.py": "c83b5607cd99e848ba7511a1e4e9dbef57549655dcc773392b6eeda6b553f09f",
+    "src/zaoseq_bopomofo/daily/corpus_compare.py": "77a3a7da05c154c4d86bff620eeb4ebbb394c743fd69a1fef13202899533453f",
+    "src/zaoseq_bopomofo/daily/experiments.py": "e9e1cad6ae568937ddabe05c3201413167b4f1defa76b5d7bfd1a9660bcb8fd1",
+    "src/zaoseq_bopomofo/daily/guard.py": "91006b9a50a88d3e481d6712034f9e7a928fd368ffc3d0f88dfe80d6bd44c27e",
+    "src/zaoseq_bopomofo/daily/importers.py": "437468649d06e94fc46a227d3f9bbdaac641b732c1bd556fab65cb06af23507f",
+    "src/zaoseq_bopomofo/daily/lexicon.py": "dfd733b838a7bf622c3ca675f1112ee78e0356a2733d6d5ff5987e2881cd2f04",
+    "src/zaoseq_bopomofo/daily/manual_sanity.py": "2d01f2852bb24609e0820fc0bb41f6dc1d104bc09f087a7c22bd846a1e6ddcf4",
+    "src/zaoseq_bopomofo/daily/mixture.py": "f3ff806b6635b9bc3ffb9e9dc39a5c3a343420956d3eb7545453c6057b955b17",
+    "src/zaoseq_bopomofo/daily/quality.py": "47b35d489b63ba35e11d40073d8d486989dc5fad645ffeb74a6ad9adff00a542",
+    "src/zaoseq_bopomofo/daily/report.py": "a8496c84c87aa52ab1b0d3be4278c2044f46858e34c85d1c5fe7bb107808e61b",
+    "src/zaoseq_bopomofo/daily/report2.py": "60ef4b87aff36b529d445e209e4e25fcf4fa003c1701bf887cb53719ffc37a84",
+    "src/zaoseq_bopomofo/daily/round2.py": "4e636f57421d0a6b7844d4052cbd60f176eccaece4ab259230db8b1e740c7f87",
+    "src/zaoseq_bopomofo/daily/round3.py": "08c37903847d492291e85b1e0db140248b24c94814c3474ee1f4ac2065573d08",
+    "src/zaoseq_bopomofo/daily/script.py": "fb1e8a7b40ca3d977e9eddc929189b9cb4f471d71ab9f2e9a6aff3b062493cbb",
+    "src/zaoseq_bopomofo/daily/selection.py": "6ee3497c33af8b0a20bb7b44733729e0e5097032947740438bf2bb35be2d1f1a",
+    "src/zaoseq_bopomofo/daily/sources.py": "61be8566789224afac0ad6530d45edcc712c97a260b4b477737907186f48bc36",
     "src/zaoseq_bopomofo/decoding/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
     "src/zaoseq_bopomofo/decoding/candidate.py": "50eb57c548e994cbbb56a05763ba2a4dd450eea382012d2e10aeebab32b12c25",
     "src/zaoseq_bopomofo/decoding/correction.py": "a21920006029c66ad2a7e43cf1a8bc3aa259eb201b12f1727234b79c2596454c",
@@ -252,18 +369,23 @@
     "tests/conftest.py": "811a968015a380b84e045aebb9c65533f831e378a9e176d8ac338e350f84d6b6",
     "tests/test_confidence.py": "1afe80e50318d7d3cc7545355cff292afbeb766038de62cc0ee2820ae8203fad",
     "tests/test_corpus.py": "9b7442b620b99ce3a8c971d209f0df799daf08ee61e8644bec702fcb4075c614",
+    "tests/test_coverage.py": "ba4eb717478166cb6b337574e2ef56af1c507a29b4b1089e2ba6a4b97f63fb8c",
+    "tests/test_daily.py": "b504c2bc569fc9faf4ad5873a555387dbf1da6a954fea98b4ca3ef7b2269e75c",
     "tests/test_decoding.py": "fb3a48f455fc2fef827a4e1ec9406327b73310e1a95d11cfc0bac99750ce5da2",
     "tests/test_domains.py": "9d66b8407bd21fd7fde916d93ee0bd4c051b7d7ae67a2469b44b27573a4fafaf",
     "tests/test_evaluation.py": "f72a89bd9c4c737f6c2c1496086c62c24f420d20e5c149e3f72692f54305aed7",
     "tests/test_hybrid_invariant.py": "cc1b257ef348786fdc3a1da2699e5f309c84b17e672ee7c1bdfe52e8d0ceb8c6",
     "tests/test_lexicon.py": "e8cfe9329b80bddba32e3b2f6b7006a3abd32f8e619a355fa1e193a0f5314c5b",
     "tests/test_phonetics.py": "97484bf64c9efa4092d69ed43835c8a6748feb1fd72b4b68f4eb2f7663e23737",
+    "tests/test_round3.py": "2628c0cba353b40e6128fc63ab75ad879bb8087423cc0e9d35e6b7096d3e8f5b",
     "tests/test_sanity_data.py": "c7f00aa0d3a2a7328f92ad51cbc2df402ae7a02b9ff368b8c0acd9582a17c243",
     "tests/test_tolerant.py": "c84bb5f9088bc333f4af9f6d2d8b11387b35ace6a185537f91fae4b8123919b1"
   },
   "audit": {
     "ok": true,
     "errors": [],
-    "files_with_optional_private_imports": []
+    "files_with_optional_private_imports": [
+      "src/zaoseq_bopomofo/daily/experiments.py"
+    ]
   }
 }

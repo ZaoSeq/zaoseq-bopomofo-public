@@ -1,0 +1,201 @@
+{
+ "profiles": {
+  "tatoeba": {
+   "train_sentences": 34950,
+   "han_tokens": 370291,
+   "char_types": 3625,
+   "bigram_types": 86885,
+   "bigram_types_per_1k_tokens": 234.6,
+   "trigram_types": 186900,
+   "mean_han_length": 10.59,
+   "question_share": 0.1426,
+   "sentence_final_particles_per_1k_sentences": {
+    "嗎": 68.9,
+    "呢": 6.5,
+    "吧": 9.6,
+    "啊": 3.4,
+    "啦": 0.6,
+    "喔": 1.6,
+    "耶": 0.2,
+    "嘛": 0.5,
+    "欸": 0.1
+   }
+  },
+  "common_voice": {
+   "train_sentences": 17903,
+   "han_tokens": 142136,
+   "char_types": 3217,
+   "bigram_types": 51925,
+   "bigram_types_per_1k_tokens": 365.3,
+   "trigram_types": 84268,
+   "mean_han_length": 7.94,
+   "question_share": 0.023,
+   "sentence_final_particles_per_1k_sentences": {
+    "嗎": 13.5,
+    "呢": 2.1,
+    "吧": 3.8,
+    "啊": 3.4,
+    "啦": 1.6,
+    "喔": 1.8,
+    "耶": 0.3,
+    "嘛": 0.2,
+    "欸": 0.3
+   }
+  },
+  "pooled": {
+   "train_sentences": 52853,
+   "han_tokens": 512427,
+   "char_types": 3974,
+   "bigram_types": 118247,
+   "bigram_types_per_1k_tokens": 230.8,
+   "trigram_types": 258276,
+   "mean_han_length": 9.7,
+   "question_share": 0.1021,
+   "sentence_final_particles_per_1k_sentences": {
+    "嗎": 50.1,
+    "呢": 5.0,
+    "吧": 7.7,
+    "啊": 3.4,
+    "啦": 1.0,
+    "喔": 1.7,
+    "耶": 0.2,
+    "嘛": 0.4,
+    "欸": 0.2
+   }
+  }
+ },
+ "overlap": {
+  "char_types_shared": 2868,
+  "char_types_only_common_voice": 349,
+  "char_types_only_tatoeba": 757,
+  "char_jaccard": 0.7217,
+  "trigram_jaccard": 0.0499
+ },
+ "coverage_dev_v1_1": {
+  "tatoeba": {
+   "gold_trigram_tokens": 1929,
+   "gold_trigram_coverage": 0.366,
+   "gold_multichar_words": 606,
+   "gold_word_coverage": 0.83
+  },
+  "common_voice": {
+   "gold_trigram_tokens": 1929,
+   "gold_trigram_coverage": 0.2079,
+   "gold_multichar_words": 606,
+   "gold_word_coverage": 0.8201
+  },
+  "pooled": {
+   "gold_trigram_tokens": 1929,
+   "gold_trigram_coverage": 0.4163,
+   "gold_multichar_words": 606,
+   "gold_word_coverage": 0.9109
+  }
+ },
+ "gold_words_only_in_common_voice": 49,
+ "gold_words_only_in_tatoeba": 55,
+ "leakage": {
+  "excluded_by_reference": {
+   "tatoeba_cmn_hant": {
+    "hand_dev_sanity:near_duplicate": 11,
+    "coverage_dev_v1.0:near_duplicate": 6,
+    "gov_dev_corpus_split:shared_8gram": 4,
+    "reference_v0_1_test_everyday:near_duplicate": 3,
+    "hand_dev_sanity:shared_8gram": 2,
+    "reference_v0_1_test_gov_corpus_split:shared_8gram": 2,
+    "coverage_dev_v1.0:shared_8gram": 2,
+    "reference_v0_1_test_everyday:shared_8gram": 1
+   },
+   "mdc_common_voice_zh_tw_27_0": {
+    "gov_dev_corpus_split:shared_8gram": 28,
+    "reference_v0_1_test_gov_corpus_split:shared_8gram": 25,
+    "gov_dev_corpus_split:near_duplicate": 3,
+    "reference_v0_1_test_everyday:near_duplicate": 2,
+    "reference_v0_1_test_gov:near_duplicate": 2,
+    "reference_v0_1_test_gov_corpus_split:near_duplicate": 1
+   }
+  },
+  "common_voice_exact_in_government_corpus": 13,
+  "manual_sanity_in_corpus": {
+   "我想要再去台北玩": {
+    "tatoeba": false,
+    "common_voice": false
+   },
+   "你要去西門町嗎": {
+    "tatoeba": false,
+    "common_voice": false
+   },
+   "你今天要幹嘛": {
+    "tatoeba": true,
+    "common_voice": false
+   },
+   "我等等再回你": {
+    "tatoeba": false,
+    "common_voice": false
+   },
+   "你有吃飯嗎": {
+    "tatoeba": false,
+    "common_voice": false
+   }
+  }
+ },
+ "quality": {
+  "tatoeba_cmn_hant": {
+   "documents": 39743,
+   "sentences_seen": 39720,
+   "sentences_kept": 38807,
+   "sentences_dropped": {
+    "non_standard_char": 479,
+    "simplified": 183,
+    "duplicate_in_source": 114,
+    "cross_split_near_dup": 88,
+    "eval_overlap": 31,
+    "weird_unicode": 18
+   },
+   "splits": {
+    "dev": 1911,
+    "test": 1946,
+    "train": 34950
+   },
+   "length_han_chars": {
+    "mean": 10.6,
+    "median": 9,
+    "p95": 21,
+    "buckets": {
+     "04-07": 11619,
+     "08-15": 21988,
+     "16-31": 4774,
+     "32+": 426
+    }
+   }
+  },
+  "mdc_common_voice_zh_tw_27_0": {
+   "documents": 20863,
+   "sentences_seen": 19993,
+   "sentences_kept": 19822,
+   "sentences_dropped": {
+    "eval_overlap": 61,
+    "cross_split_near_dup": 33,
+    "non_standard_char": 21,
+    "duplicate_other_daily_source": 19,
+    "duplicate_in_source": 19,
+    "simplified": 14,
+    "weird_unicode": 4
+   },
+   "splits": {
+    "dev": 968,
+    "test": 951,
+    "train": 17903
+   },
+   "length_han_chars": {
+    "mean": 7.95,
+    "median": 8.0,
+    "p95": 13,
+    "buckets": {
+     "04-07": 9632,
+     "08-15": 9994,
+     "16-31": 196
+    }
+   }
+  }
+ }
+}

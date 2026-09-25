@@ -1,0 +1,63 @@
+{
+  "name": "TEST-V1 (v0.2 sealed TEST)",
+  "created_at": "2026-09-25T19:16:16+08:00",
+  "source_commit": "c6f1cbc65fa980fc741c98f830ef5367d2d9287e",
+  "semantic_freeze_sha256": "c2010ec2ae48d3b2d6b39f73fad0c605933344b0e32846f44f0b274994bb4019",
+  "gate": {
+    "file": "benchmarks/frozen/V0.2_TEST_GATE.json",
+    "sha256": "e26166408d0b6974b834658bf3d6d92aecf8e2f5bc5ee1f42c00ba5b0e1c077a",
+    "created_at": "2026-09-25T19:04:16+08:00"
+  },
+  "test_plan_sha256": "2cec92c799f5c4f30b610976bd74fcae55a3f8aa317a7b7687b54eeee9b1e723",
+  "decision_plan_sha256": "cc1b0c008dafe4bbeff47febcd4b30b1b514229f988da5af7a98e19e56525ec4",
+  "files": {
+    "benchmarks/test_v1/everyday_source.tsv": {
+      "sha256": "232117ed15c9e597aca16a2f2cdea4ad32ad379597dbf9941188de0b48f44a80",
+      "authored_items": 547
+    },
+    "benchmarks/test_v1/everyday.jsonl": {
+      "sha256": "f0c9cb78978d8125b26ef9dbf1cad4658203d29870a7fb1ab5afd64000d8a1e9",
+      "items": 480,
+      "by_category": {
+        "conversation": 30,
+        "family_life": 30,
+        "food": 30,
+        "function_words": 30,
+        "homophones": 30,
+        "long_multiclause": 30,
+        "names": 30,
+        "schedule": 30,
+        "school": 30,
+        "segmentation": 30,
+        "shopping": 30,
+        "social_chat": 30,
+        "taiwan_places": 30,
+        "technology": 30,
+        "transport": 30,
+        "work": 30
+      }
+    },
+    "benchmarks/test_v1/gov.jsonl": {
+      "sha256": "edea27cfae1ff5f6284aba8978a3f10125e5f5b7f1f1588e0e9c6dcb305ba88e",
+      "items": 211,
+      "by_category": {
+        "government_faq": 28,
+        "press_release": 124,
+        "public_service": 59
+      }
+    },
+    "benchmarks/test_v1/DEDUP_REPORT.json": {
+      "sha256": "3cfe70f181d2873018808bf3309827dc0f46ec9180a6ac30c832d506faeb643a"
+    }
+  },
+  "methodology": {
+    "everyday": "authored for this TEST with AI assistance under project-owner direction, by category, without consulting DEV / v0.1 TEST / manual sanity items, error cases, or any decoder or teacher output; readings by dictionary convention (see test plan)",
+    "gov": "corpus split 'dev' documents with no v0.1 TEST-GOV item; 4-12 Han clauses with unambiguous rule-based readings; at most 3 per document; sha256('v0.2-test-v1'...) order; legal excluded (1 unused document)",
+    "leakage": "see DEDUP_REPORT.json; final flagged items must be 0"
+  },
+  "dedupe_summary": {
+    "everyday_removed": 34,
+    "gov_removed": 282,
+    "final_flagged_items": 0
+  }
+}

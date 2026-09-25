@@ -1,0 +1,21 @@
+{
+  "name": "v0.2 runtime status",
+  "recorded_at": "2026-09-25",
+  "runtime_closure": "DEFERRED / NOT REQUIRED FOR v0.2 RESEARCH PREVIEW",
+  "decision_by": "project owner, after the v0.2 sealed TEST PASS",
+  "reason": "v0.2 is a Research Preview. Its semantic freeze and sealed accuracy evaluation are complete. The production runtime will change substantially later (Small Ranker, ONNX / INT8, incremental decoding), so the production LM cache capacity is not selected now.",
+  "production_cache_capacity": null,
+  "runtime_freeze_record": "none (benchmarks/frozen/V0.2_RUNTIME.json is intentionally not created)",
+  "accuracy_path": "the sealed evaluation used the cache-disabled reference path; every LM cache capacity is output-equivalent (signature aef3680ca7efdbb43e13120024e0689d3d6ca7d4464e0d6fe1aff759e8a2132f), so the deferral does not affect any accuracy result",
+  "not_official_results": {
+    "benchmarks/results/round3_final_cache.json": "INVALID for capacity selection: the machine was not quiet; its 32 MB rule output is not an official result",
+    "benchmarks/results/round3_quiet_latency.json": "diagnostic only: measured while interactive applications were running; not release latency",
+    "benchmarks/results/v0.2_sealed_test.json": "accuracy only; its timings are not release latency"
+  },
+  "kept_for_later": {
+    "plan": "benchmarks/frozen/v0.2_runtime_plan.json",
+    "runner": "python -m zaoseq_bopomofo.evaluation.runtime_freeze probe | run | verify",
+    "last_probe": "2026-09-25T19:44:21+08:00: not quiet (Balanced power plan, 9 interactive processes, idle CPU 14.1%, stability CV 0.062)"
+  },
+  "release_statement": "v0.2 release documents must not claim a completed runtime validation, a production cache capacity or an official latency figure, and must not present any of the benchmarks listed above as official latency."
+}

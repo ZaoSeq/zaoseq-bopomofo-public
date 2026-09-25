@@ -1,0 +1,13 @@
+{
+  "train_sentences": 52853,
+  "char_tokens": 611570,
+  "char_vocabulary": 4034,
+  "char_bigrams": 124741,
+  "char_trigrams_kept": 65265,
+  "min_trigram_count": 2,
+  "sources": [
+    "mdc_common_voice_zh_tw_27_0",
+    "tatoeba_cmn_hant"
+  ],
+  "production_eligible": true
+}

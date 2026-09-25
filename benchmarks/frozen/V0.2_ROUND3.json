@@ -1,0 +1,8 @@
+{
+  "name": "v0.2 Round 3 addendum (frozen before Round 3 experiments and cache latency)",
+  "frozen_at": "2026-09-25",
+  "files": {
+    "benchmarks/frozen/v0.2_round3_addendum.json": "fe043808b0eafa8d6923c8c3545a53e7e437cd13493ae5533bcab68e68a8dd19",
+    "benchmarks/results/round3_cache_cost.json": "7c1c86bf7c4657fe378ee300c63e71a998da89bc892c0d7a0297cdb5fe1abbf7"
+  }
+}

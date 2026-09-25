@@ -1,0 +1,596 @@
+{
+  "schema": "zaoseq-bopomofo/daily-sources/v1",
+  "audited_at": "2026-09-24",
+  "policy": [
+    "Only official versions with an explicit license can be APPROVED; every source whose origin or terms are unclear is HOLD.",
+    "approval_scope: 'production' may enter a production freeze; 'dev_experiment' may be used only in DEV experiments and needs a new rights review before any production freeze.",
+    "Only APPROVED sources may be imported; the importer rejects any source whose rights fields are unknown.",
+    "training_use (AI / statistical model training) and redistribution are recorded separately.",
+    "Raw third-party files stay under data/raw/daily/ (gitignored) and are never committed; only this manifest and SHA-256 hashes are.",
+    "No simplified-to-traditional conversion: simplified or mixed-script text is dropped, never converted."
+  ],
+  "sources": [
+    {
+      "source_id": "cv_sentence_collector_zh_tw",
+      "dataset_name": "Common Voice text corpus, zh-TW Sentence Collector export",
+      "provider": "Mozilla Foundation / Common Voice contributors",
+      "official_page": "https://github.com/common-voice/common-voice/tree/main/server/data/zh-TW",
+      "urls": [
+        "https://raw.githubusercontent.com/common-voice/common-voice/eb757bc1ce32738596303261bf65d5d6e0c83624/server/data/zh-TW/sentence-collector.txt"
+      ],
+      "version": "commit eb757bc1ce32738596303261bf65d5d6e0c83624 (last automatic Sentence Collector export, 2022-07-20)",
+      "retrieved_at": "2026-09-24",
+      "license_name": "CC0 1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "commercial_use": "yes",
+      "modification": "yes",
+      "redistribution": "yes (CC0); not exercised: raw text is not committed",
+      "attribution": "not required; credited as Common Voice Sentence Collector (Mozilla)",
+      "training_use": "yes",
+      "training_basis": "inferred",
+      "inference_basis": "CC0 waives all rights, so any use including statistical model training is permitted. The repository README states that sentence text in /server/data from the Sentence Collector is released under CC0, and the Sentence Collector required every submitter to give a source and confirm 'these sentences are public domain and I have permission to upload them' (common-voice/sentence-collector web/locales/en/messages.ftl: sc-submit-confirm, sc-submit-err-add-source). Only peer-approved sentences were exported.",
+      "data_type": "short read-aloud sentences and phrases written or collected by volunteers; many proper nouns (places, landmarks)",
+      "zh_tw_relevance": "high: zh-TW locale, Taiwan contributors, Traditional script",
+      "fields_used": [
+        "line text"
+      ],
+      "fields_excluded": [
+        "none available (the export has no per-sentence source or author)"
+      ],
+      "document_identity": "each line is one document; doc_id = SHA-1 of the NFC line",
+      "files": [
+        {
+          "path": "cv_sentence_collector_zh_tw/sentence-collector.txt",
+          "url": "https://raw.githubusercontent.com/common-voice/common-voice/eb757bc1ce32738596303261bf65d5d6e0c83624/server/data/zh-TW/sentence-collector.txt",
+          "sha256": "c85d4b4cb9f20195c015d4c74c947c520e6bdc9e50c83d75d0eaa77c67cf2e7b",
+          "bytes": 379520
+        }
+      ],
+      "status": "HOLD",
+      "approval_scope": "none",
+      "reason": "Not an official dataset version: this is the Sentence Collector export kept in the Common Voice web-app repository (last automatic export 2022-07-20). Project policy requires the official Common Voice dataset/version, which is distributed only through Mozilla Data Collective (see mdc_common_voice_zh_tw). The CC0 statement and per-submission public-domain confirmation are recorded for reference, but the source is not used."
+    },
+    {
+      "source_id": "tatoeba_cmn_hant",
+      "dataset_name": "Tatoeba Mandarin (cmn) sentences, Traditional-script originals",
+      "provider": "Tatoeba Association / Tatoeba contributors",
+      "official_page": "https://tatoeba.org/en/downloads",
+      "urls": [
+        "https://downloads.tatoeba.org/exports/per_language/cmn/cmn_sentences_detailed.tsv.bz2",
+        "https://downloads.tatoeba.org/exports/per_language/cmn/cmn_transcriptions.tsv.bz2"
+      ],
+      "version": "weekly export of 2026-09-19 (file timestamps 19-Sep-2026 06:30-06:31 UTC)",
+      "retrieved_at": "2026-09-24",
+      "license_name": "CC BY 2.0 FR (the cmn CC0 subset file is empty)",
+      "license_url": "https://creativecommons.org/licenses/by/2.0/fr/",
+      "commercial_use": "yes",
+      "modification": "yes",
+      "redistribution": "yes with attribution; not exercised: raw text is not committed",
+      "attribution": "required: 'Tatoeba (https://tatoeba.org), CC BY 2.0 FR' plus the sentence authors listed in data/daily/attribution/tatoeba_cmn_hant.tsv",
+      "training_use": "yes",
+      "training_basis": "inferred",
+      "inference_basis": "CC BY 2.0 grants reproduction, distribution and derivative works for any purpose, commercial included, with attribution as the only condition (tatoeba.org/en/terms_of_use: attribution is the single restriction). Statistical n-gram counts are a use or derivative covered by that grant; the terms do not address ML training explicitly.",
+      "data_type": "example sentences written or translated by volunteers; everyday, general-purpose Mandarin",
+      "zh_tw_relevance": "medium: Traditional-script sentences, not limited to Taiwan usage (some Hong Kong / mainland phrasing)",
+      "fields_used": [
+        "sentence id",
+        "lang",
+        "text",
+        "username (attribution only)",
+        "transcriptions.script (to identify Traditional-script originals only)"
+      ],
+      "fields_excluded": [
+        "transcription text (automatic script conversions and pinyin are never used)",
+        "date added / modified",
+        "links",
+        "audio",
+        "lists",
+        "tags"
+      ],
+      "document_identity": "Tatoeba sentence id",
+      "files": [
+        {
+          "path": "tatoeba_cmn/cmn_sentences_detailed.tsv.bz2",
+          "url": "https://downloads.tatoeba.org/exports/per_language/cmn/cmn_sentences_detailed.tsv.bz2",
+          "sha256": "9680457679aefd2cf97079b01e901b2c93b2584bee3b17f21da5c0754dff0565",
+          "bytes": 1722240
+        },
+        {
+          "path": "tatoeba_cmn/cmn_transcriptions.tsv.bz2",
+          "url": "https://downloads.tatoeba.org/exports/per_language/cmn/cmn_transcriptions.tsv.bz2",
+          "sha256": "b9b3245ecba8ebf1a6f6e932ea008b6feb19a63ef2c16a207ce98bead20f6474",
+          "bytes": 2633562
+        }
+      ],
+      "status": "APPROVED",
+      "approval_scope": "production",
+      "reason": "Official Tatoeba weekly export with an explicit CC BY 2.0 FR license. Attribution is preserved in data/daily/attribution/tatoeba_cmn_hant.tsv (sentence authors of every kept sentence) and must ship with any derived artifact. Simplified-script originals are excluded, never converted."
+    },
+    {
+      "source_id": "oasst1_zh_prompter",
+      "dataset_name": "OpenAssistant Conversations (OASST1), zh prompter messages",
+      "provider": "OpenAssistant / LAION contributors",
+      "official_page": "https://huggingface.co/datasets/OpenAssistant/oasst1",
+      "urls": [
+        "https://huggingface.co/datasets/OpenAssistant/oasst1/resolve/fdf72ae0827c1cda404aff25b6603abec9e3399b/2023-04-12_oasst_ready.messages.jsonl.gz"
+      ],
+      "version": "Hugging Face revision fdf72ae0827c1cda404aff25b6603abec9e3399b, 2023-04-12 ready export",
+      "retrieved_at": "2026-09-24",
+      "license_name": "Apache-2.0",
+      "license_url": "https://huggingface.co/datasets/OpenAssistant/oasst1/blob/main/LICENSE",
+      "commercial_use": "yes",
+      "modification": "yes",
+      "redistribution": "yes with license notice; not exercised: raw text is not committed",
+      "attribution": "required: Apache-2.0 notice for OpenAssistant OASST1 when redistributing",
+      "training_use": "yes",
+      "training_basis": "explicit",
+      "inference_basis": "The dataset was released for training conversational models under Apache-2.0.",
+      "data_type": "human-written user prompts (questions and requests) from crowdsourced conversation trees",
+      "zh_tw_relevance": "low: most zh messages are Simplified; only Traditional-script messages are kept",
+      "fields_used": [
+        "text",
+        "role",
+        "lang",
+        "message_tree_id",
+        "deleted",
+        "review_result",
+        "synthetic",
+        "user_id (aggregate concentration statistics only)"
+      ],
+      "fields_excluded": [
+        "assistant messages",
+        "labels",
+        "emojis",
+        "model_name",
+        "created_date"
+      ],
+      "document_identity": "message_tree_id (a conversation tree stays in one split)",
+      "files": [
+        {
+          "path": "oasst1/2023-04-12_oasst_ready.messages.jsonl.gz",
+          "url": "https://huggingface.co/datasets/OpenAssistant/oasst1/resolve/fdf72ae0827c1cda404aff25b6603abec9e3399b/2023-04-12_oasst_ready.messages.jsonl.gz",
+          "sha256": "286a6e9a5a413b3272ae9c0b5a20d327983dea1c24342ae28cb244a6da65185c",
+          "bytes": 34196309
+        }
+      ],
+      "status": "APPROVED",
+      "approval_scope": "dev_experiment",
+      "reason": "Apache-2.0 official Hugging Face release with explicit training purpose. Approved for DEV experiments only: before any production freeze the data rights (contributor terms, copied third-party text, personal data) must be reviewed again. Only prompter messages that are not deleted, not synthetic and passed review are used."
+    },
+    {
+      "source_id": "oasst1_zh_assistant",
+      "dataset_name": "OpenAssistant Conversations (OASST1), zh assistant messages",
+      "provider": "OpenAssistant / LAION contributors",
+      "official_page": "https://huggingface.co/datasets/OpenAssistant/oasst1",
+      "urls": [
+        "https://huggingface.co/datasets/OpenAssistant/oasst1"
+      ],
+      "version": "Hugging Face revision fdf72ae0827c1cda404aff25b6603abec9e3399b",
+      "retrieved_at": "2026-09-24",
+      "license_name": "Apache-2.0",
+      "license_url": "https://huggingface.co/datasets/OpenAssistant/oasst1/blob/main/LICENSE",
+      "commercial_use": "yes",
+      "modification": "yes",
+      "redistribution": "yes with license notice",
+      "attribution": "required: Apache-2.0 notice",
+      "training_use": "unknown",
+      "training_basis": "unknown",
+      "inference_basis": "",
+      "data_type": "assistant-role answers written by volunteers",
+      "zh_tw_relevance": "low",
+      "fields_used": [],
+      "fields_excluded": [
+        "all"
+      ],
+      "document_identity": "message_tree_id",
+      "files": [],
+      "status": "HOLD",
+      "approval_scope": "none",
+      "reason": "Answers visibly contain copied third-party text (for example replies that begin with 'according to Wikipedia'), and some may be pasted chatbot output; per-message provenance cannot be checked, and Wikipedia-derived text is excluded by project policy."
+    },
+    {
+      "source_id": "mdc_common_voice_zh_tw",
+      "dataset_name": "Common Voice official dataset (zh-TW), Mozilla Data Collective distribution",
+      "provider": "Mozilla Foundation",
+      "official_page": "https://datacollective.mozillafoundation.org/datasets",
+      "urls": [
+        "https://datacollective.mozillafoundation.org/datasets"
+      ],
+      "version": "not retrieved",
+      "retrieved_at": "2026-09-24",
+      "license_name": "CC0 1.0 (dataset) plus Mozilla Data Collective terms of access",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "commercial_use": "unknown",
+      "modification": "unknown",
+      "redistribution": "no: MDC asks users not to post, distribute or mirror any Common Voice dataset outside MDC",
+      "attribution": "unknown",
+      "training_use": "unknown",
+      "training_basis": "unknown",
+      "inference_basis": "",
+      "data_type": "validated sentence texts and speech clips",
+      "zh_tw_relevance": "high",
+      "fields_used": [],
+      "fields_excluded": [
+        "all"
+      ],
+      "document_identity": "unknown",
+      "files": [],
+      "status": "HOLD",
+      "approval_scope": "none",
+      "reason": "Generic record for the Mozilla Data Collective distribution; never approved as such. Approval is per exact release: see mdc_common_voice_zh_tw_27_0 (cv-corpus-27.0-2026-09-11 zh-TW). Any other release or locale needs its own audited record."
+    },
+    {
+      "source_id": "mdc_common_voice_zh_tw_27_0",
+      "dataset_name": "Common Voice Scripted Speech 27.0 - Chinese (Taiwan)",
+      "provider": "Mozilla Foundation (Mozilla Data Collective)",
+      "official_page": "https://mozilladatacollective.com/datasets/cmu5wkw5i00c6o107jnm3t51u",
+      "urls": [
+        "https://mozilladatacollective.com/datasets/cmu5wkw5i00c6o107jnm3t51u",
+        "https://commonvoice.mozilla.org/terms"
+      ],
+      "version": "cv-corpus-27.0-2026-09-11, released 2026-09-17; MDC dataset id cmu5wkw5i00c6o107jnm3t51u. The MDC page lists the archive as common-voice-scripted-speech-27-0-chines-aea50ebd.tar.gz; the file delivered by the MDC download is 1789493066987-cv-corpus-27.0-2026-09-11-zh-TW.tar.gz (3,173,160,333 bytes, single top-level directory cv-corpus-27.0-2026-09-11/zh-TW, 140,996 clips). README.md and validated_sentences.tsv inside the archive are byte-identical to the extracted copies recorded below.",
+      "retrieved_at": "2026-09-25",
+      "license_name": "CC0 1.0 (dataset, README.md section 授權) plus Mozilla Data Collective / Common Voice terms of access",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "commercial_use": "yes (CC0; confirmed by the project owner under the MDC / Common Voice terms accepted at download on 2026-09-25)",
+      "modification": "yes (CC0)",
+      "redistribution": "no: MDC platform terms prohibit re-hosting or re-sharing the raw dataset; raw files and extracted text are never committed",
+      "attribution": "not required (CC0); credited as Mozilla Common Voice 27.0 zh-TW",
+      "training_use": "yes (computational / statistical / model-training use; confirmed by the project owner under the accepted terms)",
+      "training_basis": "inferred",
+      "inference_basis": "The dataset README releases the data under CC0 1.0, which waives all rights, so statistical n-gram counting and model training are permitted. The project owner accepted the MDC / Common Voice access terms at download (2026-09-25) and recorded that computational, statistical and model-training use and commercial use are allowed, while raw re-hosting / re-sharing and speaker re-identification are prohibited. The README also states that downloading means agreeing not to identify individual participants.",
+      "data_type": "validated read-aloud sentence texts (the speech clips are not used)",
+      "zh_tw_relevance": "high: zh-TW locale, Traditional script",
+      "fields_used": [
+        "sentence_id",
+        "sentence"
+      ],
+      "fields_excluded": [
+        "client_id",
+        "path",
+        "audio clips",
+        "age",
+        "gender",
+        "accents",
+        "variant",
+        "up_votes / down_votes",
+        "segment",
+        "sentence_domain",
+        "source",
+        "is_used",
+        "clips_count"
+      ],
+      "document_identity": "validated_sentences.tsv read directly from the archive: one document per sentence id, then one per NFC exact text; repeated recordings of a sentence count once (clips are never read)",
+      "files": [
+        {
+          "path": "mdc_common_voice_zh_tw_27_0/1789493066987-cv-corpus-27.0-2026-09-11-zh-TW.tar.gz",
+          "url": "https://mozilladatacollective.com/datasets/cmu5wkw5i00c6o107jnm3t51u",
+          "sha256": "96615945c476f795e03b666d1793b5e7fa8f080bfe92cb73c54fcf6254e2b094",
+          "bytes": 3173160333
+        },
+        {
+          "path": "mdc_common_voice_zh_tw_27_0/README.md",
+          "url": "https://mozilladatacollective.com/datasets/cmu5wkw5i00c6o107jnm3t51u",
+          "sha256": "00baa6f83c0ab8e24ed456ecbc367596b7e170ab19d4a694c452f904f3684be1",
+          "bytes": 10406
+        },
+        {
+          "path": "mdc_common_voice_zh_tw_27_0/validated_sentences.tsv",
+          "url": "https://mozilladatacollective.com/datasets/cmu5wkw5i00c6o107jnm3t51u",
+          "sha256": "a6e04b6b7f8f4103134f68b4418dac94c3173720d2b655a699ba72f0721c621d",
+          "bytes": 2467828
+        }
+      ],
+      "status": "APPROVED",
+      "approval_scope": "production",
+      "reason": "APPROVED FOR PRODUCTION COMPUTATIONAL USE; RAW REDISTRIBUTION NOT PERMITTED BY MDC. Official Mozilla Data Collective release, exact version cv-corpus-27.0-2026-09-11 zh-TW only, verified from the README and the SHA-256 of the files used. The approval never extends to the GitHub Sentence Collector export, mirrors, other releases or other locales. Sentence origins inside the release (sentence-collector, setences, chatlogs, taipei_city_gov, moztw cc0-sentences) are covered by this release's CC0 dedication; their standalone GitHub copies stay HOLD.",
+      "platform_restrictions": [
+        "no re-hosting or re-sharing of the raw dataset (MDC platform terms)",
+        "no attempt to identify individual speakers (README.md 授權; Common Voice terms)"
+      ],
+      "archive_members_sha256": {
+        "zh-TW/README.md": "00baa6f83c0ab8e24ed456ecbc367596b7e170ab19d4a694c452f904f3684be1",
+        "zh-TW/clip_durations.tsv": "a5a2edd8e683f2eb6f290139d885a93ba4293f1a0b061d27c2f8e1102861a959",
+        "zh-TW/dev.tsv": "10baeabce83c6014e3ab6815dac95b496f2b41f2d1f72fbcb1a4003980ff5ef1",
+        "zh-TW/invalidated.tsv": "fa93bd0d0dd0199866019bb177883e4a08581afba91391a5d5728b9a34deb694",
+        "zh-TW/other.tsv": "399df57fa0d8e7a24b2972a00a0602ebc5f2bf7eef17bd41c7c89d2da1a70afe",
+        "zh-TW/reported.tsv": "230499f9b543ea53ca7a3336f21fccb5d35db25a28523a4086aa6911cc635bd2",
+        "zh-TW/test.tsv": "10ac7d6f3cc996f7c5e595c730165d9b1bd1c43b00b1b1baac551286afcad981",
+        "zh-TW/train.tsv": "d42eb571461ebae5cee30de5b7772f3f5a91a653c8a18c0bb59f39b2ea37f469",
+        "zh-TW/unvalidated_sentences.tsv": "4c7f9dff7100807e393c8408dbd8dab758f6b106dbe60b426b9d939147468de8",
+        "zh-TW/validated.tsv": "f2708834e6b3aa572533a0ac7799f3dbaa7074d24b5195bd18b3e15d11349916",
+        "zh-TW/validated_sentences.tsv": "a6e04b6b7f8f4103134f68b4418dac94c3173720d2b655a699ba72f0721c621d"
+      }
+    },
+    {
+      "source_id": "cv_zh_tw_setences",
+      "dataset_name": "Common Voice repo server/data/zh-TW/setences.txt",
+      "provider": "Common Voice zh-TW community (committed by Irvin, 2018)",
+      "official_page": "https://github.com/common-voice/common-voice/tree/main/server/data/zh-TW",
+      "urls": [
+        "https://github.com/common-voice/common-voice/blob/main/server/data/zh-TW/setences.txt"
+      ],
+      "version": "main, last changed 2018-07-15",
+      "retrieved_at": "2026-09-24",
+      "license_name": "unknown (repository code is MPL-2.0; README says 'the majority' of /server/data is CC0)",
+      "license_url": "https://github.com/common-voice/common-voice/blob/main/LICENSE",
+      "commercial_use": "unknown",
+      "modification": "unknown",
+      "redistribution": "unknown",
+      "attribution": "unknown",
+      "training_use": "unknown",
+      "training_basis": "unknown",
+      "inference_basis": "",
+      "data_type": "mixed sentences",
+      "zh_tw_relevance": "high",
+      "fields_used": [],
+      "fields_excluded": [
+        "all"
+      ],
+      "document_identity": "unknown",
+      "files": [],
+      "status": "HOLD",
+      "approval_scope": "none",
+      "reason": "Commit history shows mixed origins (Taipei City Government press releases, community contributions, a sprint donation) with no per-line source; it cannot be established that every line is CC0."
+    },
+    {
+      "source_id": "cv_zh_tw_chatlogs",
+      "dataset_name": "Common Voice repo server/data/zh-TW/chatlogs.txt",
+      "provider": "donated to the Common Voice zh-TW community (2018)",
+      "official_page": "https://github.com/common-voice/common-voice/tree/main/server/data/zh-TW",
+      "urls": [
+        "https://github.com/common-voice/common-voice/blob/main/server/data/zh-TW/chatlogs.txt"
+      ],
+      "version": "main, last changed 2018-09-24",
+      "retrieved_at": "2026-09-24",
+      "license_name": "unknown",
+      "license_url": "https://github.com/common-voice/common-voice/blob/main/LICENSE",
+      "commercial_use": "unknown",
+      "modification": "unknown",
+      "redistribution": "unknown",
+      "attribution": "unknown",
+      "training_use": "unknown",
+      "training_basis": "unknown",
+      "inference_basis": "",
+      "data_type": "chat log lines",
+      "zh_tw_relevance": "high",
+      "fields_used": [],
+      "fields_excluded": [
+        "all"
+      ],
+      "document_identity": "unknown",
+      "files": [],
+      "status": "HOLD",
+      "approval_scope": "none",
+      "reason": "Chat logs donated by individuals; no donation agreement in the repository, and consent of the other chat participants cannot be verified."
+    },
+    {
+      "source_id": "cv_zh_tw_lms",
+      "dataset_name": "Common Voice repo server/data/zh-TW/lms.txt",
+      "provider": "donated by the Li Mei-shu Memorial Gallery (2018)",
+      "official_page": "https://github.com/common-voice/common-voice/tree/main/server/data/zh-TW",
+      "urls": [
+        "https://github.com/common-voice/common-voice/blob/main/server/data/zh-TW/lms.txt"
+      ],
+      "version": "main, last changed 2019-04-15",
+      "retrieved_at": "2026-09-24",
+      "license_name": "unknown",
+      "license_url": "https://github.com/common-voice/common-voice/blob/main/LICENSE",
+      "commercial_use": "unknown",
+      "modification": "unknown",
+      "redistribution": "unknown",
+      "attribution": "unknown",
+      "training_use": "unknown",
+      "training_basis": "unknown",
+      "inference_basis": "",
+      "data_type": "museum text",
+      "zh_tw_relevance": "medium",
+      "fields_used": [],
+      "fields_excluded": [
+        "all"
+      ],
+      "document_identity": "unknown",
+      "files": [],
+      "status": "HOLD",
+      "approval_scope": "none",
+      "reason": "The donation terms are referenced only through an external HackMD note; there is no license text in the repository."
+    },
+    {
+      "source_id": "cv_zh_tw_taipei_city_gov",
+      "dataset_name": "Common Voice repo server/data/zh-TW/taipei_city_gov.txt",
+      "provider": "Taipei City Government press releases (committed 2018)",
+      "official_page": "https://github.com/common-voice/common-voice/tree/main/server/data/zh-TW",
+      "urls": [
+        "https://github.com/common-voice/common-voice/blob/main/server/data/zh-TW/taipei_city_gov.txt"
+      ],
+      "version": "main, last changed 2019-03-20",
+      "retrieved_at": "2026-09-24",
+      "license_name": "unknown",
+      "license_url": "https://github.com/common-voice/common-voice/blob/main/LICENSE",
+      "commercial_use": "unknown",
+      "modification": "unknown",
+      "redistribution": "unknown",
+      "attribution": "unknown",
+      "training_use": "unknown",
+      "training_basis": "unknown",
+      "inference_basis": "",
+      "data_type": "press release sentences",
+      "zh_tw_relevance": "high (but government register, not daily language)",
+      "fields_used": [],
+      "fields_excluded": [
+        "all"
+      ],
+      "document_identity": "unknown",
+      "files": [],
+      "status": "HOLD",
+      "approval_scope": "none",
+      "reason": "The license under which the press text was contributed is not recorded, and it is government register rather than daily language."
+    },
+    {
+      "source_id": "twllm_data",
+      "dataset_name": "TWLLM-Data",
+      "provider": "yentinglin (Taiwan-LLM project)",
+      "official_page": "https://huggingface.co/datasets/yentinglin/twllm-data",
+      "urls": [
+        "https://huggingface.co/datasets/yentinglin/twllm-data"
+      ],
+      "version": "not retrieved",
+      "retrieved_at": "2026-09-24",
+      "license_name": "Apache-2.0 (as declared by the uploader)",
+      "license_url": "https://huggingface.co/datasets/yentinglin/twllm-data",
+      "commercial_use": "unknown",
+      "modification": "unknown",
+      "redistribution": "unknown",
+      "attribution": "unknown",
+      "training_use": "unknown",
+      "training_basis": "unknown",
+      "inference_basis": "",
+      "data_type": "user prompts from twllm.com / arena logs; answers regenerated by commercial chat models",
+      "zh_tw_relevance": "high",
+      "fields_used": [],
+      "fields_excluded": [
+        "all"
+      ],
+      "document_identity": "unknown",
+      "files": [],
+      "status": "HOLD",
+      "approval_scope": "none",
+      "reason": "Governance issues: (1) it is unclear that end users consented to publication and relicensing of their prompts; (2) personal information in real user logs is not documented as reviewed; (3) answers are output of commercial models whose terms restrict using outputs to develop competing models; (4) the uploader's Apache-2.0 declaration over third-party user content is not backed by a documented rights chain."
+    },
+    {
+      "source_id": "taiwan_tongues_asr_ce",
+      "dataset_name": "Taiwan-Tongues-ASR-CE dataset (zh-TW)",
+      "provider": "adi-gov-tw",
+      "official_page": "https://huggingface.co/datasets/adi-gov-tw/Taiwan-Tongues-ASR-CE-dataset-zhtw",
+      "urls": [
+        "https://huggingface.co/datasets/adi-gov-tw/Taiwan-Tongues-ASR-CE-dataset-zhtw"
+      ],
+      "version": "not retrieved",
+      "retrieved_at": "2026-09-24",
+      "license_name": "other ('released under the original project's license terms', not specified)",
+      "license_url": "https://huggingface.co/datasets/adi-gov-tw/Taiwan-Tongues-ASR-CE-dataset-zhtw",
+      "commercial_use": "unknown",
+      "modification": "unknown",
+      "redistribution": "unknown",
+      "attribution": "unknown",
+      "training_use": "unknown",
+      "training_basis": "unknown",
+      "inference_basis": "",
+      "data_type": "read-speech transcripts",
+      "zh_tw_relevance": "high",
+      "fields_used": [],
+      "fields_excluded": [
+        "all"
+      ],
+      "document_identity": "unknown",
+      "files": [],
+      "status": "HOLD",
+      "approval_scope": "none",
+      "reason": "The license is not stated on the dataset page."
+    },
+    {
+      "source_id": "aya_dataset_zho_hant",
+      "dataset_name": "Aya Dataset (CohereLabs/aya_dataset), language 'Traditional Chinese'",
+      "provider": "Cohere Labs / Aya annotators",
+      "official_page": "https://huggingface.co/datasets/CohereLabs/aya_dataset",
+      "urls": [
+        "https://huggingface.co/datasets/CohereLabs/aya_dataset"
+      ],
+      "version": "Hugging Face revision f9ea04583f02a8f86404ff6c58bf75fe637df8a2 (train split, 1,871 'Traditional Chinese' rows; inspected through the datasets-server API, not imported)",
+      "retrieved_at": "2026-09-24",
+      "license_name": "Apache-2.0",
+      "license_url": "https://huggingface.co/datasets/CohereLabs/aya_dataset",
+      "commercial_use": "yes",
+      "modification": "yes",
+      "redistribution": "yes with license notice",
+      "attribution": "required: Apache-2.0 notice; cite Singh et al. 2024 (arXiv:2402.06619)",
+      "training_use": "unknown",
+      "training_basis": "unknown",
+      "inference_basis": "",
+      "data_type": "human-annotated prompt / completion pairs: 1,688 original-annotations, 183 re-annotations of existing datasets",
+      "zh_tw_relevance": "low: region markers in the 1,871 rows: Hong Kong 57, mainland 34, Taiwan 5",
+      "fields_used": [],
+      "fields_excluded": [
+        "all"
+      ],
+      "document_identity": "row (prompt / completion pair)",
+      "files": [],
+      "status": "HOLD",
+      "approval_scope": "none",
+      "reason": "License is explicit, but per-row provenance of the completions is uncertain: many answers read as copied encyclopedia text (Wikipedia-derived text is excluded by policy) or templated QA ('請回答這個問題：… 答案：…'); 183 rows re-annotate other datasets and must be separated from native text; 16 annotators with the top one writing 47% and the top five 98%; low Taiwan relevance. Not imported."
+    },
+    {
+      "source_id": "excluded_by_policy",
+      "dataset_name": "PTT, Dcard, Threads, Facebook, news full text, blogs, Wikipedia-derived text (incl. UD Chinese GSD, DRCD), web crawls (CC-100, OSCAR), OpenSubtitles, the MOE dictionaries, other IME dictionaries (McBopomofo, Chewing, Rime), GitHub word lists without clear license, chat logs of unclear origin, LCCC and other Simplified social-media corpora",
+      "provider": "various",
+      "official_page": "n/a",
+      "urls": [
+        "n/a"
+      ],
+      "version": "n/a",
+      "retrieved_at": "2026-09-24",
+      "license_name": "various / unclear",
+      "license_url": "n/a",
+      "commercial_use": "unknown",
+      "modification": "unknown",
+      "redistribution": "unknown",
+      "attribution": "unknown",
+      "training_use": "unknown",
+      "training_basis": "unknown",
+      "inference_basis": "",
+      "data_type": "various",
+      "zh_tw_relevance": "various",
+      "fields_used": [],
+      "fields_excluded": [
+        "all"
+      ],
+      "document_identity": "n/a",
+      "files": [],
+      "status": "REJECTED",
+      "approval_scope": "none",
+      "reason": "Excluded by project policy (terms of service, copyright, Wikipedia derivation, competing IME data, or no provable license)."
+    },
+    {
+      "source_id": "unihan_variants",
+      "dataset_name": "Unicode Unihan database (Unihan_Variants.txt)",
+      "provider": "Unicode, Inc.",
+      "official_page": "https://www.unicode.org/reports/tr38/",
+      "urls": [
+        "https://www.unicode.org/Public/UCD/latest/ucd/Unihan.zip"
+      ],
+      "version": "Unicode 18.0.0 (file date 2026-07-31)",
+      "retrieved_at": "2026-09-24",
+      "license_name": "Unicode License v3",
+      "license_url": "https://www.unicode.org/license.txt",
+      "commercial_use": "yes",
+      "modification": "yes",
+      "redistribution": "yes with copyright and permission notice; not exercised",
+      "attribution": "required when redistributing: Unicode copyright and permission notice",
+      "training_use": "yes (reference data, not a text corpus: used only to flag Simplified-script characters)",
+      "training_basis": "explicit",
+      "inference_basis": "The Unicode License grants use without restriction.",
+      "data_type": "character variant metadata",
+      "zh_tw_relevance": "tool data",
+      "fields_used": [
+        "kTraditionalVariant",
+        "kSimplifiedVariant"
+      ],
+      "fields_excluded": [
+        "all other fields",
+        "no conversion mapping is ever applied to text"
+      ],
+      "document_identity": "n/a (not a corpus)",
+      "files": [
+        {
+          "path": "unihan/Unihan.zip",
+          "url": "https://www.unicode.org/Public/UCD/latest/ucd/Unihan.zip",
+          "sha256": "4c93ea9c1f636451729a840978f1667a53886af37ba854fdcce109721c63d43e",
+          "bytes": 8340649
+        }
+      ],
+      "status": "APPROVED",
+      "approval_scope": "production",
+      "reason": "Permissive license; used only for script detection, never for conversion."
+    }
+  ]
+}

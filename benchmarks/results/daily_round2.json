@@ -1,0 +1,4128 @@
+{
+  "role": "Daily Corpus Round 2 (v0.2 development, DEV only)",
+  "plan_sha256": "83c59d9b35d56b76ab0bfe81daa39b5ddb25549f8b269e76c0a606cc4e23e852",
+  "candidate_statistics_s": 76.0,
+  "candidate_ngrams": 159610,
+  "production_daily_sources": [
+    "tatoeba_cmn_hant",
+    "unihan_variants"
+  ],
+  "gold_word_order_by_prior": {
+    "flat": {
+      "contested_gold_words": 47,
+      "gold_ranked_first": 35
+    },
+    "raw": {
+      "contested_gold_words": 47,
+      "gold_ranked_first": 42
+    },
+    "log": {
+      "contested_gold_words": 47,
+      "gold_ranked_first": 42
+    },
+    "doc": {
+      "contested_gold_words": 47,
+      "gold_ranked_first": 41
+    },
+    "daily_only": {
+      "contested_gold_words": 47,
+      "gold_ranked_first": 41
+    },
+    "interpolated": {
+      "contested_gold_words": 47,
+      "gold_ranked_first": 43
+    },
+    "rank_bucket": {
+      "contested_gold_words": 47,
+      "gold_ranked_first": 41
+    }
+  },
+  "stages": {
+    "1_reading": {
+      "selected": "S1_R2",
+      "eligible": [
+        "S1_R1",
+        "S1_R2",
+        "S1_R3"
+      ],
+      "failed_gates": {
+        "S1_R0": [
+          "not_production_eligible"
+        ]
+      },
+      "tie_set": [
+        "S1_R2",
+        "S1_R1",
+        "S1_R3"
+      ],
+      "scores": [
+        {
+          "name": "S1_R0",
+          "production_eligible": false,
+          "gov_baseline_top1": 0.8225,
+          "gov_teacher_top1": 0.8575,
+          "coverage_teacher_top1": 0.76,
+          "coverage_teacher_correct_to_wrong": 14,
+          "coverage_baseline_top1": 0.6466666666666666,
+          "coverage_mrr": 0.735720289986931,
+          "coverage_r5": 0.8433333333333334,
+          "coverage_window": 0.8266666666666667,
+          "coverage_p95_ms": 195.98030990455302,
+          "rss_mb": 23.1,
+          "artifact_mb": 6.208
+        },
+        {
+          "name": "S1_R1",
+          "production_eligible": true,
+          "gov_baseline_top1": 0.8025,
+          "gov_teacher_top1": 0.8525,
+          "coverage_teacher_top1": 0.76,
+          "coverage_teacher_correct_to_wrong": 14,
+          "coverage_baseline_top1": 0.64,
+          "coverage_mrr": 0.7323481240981241,
+          "coverage_r5": 0.8466666666666667,
+          "coverage_window": 0.8333333333333334,
+          "coverage_p95_ms": 203.26490014558675,
+          "rss_mb": 12.6,
+          "artifact_mb": 2.345
+        },
+        {
+          "name": "S1_R2",
+          "production_eligible": true,
+          "gov_baseline_top1": 0.8075,
+          "gov_teacher_top1": 0.855,
+          "coverage_teacher_top1": 0.76,
+          "coverage_teacher_correct_to_wrong": 14,
+          "coverage_baseline_top1": 0.6433333333333333,
+          "coverage_mrr": 0.7343679653679654,
+          "coverage_r5": 0.8466666666666667,
+          "coverage_window": 0.8333333333333334,
+          "coverage_p95_ms": 147.8155699092895,
+          "rss_mb": 13.7,
+          "artifact_mb": 2.424
+        },
+        {
+          "name": "S1_R3",
+          "production_eligible": true,
+          "gov_baseline_top1": 0.83,
+          "gov_teacher_top1": 0.87,
+          "coverage_teacher_top1": 0.76,
+          "coverage_teacher_correct_to_wrong": 14,
+          "coverage_baseline_top1": 0.6333333333333333,
+          "coverage_mrr": 0.731589541106182,
+          "coverage_r5": 0.84,
+          "coverage_window": 0.8233333333333334,
+          "coverage_p95_ms": 175.39011016488075,
+          "rss_mb": 14.6,
+          "artifact_mb": 3.068
+        }
+      ]
+    },
+    "2_extraction": {
+      "selected": "S2_L5",
+      "eligible": [
+        "S2_L1",
+        "S2_L5"
+      ],
+      "failed_gates": {
+        "S2_L2": [
+          "gov_baseline_regression"
+        ],
+        "S2_L3": [
+          "gov_baseline_regression"
+        ],
+        "S2_L4": [
+          "gov_baseline_regression",
+          "gov_teacher_regression"
+        ]
+      },
+      "tie_set": [
+        "S2_L5"
+      ],
+      "scores": [
+        {
+          "name": "S2_L1",
+          "production_eligible": true,
+          "gov_baseline_top1": 0.8075,
+          "gov_teacher_top1": 0.855,
+          "coverage_teacher_top1": 0.76,
+          "coverage_teacher_correct_to_wrong": 14,
+          "coverage_baseline_top1": 0.6433333333333333,
+          "coverage_mrr": 0.7343679653679654,
+          "coverage_r5": 0.8466666666666667,
+          "coverage_window": 0.8333333333333334,
+          "coverage_p95_ms": 198.58578011626383,
+          "rss_mb": 11.9,
+          "artifact_mb": 2.424
+        },
+        {
+          "name": "S2_L2",
+          "production_eligible": true,
+          "gov_baseline_top1": 0.7475,
+          "gov_teacher_top1": 0.8425,
+          "coverage_teacher_top1": 0.7866666666666666,
+          "coverage_teacher_correct_to_wrong": 7,
+          "coverage_baseline_top1": 0.6766666666666666,
+          "coverage_mrr": 0.7672835636585639,
+          "coverage_r5": 0.8833333333333333,
+          "coverage_window": 0.8666666666666667,
+          "coverage_p95_ms": 178.92782505368822,
+          "rss_mb": 10.5,
+          "artifact_mb": 1.35
+        },
+        {
+          "name": "S2_L3",
+          "production_eligible": true,
+          "gov_baseline_top1": 0.745,
+          "gov_teacher_top1": 0.845,
+          "coverage_teacher_top1": 0.7933333333333333,
+          "coverage_teacher_correct_to_wrong": 7,
+          "coverage_baseline_top1": 0.6633333333333333,
+          "coverage_mrr": 0.7579385290635292,
+          "coverage_r5": 0.8833333333333333,
+          "coverage_window": 0.8633333333333333,
+          "coverage_p95_ms": 220.06166999926793,
+          "rss_mb": 10.3,
+          "artifact_mb": 1.321
+        },
+        {
+          "name": "S2_L4",
+          "production_eligible": true,
+          "gov_baseline_top1": 0.7525,
+          "gov_teacher_top1": 0.8225,
+          "coverage_teacher_top1": 0.7666666666666667,
+          "coverage_teacher_correct_to_wrong": 13,
+          "coverage_baseline_top1": 0.65,
+          "coverage_mrr": 0.7407337061087061,
+          "coverage_r5": 0.8533333333333334,
+          "coverage_window": 0.84,
+          "coverage_p95_ms": 121.76940483041112,
+          "rss_mb": 11.3,
+          "artifact_mb": 1.955
+        },
+        {
+          "name": "S2_L5",
+          "production_eligible": true,
+          "gov_baseline_top1": 0.7975,
+          "gov_teacher_top1": 0.85,
+          "coverage_teacher_top1": 0.7666666666666667,
+          "coverage_teacher_correct_to_wrong": 14,
+          "coverage_baseline_top1": 0.64,
+          "coverage_mrr": 0.7364182299182299,
+          "coverage_r5": 0.86,
+          "coverage_window": 0.8433333333333334,
+          "coverage_p95_ms": 154.11630502203482,
+          "rss_mb": 13.6,
+          "artifact_mb": 2.095
+        }
+      ]
+    },
+    "3_prior": {
+      "selected": "S3_daily_only",
+      "eligible": [
+        "S3_flat",
+        "S3_raw",
+        "S3_log",
+        "S3_doc",
+        "S3_daily_only",
+        "S3_interpolated",
+        "S3_rank_bucket"
+      ],
+      "failed_gates": {},
+      "tie_set": [
+        "S3_daily_only"
+      ],
+      "scores": [
+        {
+          "name": "S3_flat",
+          "production_eligible": true,
+          "gov_baseline_top1": 0.7975,
+          "gov_teacher_top1": 0.85,
+          "coverage_teacher_top1": 0.7666666666666667,
+          "coverage_teacher_correct_to_wrong": 14,
+          "coverage_baseline_top1": 0.64,
+          "coverage_mrr": 0.7364182299182299,
+          "coverage_r5": 0.86,
+          "coverage_window": 0.8433333333333334,
+          "coverage_p95_ms": 175.79927002079788,
+          "rss_mb": 12.6,
+          "artifact_mb": 2.095
+        },
+        {
+          "name": "S3_raw",
+          "production_eligible": true,
+          "gov_baseline_top1": 0.8075,
+          "gov_teacher_top1": 0.86,
+          "coverage_teacher_top1": 0.7666666666666667,
+          "coverage_teacher_correct_to_wrong": 15,
+          "coverage_baseline_top1": 0.64,
+          "coverage_mrr": 0.7355796055796056,
+          "coverage_r5": 0.85,
+          "coverage_window": 0.84,
+          "coverage_p95_ms": 283.15013018437276,
+          "rss_mb": 11.6,
+          "artifact_mb": 2.095
+        },
+        {
+          "name": "S3_log",
+          "production_eligible": true,
+          "gov_baseline_top1": 0.805,
+          "gov_teacher_top1": 0.8525,
+          "coverage_teacher_top1": 0.77,
+          "coverage_teacher_correct_to_wrong": 14,
+          "coverage_baseline_top1": 0.6433333333333333,
+          "coverage_mrr": 0.7378057960557961,
+          "coverage_r5": 0.8566666666666667,
+          "coverage_window": 0.8433333333333334,
+          "coverage_p95_ms": 198.9771599997767,
+          "rss_mb": 11.9,
+          "artifact_mb": 2.095
+        },
+        {
+          "name": "S3_doc",
+          "production_eligible": true,
+          "gov_baseline_top1": 0.805,
+          "gov_teacher_top1": 0.86,
+          "coverage_teacher_top1": 0.7666666666666667,
+          "coverage_teacher_correct_to_wrong": 15,
+          "coverage_baseline_top1": 0.6366666666666667,
+          "coverage_mrr": 0.733912938912939,
+          "coverage_r5": 0.85,
+          "coverage_window": 0.84,
+          "coverage_p95_ms": 172.33389506582185,
+          "rss_mb": 12.8,
+          "artifact_mb": 2.095
+        },
+        {
+          "name": "S3_daily_only",
+          "production_eligible": true,
+          "gov_baseline_top1": 0.8025,
+          "gov_teacher_top1": 0.8575,
+          "coverage_teacher_top1": 0.78,
+          "coverage_teacher_correct_to_wrong": 11,
+          "coverage_baseline_top1": 0.65,
+          "coverage_mrr": 0.7455090124300652,
+          "coverage_r5": 0.8666666666666667,
+          "coverage_window": 0.8566666666666667,
+          "coverage_p95_ms": 195.8982450887564,
+          "rss_mb": 11.7,
+          "artifact_mb": 2.095
+        },
+        {
+          "name": "S3_interpolated",
+          "production_eligible": true,
+          "gov_baseline_top1": 0.805,
+          "gov_teacher_top1": 0.8625,
+          "coverage_teacher_top1": 0.7633333333333333,
+          "coverage_teacher_correct_to_wrong": 16,
+          "coverage_baseline_top1": 0.6333333333333333,
+          "coverage_mrr": 0.7314446291009761,
+          "coverage_r5": 0.8566666666666667,
+          "coverage_window": 0.84,
+          "coverage_p95_ms": 174.71517513040465,
+          "rss_mb": 12.8,
+          "artifact_mb": 2.095
+        },
+        {
+          "name": "S3_rank_bucket",
+          "production_eligible": true,
+          "gov_baseline_top1": 0.8075,
+          "gov_teacher_top1": 0.8575,
+          "coverage_teacher_top1": 0.77,
+          "coverage_teacher_correct_to_wrong": 14,
+          "coverage_baseline_top1": 0.64,
+          "coverage_mrr": 0.7371669071669072,
+          "coverage_r5": 0.8566666666666667,
+          "coverage_window": 0.8433333333333334,
+          "coverage_p95_ms": 268.3578398195099,
+          "rss_mb": 11.8,
+          "artifact_mb": 2.095
+        }
+      ]
+    },
+    "4_lm_weight": {
+      "selected": "S4_daily0.5",
+      "eligible": [
+        "S4_daily0",
+        "S4_daily0.1",
+        "S4_daily0.25",
+        "S4_daily0.5"
+      ],
+      "failed_gates": {},
+      "tie_set": [
+        "S4_daily0.5"
+      ],
+      "scores": [
+        {
+          "name": "S4_daily0",
+          "production_eligible": true,
+          "gov_baseline_top1": 0.835,
+          "gov_teacher_top1": 0.8625,
+          "coverage_teacher_top1": 0.7033333333333334,
+          "coverage_teacher_correct_to_wrong": 12,
+          "coverage_baseline_top1": 0.5233333333333333,
+          "coverage_mrr": 0.637395052316105,
+          "coverage_r5": 0.7966666666666666,
+          "coverage_window": 0.7733333333333333,
+          "coverage_p95_ms": 171.58366489456992,
+          "rss_mb": 2.4,
+          "artifact_mb": 1.257
+        },
+        {
+          "name": "S4_daily0.1",
+          "production_eligible": true,
+          "gov_baseline_top1": 0.835,
+          "gov_teacher_top1": 0.8675,
+          "coverage_teacher_top1": 0.7633333333333333,
+          "coverage_teacher_correct_to_wrong": 14,
+          "coverage_baseline_top1": 0.6433333333333333,
+          "coverage_mrr": 0.7353952727555669,
+          "coverage_r5": 0.86,
+          "coverage_window": 0.8433333333333334,
+          "coverage_p95_ms": 185.67156507633635,
+          "rss_mb": 13.1,
+          "artifact_mb": 2.095
+        },
+        {
+          "name": "S4_daily0.25",
+          "production_eligible": true,
+          "gov_baseline_top1": 0.8025,
+          "gov_teacher_top1": 0.8575,
+          "coverage_teacher_top1": 0.78,
+          "coverage_teacher_correct_to_wrong": 11,
+          "coverage_baseline_top1": 0.65,
+          "coverage_mrr": 0.7455090124300652,
+          "coverage_r5": 0.8666666666666667,
+          "coverage_window": 0.8566666666666667,
+          "coverage_p95_ms": 172.21577999880537,
+          "rss_mb": 11.8,
+          "artifact_mb": 2.095
+        },
+        {
+          "name": "S4_daily0.5",
+          "production_eligible": true,
+          "gov_baseline_top1": 0.79,
+          "gov_teacher_top1": 0.8575,
+          "coverage_teacher_top1": 0.7866666666666666,
+          "coverage_teacher_correct_to_wrong": 15,
+          "coverage_baseline_top1": 0.65,
+          "coverage_mrr": 0.7510547919429499,
+          "coverage_r5": 0.8733333333333333,
+          "coverage_window": 0.8566666666666667,
+          "coverage_p95_ms": 185.990135034081,
+          "rss_mb": 11.4,
+          "artifact_mb": 2.095
+        }
+      ]
+    },
+    "5_corpus_ablation": {
+      "skipped": "only one production-approved daily source (tatoeba_cmn_hant)"
+    }
+  },
+  "final": {
+    "selected": "S4_daily0.5",
+    "eligible": [
+      "A_v0",
+      "S1_R1",
+      "S1_R2",
+      "S1_R3",
+      "S2_L1",
+      "S2_L5",
+      "S3_flat",
+      "S3_raw",
+      "S3_log",
+      "S3_doc",
+      "S3_daily_only",
+      "S3_interpolated",
+      "S3_rank_bucket",
+      "S4_daily0",
+      "S4_daily0.1",
+      "S4_daily0.25",
+      "S4_daily0.5"
+    ],
+    "failed_gates": {
+      "S2_L2": [
+        "gov_baseline_regression"
+      ],
+      "S2_L3": [
+        "gov_baseline_regression"
+      ],
+      "S2_L4": [
+        "gov_baseline_regression",
+        "gov_teacher_regression"
+      ]
+    },
+    "tie_set": [
+      "S4_daily0.5"
+    ],
+    "scores": [
+      {
+        "name": "A_v0",
+        "production_eligible": true,
+        "gov_baseline_top1": 0.8025,
+        "gov_teacher_top1": 0.86,
+        "coverage_teacher_top1": 0.6966666666666667,
+        "coverage_teacher_correct_to_wrong": 0,
+        "coverage_baseline_top1": 0.47333333333333333,
+        "coverage_mrr": 0.5997511562511562,
+        "coverage_r5": 0.7833333333333333,
+        "coverage_window": 0.7466666666666667,
+        "coverage_p95_ms": 170.33070513280114,
+        "rss_mb": 0.0,
+        "artifact_mb": 0.0
+      },
+      {
+        "name": "S1_R1",
+        "production_eligible": true,
+        "gov_baseline_top1": 0.8025,
+        "gov_teacher_top1": 0.8525,
+        "coverage_teacher_top1": 0.76,
+        "coverage_teacher_correct_to_wrong": 14,
+        "coverage_baseline_top1": 0.64,
+        "coverage_mrr": 0.7323481240981241,
+        "coverage_r5": 0.8466666666666667,
+        "coverage_window": 0.8333333333333334,
+        "coverage_p95_ms": 203.26490014558675,
+        "rss_mb": 12.6,
+        "artifact_mb": 2.345
+      },
+      {
+        "name": "S1_R2",
+        "production_eligible": true,
+        "gov_baseline_top1": 0.8075,
+        "gov_teacher_top1": 0.855,
+        "coverage_teacher_top1": 0.76,
+        "coverage_teacher_correct_to_wrong": 14,
+        "coverage_baseline_top1": 0.6433333333333333,
+        "coverage_mrr": 0.7343679653679654,
+        "coverage_r5": 0.8466666666666667,
+        "coverage_window": 0.8333333333333334,
+        "coverage_p95_ms": 147.8155699092895,
+        "rss_mb": 13.7,
+        "artifact_mb": 2.424
+      },
+      {
+        "name": "S1_R3",
+        "production_eligible": true,
+        "gov_baseline_top1": 0.83,
+        "gov_teacher_top1": 0.87,
+        "coverage_teacher_top1": 0.76,
+        "coverage_teacher_correct_to_wrong": 14,
+        "coverage_baseline_top1": 0.6333333333333333,
+        "coverage_mrr": 0.731589541106182,
+        "coverage_r5": 0.84,
+        "coverage_window": 0.8233333333333334,
+        "coverage_p95_ms": 175.39011016488075,
+        "rss_mb": 14.6,
+        "artifact_mb": 3.068
+      },
+      {
+        "name": "S2_L1",
+        "production_eligible": true,
+        "gov_baseline_top1": 0.8075,
+        "gov_teacher_top1": 0.855,
+        "coverage_teacher_top1": 0.76,
+        "coverage_teacher_correct_to_wrong": 14,
+        "coverage_baseline_top1": 0.6433333333333333,
+        "coverage_mrr": 0.7343679653679654,
+        "coverage_r5": 0.8466666666666667,
+        "coverage_window": 0.8333333333333334,
+        "coverage_p95_ms": 198.58578011626383,
+        "rss_mb": 11.9,
+        "artifact_mb": 2.424
+      },
+      {
+        "name": "S2_L2",
+        "production_eligible": true,
+        "gov_baseline_top1": 0.7475,
+        "gov_teacher_top1": 0.8425,
+        "coverage_teacher_top1": 0.7866666666666666,
+        "coverage_teacher_correct_to_wrong": 7,
+        "coverage_baseline_top1": 0.6766666666666666,
+        "coverage_mrr": 0.7672835636585639,
+        "coverage_r5": 0.8833333333333333,
+        "coverage_window": 0.8666666666666667,
+        "coverage_p95_ms": 178.92782505368822,
+        "rss_mb": 10.5,
+        "artifact_mb": 1.35
+      },
+      {
+        "name": "S2_L3",
+        "production_eligible": true,
+        "gov_baseline_top1": 0.745,
+        "gov_teacher_top1": 0.845,
+        "coverage_teacher_top1": 0.7933333333333333,
+        "coverage_teacher_correct_to_wrong": 7,
+        "coverage_baseline_top1": 0.6633333333333333,
+        "coverage_mrr": 0.7579385290635292,
+        "coverage_r5": 0.8833333333333333,
+        "coverage_window": 0.8633333333333333,
+        "coverage_p95_ms": 220.06166999926793,
+        "rss_mb": 10.3,
+        "artifact_mb": 1.321
+      },
+      {
+        "name": "S2_L4",
+        "production_eligible": true,
+        "gov_baseline_top1": 0.7525,
+        "gov_teacher_top1": 0.8225,
+        "coverage_teacher_top1": 0.7666666666666667,
+        "coverage_teacher_correct_to_wrong": 13,
+        "coverage_baseline_top1": 0.65,
+        "coverage_mrr": 0.7407337061087061,
+        "coverage_r5": 0.8533333333333334,
+        "coverage_window": 0.84,
+        "coverage_p95_ms": 121.76940483041112,
+        "rss_mb": 11.3,
+        "artifact_mb": 1.955
+      },
+      {
+        "name": "S2_L5",
+        "production_eligible": true,
+        "gov_baseline_top1": 0.7975,
+        "gov_teacher_top1": 0.85,
+        "coverage_teacher_top1": 0.7666666666666667,
+        "coverage_teacher_correct_to_wrong": 14,
+        "coverage_baseline_top1": 0.64,
+        "coverage_mrr": 0.7364182299182299,
+        "coverage_r5": 0.86,
+        "coverage_window": 0.8433333333333334,
+        "coverage_p95_ms": 154.11630502203482,
+        "rss_mb": 13.6,
+        "artifact_mb": 2.095
+      },
+      {
+        "name": "S3_flat",
+        "production_eligible": true,
+        "gov_baseline_top1": 0.7975,
+        "gov_teacher_top1": 0.85,
+        "coverage_teacher_top1": 0.7666666666666667,
+        "coverage_teacher_correct_to_wrong": 14,
+        "coverage_baseline_top1": 0.64,
+        "coverage_mrr": 0.7364182299182299,
+        "coverage_r5": 0.86,
+        "coverage_window": 0.8433333333333334,
+        "coverage_p95_ms": 175.79927002079788,
+        "rss_mb": 12.6,
+        "artifact_mb": 2.095
+      },
+      {
+        "name": "S3_raw",
+        "production_eligible": true,
+        "gov_baseline_top1": 0.8075,
+        "gov_teacher_top1": 0.86,
+        "coverage_teacher_top1": 0.7666666666666667,
+        "coverage_teacher_correct_to_wrong": 15,
+        "coverage_baseline_top1": 0.64,
+        "coverage_mrr": 0.7355796055796056,
+        "coverage_r5": 0.85,
+        "coverage_window": 0.84,
+        "coverage_p95_ms": 283.15013018437276,
+        "rss_mb": 11.6,
+        "artifact_mb": 2.095
+      },
+      {
+        "name": "S3_log",
+        "production_eligible": true,
+        "gov_baseline_top1": 0.805,
+        "gov_teacher_top1": 0.8525,
+        "coverage_teacher_top1": 0.77,
+        "coverage_teacher_correct_to_wrong": 14,
+        "coverage_baseline_top1": 0.6433333333333333,
+        "coverage_mrr": 0.7378057960557961,
+        "coverage_r5": 0.8566666666666667,
+        "coverage_window": 0.8433333333333334,
+        "coverage_p95_ms": 198.9771599997767,
+        "rss_mb": 11.9,
+        "artifact_mb": 2.095
+      },
+      {
+        "name": "S3_doc",
+        "production_eligible": true,
+        "gov_baseline_top1": 0.805,
+        "gov_teacher_top1": 0.86,
+        "coverage_teacher_top1": 0.7666666666666667,
+        "coverage_teacher_correct_to_wrong": 15,
+        "coverage_baseline_top1": 0.6366666666666667,
+        "coverage_mrr": 0.733912938912939,
+        "coverage_r5": 0.85,
+        "coverage_window": 0.84,
+        "coverage_p95_ms": 172.33389506582185,
+        "rss_mb": 12.8,
+        "artifact_mb": 2.095
+      },
+      {
+        "name": "S3_daily_only",
+        "production_eligible": true,
+        "gov_baseline_top1": 0.8025,
+        "gov_teacher_top1": 0.8575,
+        "coverage_teacher_top1": 0.78,
+        "coverage_teacher_correct_to_wrong": 11,
+        "coverage_baseline_top1": 0.65,
+        "coverage_mrr": 0.7455090124300652,
+        "coverage_r5": 0.8666666666666667,
+        "coverage_window": 0.8566666666666667,
+        "coverage_p95_ms": 195.8982450887564,
+        "rss_mb": 11.7,
+        "artifact_mb": 2.095
+      },
+      {
+        "name": "S3_interpolated",
+        "production_eligible": true,
+        "gov_baseline_top1": 0.805,
+        "gov_teacher_top1": 0.8625,
+        "coverage_teacher_top1": 0.7633333333333333,
+        "coverage_teacher_correct_to_wrong": 16,
+        "coverage_baseline_top1": 0.6333333333333333,
+        "coverage_mrr": 0.7314446291009761,
+        "coverage_r5": 0.8566666666666667,
+        "coverage_window": 0.84,
+        "coverage_p95_ms": 174.71517513040465,
+        "rss_mb": 12.8,
+        "artifact_mb": 2.095
+      },
+      {
+        "name": "S3_rank_bucket",
+        "production_eligible": true,
+        "gov_baseline_top1": 0.8075,
+        "gov_teacher_top1": 0.8575,
+        "coverage_teacher_top1": 0.77,
+        "coverage_teacher_correct_to_wrong": 14,
+        "coverage_baseline_top1": 0.64,
+        "coverage_mrr": 0.7371669071669072,
+        "coverage_r5": 0.8566666666666667,
+        "coverage_window": 0.8433333333333334,
+        "coverage_p95_ms": 268.3578398195099,
+        "rss_mb": 11.8,
+        "artifact_mb": 2.095
+      },
+      {
+        "name": "S4_daily0",
+        "production_eligible": true,
+        "gov_baseline_top1": 0.835,
+        "gov_teacher_top1": 0.8625,
+        "coverage_teacher_top1": 0.7033333333333334,
+        "coverage_teacher_correct_to_wrong": 12,
+        "coverage_baseline_top1": 0.5233333333333333,
+        "coverage_mrr": 0.637395052316105,
+        "coverage_r5": 0.7966666666666666,
+        "coverage_window": 0.7733333333333333,
+        "coverage_p95_ms": 171.58366489456992,
+        "rss_mb": 2.4,
+        "artifact_mb": 1.257
+      },
+      {
+        "name": "S4_daily0.1",
+        "production_eligible": true,
+        "gov_baseline_top1": 0.835,
+        "gov_teacher_top1": 0.8675,
+        "coverage_teacher_top1": 0.7633333333333333,
+        "coverage_teacher_correct_to_wrong": 14,
+        "coverage_baseline_top1": 0.6433333333333333,
+        "coverage_mrr": 0.7353952727555669,
+        "coverage_r5": 0.86,
+        "coverage_window": 0.8433333333333334,
+        "coverage_p95_ms": 185.67156507633635,
+        "rss_mb": 13.1,
+        "artifact_mb": 2.095
+      },
+      {
+        "name": "S4_daily0.25",
+        "production_eligible": true,
+        "gov_baseline_top1": 0.8025,
+        "gov_teacher_top1": 0.8575,
+        "coverage_teacher_top1": 0.78,
+        "coverage_teacher_correct_to_wrong": 11,
+        "coverage_baseline_top1": 0.65,
+        "coverage_mrr": 0.7455090124300652,
+        "coverage_r5": 0.8666666666666667,
+        "coverage_window": 0.8566666666666667,
+        "coverage_p95_ms": 172.21577999880537,
+        "rss_mb": 11.8,
+        "artifact_mb": 2.095
+      },
+      {
+        "name": "S4_daily0.5",
+        "production_eligible": true,
+        "gov_baseline_top1": 0.79,
+        "gov_teacher_top1": 0.8575,
+        "coverage_teacher_top1": 0.7866666666666666,
+        "coverage_teacher_correct_to_wrong": 15,
+        "coverage_baseline_top1": 0.65,
+        "coverage_mrr": 0.7510547919429499,
+        "coverage_r5": 0.8733333333333333,
+        "coverage_window": 0.8566666666666667,
+        "coverage_p95_ms": 185.990135034081,
+        "rss_mb": 11.4,
+        "artifact_mb": 2.095
+      }
+    ]
+  },
+  "lexicon_benchmark": {
+    "artifact_mb": 1.257,
+    "provenance_json_mb": 13.203,
+    "frozen_lexicon_with_provenance_alive": {
+      "load_s": 0.976,
+      "incremental_rss_mb": 79.0,
+      "lookup_us": 0.134
+    },
+    "frozen_lexicon": {
+      "load_s": 0.928,
+      "incremental_rss_mb": 78.7,
+      "lookup_us": 0.115
+    },
+    "compact": {
+      "load_s": 0.118,
+      "incremental_rss_mb": 10.0,
+      "lookup_us": 1.168
+    }
+  },
+  "lexicon_benchmark_R0": {
+    "artifact_mb": 5.37,
+    "provenance_json_mb": 41.122,
+    "frozen_lexicon_with_provenance_alive": {
+      "load_s": 3.484,
+      "incremental_rss_mb": 263.7,
+      "lookup_us": 0.204
+    },
+    "frozen_lexicon": {
+      "load_s": 3.231,
+      "incremental_rss_mb": 262.3,
+      "lookup_us": 0.198
+    },
+    "compact": {
+      "load_s": 0.162,
+      "incremental_rss_mb": 21.5,
+      "lookup_us": 1.299
+    }
+  },
+  "dev_equivalence": {
+    "config": "S4_daily0.5",
+    "cases": 700,
+    "mismatches": [],
+    "latency_ms": {
+      "frozen_lexicon_uncached_lm": {
+        "p50": 86.6,
+        "p95": 238.3
+      },
+      "compact_lexicon_cached_lm": {
+        "p50": 64.9,
+        "p95": 207.9
+      }
+    }
+  },
+  "results": {
+    "A_v0": {
+      "config": {
+        "name": "A_v0",
+        "stage": "reference",
+        "daily_lm": null,
+        "daily_weight": 0.0,
+        "lexicon": "builtin",
+        "production_eligible": true
+      },
+      "coverage_dev": {
+        "items": 300,
+        "recall": {
+          "@1": 0.47333333333333333,
+          "@3": 0.7,
+          "@5": 0.7833333333333333,
+          "@10": 0.8366666666666667
+        },
+        "recall_unlimited": 0.9166666666666666,
+        "reachable": 1.0,
+        "window_recall_top4_families": 0.7466666666666667,
+        "generated_but_outside_top5": 40,
+        "never_generated": 25,
+        "unreachable": 0,
+        "beam_pruned": 25,
+        "mean_candidates": 20.0,
+        "mean_families": 19.956666666666667,
+        "latency_p50_ms": 59.666949906386435,
+        "latency_p95_ms": 170.33070513280114,
+        "oov_rate": 0.0,
+        "reading_coverage": 1.0,
+        "word_coverage": 0.24487179487179486,
+        "top1": 0.47333333333333333,
+        "character_accuracy": 0.9039145907473309,
+        "mrr": 0.5997511562511562
+      },
+      "gov_dev": {
+        "items": 400,
+        "recall": {
+          "@1": 0.8025,
+          "@3": 0.8875,
+          "@5": 0.915,
+          "@10": 0.945
+        },
+        "recall_unlimited": 0.9775,
+        "reachable": 1.0,
+        "window_recall_top4_families": 0.9075,
+        "generated_but_outside_top5": 25,
+        "never_generated": 9,
+        "unreachable": 0,
+        "beam_pruned": 9,
+        "mean_candidates": 20.0,
+        "mean_families": 19.7925,
+        "latency_p50_ms": 55.20784994587302,
+        "latency_p95_ms": 171.99495498789454,
+        "oov_rate": 0.0,
+        "reading_coverage": 1.0,
+        "word_coverage": null,
+        "top1": 0.8025,
+        "character_accuracy": 0.9455087271179226,
+        "mrr": 0.8521140873015872
+      },
+      "teacher": {
+        "coverage_dev": {
+          "window_coverage": 0.7466666666666667,
+          "teacher_top1": 0.6966666666666667,
+          "latency_p50_ms": 25.97,
+          "latency_p95_ms": 65.03,
+          "gpu_peak_mb": 1507.3,
+          "fallbacks": 0
+        },
+        "gov_dev": {
+          "window_coverage": 0.9075,
+          "teacher_top1": 0.86,
+          "latency_p50_ms": 26.46,
+          "latency_p95_ms": 62.88,
+          "gpu_peak_mb": 1508.1,
+          "fallbacks": 0
+        }
+      },
+      "teacher_vs_v0_teacher": {
+        "coverage_dev": {
+          "wrong_to_correct": 0,
+          "correct_to_wrong": 0,
+          "mcnemar_p": 1.0
+        },
+        "gov_dev": {
+          "wrong_to_correct": 0,
+          "correct_to_wrong": 0,
+          "mcnemar_p": 1.0
+        }
+      },
+      "lexicon": {
+        "lexicon_entries": 16759,
+        "artifact_mb": 0.0
+      },
+      "runtime": {
+        "rss_start_mb": 35.215,
+        "v0_load_s": 4.344,
+        "rss_after_v0_mb": 327.773,
+        "daily_lm_load_s": 0.004,
+        "rss_after_daily_lm_mb": 327.773,
+        "incremental_rss_mb": 0.0
+      },
+      "lm_cache": {
+        "hits": 8319037,
+        "misses": 4586504
+      },
+      "score": {
+        "name": "A_v0",
+        "production_eligible": true,
+        "gov_baseline_top1": 0.8025,
+        "gov_teacher_top1": 0.86,
+        "coverage_teacher_top1": 0.6966666666666667,
+        "coverage_teacher_correct_to_wrong": 0,
+        "coverage_baseline_top1": 0.47333333333333333,
+        "coverage_mrr": 0.5997511562511562,
+        "coverage_r5": 0.7833333333333333,
+        "coverage_window": 0.7466666666666667,
+        "coverage_p95_ms": 170.33070513280114,
+        "rss_mb": 0.0,
+        "artifact_mb": 0.0
+      }
+    },
+    "S1_R0": {
+      "config": {
+        "name": "S1_R0",
+        "stage": "1_reading",
+        "daily_lm": "daily_production",
+        "daily_weight": 0.25,
+        "lexicon": "R0_cartesian|L1_mixed|flat",
+        "production_eligible": false
+      },
+      "coverage_dev": {
+        "items": 300,
+        "recall": {
+          "@1": 0.6466666666666666,
+          "@3": 0.81,
+          "@5": 0.8433333333333334,
+          "@10": 0.8733333333333333
+        },
+        "recall_unlimited": 0.9566666666666667,
+        "reachable": 1.0,
+        "window_recall_top4_families": 0.8266666666666667,
+        "generated_but_outside_top5": 34,
+        "never_generated": 13,
+        "unreachable": 0,
+        "beam_pruned": 13,
+        "mean_candidates": 20.0,
+        "mean_families": 19.973333333333333,
+        "latency_p50_ms": 62.62764998245984,
+        "latency_p95_ms": 195.98030990455302,
+        "oov_rate": 0.0,
+        "reading_coverage": 1.0,
+        "word_coverage": 0.767948717948718,
+        "top1": 0.6466666666666666,
+        "character_accuracy": 0.9327797548438118,
+        "mrr": 0.735720289986931
+      },
+      "gov_dev": {
+        "items": 400,
+        "recall": {
+          "@1": 0.8225,
+          "@3": 0.9,
+          "@5": 0.915,
+          "@10": 0.94
+        },
+        "recall_unlimited": 0.985,
+        "reachable": 1.0,
+        "window_recall_top4_families": 0.91,
+        "generated_but_outside_top5": 28,
+        "never_generated": 6,
+        "unreachable": 0,
+        "beam_pruned": 6,
+        "mean_candidates": 20.0,
+        "mean_families": 19.855,
+        "latency_p50_ms": 58.87220008298755,
+        "latency_p95_ms": 202.57572996197263,
+        "oov_rate": 0.0,
+        "reading_coverage": 1.0,
+        "word_coverage": null,
+        "top1": 0.8225,
+        "character_accuracy": 0.9497658578118349,
+        "mrr": 0.8668322694462403
+      },
+      "teacher": {
+        "coverage_dev": {
+          "window_coverage": 0.8266666666666667,
+          "teacher_top1": 0.76,
+          "latency_p50_ms": 60.35,
+          "latency_p95_ms": 67.52,
+          "gpu_peak_mb": 1507.4,
+          "fallbacks": 0
+        },
+        "gov_dev": {
+          "window_coverage": 0.91,
+          "teacher_top1": 0.8575,
+          "latency_p50_ms": 49.82,
+          "latency_p95_ms": 64.35,
+          "gpu_peak_mb": 1508.1,
+          "fallbacks": 0
+        }
+      },
+      "teacher_vs_v0_teacher": {
+        "coverage_dev": {
+          "wrong_to_correct": 33,
+          "correct_to_wrong": 14,
+          "mcnemar_p": 0.0079
+        },
+        "gov_dev": {
+          "wrong_to_correct": 18,
+          "correct_to_wrong": 19,
+          "mcnemar_p": 1.0
+        }
+      },
+      "lexicon": {
+        "recipe": "R0_cartesian|L1_mixed|flat",
+        "derived_words": 82841,
+        "by_length": {
+          "2": 35409,
+          "3": 25611,
+          "4": 21821
+        },
+        "lexicon_rows_added": 137356,
+        "lexicon_entries": 154115,
+        "rejected": {
+          "below_pooled_frequency": 31043,
+          "fragment_of_longer_ngram": 31336,
+          "readings_unresolved": 13571,
+          "too_few_documents": 819
+        },
+        "daily_supported_words": 17318,
+        "government_only_words": 65523,
+        "unsupported_readings": 85529,
+        "false_competitors": 10813,
+        "weight_distribution": {
+          "min": 10.0,
+          "p25": 10.0,
+          "median": 10.0,
+          "p75": 10.0,
+          "max": 10.0
+        },
+        "artifact_mb": 5.37,
+        "build_s": 11.06
+      },
+      "runtime": {
+        "rss_start_mb": 35.246,
+        "v0_load_s": 4.274,
+        "rss_after_v0_mb": 328.23,
+        "daily_lm_load_s": 0.192,
+        "rss_after_daily_lm_mb": 337.734,
+        "lexicon_load_s": 0.072,
+        "rss_after_lexicon_mb": 351.289,
+        "incremental_rss_mb": 23.1
+      },
+      "lm_cache": {
+        "hits": 9181054,
+        "misses": 4824171
+      },
+      "score": {
+        "name": "S1_R0",
+        "production_eligible": false,
+        "gov_baseline_top1": 0.8225,
+        "gov_teacher_top1": 0.8575,
+        "coverage_teacher_top1": 0.76,
+        "coverage_teacher_correct_to_wrong": 14,
+        "coverage_baseline_top1": 0.6466666666666666,
+        "coverage_mrr": 0.735720289986931,
+        "coverage_r5": 0.8433333333333334,
+        "coverage_window": 0.8266666666666667,
+        "coverage_p95_ms": 195.98030990455302,
+        "rss_mb": 23.1,
+        "artifact_mb": 6.208
+      }
+    },
+    "S1_R1": {
+      "config": {
+        "name": "S1_R1",
+        "stage": "1_reading",
+        "daily_lm": "daily_production",
+        "daily_weight": 0.25,
+        "lexicon": "R1_unambiguous|L1_mixed|flat",
+        "production_eligible": true
+      },
+      "coverage_dev": {
+        "items": 300,
+        "recall": {
+          "@1": 0.64,
+          "@3": 0.8033333333333333,
+          "@5": 0.8466666666666667,
+          "@10": 0.89
+        },
+        "recall_unlimited": 0.9533333333333334,
+        "reachable": 1.0,
+        "window_recall_top4_families": 0.8333333333333334,
+        "generated_but_outside_top5": 32,
+        "never_generated": 14,
+        "unreachable": 0,
+        "beam_pruned": 14,
+        "mean_candidates": 20.0,
+        "mean_families": 19.953333333333333,
+        "latency_p50_ms": 62.87895003333688,
+        "latency_p95_ms": 203.26490014558675,
+        "oov_rate": 0.0,
+        "reading_coverage": 1.0,
+        "word_coverage": 0.5,
+        "top1": 0.64,
+        "character_accuracy": 0.9367338869118228,
+        "mrr": 0.7323481240981241
+      },
+      "gov_dev": {
+        "items": 400,
+        "recall": {
+          "@1": 0.8025,
+          "@3": 0.8925,
+          "@5": 0.9125,
+          "@10": 0.9375
+        },
+        "recall_unlimited": 0.9875,
+        "reachable": 1.0,
+        "window_recall_top4_families": 0.91,
+        "generated_but_outside_top5": 30,
+        "never_generated": 5,
+        "unreachable": 0,
+        "beam_pruned": 5,
+        "mean_candidates": 20.0,
+        "mean_families": 19.8475,
+        "latency_p50_ms": 61.321199988014996,
+        "latency_p95_ms": 179.1796550736762,
+        "oov_rate": 0.0,
+        "reading_coverage": 1.0,
+        "word_coverage": null,
+        "top1": 0.8025,
+        "character_accuracy": 0.946360153256705,
+        "mrr": 0.854956277382748
+      },
+      "teacher": {
+        "coverage_dev": {
+          "window_coverage": 0.8333333333333334,
+          "teacher_top1": 0.76,
+          "latency_p50_ms": 48.89,
+          "latency_p95_ms": 57.95,
+          "gpu_peak_mb": 1507.3,
+          "fallbacks": 0
+        },
+        "gov_dev": {
+          "window_coverage": 0.91,
+          "teacher_top1": 0.8525,
+          "latency_p50_ms": 52.7,
+          "latency_p95_ms": 69.11,
+          "gpu_peak_mb": 1508.1,
+          "fallbacks": 0
+        }
+      },
+      "teacher_vs_v0_teacher": {
+        "coverage_dev": {
+          "wrong_to_correct": 33,
+          "correct_to_wrong": 14,
+          "mcnemar_p": 0.0079
+        },
+        "gov_dev": {
+          "wrong_to_correct": 17,
+          "correct_to_wrong": 20,
+          "mcnemar_p": 0.7428
+        }
+      },
+      "lexicon": {
+        "recipe": "R1_unambiguous|L1_mixed|flat",
+        "derived_words": 32134,
+        "by_length": {
+          "2": 15937,
+          "3": 9182,
+          "4": 7015
+        },
+        "lexicon_rows_added": 32134,
+        "lexicon_entries": 48893,
+        "rejected": {
+          "below_pooled_frequency": 31043,
+          "fragment_of_longer_ngram": 31336,
+          "readings_unresolved": 64278,
+          "too_few_documents": 819
+        },
+        "daily_supported_words": 5827,
+        "government_only_words": 26307,
+        "unsupported_readings": 0,
+        "false_competitors": 0,
+        "weight_distribution": {
+          "min": 10.0,
+          "p25": 10.0,
+          "median": 10.0,
+          "p75": 10.0,
+          "max": 10.0
+        },
+        "artifact_mb": 1.507,
+        "build_s": 3.51
+      },
+      "runtime": {
+        "rss_start_mb": 35.191,
+        "v0_load_s": 5.124,
+        "rss_after_v0_mb": 327.621,
+        "daily_lm_load_s": 0.213,
+        "rss_after_daily_lm_mb": 337.645,
+        "lexicon_load_s": 0.022,
+        "rss_after_lexicon_mb": 340.195,
+        "incremental_rss_mb": 12.6
+      },
+      "lm_cache": {
+        "hits": 8697712,
+        "misses": 4732240
+      },
+      "score": {
+        "name": "S1_R1",
+        "production_eligible": true,
+        "gov_baseline_top1": 0.8025,
+        "gov_teacher_top1": 0.8525,
+        "coverage_teacher_top1": 0.76,
+        "coverage_teacher_correct_to_wrong": 14,
+        "coverage_baseline_top1": 0.64,
+        "coverage_mrr": 0.7323481240981241,
+        "coverage_r5": 0.8466666666666667,
+        "coverage_window": 0.8333333333333334,
+        "coverage_p95_ms": 203.26490014558675,
+        "rss_mb": 12.6,
+        "artifact_mb": 2.345
+      }
+    },
+    "S1_R2": {
+      "config": {
+        "name": "S1_R2",
+        "stage": "1_reading",
+        "daily_lm": "daily_production",
+        "daily_weight": 0.25,
+        "lexicon": "R2_known_word|L1_mixed|flat",
+        "production_eligible": true
+      },
+      "coverage_dev": {
+        "items": 300,
+        "recall": {
+          "@1": 0.6433333333333333,
+          "@3": 0.8066666666666666,
+          "@5": 0.8466666666666667,
+          "@10": 0.8866666666666667
+        },
+        "recall_unlimited": 0.95,
+        "reachable": 1.0,
+        "window_recall_top4_families": 0.8333333333333334,
+        "generated_but_outside_top5": 31,
+        "never_generated": 15,
+        "unreachable": 0,
+        "beam_pruned": 15,
+        "mean_candidates": 20.0,
+        "mean_families": 19.953333333333333,
+        "latency_p50_ms": 42.02700010500848,
+        "latency_p95_ms": 147.8155699092895,
+        "oov_rate": 0.0,
+        "reading_coverage": 1.0,
+        "word_coverage": 0.5012820512820513,
+        "top1": 0.6433333333333333,
+        "character_accuracy": 0.9375247133254251,
+        "mrr": 0.7343679653679654
+      },
+      "gov_dev": {
+        "items": 400,
+        "recall": {
+          "@1": 0.8075,
+          "@3": 0.9,
+          "@5": 0.915,
+          "@10": 0.9375
+        },
+        "recall_unlimited": 0.9875,
+        "reachable": 1.0,
+        "window_recall_top4_families": 0.9125,
+        "generated_but_outside_top5": 29,
+        "never_generated": 5,
+        "unreachable": 0,
+        "beam_pruned": 5,
+        "mean_candidates": 20.0,
+        "mean_families": 19.865,
+        "latency_p50_ms": 58.59655002132058,
+        "latency_p95_ms": 233.49427003413422,
+        "oov_rate": 0.0,
+        "reading_coverage": 1.0,
+        "word_coverage": null,
+        "top1": 0.8075,
+        "character_accuracy": 0.9476372924648787,
+        "mrr": 0.8592271107160814
+      },
+      "teacher": {
+        "coverage_dev": {
+          "window_coverage": 0.8333333333333334,
+          "teacher_top1": 0.76,
+          "latency_p50_ms": 51.05,
+          "latency_p95_ms": 71.24,
+          "gpu_peak_mb": 1507.3,
+          "fallbacks": 0
+        },
+        "gov_dev": {
+          "window_coverage": 0.9125,
+          "teacher_top1": 0.855,
+          "latency_p50_ms": 48.95,
+          "latency_p95_ms": 59.72,
+          "gpu_peak_mb": 1508.1,
+          "fallbacks": 0
+        }
+      },
+      "teacher_vs_v0_teacher": {
+        "coverage_dev": {
+          "wrong_to_correct": 33,
+          "correct_to_wrong": 14,
+          "mcnemar_p": 0.0079
+        },
+        "gov_dev": {
+          "wrong_to_correct": 18,
+          "correct_to_wrong": 20,
+          "mcnemar_p": 0.8714
+        }
+      },
+      "lexicon": {
+        "recipe": "R2_known_word|L1_mixed|flat",
+        "derived_words": 34123,
+        "by_length": {
+          "2": 15937,
+          "3": 10272,
+          "4": 7914
+        },
+        "lexicon_rows_added": 34123,
+        "lexicon_entries": 50882,
+        "rejected": {
+          "below_pooled_frequency": 31043,
+          "fragment_of_longer_ngram": 31336,
+          "readings_unresolved": 62289,
+          "too_few_documents": 819
+        },
+        "daily_supported_words": 6175,
+        "government_only_words": 27948,
+        "unsupported_readings": 0,
+        "false_competitors": 0,
+        "weight_distribution": {
+          "min": 10.0,
+          "p25": 10.0,
+          "median": 10.0,
+          "p75": 10.0,
+          "max": 10.0
+        },
+        "artifact_mb": 1.586,
+        "build_s": 4.62
+      },
+      "runtime": {
+        "rss_start_mb": 35.242,
+        "v0_load_s": 3.903,
+        "rss_after_v0_mb": 327.754,
+        "daily_lm_load_s": 0.219,
+        "rss_after_daily_lm_mb": 337.742,
+        "lexicon_load_s": 0.025,
+        "rss_after_lexicon_mb": 341.48,
+        "incremental_rss_mb": 13.7
+      },
+      "lm_cache": {
+        "hits": 8698083,
+        "misses": 4746281
+      },
+      "score": {
+        "name": "S1_R2",
+        "production_eligible": true,
+        "gov_baseline_top1": 0.8075,
+        "gov_teacher_top1": 0.855,
+        "coverage_teacher_top1": 0.76,
+        "coverage_teacher_correct_to_wrong": 14,
+        "coverage_baseline_top1": 0.6433333333333333,
+        "coverage_mrr": 0.7343679653679654,
+        "coverage_r5": 0.8466666666666667,
+        "coverage_window": 0.8333333333333334,
+        "coverage_p95_ms": 147.8155699092895,
+        "rss_mb": 13.7,
+        "artifact_mb": 2.424
+      }
+    },
+    "S1_R3": {
+      "config": {
+        "name": "S1_R3",
+        "stage": "1_reading",
+        "daily_lm": "daily_production",
+        "daily_weight": 0.25,
+        "lexicon": "R3_bounded|L1_mixed|flat",
+        "production_eligible": true
+      },
+      "coverage_dev": {
+        "items": 300,
+        "recall": {
+          "@1": 0.6333333333333333,
+          "@3": 0.8033333333333333,
+          "@5": 0.84,
+          "@10": 0.8966666666666666
+        },
+        "recall_unlimited": 0.96,
+        "reachable": 1.0,
+        "window_recall_top4_families": 0.8233333333333334,
+        "generated_but_outside_top5": 36,
+        "never_generated": 12,
+        "unreachable": 0,
+        "beam_pruned": 12,
+        "mean_candidates": 20.0,
+        "mean_families": 19.973333333333333,
+        "latency_p50_ms": 64.17934992350638,
+        "latency_p95_ms": 175.39011016488075,
+        "oov_rate": 0.0,
+        "reading_coverage": 1.0,
+        "word_coverage": 0.6102564102564103,
+        "top1": 0.6333333333333333,
+        "character_accuracy": 0.9339659944642151,
+        "mrr": 0.731589541106182
+      },
+      "gov_dev": {
+        "items": 400,
+        "recall": {
+          "@1": 0.83,
+          "@3": 0.9175,
+          "@5": 0.9325,
+          "@10": 0.9475
+        },
+        "recall_unlimited": 0.9875,
+        "reachable": 1.0,
+        "window_recall_top4_families": 0.9275,
+        "generated_but_outside_top5": 22,
+        "never_generated": 5,
+        "unreachable": 0,
+        "beam_pruned": 5,
+        "mean_candidates": 20.0,
+        "mean_families": 19.88,
+        "latency_p50_ms": 57.63709999155253,
+        "latency_p95_ms": 179.31178509024878,
+        "oov_rate": 0.0,
+        "reading_coverage": 1.0,
+        "word_coverage": null,
+        "top1": 0.83,
+        "character_accuracy": 0.9540229885057471,
+        "mrr": 0.8776904043668751
+      },
+      "teacher": {
+        "coverage_dev": {
+          "window_coverage": 0.8233333333333334,
+          "teacher_top1": 0.76,
+          "latency_p50_ms": 50.67,
+          "latency_p95_ms": 64.51,
+          "gpu_peak_mb": 1507.3,
+          "fallbacks": 0
+        },
+        "gov_dev": {
+          "window_coverage": 0.9275,
+          "teacher_top1": 0.87,
+          "latency_p50_ms": 60.38,
+          "latency_p95_ms": 74.53,
+          "gpu_peak_mb": 1508.1,
+          "fallbacks": 0
+        }
+      },
+      "teacher_vs_v0_teacher": {
+        "coverage_dev": {
+          "wrong_to_correct": 33,
+          "correct_to_wrong": 14,
+          "mcnemar_p": 0.0079
+        },
+        "gov_dev": {
+          "wrong_to_correct": 20,
+          "correct_to_wrong": 16,
+          "mcnemar_p": 0.6177
+        }
+      },
+      "lexicon": {
+        "recipe": "R3_bounded|L1_mixed|flat",
+        "derived_words": 51827,
+        "by_length": {
+          "2": 23212,
+          "3": 15958,
+          "4": 12657
+        },
+        "lexicon_rows_added": 51827,
+        "lexicon_entries": 68586,
+        "rejected": {
+          "below_pooled_frequency": 31043,
+          "fragment_of_longer_ngram": 31336,
+          "readings_unresolved": 44585,
+          "too_few_documents": 819
+        },
+        "daily_supported_words": 12539,
+        "government_only_words": 39288,
+        "unsupported_readings": 0,
+        "false_competitors": 0,
+        "weight_distribution": {
+          "min": 10.0,
+          "p25": 10.0,
+          "median": 10.0,
+          "p75": 10.0,
+          "max": 10.0
+        },
+        "artifact_mb": 2.23,
+        "build_s": 5.79
+      },
+      "runtime": {
+        "rss_start_mb": 35.27,
+        "v0_load_s": 4.599,
+        "rss_after_v0_mb": 327.512,
+        "daily_lm_load_s": 0.206,
+        "rss_after_daily_lm_mb": 337.523,
+        "lexicon_load_s": 0.031,
+        "rss_after_lexicon_mb": 342.16,
+        "incremental_rss_mb": 14.6
+      },
+      "lm_cache": {
+        "hits": 8961530,
+        "misses": 4809890
+      },
+      "score": {
+        "name": "S1_R3",
+        "production_eligible": true,
+        "gov_baseline_top1": 0.83,
+        "gov_teacher_top1": 0.87,
+        "coverage_teacher_top1": 0.76,
+        "coverage_teacher_correct_to_wrong": 14,
+        "coverage_baseline_top1": 0.6333333333333333,
+        "coverage_mrr": 0.731589541106182,
+        "coverage_r5": 0.84,
+        "coverage_window": 0.8233333333333334,
+        "coverage_p95_ms": 175.39011016488075,
+        "rss_mb": 14.6,
+        "artifact_mb": 3.068
+      }
+    },
+    "S2_L1": {
+      "config": {
+        "name": "S2_L1",
+        "stage": "2_extraction",
+        "daily_lm": "daily_production",
+        "daily_weight": 0.25,
+        "lexicon": "R2_known_word|L1_mixed|flat",
+        "production_eligible": true
+      },
+      "coverage_dev": {
+        "items": 300,
+        "recall": {
+          "@1": 0.6433333333333333,
+          "@3": 0.8066666666666666,
+          "@5": 0.8466666666666667,
+          "@10": 0.8866666666666667
+        },
+        "recall_unlimited": 0.95,
+        "reachable": 1.0,
+        "window_recall_top4_families": 0.8333333333333334,
+        "generated_but_outside_top5": 31,
+        "never_generated": 15,
+        "unreachable": 0,
+        "beam_pruned": 15,
+        "mean_candidates": 20.0,
+        "mean_families": 19.953333333333333,
+        "latency_p50_ms": 62.703050090931356,
+        "latency_p95_ms": 198.58578011626383,
+        "oov_rate": 0.0,
+        "reading_coverage": 1.0,
+        "word_coverage": 0.5012820512820513,
+        "top1": 0.6433333333333333,
+        "character_accuracy": 0.9375247133254251,
+        "mrr": 0.7343679653679654
+      },
+      "gov_dev": {
+        "items": 400,
+        "recall": {
+          "@1": 0.8075,
+          "@3": 0.9,
+          "@5": 0.915,
+          "@10": 0.9375
+        },
+        "recall_unlimited": 0.9875,
+        "reachable": 1.0,
+        "window_recall_top4_families": 0.9125,
+        "generated_but_outside_top5": 29,
+        "never_generated": 5,
+        "unreachable": 0,
+        "beam_pruned": 5,
+        "mean_candidates": 20.0,
+        "mean_families": 19.865,
+        "latency_p50_ms": 58.75920003745705,
+        "latency_p95_ms": 169.27884004544447,
+        "oov_rate": 0.0,
+        "reading_coverage": 1.0,
+        "word_coverage": null,
+        "top1": 0.8075,
+        "character_accuracy": 0.9476372924648787,
+        "mrr": 0.8592271107160814
+      },
+      "teacher": {
+        "coverage_dev": {
+          "window_coverage": 0.8333333333333334,
+          "teacher_top1": 0.76,
+          "latency_p50_ms": 65.36,
+          "latency_p95_ms": 94.02,
+          "gpu_peak_mb": 1507.3,
+          "fallbacks": 0
+        },
+        "gov_dev": {
+          "window_coverage": 0.9125,
+          "teacher_top1": 0.855,
+          "latency_p50_ms": 55.77,
+          "latency_p95_ms": 73.86,
+          "gpu_peak_mb": 1508.1,
+          "fallbacks": 0
+        }
+      },
+      "teacher_vs_v0_teacher": {
+        "coverage_dev": {
+          "wrong_to_correct": 33,
+          "correct_to_wrong": 14,
+          "mcnemar_p": 0.0079
+        },
+        "gov_dev": {
+          "wrong_to_correct": 18,
+          "correct_to_wrong": 20,
+          "mcnemar_p": 0.8714
+        }
+      },
+      "lexicon": {
+        "recipe": "R2_known_word|L1_mixed|flat",
+        "derived_words": 34123,
+        "by_length": {
+          "2": 15937,
+          "3": 10272,
+          "4": 7914
+        },
+        "lexicon_rows_added": 34123,
+        "lexicon_entries": 50882,
+        "rejected": {
+          "below_pooled_frequency": 31043,
+          "fragment_of_longer_ngram": 31336,
+          "readings_unresolved": 62289,
+          "too_few_documents": 819
+        },
+        "daily_supported_words": 6175,
+        "government_only_words": 27948,
+        "unsupported_readings": 0,
+        "false_competitors": 0,
+        "weight_distribution": {
+          "min": 10.0,
+          "p25": 10.0,
+          "median": 10.0,
+          "p75": 10.0,
+          "max": 10.0
+        },
+        "artifact_mb": 1.586,
+        "build_s": 4.62
+      },
+      "runtime": {
+        "rss_start_mb": 35.297,
+        "v0_load_s": 4.476,
+        "rss_after_v0_mb": 328.234,
+        "daily_lm_load_s": 0.244,
+        "rss_after_daily_lm_mb": 337.723,
+        "lexicon_load_s": 0.025,
+        "rss_after_lexicon_mb": 340.145,
+        "incremental_rss_mb": 11.9
+      },
+      "lm_cache": {
+        "hits": 8698083,
+        "misses": 4746281
+      },
+      "score": {
+        "name": "S2_L1",
+        "production_eligible": true,
+        "gov_baseline_top1": 0.8075,
+        "gov_teacher_top1": 0.855,
+        "coverage_teacher_top1": 0.76,
+        "coverage_teacher_correct_to_wrong": 14,
+        "coverage_baseline_top1": 0.6433333333333333,
+        "coverage_mrr": 0.7343679653679654,
+        "coverage_r5": 0.8466666666666667,
+        "coverage_window": 0.8333333333333334,
+        "coverage_p95_ms": 198.58578011626383,
+        "rss_mb": 11.9,
+        "artifact_mb": 2.424
+      }
+    },
+    "S2_L2": {
+      "config": {
+        "name": "S2_L2",
+        "stage": "2_extraction",
+        "daily_lm": "daily_production",
+        "daily_weight": 0.25,
+        "lexicon": "R2_known_word|L2_daily_only|flat",
+        "production_eligible": true
+      },
+      "coverage_dev": {
+        "items": 300,
+        "recall": {
+          "@1": 0.6766666666666666,
+          "@3": 0.8366666666666667,
+          "@5": 0.8833333333333333,
+          "@10": 0.9233333333333333
+        },
+        "recall_unlimited": 0.9733333333333334,
+        "reachable": 1.0,
+        "window_recall_top4_families": 0.8666666666666667,
+        "generated_but_outside_top5": 27,
+        "never_generated": 8,
+        "unreachable": 0,
+        "beam_pruned": 8,
+        "mean_candidates": 20.0,
+        "mean_families": 19.953333333333333,
+        "latency_p50_ms": 65.97020011395216,
+        "latency_p95_ms": 178.92782505368822,
+        "oov_rate": 0.0,
+        "reading_coverage": 1.0,
+        "word_coverage": 0.4564102564102564,
+        "top1": 0.6766666666666666,
+        "character_accuracy": 0.9470146302886516,
+        "mrr": 0.7672835636585639
+      },
+      "gov_dev": {
+        "items": 400,
+        "recall": {
+          "@1": 0.7475,
+          "@3": 0.8675,
+          "@5": 0.9025,
+          "@10": 0.915
+        },
+        "recall_unlimited": 0.9625,
+        "reachable": 1.0,
+        "window_recall_top4_families": 0.89,
+        "generated_but_outside_top5": 24,
+        "never_generated": 15,
+        "unreachable": 0,
+        "beam_pruned": 15,
+        "mean_candidates": 20.0,
+        "mean_families": 19.815,
+        "latency_p50_ms": 58.2143000792712,
+        "latency_p95_ms": 161.1429899930954,
+        "oov_rate": 0.0,
+        "reading_coverage": 1.0,
+        "word_coverage": null,
+        "top1": 0.7475,
+        "character_accuracy": 0.9276287782034909,
+        "mrr": 0.8139916958041958
+      },
+      "teacher": {
+        "coverage_dev": {
+          "window_coverage": 0.8666666666666667,
+          "teacher_top1": 0.7866666666666666,
+          "latency_p50_ms": 51.62,
+          "latency_p95_ms": 67.89,
+          "gpu_peak_mb": 1507.3,
+          "fallbacks": 0
+        },
+        "gov_dev": {
+          "window_coverage": 0.89,
+          "teacher_top1": 0.8425,
+          "latency_p50_ms": 51.18,
+          "latency_p95_ms": 68.12,
+          "gpu_peak_mb": 1508.1,
+          "fallbacks": 0
+        }
+      },
+      "teacher_vs_v0_teacher": {
+        "coverage_dev": {
+          "wrong_to_correct": 34,
+          "correct_to_wrong": 7,
+          "mcnemar_p": 0.0
+        },
+        "gov_dev": {
+          "wrong_to_correct": 8,
+          "correct_to_wrong": 15,
+          "mcnemar_p": 0.21
+        }
+      },
+      "lexicon": {
+        "recipe": "R2_known_word|L2_daily_only|flat",
+        "derived_words": 4469,
+        "by_length": {
+          "2": 2603,
+          "3": 1122,
+          "4": 744
+        },
+        "lexicon_rows_added": 4469,
+        "lexicon_entries": 21228,
+        "rejected": {
+          "below_daily_count": 117289,
+          "fragment_of_longer_ngram": 5642,
+          "low_daily_pmi": 18053,
+          "readings_unresolved": 13717,
+          "too_few_daily_documents": 440
+        },
+        "daily_supported_words": 4469,
+        "government_only_words": 0,
+        "unsupported_readings": 0,
+        "false_competitors": 0,
+        "weight_distribution": {
+          "min": 10.0,
+          "p25": 10.0,
+          "median": 10.0,
+          "p75": 10.0,
+          "max": 10.0
+        },
+        "artifact_mb": 0.512,
+        "build_s": 1.26
+      },
+      "runtime": {
+        "rss_start_mb": 35.328,
+        "v0_load_s": 4.745,
+        "rss_after_v0_mb": 327.73,
+        "daily_lm_load_s": 0.21,
+        "rss_after_daily_lm_mb": 337.617,
+        "lexicon_load_s": 0.009,
+        "rss_after_lexicon_mb": 338.223,
+        "incremental_rss_mb": 10.5
+      },
+      "lm_cache": {
+        "hits": 8330408,
+        "misses": 4714817
+      },
+      "score": {
+        "name": "S2_L2",
+        "production_eligible": true,
+        "gov_baseline_top1": 0.7475,
+        "gov_teacher_top1": 0.8425,
+        "coverage_teacher_top1": 0.7866666666666666,
+        "coverage_teacher_correct_to_wrong": 7,
+        "coverage_baseline_top1": 0.6766666666666666,
+        "coverage_mrr": 0.7672835636585639,
+        "coverage_r5": 0.8833333333333333,
+        "coverage_window": 0.8666666666666667,
+        "coverage_p95_ms": 178.92782505368822,
+        "rss_mb": 10.5,
+        "artifact_mb": 1.35
+      }
+    },
+    "S2_L3": {
+      "config": {
+        "name": "S2_L3",
+        "stage": "2_extraction",
+        "daily_lm": "daily_production",
+        "daily_weight": 0.25,
+        "lexicon": "R2_known_word|L3_daily_supported|flat",
+        "production_eligible": true
+      },
+      "coverage_dev": {
+        "items": 300,
+        "recall": {
+          "@1": 0.6633333333333333,
+          "@3": 0.8366666666666667,
+          "@5": 0.8833333333333333,
+          "@10": 0.9133333333333333
+        },
+        "recall_unlimited": 0.97,
+        "reachable": 1.0,
+        "window_recall_top4_families": 0.8633333333333333,
+        "generated_but_outside_top5": 26,
+        "never_generated": 9,
+        "unreachable": 0,
+        "beam_pruned": 9,
+        "mean_candidates": 20.0,
+        "mean_families": 19.953333333333333,
+        "latency_p50_ms": 75.91639994643629,
+        "latency_p95_ms": 220.06166999926793,
+        "oov_rate": 0.0,
+        "reading_coverage": 1.0,
+        "word_coverage": 0.4564102564102564,
+        "top1": 0.6633333333333333,
+        "character_accuracy": 0.9422696718070384,
+        "mrr": 0.7579385290635292
+      },
+      "gov_dev": {
+        "items": 400,
+        "recall": {
+          "@1": 0.745,
+          "@3": 0.865,
+          "@5": 0.9,
+          "@10": 0.9175
+        },
+        "recall_unlimited": 0.965,
+        "reachable": 1.0,
+        "window_recall_top4_families": 0.885,
+        "generated_but_outside_top5": 26,
+        "never_generated": 14,
+        "unreachable": 0,
+        "beam_pruned": 14,
+        "mean_candidates": 20.0,
+        "mean_families": 19.8175,
+        "latency_p50_ms": 46.52290011290461,
+        "latency_p95_ms": 199.471244926098,
+        "oov_rate": 0.0,
+        "reading_coverage": 1.0,
+        "word_coverage": null,
+        "top1": 0.745,
+        "character_accuracy": 0.9276287782034909,
+        "mrr": 0.8128767690642691
+      },
+      "teacher": {
+        "coverage_dev": {
+          "window_coverage": 0.8633333333333333,
+          "teacher_top1": 0.7933333333333333,
+          "latency_p50_ms": 48.62,
+          "latency_p95_ms": 60.15,
+          "gpu_peak_mb": 1507.3,
+          "fallbacks": 0
+        },
+        "gov_dev": {
+          "window_coverage": 0.885,
+          "teacher_top1": 0.845,
+          "latency_p50_ms": 19.55,
+          "latency_p95_ms": 28.49,
+          "gpu_peak_mb": 1508.1,
+          "fallbacks": 0
+        }
+      },
+      "teacher_vs_v0_teacher": {
+        "coverage_dev": {
+          "wrong_to_correct": 36,
+          "correct_to_wrong": 7,
+          "mcnemar_p": 0.0
+        },
+        "gov_dev": {
+          "wrong_to_correct": 7,
+          "correct_to_wrong": 13,
+          "mcnemar_p": 0.2632
+        }
+      },
+      "lexicon": {
+        "recipe": "R2_known_word|L3_daily_supported|flat",
+        "derived_words": 3883,
+        "by_length": {
+          "2": 3233,
+          "3": 557,
+          "4": 93
+        },
+        "lexicon_rows_added": 3883,
+        "lexicon_entries": 20642,
+        "rejected": {
+          "below_pooled_frequency": 31043,
+          "fragment_of_longer_ngram": 31336,
+          "no_daily_support": 83351,
+          "readings_unresolved": 9178,
+          "too_few_documents": 819
+        },
+        "daily_supported_words": 3883,
+        "government_only_words": 0,
+        "unsupported_readings": 0,
+        "false_competitors": 0,
+        "weight_distribution": {
+          "min": 10.0,
+          "p25": 10.0,
+          "median": 10.0,
+          "p75": 10.0,
+          "max": 10.0
+        },
+        "artifact_mb": 0.483,
+        "build_s": 1.5
+      },
+      "runtime": {
+        "rss_start_mb": 35.289,
+        "v0_load_s": 3.55,
+        "rss_after_v0_mb": 327.66,
+        "daily_lm_load_s": 0.118,
+        "rss_after_daily_lm_mb": 337.641,
+        "lexicon_load_s": 0.005,
+        "rss_after_lexicon_mb": 337.926,
+        "incremental_rss_mb": 10.3
+      },
+      "lm_cache": {
+        "hits": 8389751,
+        "misses": 4687385
+      },
+      "score": {
+        "name": "S2_L3",
+        "production_eligible": true,
+        "gov_baseline_top1": 0.745,
+        "gov_teacher_top1": 0.845,
+        "coverage_teacher_top1": 0.7933333333333333,
+        "coverage_teacher_correct_to_wrong": 7,
+        "coverage_baseline_top1": 0.6633333333333333,
+        "coverage_mrr": 0.7579385290635292,
+        "coverage_r5": 0.8833333333333333,
+        "coverage_window": 0.8633333333333333,
+        "coverage_p95_ms": 220.06166999926793,
+        "rss_mb": 10.3,
+        "artifact_mb": 1.321
+      }
+    },
+    "S2_L4": {
+      "config": {
+        "name": "S2_L4",
+        "stage": "2_extraction",
+        "daily_lm": "daily_production",
+        "daily_weight": 0.25,
+        "lexicon": "R2_known_word|L4_domain_ratio|flat",
+        "production_eligible": true
+      },
+      "coverage_dev": {
+        "items": 300,
+        "recall": {
+          "@1": 0.65,
+          "@3": 0.8133333333333334,
+          "@5": 0.8533333333333334,
+          "@10": 0.8866666666666667
+        },
+        "recall_unlimited": 0.9633333333333334,
+        "reachable": 1.0,
+        "window_recall_top4_families": 0.84,
+        "generated_but_outside_top5": 33,
+        "never_generated": 11,
+        "unreachable": 0,
+        "beam_pruned": 11,
+        "mean_candidates": 20.0,
+        "mean_families": 19.953333333333333,
+        "latency_p50_ms": 35.76050000265241,
+        "latency_p95_ms": 121.76940483041112,
+        "oov_rate": 0.0,
+        "reading_coverage": 1.0,
+        "word_coverage": 0.4807692307692308,
+        "top1": 0.65,
+        "character_accuracy": 0.9395017793594306,
+        "mrr": 0.7407337061087061
+      },
+      "gov_dev": {
+        "items": 400,
+        "recall": {
+          "@1": 0.7525,
+          "@3": 0.8675,
+          "@5": 0.8875,
+          "@10": 0.92
+        },
+        "recall_unlimited": 0.9675,
+        "reachable": 1.0,
+        "window_recall_top4_families": 0.8825,
+        "generated_but_outside_top5": 32,
+        "never_generated": 13,
+        "unreachable": 0,
+        "beam_pruned": 13,
+        "mean_candidates": 20.0,
+        "mean_families": 19.84,
+        "latency_p50_ms": 46.65355000179261,
+        "latency_p95_ms": 173.5939151258206,
+        "oov_rate": 0.0,
+        "reading_coverage": 1.0,
+        "word_coverage": null,
+        "top1": 0.7525,
+        "character_accuracy": 0.9306087696892295,
+        "mrr": 0.8154427816335711
+      },
+      "teacher": {
+        "coverage_dev": {
+          "window_coverage": 0.84,
+          "teacher_top1": 0.7666666666666667,
+          "latency_p50_ms": 50.78,
+          "latency_p95_ms": 68.25,
+          "gpu_peak_mb": 1507.3,
+          "fallbacks": 0
+        },
+        "gov_dev": {
+          "window_coverage": 0.8825,
+          "teacher_top1": 0.8225,
+          "latency_p50_ms": 48.18,
+          "latency_p95_ms": 59.67,
+          "gpu_peak_mb": 1508.1,
+          "fallbacks": 0
+        }
+      },
+      "teacher_vs_v0_teacher": {
+        "coverage_dev": {
+          "wrong_to_correct": 34,
+          "correct_to_wrong": 13,
+          "mcnemar_p": 0.0031
+        },
+        "gov_dev": {
+          "wrong_to_correct": 9,
+          "correct_to_wrong": 24,
+          "mcnemar_p": 0.0135
+        }
+      },
+      "lexicon": {
+        "recipe": "R2_known_word|L4_domain_ratio|flat",
+        "derived_words": 21806,
+        "by_length": {
+          "2": 12581,
+          "3": 6361,
+          "4": 2864
+        },
+        "lexicon_rows_added": 21806,
+        "lexicon_entries": 38565,
+        "rejected": {
+          "below_pooled_frequency": 31043,
+          "fragment_of_longer_ngram": 31336,
+          "government_domain_concentrated": 34530,
+          "numeral_template": 1579,
+          "readings_unresolved": 38497,
+          "too_few_documents": 819
+        },
+        "daily_supported_words": 5575,
+        "government_only_words": 16231,
+        "unsupported_readings": 0,
+        "false_competitors": 0,
+        "weight_distribution": {
+          "min": 10.0,
+          "p25": 10.0,
+          "median": 10.0,
+          "p75": 10.0,
+          "max": 10.0
+        },
+        "artifact_mb": 1.117,
+        "build_s": 1.89
+      },
+      "runtime": {
+        "rss_start_mb": 35.402,
+        "v0_load_s": 3.597,
+        "rss_after_v0_mb": 328.328,
+        "daily_lm_load_s": 0.124,
+        "rss_after_daily_lm_mb": 337.703,
+        "lexicon_load_s": 0.011,
+        "rss_after_lexicon_mb": 339.605,
+        "incremental_rss_mb": 11.3
+      },
+      "lm_cache": {
+        "hits": 8550406,
+        "misses": 4744092
+      },
+      "score": {
+        "name": "S2_L4",
+        "production_eligible": true,
+        "gov_baseline_top1": 0.7525,
+        "gov_teacher_top1": 0.8225,
+        "coverage_teacher_top1": 0.7666666666666667,
+        "coverage_teacher_correct_to_wrong": 13,
+        "coverage_baseline_top1": 0.65,
+        "coverage_mrr": 0.7407337061087061,
+        "coverage_r5": 0.8533333333333334,
+        "coverage_window": 0.84,
+        "coverage_p95_ms": 121.76940483041112,
+        "rss_mb": 11.3,
+        "artifact_mb": 1.955
+      }
+    },
+    "S2_L5": {
+      "config": {
+        "name": "S2_L5",
+        "stage": "2_extraction",
+        "daily_lm": "daily_production",
+        "daily_weight": 0.25,
+        "lexicon": "R2_known_word|L5_doc_frequency|flat",
+        "production_eligible": true
+      },
+      "coverage_dev": {
+        "items": 300,
+        "recall": {
+          "@1": 0.64,
+          "@3": 0.8133333333333334,
+          "@5": 0.86,
+          "@10": 0.8966666666666666
+        },
+        "recall_unlimited": 0.9566666666666667,
+        "reachable": 1.0,
+        "window_recall_top4_families": 0.8433333333333334,
+        "generated_but_outside_top5": 29,
+        "never_generated": 13,
+        "unreachable": 0,
+        "beam_pruned": 13,
+        "mean_candidates": 20.0,
+        "mean_families": 19.953333333333333,
+        "latency_p50_ms": 38.79954991862178,
+        "latency_p95_ms": 154.11630502203482,
+        "oov_rate": 0.0,
+        "reading_coverage": 1.0,
+        "word_coverage": 0.49743589743589745,
+        "top1": 0.64,
+        "character_accuracy": 0.9379201265322262,
+        "mrr": 0.7364182299182299
+      },
+      "gov_dev": {
+        "items": 400,
+        "recall": {
+          "@1": 0.7975,
+          "@3": 0.9,
+          "@5": 0.915,
+          "@10": 0.9425
+        },
+        "recall_unlimited": 0.99,
+        "reachable": 1.0,
+        "window_recall_top4_families": 0.9125,
+        "generated_but_outside_top5": 30,
+        "never_generated": 4,
+        "unreachable": 0,
+        "beam_pruned": 4,
+        "mean_candidates": 20.0,
+        "mean_families": 19.8675,
+        "latency_p50_ms": 39.444449939765036,
+        "latency_p95_ms": 303.3868150436312,
+        "oov_rate": 0.0,
+        "reading_coverage": 1.0,
+        "word_coverage": null,
+        "top1": 0.7975,
+        "character_accuracy": 0.9459344401873138,
+        "mrr": 0.853720166271637
+      },
+      "teacher": {
+        "coverage_dev": {
+          "window_coverage": 0.8433333333333334,
+          "teacher_top1": 0.7666666666666667,
+          "latency_p50_ms": 62.58,
+          "latency_p95_ms": 102.47,
+          "gpu_peak_mb": 1507.3,
+          "fallbacks": 0
+        },
+        "gov_dev": {
+          "window_coverage": 0.9125,
+          "teacher_top1": 0.85,
+          "latency_p50_ms": 64.62,
+          "latency_p95_ms": 100.53,
+          "gpu_peak_mb": 1508.1,
+          "fallbacks": 0
+        }
+      },
+      "teacher_vs_v0_teacher": {
+        "coverage_dev": {
+          "wrong_to_correct": 35,
+          "correct_to_wrong": 14,
+          "mcnemar_p": 0.0038
+        },
+        "gov_dev": {
+          "wrong_to_correct": 15,
+          "correct_to_wrong": 19,
+          "mcnemar_p": 0.6076
+        }
+      },
+      "lexicon": {
+        "recipe": "R2_known_word|L5_doc_frequency|flat",
+        "derived_words": 25789,
+        "by_length": {
+          "2": 14649,
+          "3": 7640,
+          "4": 3500
+        },
+        "lexicon_rows_added": 25789,
+        "lexicon_entries": 42548,
+        "rejected": {
+          "below_pooled_frequency": 31043,
+          "fragment_of_longer_ngram": 31336,
+          "readings_unresolved": 44821,
+          "too_few_documents": 2770,
+          "too_few_sources": 23851
+        },
+        "daily_supported_words": 5977,
+        "government_only_words": 19812,
+        "unsupported_readings": 0,
+        "false_competitors": 0,
+        "weight_distribution": {
+          "min": 10.0,
+          "p25": 10.0,
+          "median": 10.0,
+          "p75": 10.0,
+          "max": 10.0
+        },
+        "artifact_mb": 1.257,
+        "build_s": 1.93
+      },
+      "runtime": {
+        "rss_start_mb": 35.242,
+        "v0_load_s": 3.736,
+        "rss_after_v0_mb": 327.645,
+        "daily_lm_load_s": 0.118,
+        "rss_after_daily_lm_mb": 337.625,
+        "lexicon_load_s": 0.011,
+        "rss_after_lexicon_mb": 341.195,
+        "incremental_rss_mb": 13.6
+      },
+      "lm_cache": {
+        "hits": 8655465,
+        "misses": 4734749
+      },
+      "score": {
+        "name": "S2_L5",
+        "production_eligible": true,
+        "gov_baseline_top1": 0.7975,
+        "gov_teacher_top1": 0.85,
+        "coverage_teacher_top1": 0.7666666666666667,
+        "coverage_teacher_correct_to_wrong": 14,
+        "coverage_baseline_top1": 0.64,
+        "coverage_mrr": 0.7364182299182299,
+        "coverage_r5": 0.86,
+        "coverage_window": 0.8433333333333334,
+        "coverage_p95_ms": 154.11630502203482,
+        "rss_mb": 13.6,
+        "artifact_mb": 2.095
+      }
+    },
+    "S3_flat": {
+      "config": {
+        "name": "S3_flat",
+        "stage": "3_prior",
+        "daily_lm": "daily_production",
+        "daily_weight": 0.25,
+        "lexicon": "R2_known_word|L5_doc_frequency|flat",
+        "production_eligible": true
+      },
+      "coverage_dev": {
+        "items": 300,
+        "recall": {
+          "@1": 0.64,
+          "@3": 0.8133333333333334,
+          "@5": 0.86,
+          "@10": 0.8966666666666666
+        },
+        "recall_unlimited": 0.9566666666666667,
+        "reachable": 1.0,
+        "window_recall_top4_families": 0.8433333333333334,
+        "generated_but_outside_top5": 29,
+        "never_generated": 13,
+        "unreachable": 0,
+        "beam_pruned": 13,
+        "mean_candidates": 20.0,
+        "mean_families": 19.953333333333333,
+        "latency_p50_ms": 51.67810001876205,
+        "latency_p95_ms": 175.79927002079788,
+        "oov_rate": 0.0,
+        "reading_coverage": 1.0,
+        "word_coverage": 0.49743589743589745,
+        "top1": 0.64,
+        "character_accuracy": 0.9379201265322262,
+        "mrr": 0.7364182299182299
+      },
+      "gov_dev": {
+        "items": 400,
+        "recall": {
+          "@1": 0.7975,
+          "@3": 0.9,
+          "@5": 0.915,
+          "@10": 0.9425
+        },
+        "recall_unlimited": 0.99,
+        "reachable": 1.0,
+        "window_recall_top4_families": 0.9125,
+        "generated_but_outside_top5": 30,
+        "never_generated": 4,
+        "unreachable": 0,
+        "beam_pruned": 4,
+        "mean_candidates": 20.0,
+        "mean_families": 19.8675,
+        "latency_p50_ms": 61.36489997152239,
+        "latency_p95_ms": 191.62467498099403,
+        "oov_rate": 0.0,
+        "reading_coverage": 1.0,
+        "word_coverage": null,
+        "top1": 0.7975,
+        "character_accuracy": 0.9459344401873138,
+        "mrr": 0.853720166271637
+      },
+      "teacher": {
+        "coverage_dev": {
+          "window_coverage": 0.8433333333333334,
+          "teacher_top1": 0.7666666666666667,
+          "latency_p50_ms": 54.98,
+          "latency_p95_ms": 65.56,
+          "gpu_peak_mb": 1507.3,
+          "fallbacks": 0
+        },
+        "gov_dev": {
+          "window_coverage": 0.9125,
+          "teacher_top1": 0.85,
+          "latency_p50_ms": 56.08,
+          "latency_p95_ms": 66.46,
+          "gpu_peak_mb": 1508.1,
+          "fallbacks": 0
+        }
+      },
+      "teacher_vs_v0_teacher": {
+        "coverage_dev": {
+          "wrong_to_correct": 35,
+          "correct_to_wrong": 14,
+          "mcnemar_p": 0.0038
+        },
+        "gov_dev": {
+          "wrong_to_correct": 15,
+          "correct_to_wrong": 19,
+          "mcnemar_p": 0.6076
+        }
+      },
+      "lexicon": {
+        "recipe": "R2_known_word|L5_doc_frequency|flat",
+        "derived_words": 25789,
+        "by_length": {
+          "2": 14649,
+          "3": 7640,
+          "4": 3500
+        },
+        "lexicon_rows_added": 25789,
+        "lexicon_entries": 42548,
+        "rejected": {
+          "below_pooled_frequency": 31043,
+          "fragment_of_longer_ngram": 31336,
+          "readings_unresolved": 44821,
+          "too_few_documents": 2770,
+          "too_few_sources": 23851
+        },
+        "daily_supported_words": 5977,
+        "government_only_words": 19812,
+        "unsupported_readings": 0,
+        "false_competitors": 0,
+        "weight_distribution": {
+          "min": 10.0,
+          "p25": 10.0,
+          "median": 10.0,
+          "p75": 10.0,
+          "max": 10.0
+        },
+        "artifact_mb": 1.257,
+        "build_s": 1.93
+      },
+      "runtime": {
+        "rss_start_mb": 35.145,
+        "v0_load_s": 4.716,
+        "rss_after_v0_mb": 327.984,
+        "daily_lm_load_s": 0.214,
+        "rss_after_daily_lm_mb": 337.477,
+        "lexicon_load_s": 0.02,
+        "rss_after_lexicon_mb": 340.582,
+        "incremental_rss_mb": 12.6
+      },
+      "lm_cache": {
+        "hits": 8655465,
+        "misses": 4734749
+      },
+      "score": {
+        "name": "S3_flat",
+        "production_eligible": true,
+        "gov_baseline_top1": 0.7975,
+        "gov_teacher_top1": 0.85,
+        "coverage_teacher_top1": 0.7666666666666667,
+        "coverage_teacher_correct_to_wrong": 14,
+        "coverage_baseline_top1": 0.64,
+        "coverage_mrr": 0.7364182299182299,
+        "coverage_r5": 0.86,
+        "coverage_window": 0.8433333333333334,
+        "coverage_p95_ms": 175.79927002079788,
+        "rss_mb": 12.6,
+        "artifact_mb": 2.095
+      }
+    },
+    "S3_raw": {
+      "config": {
+        "name": "S3_raw",
+        "stage": "3_prior",
+        "daily_lm": "daily_production",
+        "daily_weight": 0.25,
+        "lexicon": "R2_known_word|L5_doc_frequency|raw",
+        "production_eligible": true
+      },
+      "coverage_dev": {
+        "items": 300,
+        "recall": {
+          "@1": 0.64,
+          "@3": 0.81,
+          "@5": 0.85,
+          "@10": 0.9
+        },
+        "recall_unlimited": 0.9566666666666667,
+        "reachable": 1.0,
+        "window_recall_top4_families": 0.84,
+        "generated_but_outside_top5": 32,
+        "never_generated": 13,
+        "unreachable": 0,
+        "beam_pruned": 13,
+        "mean_candidates": 20.0,
+        "mean_families": 19.953333333333333,
+        "latency_p50_ms": 63.966549932956696,
+        "latency_p95_ms": 283.15013018437276,
+        "oov_rate": 0.0,
+        "reading_coverage": 1.0,
+        "word_coverage": 0.49743589743589745,
+        "top1": 0.64,
+        "character_accuracy": 0.9363384737050218,
+        "mrr": 0.7355796055796056
+      },
+      "gov_dev": {
+        "items": 400,
+        "recall": {
+          "@1": 0.8075,
+          "@3": 0.895,
+          "@5": 0.92,
+          "@10": 0.94
+        },
+        "recall_unlimited": 0.9875,
+        "reachable": 1.0,
+        "window_recall_top4_families": 0.92,
+        "generated_but_outside_top5": 27,
+        "never_generated": 5,
+        "unreachable": 0,
+        "beam_pruned": 5,
+        "mean_candidates": 20.0,
+        "mean_families": 19.8675,
+        "latency_p50_ms": 60.911449952982366,
+        "latency_p95_ms": 245.3556551714426,
+        "oov_rate": 0.0,
+        "reading_coverage": 1.0,
+        "word_coverage": null,
+        "top1": 0.8075,
+        "character_accuracy": 0.9455087271179226,
+        "mrr": 0.8584508210335415
+      },
+      "teacher": {
+        "coverage_dev": {
+          "window_coverage": 0.84,
+          "teacher_top1": 0.7666666666666667,
+          "latency_p50_ms": 54.11,
+          "latency_p95_ms": 64.82,
+          "gpu_peak_mb": 1507.3,
+          "fallbacks": 0
+        },
+        "gov_dev": {
+          "window_coverage": 0.92,
+          "teacher_top1": 0.86,
+          "latency_p50_ms": 56.0,
+          "latency_p95_ms": 72.65,
+          "gpu_peak_mb": 1508.1,
+          "fallbacks": 0
+        }
+      },
+      "teacher_vs_v0_teacher": {
+        "coverage_dev": {
+          "wrong_to_correct": 36,
+          "correct_to_wrong": 15,
+          "mcnemar_p": 0.0046
+        },
+        "gov_dev": {
+          "wrong_to_correct": 16,
+          "correct_to_wrong": 16,
+          "mcnemar_p": 1.0
+        }
+      },
+      "lexicon": {
+        "recipe": "R2_known_word|L5_doc_frequency|raw",
+        "derived_words": 25789,
+        "by_length": {
+          "2": 14649,
+          "3": 7640,
+          "4": 3500
+        },
+        "lexicon_rows_added": 25789,
+        "lexicon_entries": 42548,
+        "rejected": {
+          "below_pooled_frequency": 31043,
+          "fragment_of_longer_ngram": 31336,
+          "readings_unresolved": 44821,
+          "too_few_documents": 2770,
+          "too_few_sources": 23851
+        },
+        "daily_supported_words": 5977,
+        "government_only_words": 19812,
+        "unsupported_readings": 0,
+        "false_competitors": 0,
+        "weight_distribution": {
+          "min": 4.3902,
+          "p25": 6.0976,
+          "median": 10.0,
+          "p75": 20.9756,
+          "max": 200.0
+        },
+        "artifact_mb": 1.257,
+        "build_s": 3.64
+      },
+      "runtime": {
+        "rss_start_mb": 35.191,
+        "v0_load_s": 4.599,
+        "rss_after_v0_mb": 327.867,
+        "daily_lm_load_s": 0.233,
+        "rss_after_daily_lm_mb": 337.371,
+        "lexicon_load_s": 0.023,
+        "rss_after_lexicon_mb": 339.473,
+        "incremental_rss_mb": 11.6
+      },
+      "lm_cache": {
+        "hits": 8659918,
+        "misses": 4730296
+      },
+      "score": {
+        "name": "S3_raw",
+        "production_eligible": true,
+        "gov_baseline_top1": 0.8075,
+        "gov_teacher_top1": 0.86,
+        "coverage_teacher_top1": 0.7666666666666667,
+        "coverage_teacher_correct_to_wrong": 15,
+        "coverage_baseline_top1": 0.64,
+        "coverage_mrr": 0.7355796055796056,
+        "coverage_r5": 0.85,
+        "coverage_window": 0.84,
+        "coverage_p95_ms": 283.15013018437276,
+        "rss_mb": 11.6,
+        "artifact_mb": 2.095
+      }
+    },
+    "S3_log": {
+      "config": {
+        "name": "S3_log",
+        "stage": "3_prior",
+        "daily_lm": "daily_production",
+        "daily_weight": 0.25,
+        "lexicon": "R2_known_word|L5_doc_frequency|log",
+        "production_eligible": true
+      },
+      "coverage_dev": {
+        "items": 300,
+        "recall": {
+          "@1": 0.6433333333333333,
+          "@3": 0.8166666666666667,
+          "@5": 0.8566666666666667,
+          "@10": 0.8966666666666666
+        },
+        "recall_unlimited": 0.9566666666666667,
+        "reachable": 1.0,
+        "window_recall_top4_families": 0.8433333333333334,
+        "generated_but_outside_top5": 30,
+        "never_generated": 13,
+        "unreachable": 0,
+        "beam_pruned": 13,
+        "mean_candidates": 20.0,
+        "mean_families": 19.953333333333333,
+        "latency_p50_ms": 62.97645007725805,
+        "latency_p95_ms": 198.9771599997767,
+        "oov_rate": 0.0,
+        "reading_coverage": 1.0,
+        "word_coverage": 0.49743589743589745,
+        "top1": 0.6433333333333333,
+        "character_accuracy": 0.9387109529458284,
+        "mrr": 0.7378057960557961
+      },
+      "gov_dev": {
+        "items": 400,
+        "recall": {
+          "@1": 0.805,
+          "@3": 0.9,
+          "@5": 0.92,
+          "@10": 0.9425
+        },
+        "recall_unlimited": 0.9875,
+        "reachable": 1.0,
+        "window_recall_top4_families": 0.9125,
+        "generated_but_outside_top5": 27,
+        "never_generated": 5,
+        "unreachable": 0,
+        "beam_pruned": 5,
+        "mean_candidates": 20.0,
+        "mean_families": 19.8675,
+        "latency_p50_ms": 56.69130012392998,
+        "latency_p95_ms": 231.1690749833356,
+        "oov_rate": 0.0,
+        "reading_coverage": 1.0,
+        "word_coverage": null,
+        "top1": 0.805,
+        "character_accuracy": 0.9455087271179226,
+        "mrr": 0.8571608758888171
+      },
+      "teacher": {
+        "coverage_dev": {
+          "window_coverage": 0.8433333333333334,
+          "teacher_top1": 0.77,
+          "latency_p50_ms": 47.41,
+          "latency_p95_ms": 59.28,
+          "gpu_peak_mb": 1507.3,
+          "fallbacks": 0
+        },
+        "gov_dev": {
+          "window_coverage": 0.9125,
+          "teacher_top1": 0.8525,
+          "latency_p50_ms": 59.54,
+          "latency_p95_ms": 71.08,
+          "gpu_peak_mb": 1508.1,
+          "fallbacks": 0
+        }
+      },
+      "teacher_vs_v0_teacher": {
+        "coverage_dev": {
+          "wrong_to_correct": 36,
+          "correct_to_wrong": 14,
+          "mcnemar_p": 0.0026
+        },
+        "gov_dev": {
+          "wrong_to_correct": 15,
+          "correct_to_wrong": 18,
+          "mcnemar_p": 0.7283
+        }
+      },
+      "lexicon": {
+        "recipe": "R2_known_word|L5_doc_frequency|log",
+        "derived_words": 25789,
+        "by_length": {
+          "2": 14649,
+          "3": 7640,
+          "4": 3500
+        },
+        "lexicon_rows_added": 25789,
+        "lexicon_entries": 42548,
+        "rejected": {
+          "below_pooled_frequency": 31043,
+          "fragment_of_longer_ngram": 31336,
+          "readings_unresolved": 44821,
+          "too_few_documents": 2770,
+          "too_few_sources": 23851
+        },
+        "daily_supported_words": 5977,
+        "government_only_words": 19812,
+        "unsupported_readings": 0,
+        "false_competitors": 0,
+        "weight_distribution": {
+          "min": 6.4249,
+          "p25": 7.8516,
+          "median": 10.0,
+          "p75": 13.2171,
+          "max": 39.5848
+        },
+        "artifact_mb": 1.257,
+        "build_s": 4.77
+      },
+      "runtime": {
+        "rss_start_mb": 35.336,
+        "v0_load_s": 5.078,
+        "rss_after_v0_mb": 327.734,
+        "daily_lm_load_s": 0.217,
+        "rss_after_daily_lm_mb": 337.621,
+        "lexicon_load_s": 0.021,
+        "rss_after_lexicon_mb": 339.668,
+        "incremental_rss_mb": 11.9
+      },
+      "lm_cache": {
+        "hits": 8655727,
+        "misses": 4734487
+      },
+      "score": {
+        "name": "S3_log",
+        "production_eligible": true,
+        "gov_baseline_top1": 0.805,
+        "gov_teacher_top1": 0.8525,
+        "coverage_teacher_top1": 0.77,
+        "coverage_teacher_correct_to_wrong": 14,
+        "coverage_baseline_top1": 0.6433333333333333,
+        "coverage_mrr": 0.7378057960557961,
+        "coverage_r5": 0.8566666666666667,
+        "coverage_window": 0.8433333333333334,
+        "coverage_p95_ms": 198.9771599997767,
+        "rss_mb": 11.9,
+        "artifact_mb": 2.095
+      }
+    },
+    "S3_doc": {
+      "config": {
+        "name": "S3_doc",
+        "stage": "3_prior",
+        "daily_lm": "daily_production",
+        "daily_weight": 0.25,
+        "lexicon": "R2_known_word|L5_doc_frequency|doc",
+        "production_eligible": true
+      },
+      "coverage_dev": {
+        "items": 300,
+        "recall": {
+          "@1": 0.6366666666666667,
+          "@3": 0.81,
+          "@5": 0.85,
+          "@10": 0.9
+        },
+        "recall_unlimited": 0.9566666666666667,
+        "reachable": 1.0,
+        "window_recall_top4_families": 0.84,
+        "generated_but_outside_top5": 32,
+        "never_generated": 13,
+        "unreachable": 0,
+        "beam_pruned": 13,
+        "mean_candidates": 20.0,
+        "mean_families": 19.953333333333333,
+        "latency_p50_ms": 64.37335012014955,
+        "latency_p95_ms": 172.33389506582185,
+        "oov_rate": 0.0,
+        "reading_coverage": 1.0,
+        "word_coverage": 0.49743589743589745,
+        "top1": 0.6366666666666667,
+        "character_accuracy": 0.9359430604982206,
+        "mrr": 0.733912938912939
+      },
+      "gov_dev": {
+        "items": 400,
+        "recall": {
+          "@1": 0.805,
+          "@3": 0.8975,
+          "@5": 0.92,
+          "@10": 0.94
+        },
+        "recall_unlimited": 0.9875,
+        "reachable": 1.0,
+        "window_recall_top4_families": 0.92,
+        "generated_but_outside_top5": 27,
+        "never_generated": 5,
+        "unreachable": 0,
+        "beam_pruned": 5,
+        "mean_candidates": 20.0,
+        "mean_families": 19.865,
+        "latency_p50_ms": 50.43870001100004,
+        "latency_p95_ms": 180.0897048786282,
+        "oov_rate": 0.0,
+        "reading_coverage": 1.0,
+        "word_coverage": null,
+        "top1": 0.805,
+        "character_accuracy": 0.9450830140485313,
+        "mrr": 0.856923772714214
+      },
+      "teacher": {
+        "coverage_dev": {
+          "window_coverage": 0.84,
+          "teacher_top1": 0.7666666666666667,
+          "latency_p50_ms": 58.9,
+          "latency_p95_ms": 70.29,
+          "gpu_peak_mb": 1507.3,
+          "fallbacks": 0
+        },
+        "gov_dev": {
+          "window_coverage": 0.92,
+          "teacher_top1": 0.86,
+          "latency_p50_ms": 49.61,
+          "latency_p95_ms": 63.58,
+          "gpu_peak_mb": 1508.1,
+          "fallbacks": 0
+        }
+      },
+      "teacher_vs_v0_teacher": {
+        "coverage_dev": {
+          "wrong_to_correct": 36,
+          "correct_to_wrong": 15,
+          "mcnemar_p": 0.0046
+        },
+        "gov_dev": {
+          "wrong_to_correct": 16,
+          "correct_to_wrong": 16,
+          "mcnemar_p": 1.0
+        }
+      },
+      "lexicon": {
+        "recipe": "R2_known_word|L5_doc_frequency|doc",
+        "derived_words": 25789,
+        "by_length": {
+          "2": 14649,
+          "3": 7640,
+          "4": 3500
+        },
+        "lexicon_rows_added": 25789,
+        "lexicon_entries": 42548,
+        "rejected": {
+          "below_pooled_frequency": 31043,
+          "fragment_of_longer_ngram": 31336,
+          "readings_unresolved": 44821,
+          "too_few_documents": 2770,
+          "too_few_sources": 23851
+        },
+        "daily_supported_words": 5977,
+        "government_only_words": 19812,
+        "unsupported_readings": 0,
+        "false_competitors": 0,
+        "weight_distribution": {
+          "min": 3.0,
+          "p25": 6.5517,
+          "median": 10.0,
+          "p75": 18.9655,
+          "max": 200.0
+        },
+        "artifact_mb": 1.257,
+        "build_s": 3.5
+      },
+      "runtime": {
+        "rss_start_mb": 35.113,
+        "v0_load_s": 4.345,
+        "rss_after_v0_mb": 328.211,
+        "daily_lm_load_s": 0.191,
+        "rss_after_daily_lm_mb": 337.719,
+        "lexicon_load_s": 0.017,
+        "rss_after_lexicon_mb": 341.047,
+        "incremental_rss_mb": 12.8
+      },
+      "lm_cache": {
+        "hits": 8660813,
+        "misses": 4729401
+      },
+      "score": {
+        "name": "S3_doc",
+        "production_eligible": true,
+        "gov_baseline_top1": 0.805,
+        "gov_teacher_top1": 0.86,
+        "coverage_teacher_top1": 0.7666666666666667,
+        "coverage_teacher_correct_to_wrong": 15,
+        "coverage_baseline_top1": 0.6366666666666667,
+        "coverage_mrr": 0.733912938912939,
+        "coverage_r5": 0.85,
+        "coverage_window": 0.84,
+        "coverage_p95_ms": 172.33389506582185,
+        "rss_mb": 12.8,
+        "artifact_mb": 2.095
+      }
+    },
+    "S3_daily_only": {
+      "config": {
+        "name": "S3_daily_only",
+        "stage": "3_prior",
+        "daily_lm": "daily_production",
+        "daily_weight": 0.25,
+        "lexicon": "R2_known_word|L5_doc_frequency|daily_only",
+        "production_eligible": true
+      },
+      "coverage_dev": {
+        "items": 300,
+        "recall": {
+          "@1": 0.65,
+          "@3": 0.8266666666666667,
+          "@5": 0.8666666666666667,
+          "@10": 0.9033333333333333
+        },
+        "recall_unlimited": 0.97,
+        "reachable": 1.0,
+        "window_recall_top4_families": 0.8566666666666667,
+        "generated_but_outside_top5": 31,
+        "never_generated": 9,
+        "unreachable": 0,
+        "beam_pruned": 9,
+        "mean_candidates": 20.0,
+        "mean_families": 19.953333333333333,
+        "latency_p50_ms": 63.08045017067343,
+        "latency_p95_ms": 195.8982450887564,
+        "oov_rate": 0.0,
+        "reading_coverage": 1.0,
+        "word_coverage": 0.49743589743589745,
+        "top1": 0.65,
+        "character_accuracy": 0.9395017793594306,
+        "mrr": 0.7455090124300652
+      },
+      "gov_dev": {
+        "items": 400,
+        "recall": {
+          "@1": 0.8025,
+          "@3": 0.8975,
+          "@5": 0.9175,
+          "@10": 0.9425
+        },
+        "recall_unlimited": 0.99,
+        "reachable": 1.0,
+        "window_recall_top4_families": 0.9125,
+        "generated_but_outside_top5": 29,
+        "never_generated": 4,
+        "unreachable": 0,
+        "beam_pruned": 4,
+        "mean_candidates": 20.0,
+        "mean_families": 19.85,
+        "latency_p50_ms": 59.001100016757846,
+        "latency_p95_ms": 186.51427982840673,
+        "oov_rate": 0.0,
+        "reading_coverage": 1.0,
+        "word_coverage": null,
+        "top1": 0.8025,
+        "character_accuracy": 0.9455087271179226,
+        "mrr": 0.8563006042160456
+      },
+      "teacher": {
+        "coverage_dev": {
+          "window_coverage": 0.8566666666666667,
+          "teacher_top1": 0.78,
+          "latency_p50_ms": 56.35,
+          "latency_p95_ms": 77.37,
+          "gpu_peak_mb": 1507.3,
+          "fallbacks": 0
+        },
+        "gov_dev": {
+          "window_coverage": 0.9125,
+          "teacher_top1": 0.8575,
+          "latency_p50_ms": 49.82,
+          "latency_p95_ms": 62.3,
+          "gpu_peak_mb": 1508.1,
+          "fallbacks": 0
+        }
+      },
+      "teacher_vs_v0_teacher": {
+        "coverage_dev": {
+          "wrong_to_correct": 36,
+          "correct_to_wrong": 11,
+          "mcnemar_p": 0.0003
+        },
+        "gov_dev": {
+          "wrong_to_correct": 15,
+          "correct_to_wrong": 16,
+          "mcnemar_p": 1.0
+        }
+      },
+      "lexicon": {
+        "recipe": "R2_known_word|L5_doc_frequency|daily_only",
+        "derived_words": 25789,
+        "by_length": {
+          "2": 14649,
+          "3": 7640,
+          "4": 3500
+        },
+        "lexicon_rows_added": 25789,
+        "lexicon_entries": 42548,
+        "rejected": {
+          "below_pooled_frequency": 31043,
+          "fragment_of_longer_ngram": 31336,
+          "readings_unresolved": 44821,
+          "too_few_documents": 2770,
+          "too_few_sources": 23851
+        },
+        "daily_supported_words": 5977,
+        "government_only_words": 19812,
+        "unsupported_readings": 0,
+        "false_competitors": 0,
+        "weight_distribution": {
+          "min": 3.0,
+          "p25": 3.0,
+          "median": 3.0,
+          "p75": 3.0,
+          "max": 200.0
+        },
+        "artifact_mb": 1.257,
+        "build_s": 3.24
+      },
+      "runtime": {
+        "rss_start_mb": 35.254,
+        "v0_load_s": 3.891,
+        "rss_after_v0_mb": 328.098,
+        "daily_lm_load_s": 0.211,
+        "rss_after_daily_lm_mb": 337.602,
+        "lexicon_load_s": 0.018,
+        "rss_after_lexicon_mb": 339.777,
+        "incremental_rss_mb": 11.7
+      },
+      "lm_cache": {
+        "hits": 8636598,
+        "misses": 4753616
+      },
+      "score": {
+        "name": "S3_daily_only",
+        "production_eligible": true,
+        "gov_baseline_top1": 0.8025,
+        "gov_teacher_top1": 0.8575,
+        "coverage_teacher_top1": 0.78,
+        "coverage_teacher_correct_to_wrong": 11,
+        "coverage_baseline_top1": 0.65,
+        "coverage_mrr": 0.7455090124300652,
+        "coverage_r5": 0.8666666666666667,
+        "coverage_window": 0.8566666666666667,
+        "coverage_p95_ms": 195.8982450887564,
+        "rss_mb": 11.7,
+        "artifact_mb": 2.095
+      }
+    },
+    "S3_interpolated": {
+      "config": {
+        "name": "S3_interpolated",
+        "stage": "3_prior",
+        "daily_lm": "daily_production",
+        "daily_weight": 0.25,
+        "lexicon": "R2_known_word|L5_doc_frequency|interpolated",
+        "production_eligible": true
+      },
+      "coverage_dev": {
+        "items": 300,
+        "recall": {
+          "@1": 0.6333333333333333,
+          "@3": 0.81,
+          "@5": 0.8566666666666667,
+          "@10": 0.8933333333333333
+        },
+        "recall_unlimited": 0.9566666666666667,
+        "reachable": 1.0,
+        "window_recall_top4_families": 0.84,
+        "generated_but_outside_top5": 30,
+        "never_generated": 13,
+        "unreachable": 0,
+        "beam_pruned": 13,
+        "mean_candidates": 20.0,
+        "mean_families": 19.953333333333333,
+        "latency_p50_ms": 63.321599969640374,
+        "latency_p95_ms": 174.71517513040465,
+        "oov_rate": 0.0,
+        "reading_coverage": 1.0,
+        "word_coverage": 0.49743589743589745,
+        "top1": 0.6333333333333333,
+        "character_accuracy": 0.9355476472914195,
+        "mrr": 0.7314446291009761
+      },
+      "gov_dev": {
+        "items": 400,
+        "recall": {
+          "@1": 0.805,
+          "@3": 0.8975,
+          "@5": 0.92,
+          "@10": 0.9375
+        },
+        "recall_unlimited": 0.99,
+        "reachable": 1.0,
+        "window_recall_top4_families": 0.9175,
+        "generated_but_outside_top5": 28,
+        "never_generated": 4,
+        "unreachable": 0,
+        "beam_pruned": 4,
+        "mean_candidates": 20.0,
+        "mean_families": 19.865,
+        "latency_p50_ms": 58.17884998396039,
+        "latency_p95_ms": 189.60764498915515,
+        "oov_rate": 0.0,
+        "reading_coverage": 1.0,
+        "word_coverage": null,
+        "top1": 0.805,
+        "character_accuracy": 0.9450830140485313,
+        "mrr": 0.8568879555364657
+      },
+      "teacher": {
+        "coverage_dev": {
+          "window_coverage": 0.84,
+          "teacher_top1": 0.7633333333333333,
+          "latency_p50_ms": 50.73,
+          "latency_p95_ms": 60.43,
+          "gpu_peak_mb": 1507.3,
+          "fallbacks": 0
+        },
+        "gov_dev": {
+          "window_coverage": 0.9175,
+          "teacher_top1": 0.8625,
+          "latency_p50_ms": 50.87,
+          "latency_p95_ms": 59.76,
+          "gpu_peak_mb": 1508.1,
+          "fallbacks": 0
+        }
+      },
+      "teacher_vs_v0_teacher": {
+        "coverage_dev": {
+          "wrong_to_correct": 36,
+          "correct_to_wrong": 16,
+          "mcnemar_p": 0.0078
+        },
+        "gov_dev": {
+          "wrong_to_correct": 16,
+          "correct_to_wrong": 15,
+          "mcnemar_p": 1.0
+        }
+      },
+      "lexicon": {
+        "recipe": "R2_known_word|L5_doc_frequency|interpolated",
+        "derived_words": 25789,
+        "by_length": {
+          "2": 14649,
+          "3": 7640,
+          "4": 3500
+        },
+        "lexicon_rows_added": 25789,
+        "lexicon_entries": 42548,
+        "rejected": {
+          "below_pooled_frequency": 31043,
+          "fragment_of_longer_ngram": 31336,
+          "readings_unresolved": 44821,
+          "too_few_documents": 2770,
+          "too_few_sources": 23851
+        },
+        "daily_supported_words": 5977,
+        "government_only_words": 19812,
+        "unsupported_readings": 0,
+        "false_competitors": 0,
+        "weight_distribution": {
+          "min": 3.0,
+          "p25": 5.4369,
+          "median": 10.0,
+          "p75": 20.9655,
+          "max": 200.0
+        },
+        "artifact_mb": 1.257,
+        "build_s": 3.57
+      },
+      "runtime": {
+        "rss_start_mb": 35.434,
+        "v0_load_s": 4.349,
+        "rss_after_v0_mb": 328.27,
+        "daily_lm_load_s": 0.217,
+        "rss_after_daily_lm_mb": 337.77,
+        "lexicon_load_s": 0.019,
+        "rss_after_lexicon_mb": 341.086,
+        "incremental_rss_mb": 12.8
+      },
+      "lm_cache": {
+        "hits": 8659538,
+        "misses": 4730676
+      },
+      "score": {
+        "name": "S3_interpolated",
+        "production_eligible": true,
+        "gov_baseline_top1": 0.805,
+        "gov_teacher_top1": 0.8625,
+        "coverage_teacher_top1": 0.7633333333333333,
+        "coverage_teacher_correct_to_wrong": 16,
+        "coverage_baseline_top1": 0.6333333333333333,
+        "coverage_mrr": 0.7314446291009761,
+        "coverage_r5": 0.8566666666666667,
+        "coverage_window": 0.84,
+        "coverage_p95_ms": 174.71517513040465,
+        "rss_mb": 12.8,
+        "artifact_mb": 2.095
+      }
+    },
+    "S3_rank_bucket": {
+      "config": {
+        "name": "S3_rank_bucket",
+        "stage": "3_prior",
+        "daily_lm": "daily_production",
+        "daily_weight": 0.25,
+        "lexicon": "R2_known_word|L5_doc_frequency|rank_bucket",
+        "production_eligible": true
+      },
+      "coverage_dev": {
+        "items": 300,
+        "recall": {
+          "@1": 0.64,
+          "@3": 0.8133333333333334,
+          "@5": 0.8566666666666667,
+          "@10": 0.9033333333333333
+        },
+        "recall_unlimited": 0.96,
+        "reachable": 1.0,
+        "window_recall_top4_families": 0.8433333333333334,
+        "generated_but_outside_top5": 31,
+        "never_generated": 12,
+        "unreachable": 0,
+        "beam_pruned": 12,
+        "mean_candidates": 20.0,
+        "mean_families": 19.953333333333333,
+        "latency_p50_ms": 74.28149995394051,
+        "latency_p95_ms": 268.3578398195099,
+        "oov_rate": 0.0,
+        "reading_coverage": 1.0,
+        "word_coverage": 0.49743589743589745,
+        "top1": 0.64,
+        "character_accuracy": 0.9363384737050218,
+        "mrr": 0.7371669071669072
+      },
+      "gov_dev": {
+        "items": 400,
+        "recall": {
+          "@1": 0.8075,
+          "@3": 0.895,
+          "@5": 0.9225,
+          "@10": 0.9425
+        },
+        "recall_unlimited": 0.99,
+        "reachable": 1.0,
+        "window_recall_top4_families": 0.9175,
+        "generated_but_outside_top5": 27,
+        "never_generated": 4,
+        "unreachable": 0,
+        "beam_pruned": 4,
+        "mean_candidates": 20.0,
+        "mean_families": 19.8675,
+        "latency_p50_ms": 61.43949995748699,
+        "latency_p95_ms": 191.18181997910128,
+        "oov_rate": 0.0,
+        "reading_coverage": 1.0,
+        "word_coverage": null,
+        "top1": 0.8075,
+        "character_accuracy": 0.9467858663260962,
+        "mrr": 0.8583501265890974
+      },
+      "teacher": {
+        "coverage_dev": {
+          "window_coverage": 0.8433333333333334,
+          "teacher_top1": 0.77,
+          "latency_p50_ms": 50.29,
+          "latency_p95_ms": 60.58,
+          "gpu_peak_mb": 1507.3,
+          "fallbacks": 0
+        },
+        "gov_dev": {
+          "window_coverage": 0.9175,
+          "teacher_top1": 0.8575,
+          "latency_p50_ms": 51.15,
+          "latency_p95_ms": 62.52,
+          "gpu_peak_mb": 1508.1,
+          "fallbacks": 0
+        }
+      },
+      "teacher_vs_v0_teacher": {
+        "coverage_dev": {
+          "wrong_to_correct": 36,
+          "correct_to_wrong": 14,
+          "mcnemar_p": 0.0026
+        },
+        "gov_dev": {
+          "wrong_to_correct": 16,
+          "correct_to_wrong": 17,
+          "mcnemar_p": 1.0
+        }
+      },
+      "lexicon": {
+        "recipe": "R2_known_word|L5_doc_frequency|rank_bucket",
+        "derived_words": 25789,
+        "by_length": {
+          "2": 14649,
+          "3": 7640,
+          "4": 3500
+        },
+        "lexicon_rows_added": 25789,
+        "lexicon_entries": 42548,
+        "rejected": {
+          "below_pooled_frequency": 31043,
+          "fragment_of_longer_ngram": 31336,
+          "readings_unresolved": 44821,
+          "too_few_documents": 2770,
+          "too_few_sources": 23851
+        },
+        "daily_supported_words": 5977,
+        "government_only_words": 19812,
+        "unsupported_readings": 0,
+        "false_competitors": 0,
+        "weight_distribution": {
+          "min": 3.0,
+          "p25": 3.0,
+          "median": 10.0,
+          "p75": 20.0,
+          "max": 50.0
+        },
+        "artifact_mb": 1.257,
+        "build_s": 3.81
+      },
+      "runtime": {
+        "rss_start_mb": 35.152,
+        "v0_load_s": 4.813,
+        "rss_after_v0_mb": 328.043,
+        "daily_lm_load_s": 0.231,
+        "rss_after_daily_lm_mb": 337.551,
+        "lexicon_load_s": 0.021,
+        "rss_after_lexicon_mb": 339.797,
+        "incremental_rss_mb": 11.8
+      },
+      "lm_cache": {
+        "hits": 8657045,
+        "misses": 4733169
+      },
+      "score": {
+        "name": "S3_rank_bucket",
+        "production_eligible": true,
+        "gov_baseline_top1": 0.8075,
+        "gov_teacher_top1": 0.8575,
+        "coverage_teacher_top1": 0.77,
+        "coverage_teacher_correct_to_wrong": 14,
+        "coverage_baseline_top1": 0.64,
+        "coverage_mrr": 0.7371669071669072,
+        "coverage_r5": 0.8566666666666667,
+        "coverage_window": 0.8433333333333334,
+        "coverage_p95_ms": 268.3578398195099,
+        "rss_mb": 11.8,
+        "artifact_mb": 2.095
+      }
+    },
+    "S4_daily0": {
+      "config": {
+        "name": "S4_daily0",
+        "stage": "4_lm_weight",
+        "daily_lm": null,
+        "daily_weight": 0.0,
+        "lexicon": "R2_known_word|L5_doc_frequency|daily_only",
+        "production_eligible": true
+      },
+      "coverage_dev": {
+        "items": 300,
+        "recall": {
+          "@1": 0.5233333333333333,
+          "@3": 0.7266666666666667,
+          "@5": 0.7966666666666666,
+          "@10": 0.85
+        },
+        "recall_unlimited": 0.9433333333333334,
+        "reachable": 1.0,
+        "window_recall_top4_families": 0.7733333333333333,
+        "generated_but_outside_top5": 44,
+        "never_generated": 17,
+        "unreachable": 0,
+        "beam_pruned": 17,
+        "mean_candidates": 20.0,
+        "mean_families": 19.95,
+        "latency_p50_ms": 55.09354989044368,
+        "latency_p95_ms": 171.58366489456992,
+        "oov_rate": 0.0,
+        "reading_coverage": 1.0,
+        "word_coverage": 0.49743589743589745,
+        "top1": 0.5233333333333333,
+        "character_accuracy": 0.9122182680901542,
+        "mrr": 0.637395052316105
+      },
+      "gov_dev": {
+        "items": 400,
+        "recall": {
+          "@1": 0.835,
+          "@3": 0.9025,
+          "@5": 0.9325,
+          "@10": 0.945
+        },
+        "recall_unlimited": 0.99,
+        "reachable": 1.0,
+        "window_recall_top4_families": 0.9175,
+        "generated_but_outside_top5": 23,
+        "never_generated": 4,
+        "unreachable": 0,
+        "beam_pruned": 4,
+        "mean_candidates": 20.0,
+        "mean_families": 19.83,
+        "latency_p50_ms": 52.28930001612753,
+        "latency_p95_ms": 189.4603150081817,
+        "oov_rate": 0.0,
+        "reading_coverage": 1.0,
+        "word_coverage": null,
+        "top1": 0.835,
+        "character_accuracy": 0.9540229885057471,
+        "mrr": 0.876334325396825
+      },
+      "teacher": {
+        "coverage_dev": {
+          "window_coverage": 0.7733333333333333,
+          "teacher_top1": 0.7033333333333334,
+          "latency_p50_ms": 50.91,
+          "latency_p95_ms": 61.1,
+          "gpu_peak_mb": 1507.3,
+          "fallbacks": 0
+        },
+        "gov_dev": {
+          "window_coverage": 0.9175,
+          "teacher_top1": 0.8625,
+          "latency_p50_ms": 55.43,
+          "latency_p95_ms": 70.9,
+          "gpu_peak_mb": 1508.1,
+          "fallbacks": 0
+        }
+      },
+      "teacher_vs_v0_teacher": {
+        "coverage_dev": {
+          "wrong_to_correct": 14,
+          "correct_to_wrong": 12,
+          "mcnemar_p": 0.845
+        },
+        "gov_dev": {
+          "wrong_to_correct": 13,
+          "correct_to_wrong": 12,
+          "mcnemar_p": 1.0
+        }
+      },
+      "lexicon": {
+        "recipe": "R2_known_word|L5_doc_frequency|daily_only",
+        "derived_words": 25789,
+        "by_length": {
+          "2": 14649,
+          "3": 7640,
+          "4": 3500
+        },
+        "lexicon_rows_added": 25789,
+        "lexicon_entries": 42548,
+        "rejected": {
+          "below_pooled_frequency": 31043,
+          "fragment_of_longer_ngram": 31336,
+          "readings_unresolved": 44821,
+          "too_few_documents": 2770,
+          "too_few_sources": 23851
+        },
+        "daily_supported_words": 5977,
+        "government_only_words": 19812,
+        "unsupported_readings": 0,
+        "false_competitors": 0,
+        "weight_distribution": {
+          "min": 3.0,
+          "p25": 3.0,
+          "median": 3.0,
+          "p75": 3.0,
+          "max": 200.0
+        },
+        "artifact_mb": 1.257,
+        "build_s": 3.24
+      },
+      "runtime": {
+        "rss_start_mb": 35.414,
+        "v0_load_s": 4.887,
+        "rss_after_v0_mb": 328.387,
+        "daily_lm_load_s": 0.005,
+        "rss_after_daily_lm_mb": 328.387,
+        "lexicon_load_s": 0.023,
+        "rss_after_lexicon_mb": 330.746,
+        "incremental_rss_mb": 2.4
+      },
+      "lm_cache": {
+        "hits": 8695445,
+        "misses": 4694769
+      },
+      "score": {
+        "name": "S4_daily0",
+        "production_eligible": true,
+        "gov_baseline_top1": 0.835,
+        "gov_teacher_top1": 0.8625,
+        "coverage_teacher_top1": 0.7033333333333334,
+        "coverage_teacher_correct_to_wrong": 12,
+        "coverage_baseline_top1": 0.5233333333333333,
+        "coverage_mrr": 0.637395052316105,
+        "coverage_r5": 0.7966666666666666,
+        "coverage_window": 0.7733333333333333,
+        "coverage_p95_ms": 171.58366489456992,
+        "rss_mb": 2.4,
+        "artifact_mb": 1.257
+      }
+    },
+    "S4_daily0.1": {
+      "config": {
+        "name": "S4_daily0.1",
+        "stage": "4_lm_weight",
+        "daily_lm": "daily_production",
+        "daily_weight": 0.1,
+        "lexicon": "R2_known_word|L5_doc_frequency|daily_only",
+        "production_eligible": true
+      },
+      "coverage_dev": {
+        "items": 300,
+        "recall": {
+          "@1": 0.6433333333333333,
+          "@3": 0.8,
+          "@5": 0.86,
+          "@10": 0.8933333333333333
+        },
+        "recall_unlimited": 0.96,
+        "reachable": 1.0,
+        "window_recall_top4_families": 0.8433333333333334,
+        "generated_but_outside_top5": 30,
+        "never_generated": 12,
+        "unreachable": 0,
+        "beam_pruned": 12,
+        "mean_candidates": 20.0,
+        "mean_families": 19.953333333333333,
+        "latency_p50_ms": 61.687500099651515,
+        "latency_p95_ms": 185.67156507633635,
+        "oov_rate": 0.0,
+        "reading_coverage": 1.0,
+        "word_coverage": 0.49743589743589745,
+        "top1": 0.6433333333333333,
+        "character_accuracy": 0.9355476472914195,
+        "mrr": 0.7353952727555669
+      },
+      "gov_dev": {
+        "items": 400,
+        "recall": {
+          "@1": 0.835,
+          "@3": 0.905,
+          "@5": 0.93,
+          "@10": 0.94
+        },
+        "recall_unlimited": 0.99,
+        "reachable": 1.0,
+        "window_recall_top4_families": 0.9225,
+        "generated_but_outside_top5": 24,
+        "never_generated": 4,
+        "unreachable": 0,
+        "beam_pruned": 4,
+        "mean_candidates": 20.0,
+        "mean_families": 19.845,
+        "latency_p50_ms": 63.0505500594154,
+        "latency_p95_ms": 202.74511518655336,
+        "oov_rate": 0.0,
+        "reading_coverage": 1.0,
+        "word_coverage": null,
+        "top1": 0.835,
+        "character_accuracy": 0.9535972754363559,
+        "mrr": 0.8760624281763988
+      },
+      "teacher": {
+        "coverage_dev": {
+          "window_coverage": 0.8433333333333334,
+          "teacher_top1": 0.7633333333333333,
+          "latency_p50_ms": 57.32,
+          "latency_p95_ms": 108.11,
+          "gpu_peak_mb": 1507.3,
+          "fallbacks": 0
+        },
+        "gov_dev": {
+          "window_coverage": 0.9225,
+          "teacher_top1": 0.8675,
+          "latency_p50_ms": 61.26,
+          "latency_p95_ms": 77.91,
+          "gpu_peak_mb": 1508.1,
+          "fallbacks": 0
+        }
+      },
+      "teacher_vs_v0_teacher": {
+        "coverage_dev": {
+          "wrong_to_correct": 34,
+          "correct_to_wrong": 14,
+          "mcnemar_p": 0.0055
+        },
+        "gov_dev": {
+          "wrong_to_correct": 16,
+          "correct_to_wrong": 13,
+          "mcnemar_p": 0.7111
+        }
+      },
+      "lexicon": {
+        "recipe": "R2_known_word|L5_doc_frequency|daily_only",
+        "derived_words": 25789,
+        "by_length": {
+          "2": 14649,
+          "3": 7640,
+          "4": 3500
+        },
+        "lexicon_rows_added": 25789,
+        "lexicon_entries": 42548,
+        "rejected": {
+          "below_pooled_frequency": 31043,
+          "fragment_of_longer_ngram": 31336,
+          "readings_unresolved": 44821,
+          "too_few_documents": 2770,
+          "too_few_sources": 23851
+        },
+        "daily_supported_words": 5977,
+        "government_only_words": 19812,
+        "unsupported_readings": 0,
+        "false_competitors": 0,
+        "weight_distribution": {
+          "min": 3.0,
+          "p25": 3.0,
+          "median": 3.0,
+          "p75": 3.0,
+          "max": 200.0
+        },
+        "artifact_mb": 1.257,
+        "build_s": 3.24
+      },
+      "runtime": {
+        "rss_start_mb": 35.41,
+        "v0_load_s": 4.817,
+        "rss_after_v0_mb": 327.695,
+        "daily_lm_load_s": 0.229,
+        "rss_after_daily_lm_mb": 337.664,
+        "lexicon_load_s": 0.019,
+        "rss_after_lexicon_mb": 340.781,
+        "incremental_rss_mb": 13.1
+      },
+      "lm_cache": {
+        "hits": 8655138,
+        "misses": 4735076
+      },
+      "score": {
+        "name": "S4_daily0.1",
+        "production_eligible": true,
+        "gov_baseline_top1": 0.835,
+        "gov_teacher_top1": 0.8675,
+        "coverage_teacher_top1": 0.7633333333333333,
+        "coverage_teacher_correct_to_wrong": 14,
+        "coverage_baseline_top1": 0.6433333333333333,
+        "coverage_mrr": 0.7353952727555669,
+        "coverage_r5": 0.86,
+        "coverage_window": 0.8433333333333334,
+        "coverage_p95_ms": 185.67156507633635,
+        "rss_mb": 13.1,
+        "artifact_mb": 2.095
+      }
+    },
+    "S4_daily0.25": {
+      "config": {
+        "name": "S4_daily0.25",
+        "stage": "4_lm_weight",
+        "daily_lm": "daily_production",
+        "daily_weight": 0.25,
+        "lexicon": "R2_known_word|L5_doc_frequency|daily_only",
+        "production_eligible": true
+      },
+      "coverage_dev": {
+        "items": 300,
+        "recall": {
+          "@1": 0.65,
+          "@3": 0.8266666666666667,
+          "@5": 0.8666666666666667,
+          "@10": 0.9033333333333333
+        },
+        "recall_unlimited": 0.97,
+        "reachable": 1.0,
+        "window_recall_top4_families": 0.8566666666666667,
+        "generated_but_outside_top5": 31,
+        "never_generated": 9,
+        "unreachable": 0,
+        "beam_pruned": 9,
+        "mean_candidates": 20.0,
+        "mean_families": 19.953333333333333,
+        "latency_p50_ms": 67.43115012068301,
+        "latency_p95_ms": 172.21577999880537,
+        "oov_rate": 0.0,
+        "reading_coverage": 1.0,
+        "word_coverage": 0.49743589743589745,
+        "top1": 0.65,
+        "character_accuracy": 0.9395017793594306,
+        "mrr": 0.7455090124300652
+      },
+      "gov_dev": {
+        "items": 400,
+        "recall": {
+          "@1": 0.8025,
+          "@3": 0.8975,
+          "@5": 0.9175,
+          "@10": 0.9425
+        },
+        "recall_unlimited": 0.99,
+        "reachable": 1.0,
+        "window_recall_top4_families": 0.9125,
+        "generated_but_outside_top5": 29,
+        "never_generated": 4,
+        "unreachable": 0,
+        "beam_pruned": 4,
+        "mean_candidates": 20.0,
+        "mean_families": 19.85,
+        "latency_p50_ms": 61.02535000536591,
+        "latency_p95_ms": 182.74939003167646,
+        "oov_rate": 0.0,
+        "reading_coverage": 1.0,
+        "word_coverage": null,
+        "top1": 0.8025,
+        "character_accuracy": 0.9455087271179226,
+        "mrr": 0.8563006042160456
+      },
+      "teacher": {
+        "coverage_dev": {
+          "window_coverage": 0.8566666666666667,
+          "teacher_top1": 0.78,
+          "latency_p50_ms": 50.31,
+          "latency_p95_ms": 63.89,
+          "gpu_peak_mb": 1507.3,
+          "fallbacks": 0
+        },
+        "gov_dev": {
+          "window_coverage": 0.9125,
+          "teacher_top1": 0.8575,
+          "latency_p50_ms": 49.79,
+          "latency_p95_ms": 60.15,
+          "gpu_peak_mb": 1508.1,
+          "fallbacks": 0
+        }
+      },
+      "teacher_vs_v0_teacher": {
+        "coverage_dev": {
+          "wrong_to_correct": 36,
+          "correct_to_wrong": 11,
+          "mcnemar_p": 0.0003
+        },
+        "gov_dev": {
+          "wrong_to_correct": 15,
+          "correct_to_wrong": 16,
+          "mcnemar_p": 1.0
+        }
+      },
+      "lexicon": {
+        "recipe": "R2_known_word|L5_doc_frequency|daily_only",
+        "derived_words": 25789,
+        "by_length": {
+          "2": 14649,
+          "3": 7640,
+          "4": 3500
+        },
+        "lexicon_rows_added": 25789,
+        "lexicon_entries": 42548,
+        "rejected": {
+          "below_pooled_frequency": 31043,
+          "fragment_of_longer_ngram": 31336,
+          "readings_unresolved": 44821,
+          "too_few_documents": 2770,
+          "too_few_sources": 23851
+        },
+        "daily_supported_words": 5977,
+        "government_only_words": 19812,
+        "unsupported_readings": 0,
+        "false_competitors": 0,
+        "weight_distribution": {
+          "min": 3.0,
+          "p25": 3.0,
+          "median": 3.0,
+          "p75": 3.0,
+          "max": 200.0
+        },
+        "artifact_mb": 1.257,
+        "build_s": 3.24
+      },
+      "runtime": {
+        "rss_start_mb": 35.156,
+        "v0_load_s": 4.543,
+        "rss_after_v0_mb": 328.004,
+        "daily_lm_load_s": 0.205,
+        "rss_after_daily_lm_mb": 337.5,
+        "lexicon_load_s": 0.02,
+        "rss_after_lexicon_mb": 339.777,
+        "incremental_rss_mb": 11.8
+      },
+      "lm_cache": {
+        "hits": 8636598,
+        "misses": 4753616
+      },
+      "score": {
+        "name": "S4_daily0.25",
+        "production_eligible": true,
+        "gov_baseline_top1": 0.8025,
+        "gov_teacher_top1": 0.8575,
+        "coverage_teacher_top1": 0.78,
+        "coverage_teacher_correct_to_wrong": 11,
+        "coverage_baseline_top1": 0.65,
+        "coverage_mrr": 0.7455090124300652,
+        "coverage_r5": 0.8666666666666667,
+        "coverage_window": 0.8566666666666667,
+        "coverage_p95_ms": 172.21577999880537,
+        "rss_mb": 11.8,
+        "artifact_mb": 2.095
+      }
+    },
+    "S4_daily0.5": {
+      "config": {
+        "name": "S4_daily0.5",
+        "stage": "4_lm_weight",
+        "daily_lm": "daily_production",
+        "daily_weight": 0.5,
+        "lexicon": "R2_known_word|L5_doc_frequency|daily_only",
+        "production_eligible": true
+      },
+      "coverage_dev": {
+        "items": 300,
+        "recall": {
+          "@1": 0.65,
+          "@3": 0.8266666666666667,
+          "@5": 0.8733333333333333,
+          "@10": 0.9066666666666666
+        },
+        "recall_unlimited": 0.9733333333333334,
+        "reachable": 1.0,
+        "window_recall_top4_families": 0.8566666666666667,
+        "generated_but_outside_top5": 30,
+        "never_generated": 8,
+        "unreachable": 0,
+        "beam_pruned": 8,
+        "mean_candidates": 20.0,
+        "mean_families": 19.96,
+        "latency_p50_ms": 60.6325501576066,
+        "latency_p95_ms": 185.990135034081,
+        "oov_rate": 0.0,
+        "reading_coverage": 1.0,
+        "word_coverage": 0.49743589743589745,
+        "top1": 0.65,
+        "character_accuracy": 0.9422696718070384,
+        "mrr": 0.7510547919429499
+      },
+      "gov_dev": {
+        "items": 400,
+        "recall": {
+          "@1": 0.79,
+          "@3": 0.8875,
+          "@5": 0.9125,
+          "@10": 0.9375
+        },
+        "recall_unlimited": 0.985,
+        "reachable": 1.0,
+        "window_recall_top4_families": 0.9075,
+        "generated_but_outside_top5": 29,
+        "never_generated": 6,
+        "unreachable": 0,
+        "beam_pruned": 6,
+        "mean_candidates": 20.0,
+        "mean_families": 19.865,
+        "latency_p50_ms": 57.127550011500716,
+        "latency_p95_ms": 169.3917049909941,
+        "oov_rate": 0.0,
+        "reading_coverage": 1.0,
+        "word_coverage": null,
+        "top1": 0.79,
+        "character_accuracy": 0.9416773094934014,
+        "mrr": 0.845045229076479
+      },
+      "teacher": {
+        "coverage_dev": {
+          "window_coverage": 0.8566666666666667,
+          "teacher_top1": 0.7866666666666666,
+          "latency_p50_ms": 47.8,
+          "latency_p95_ms": 55.23,
+          "gpu_peak_mb": 1507.3,
+          "fallbacks": 0
+        },
+        "gov_dev": {
+          "window_coverage": 0.9075,
+          "teacher_top1": 0.8575,
+          "latency_p50_ms": 49.26,
+          "latency_p95_ms": 58.13,
+          "gpu_peak_mb": 1508.1,
+          "fallbacks": 0
+        }
+      },
+      "teacher_vs_v0_teacher": {
+        "coverage_dev": {
+          "wrong_to_correct": 42,
+          "correct_to_wrong": 15,
+          "mcnemar_p": 0.0005
+        },
+        "gov_dev": {
+          "wrong_to_correct": 18,
+          "correct_to_wrong": 19,
+          "mcnemar_p": 1.0
+        }
+      },
+      "lexicon": {
+        "recipe": "R2_known_word|L5_doc_frequency|daily_only",
+        "derived_words": 25789,
+        "by_length": {
+          "2": 14649,
+          "3": 7640,
+          "4": 3500
+        },
+        "lexicon_rows_added": 25789,
+        "lexicon_entries": 42548,
+        "rejected": {
+          "below_pooled_frequency": 31043,
+          "fragment_of_longer_ngram": 31336,
+          "readings_unresolved": 44821,
+          "too_few_documents": 2770,
+          "too_few_sources": 23851
+        },
+        "daily_supported_words": 5977,
+        "government_only_words": 19812,
+        "unsupported_readings": 0,
+        "false_competitors": 0,
+        "weight_distribution": {
+          "min": 3.0,
+          "p25": 3.0,
+          "median": 3.0,
+          "p75": 3.0,
+          "max": 200.0
+        },
+        "artifact_mb": 1.257,
+        "build_s": 3.24
+      },
+      "runtime": {
+        "rss_start_mb": 35.266,
+        "v0_load_s": 4.597,
+        "rss_after_v0_mb": 328.305,
+        "daily_lm_load_s": 0.204,
+        "rss_after_daily_lm_mb": 337.812,
+        "lexicon_load_s": 0.019,
+        "rss_after_lexicon_mb": 339.746,
+        "incremental_rss_mb": 11.4
+      },
+      "lm_cache": {
+        "hits": 8621322,
+        "misses": 4768892
+      },
+      "score": {
+        "name": "S4_daily0.5",
+        "production_eligible": true,
+        "gov_baseline_top1": 0.79,
+        "gov_teacher_top1": 0.8575,
+        "coverage_teacher_top1": 0.7866666666666666,
+        "coverage_teacher_correct_to_wrong": 15,
+        "coverage_baseline_top1": 0.65,
+        "coverage_mrr": 0.7510547919429499,
+        "coverage_r5": 0.8733333333333333,
+        "coverage_window": 0.8566666666666667,
+        "coverage_p95_ms": 185.990135034081,
+        "rss_mb": 11.4,
+        "artifact_mb": 2.095
+      }
+    },
+    "DIAG_oasst_mix": {
+      "config": {
+        "name": "DIAG_oasst_mix",
+        "stage": "diagnostic",
+        "daily_lm": "daily_all",
+        "daily_weight": 0.5,
+        "lexicon": "R2_known_word|L5_doc_frequency|daily_only",
+        "production_eligible": false
+      },
+      "coverage_dev": {
+        "items": 300,
+        "recall": {
+          "@1": 0.65,
+          "@3": 0.83,
+          "@5": 0.87,
+          "@10": 0.9066666666666666
+        },
+        "recall_unlimited": 0.9733333333333334,
+        "reachable": 1.0,
+        "window_recall_top4_families": 0.86,
+        "generated_but_outside_top5": 31,
+        "never_generated": 8,
+        "unreachable": 0,
+        "beam_pruned": 8,
+        "mean_candidates": 20.0,
+        "mean_families": 19.96,
+        "latency_p50_ms": 61.0791000071913,
+        "latency_p95_ms": 191.29401505924787,
+        "oov_rate": 0.0,
+        "reading_coverage": 1.0,
+        "word_coverage": 0.49743589743589745,
+        "top1": 0.65,
+        "character_accuracy": 0.9422696718070384,
+        "mrr": 0.7518145385316438
+      },
+      "gov_dev": {
+        "items": 400,
+        "recall": {
+          "@1": 0.79,
+          "@3": 0.8875,
+          "@5": 0.915,
+          "@10": 0.9375
+        },
+        "recall_unlimited": 0.985,
+        "reachable": 1.0,
+        "window_recall_top4_families": 0.9075,
+        "generated_but_outside_top5": 28,
+        "never_generated": 6,
+        "unreachable": 0,
+        "beam_pruned": 6,
+        "mean_candidates": 20.0,
+        "mean_families": 19.855,
+        "latency_p50_ms": 59.0289500541985,
+        "latency_p95_ms": 174.57749007735396,
+        "oov_rate": 0.0,
+        "reading_coverage": 1.0,
+        "word_coverage": null,
+        "top1": 0.79,
+        "character_accuracy": 0.9416773094934014,
+        "mrr": 0.8455518080238476
+      },
+      "teacher": {
+        "coverage_dev": {
+          "window_coverage": 0.86,
+          "teacher_top1": 0.79,
+          "latency_p50_ms": 49.55,
+          "latency_p95_ms": 59.51,
+          "gpu_peak_mb": 1507.3,
+          "fallbacks": 0
+        },
+        "gov_dev": {
+          "window_coverage": 0.9075,
+          "teacher_top1": 0.8525,
+          "latency_p50_ms": 49.43,
+          "latency_p95_ms": 60.54,
+          "gpu_peak_mb": 1508.1,
+          "fallbacks": 0
+        }
+      },
+      "teacher_vs_v0_teacher": {
+        "coverage_dev": {
+          "wrong_to_correct": 43,
+          "correct_to_wrong": 15,
+          "mcnemar_p": 0.0003
+        },
+        "gov_dev": {
+          "wrong_to_correct": 16,
+          "correct_to_wrong": 19,
+          "mcnemar_p": 0.7359
+        }
+      },
+      "lexicon": {
+        "recipe": "R2_known_word|L5_doc_frequency|daily_only",
+        "derived_words": 25789,
+        "by_length": {
+          "2": 14649,
+          "3": 7640,
+          "4": 3500
+        },
+        "lexicon_rows_added": 25789,
+        "lexicon_entries": 42548,
+        "rejected": {
+          "below_pooled_frequency": 31043,
+          "fragment_of_longer_ngram": 31336,
+          "readings_unresolved": 44821,
+          "too_few_documents": 2770,
+          "too_few_sources": 23851
+        },
+        "daily_supported_words": 5977,
+        "government_only_words": 19812,
+        "unsupported_readings": 0,
+        "false_competitors": 0,
+        "weight_distribution": {
+          "min": 3.0,
+          "p25": 3.0,
+          "median": 3.0,
+          "p75": 3.0,
+          "max": 200.0
+        },
+        "artifact_mb": 1.257,
+        "build_s": 3.24
+      },
+      "runtime": {
+        "rss_start_mb": 35.25,
+        "v0_load_s": 4.341,
+        "rss_after_v0_mb": 328.324,
+        "daily_lm_load_s": 0.201,
+        "rss_after_daily_lm_mb": 337.828,
+        "lexicon_load_s": 0.02,
+        "rss_after_lexicon_mb": 341.242,
+        "incremental_rss_mb": 12.9
+      },
+      "lm_cache": {
+        "hits": 8620742,
+        "misses": 4769472
+      },
+      "score": {
+        "name": "DIAG_oasst_mix",
+        "production_eligible": false,
+        "gov_baseline_top1": 0.79,
+        "gov_teacher_top1": 0.8525,
+        "coverage_teacher_top1": 0.79,
+        "coverage_teacher_correct_to_wrong": 15,
+        "coverage_baseline_top1": 0.65,
+        "coverage_mrr": 0.7518145385316438,
+        "coverage_r5": 0.87,
+        "coverage_window": 0.86,
+        "coverage_p95_ms": 191.29401505924787,
+        "rss_mb": 12.9,
+        "artifact_mb": 2.1
+      }
+    }
+  },
+  "raw_file": "benchmarks/results/daily_round2_raw.json"
+}

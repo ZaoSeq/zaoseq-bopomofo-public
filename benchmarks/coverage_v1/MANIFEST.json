@@ -1,0 +1,43 @@
+{
+  "name": "Coverage-DEV v1",
+  "role": "DEV for candidate generation / decoder coverage; not a sealed test",
+  "created_at": "2026-09-24",
+  "provenance": "hand-written by the ZaoSeq Bopomofo project; not rewritten from v0.1 TEST sentences and not modelled on any decoder failure case; word segmentation and proper-noun / colloquial tags are manual",
+  "license": "Apache-2.0 (project-authored)",
+  "items": 300,
+  "characters": 2529,
+  "with_left_context": 26,
+  "by_category": {
+    "conversation": 25,
+    "homophone": 25,
+    "long_composition": 25,
+    "names_places": 25,
+    "school": 25,
+    "segmentation": 25,
+    "shopping_food": 25,
+    "social_chat": 25,
+    "technology": 25,
+    "time_schedule": 25,
+    "transport": 25,
+    "work": 25
+  },
+  "proper_noun_words": 29,
+  "colloquial_words": 12,
+  "files": {
+    "benchmarks/coverage_v1/source.tsv": "81f9d4240f15211e50c861f831beb075dcec592c6ec71c6351106dbde96ee97f",
+    "benchmarks/coverage_v1/coverage_dev.jsonl": "c387a11eddcd7f3a5fc0953752ef1117d9ecdb0c911139362a5758646520706f"
+  },
+  "leakage": {
+    "method": "char 4-gram MinHash LSH, Jaccard >= 0.6, Han-only normalized text",
+    "checked_against": [
+      "corpus splits train / dev / test",
+      "benchmarks/dev + benchmarks/sanity",
+      "v0.1 TEST-EVERYDAY and TEST-GOV (leakage check only)",
+      "Coverage-DEV itself"
+    ],
+    "index_size": 264558,
+    "external_hits": {},
+    "internal_hits": []
+  },
+  "reading_convention": "MOE: 一／不 tone sandhi, particles neutral; CNS base tone when the neutral reading is absent"
+}

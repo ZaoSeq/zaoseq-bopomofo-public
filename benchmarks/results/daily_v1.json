@@ -1,0 +1,1798 @@
+{
+  "role": "Daily Corpus V1 (v0.2 development, DEV only; v0.1 TEST used only for corpus exclusion)",
+  "selection_rule": "DEV only (Coverage-DEV v1.1 + GOV-DEV). Pick the candidate with the highest Coverage-DEV v1.1 R@5 among those whose GOV-DEV R@1 is at least A's minus 0.02; ties go to higher top-4-family window recall, then to the smaller daily weight / earlier variant. If no candidate satisfies the GOV constraint, the one with the smallest GOV drop is reported as selected and flagged.",
+  "c_selection": {
+    "selected": "C_daily0.25",
+    "gov_r1_floor": 0.7825,
+    "passing": [],
+    "constraint_satisfied": false
+  },
+  "e_selection": {
+    "selected": "E_pmi",
+    "gov_r1_floor": 0.7825,
+    "passing": [
+      "E_raw_freq",
+      "E_doc_freq",
+      "E_pmi",
+      "E_interpolated"
+    ],
+    "constraint_satisfied": true
+  },
+  "load": {
+    "gov_context_s": 8.74,
+    "rss_after_gov_mb": 645.7,
+    "rss_before_mb": 36.3
+  },
+  "lexicon_statistics_build_s": 73.2,
+  "lexicon_variants": {
+    "raw_freq": {
+      "policy": {
+        "name": "raw_freq",
+        "estimator": "pooled",
+        "min_per_million": 2.0,
+        "min_documents": 2,
+        "min_pmi": 0.0,
+        "fragment_share": 0.9,
+        "max_readings": 4,
+        "median_weight": 10.0,
+        "weight_bounds": [
+          3.0,
+          200.0
+        ]
+      },
+      "considered": 128798,
+      "eligibility": {
+        "eligible": 71330,
+        "fragment_of_longer_ngram": 29741,
+        "known_builtin": 231,
+        "low_pmi": 14321,
+        "readings_unresolved": 12356,
+        "too_few_documents": 819
+      },
+      "eligible_words": 71330,
+      "by_length": {
+        "2": 25343,
+        "3": 24261,
+        "4": 21726
+      },
+      "daily_only_words": 387,
+      "government_only_words": 57271,
+      "lexicon_rows_added": 119156,
+      "weight_median": 10.0,
+      "build_s": 10.76,
+      "top_by_frequency": [
+        "機關",
+        "主管機關",
+        "申請",
+        "第一",
+        "辦理",
+        "人員",
+        "前項",
+        "事項",
+        "定之",
+        "相關",
+        "條第",
+        "第二",
+        "中央",
+        "政府",
+        "管理",
+        "使用",
+        "保險",
+        "執行",
+        "以上",
+        "機構",
+        "行政",
+        "第三",
+        "法院",
+        "第一項",
+        "以下"
+      ]
+    },
+    "doc_freq": {
+      "policy": {
+        "name": "doc_freq",
+        "estimator": "pooled",
+        "min_per_million": 2.0,
+        "min_documents": 5,
+        "min_pmi": 0.0,
+        "fragment_share": 0.9,
+        "max_readings": 4,
+        "median_weight": 10.0,
+        "weight_bounds": [
+          3.0,
+          200.0
+        ]
+      },
+      "considered": 128798,
+      "eligibility": {
+        "eligible": 69644,
+        "fragment_of_longer_ngram": 28330,
+        "known_builtin": 231,
+        "low_pmi": 14295,
+        "readings_unresolved": 12098,
+        "too_few_documents": 4200
+      },
+      "eligible_words": 69644,
+      "by_length": {
+        "2": 25233,
+        "3": 23982,
+        "4": 20429
+      },
+      "daily_only_words": 387,
+      "government_only_words": 55593,
+      "lexicon_rows_added": 116067,
+      "weight_median": 10.0,
+      "build_s": 11.74,
+      "top_by_frequency": [
+        "機關",
+        "主管機關",
+        "申請",
+        "第一",
+        "辦理",
+        "人員",
+        "前項",
+        "事項",
+        "定之",
+        "相關",
+        "條第",
+        "第二",
+        "中央",
+        "政府",
+        "管理",
+        "使用",
+        "保險",
+        "執行",
+        "以上",
+        "機構",
+        "行政",
+        "第三",
+        "法院",
+        "第一項",
+        "以下"
+      ]
+    },
+    "pmi": {
+      "policy": {
+        "name": "pmi",
+        "estimator": "pooled",
+        "min_per_million": 2.0,
+        "min_documents": 5,
+        "min_pmi": 5.0,
+        "fragment_share": 0.9,
+        "max_readings": 4,
+        "median_weight": 10.0,
+        "weight_bounds": [
+          3.0,
+          200.0
+        ]
+      },
+      "considered": 128798,
+      "eligibility": {
+        "eligible": 23901,
+        "fragment_of_longer_ngram": 10360,
+        "known_builtin": 231,
+        "low_pmi": 85322,
+        "readings_unresolved": 4784,
+        "too_few_documents": 4200
+      },
+      "eligible_words": 23901,
+      "by_length": {
+        "2": 5774,
+        "3": 4868,
+        "4": 13259
+      },
+      "daily_only_words": 231,
+      "government_only_words": 19280,
+      "lexicon_rows_added": 41352,
+      "weight_median": 10.0,
+      "build_s": 9.19,
+      "top_by_frequency": [
+        "機關",
+        "主管機關",
+        "申請",
+        "辦理",
+        "前項",
+        "事項",
+        "相關",
+        "條第",
+        "第二",
+        "中央",
+        "政府",
+        "管理",
+        "使用",
+        "保險",
+        "執行",
+        "以上",
+        "機構",
+        "行政",
+        "第三",
+        "法院",
+        "第一項",
+        "以下",
+        "提供",
+        "項規定",
+        "登記"
+      ]
+    },
+    "daily_weighted": {
+      "policy": {
+        "name": "daily_weighted",
+        "estimator": "interpolated_daily0.75",
+        "min_per_million": 2.0,
+        "min_documents": 5,
+        "min_pmi": 5.0,
+        "fragment_share": 0.9,
+        "max_readings": 4,
+        "median_weight": 10.0,
+        "weight_bounds": [
+          3.0,
+          200.0
+        ]
+      },
+      "considered": 107915,
+      "eligibility": {
+        "eligible": 12648,
+        "fragment_of_longer_ngram": 4546,
+        "known_builtin": 238,
+        "low_pmi": 39072,
+        "readings_unresolved": 1823,
+        "too_few_documents": 49588
+      },
+      "eligible_words": 12648,
+      "by_length": {
+        "2": 5635,
+        "3": 3422,
+        "4": 3591
+      },
+      "daily_only_words": 1268,
+      "government_only_words": 5121,
+      "lexicon_rows_added": 20953,
+      "weight_median": 10.0,
+      "build_s": 12.54,
+      "top_by_frequency": [
+        "湯姆",
+        "沒有",
+        "應該",
+        "瑪麗",
+        "起來",
+        "可能",
+        "申請",
+        "使用",
+        "很多",
+        "告訴",
+        "機關",
+        "蘋果",
+        "英語",
+        "非常",
+        "正在",
+        "電話",
+        "國家",
+        "認為",
+        "孩子",
+        "這些",
+        "辦理",
+        "任何",
+        "在哪",
+        "本書",
+        "星期"
+      ]
+    },
+    "interpolated": {
+      "policy": {
+        "name": "interpolated",
+        "estimator": "interpolated_daily0.25",
+        "min_per_million": 2.0,
+        "min_documents": 5,
+        "min_pmi": 5.0,
+        "fragment_share": 0.9,
+        "max_readings": 4,
+        "median_weight": 10.0,
+        "weight_bounds": [
+          3.0,
+          200.0
+        ]
+      },
+      "considered": 133693,
+      "eligibility": {
+        "eligible": 24255,
+        "fragment_of_longer_ngram": 10309,
+        "known_builtin": 242,
+        "low_pmi": 78396,
+        "readings_unresolved": 4454,
+        "too_few_documents": 16037
+      },
+      "eligible_words": 24255,
+      "by_length": {
+        "2": 6760,
+        "3": 6048,
+        "4": 11447
+      },
+      "daily_only_words": 1767,
+      "government_only_words": 16372,
+      "lexicon_rows_added": 41692,
+      "weight_median": 10.0,
+      "build_s": 15.39,
+      "top_by_frequency": [
+        "申請",
+        "湯姆",
+        "機關",
+        "使用",
+        "辦理",
+        "相關",
+        "政府",
+        "資料",
+        "沒有",
+        "保險",
+        "管理",
+        "提供",
+        "如何",
+        "人員",
+        "是否",
+        "警察",
+        "方式",
+        "基金",
+        "登記",
+        "主管機關",
+        "資訊",
+        "國家",
+        "土地",
+        "中心",
+        "合作"
+      ]
+    }
+  },
+  "perplexity": {
+    "A_gov": {
+      "daily_dev_bits_per_char": 8.9486,
+      "gov_dev_bits_per_char": 6.0387
+    },
+    "B_daily": {
+      "daily_dev_bits_per_char": 6.342,
+      "gov_dev_bits_per_char": 10.3942
+    },
+    "C_daily0.25": {
+      "daily_dev_bits_per_char": 6.926,
+      "gov_dev_bits_per_char": 6.1969
+    },
+    "C_daily0.5": {
+      "daily_dev_bits_per_char": 6.4886,
+      "gov_dev_bits_per_char": 6.5271
+    },
+    "C_daily0.75": {
+      "daily_dev_bits_per_char": 6.268,
+      "gov_dev_bits_per_char": 7.1086
+    },
+    "G_oasst1_zh_prompter": {
+      "daily_dev_bits_per_char": 8.5801,
+      "gov_dev_bits_per_char": 6.2853
+    },
+    "H_daily_all": {
+      "daily_dev_bits_per_char": 6.9255,
+      "gov_dev_bits_per_char": 6.1966
+    }
+  },
+  "teacher_window_diagnostic": {
+    "A_gov": {
+      "coverage_dev": {
+        "K=4": {
+          "window_coverage": 0.7466666666666667,
+          "teacher_top1": 0.6966666666666667,
+          "latency_p50_ms": 48.49,
+          "latency_p95_ms": 72.48,
+          "gpu_peak_mb": 1507.3,
+          "fallbacks": 0,
+          "same_pick_as_K4": 1.0,
+          "vs_K4": {
+            "wrong_to_correct": 0,
+            "correct_to_wrong": 0,
+            "mcnemar_p": 1.0
+          }
+        },
+        "K=5": {
+          "window_coverage": 0.7833333333333333,
+          "teacher_top1": 0.7,
+          "latency_p50_ms": 47.38,
+          "latency_p95_ms": 56.09,
+          "gpu_peak_mb": 1507.6,
+          "fallbacks": 0,
+          "same_pick_as_K4": 0.8767,
+          "vs_K4": {
+            "wrong_to_correct": 8,
+            "correct_to_wrong": 7,
+            "mcnemar_p": 1.0
+          }
+        },
+        "K=6": {
+          "window_coverage": 0.7866666666666666,
+          "teacher_top1": 0.7066666666666667,
+          "latency_p50_ms": 47.76,
+          "latency_p95_ms": 56.79,
+          "gpu_peak_mb": 1507.8,
+          "fallbacks": 0,
+          "same_pick_as_K4": 0.87,
+          "vs_K4": {
+            "wrong_to_correct": 10,
+            "correct_to_wrong": 7,
+            "mcnemar_p": 0.6291
+          }
+        },
+        "K=8": {
+          "window_coverage": 0.8166666666666667,
+          "teacher_top1": 0.71,
+          "latency_p50_ms": 47.6,
+          "latency_p95_ms": 59.8,
+          "gpu_peak_mb": 1508.4,
+          "fallbacks": 0,
+          "same_pick_as_K4": 0.8367,
+          "vs_K4": {
+            "wrong_to_correct": 14,
+            "correct_to_wrong": 10,
+            "mcnemar_p": 0.5413
+          }
+        }
+      },
+      "gov_dev": {
+        "K=4": {
+          "window_coverage": 0.9075,
+          "teacher_top1": 0.86,
+          "latency_p50_ms": 55.91,
+          "latency_p95_ms": 73.42,
+          "gpu_peak_mb": 1508.1,
+          "fallbacks": 0,
+          "same_pick_as_K4": 1.0,
+          "vs_K4": {
+            "wrong_to_correct": 0,
+            "correct_to_wrong": 0,
+            "mcnemar_p": 1.0
+          }
+        },
+        "K=5": {
+          "window_coverage": 0.915,
+          "teacher_top1": 0.8625,
+          "latency_p50_ms": 45.68,
+          "latency_p95_ms": 62.67,
+          "gpu_peak_mb": 1508.5,
+          "fallbacks": 0,
+          "same_pick_as_K4": 0.955,
+          "vs_K4": {
+            "wrong_to_correct": 4,
+            "correct_to_wrong": 3,
+            "mcnemar_p": 1.0
+          }
+        },
+        "K=6": {
+          "window_coverage": 0.925,
+          "teacher_top1": 0.865,
+          "latency_p50_ms": 43.16,
+          "latency_p95_ms": 54.65,
+          "gpu_peak_mb": 1508.9,
+          "fallbacks": 0,
+          "same_pick_as_K4": 0.93,
+          "vs_K4": {
+            "wrong_to_correct": 7,
+            "correct_to_wrong": 5,
+            "mcnemar_p": 0.7744
+          }
+        },
+        "K=8": {
+          "window_coverage": 0.935,
+          "teacher_top1": 0.8675,
+          "latency_p50_ms": 50.22,
+          "latency_p95_ms": 68.43,
+          "gpu_peak_mb": 1513.1,
+          "fallbacks": 0,
+          "same_pick_as_K4": 0.9175,
+          "vs_K4": {
+            "wrong_to_correct": 12,
+            "correct_to_wrong": 9,
+            "mcnemar_p": 0.6636
+          }
+        }
+      }
+    },
+    "E_pmi": {
+      "coverage_dev": {
+        "K=4": {
+          "window_coverage": 0.8466666666666667,
+          "teacher_top1": 0.78,
+          "latency_p50_ms": 54.99,
+          "latency_p95_ms": 71.37,
+          "gpu_peak_mb": 1507.3,
+          "fallbacks": 0,
+          "same_pick_as_K4": 1.0,
+          "vs_K4": {
+            "wrong_to_correct": 0,
+            "correct_to_wrong": 0,
+            "mcnemar_p": 1.0
+          }
+        },
+        "K=5": {
+          "window_coverage": 0.8633333333333333,
+          "teacher_top1": 0.7833333333333333,
+          "latency_p50_ms": 51.81,
+          "latency_p95_ms": 67.41,
+          "gpu_peak_mb": 1507.6,
+          "fallbacks": 0,
+          "same_pick_as_K4": 0.92,
+          "vs_K4": {
+            "wrong_to_correct": 8,
+            "correct_to_wrong": 7,
+            "mcnemar_p": 1.0
+          }
+        },
+        "K=6": {
+          "window_coverage": 0.8666666666666667,
+          "teacher_top1": 0.7733333333333333,
+          "latency_p50_ms": 57.02,
+          "latency_p95_ms": 76.58,
+          "gpu_peak_mb": 1507.8,
+          "fallbacks": 0,
+          "same_pick_as_K4": 0.8867,
+          "vs_K4": {
+            "wrong_to_correct": 9,
+            "correct_to_wrong": 11,
+            "mcnemar_p": 0.8238
+          }
+        },
+        "K=8": {
+          "window_coverage": 0.88,
+          "teacher_top1": 0.79,
+          "latency_p50_ms": 60.47,
+          "latency_p95_ms": 72.47,
+          "gpu_peak_mb": 1508.4,
+          "fallbacks": 0,
+          "same_pick_as_K4": 0.8733,
+          "vs_K4": {
+            "wrong_to_correct": 12,
+            "correct_to_wrong": 9,
+            "mcnemar_p": 0.6636
+          }
+        }
+      },
+      "gov_dev": {
+        "K=4": {
+          "window_coverage": 0.9075,
+          "teacher_top1": 0.86,
+          "latency_p50_ms": 54.29,
+          "latency_p95_ms": 71.47,
+          "gpu_peak_mb": 1508.1,
+          "fallbacks": 0,
+          "same_pick_as_K4": 1.0,
+          "vs_K4": {
+            "wrong_to_correct": 0,
+            "correct_to_wrong": 0,
+            "mcnemar_p": 1.0
+          }
+        },
+        "K=5": {
+          "window_coverage": 0.9175,
+          "teacher_top1": 0.8475,
+          "latency_p50_ms": 53.86,
+          "latency_p95_ms": 75.46,
+          "gpu_peak_mb": 1508.6,
+          "fallbacks": 0,
+          "same_pick_as_K4": 0.94,
+          "vs_K4": {
+            "wrong_to_correct": 5,
+            "correct_to_wrong": 10,
+            "mcnemar_p": 0.3018
+          }
+        },
+        "K=6": {
+          "window_coverage": 0.92,
+          "teacher_top1": 0.86,
+          "latency_p50_ms": 57.61,
+          "latency_p95_ms": 76.31,
+          "gpu_peak_mb": 1508.9,
+          "fallbacks": 0,
+          "same_pick_as_K4": 0.95,
+          "vs_K4": {
+            "wrong_to_correct": 6,
+            "correct_to_wrong": 6,
+            "mcnemar_p": 1.0
+          }
+        },
+        "K=8": {
+          "window_coverage": 0.9325,
+          "teacher_top1": 0.86,
+          "latency_p50_ms": 55.64,
+          "latency_p95_ms": 75.52,
+          "gpu_peak_mb": 1513.2,
+          "fallbacks": 0,
+          "same_pick_as_K4": 0.925,
+          "vs_K4": {
+            "wrong_to_correct": 9,
+            "correct_to_wrong": 9,
+            "mcnemar_p": 1.0
+          }
+        }
+      }
+    }
+  },
+  "homophone": {
+    "competitors": {
+      "derived_readings_with_competitor": 7,
+      "derived_outweighs_best_competitor": 2,
+      "examples": [
+        {
+          "derived": "刑事",
+          "readings": "ㄒㄧㄥˊ ㄕˋ",
+          "derived_weight": 200.0,
+          "best_competitor": "形勢",
+          "competitor_weight": 50.0,
+          "competitors": [
+            "形勢",
+            "形式",
+            "行事"
+          ]
+        },
+        {
+          "derived": "公私",
+          "readings": "ㄍㄨㄥ ㄙ",
+          "derived_weight": 102.31,
+          "best_competitor": "公司",
+          "competitor_weight": 1000.0,
+          "competitors": [
+            "公司"
+          ]
+        },
+        {
+          "derived": "使用",
+          "readings": "ㄕˋ ㄩㄥˋ",
+          "derived_weight": 100.0,
+          "best_competitor": "試用",
+          "competitor_weight": 50.0,
+          "competitors": [
+            "試用",
+            "適用"
+          ]
+        },
+        {
+          "derived": "經紀",
+          "readings": "ㄐㄧㄥ ㄐㄧˋ",
+          "derived_weight": 90.77,
+          "best_competitor": "經濟",
+          "competitor_weight": 200.0,
+          "competitors": [
+            "經濟"
+          ]
+        },
+        {
+          "derived": "它們",
+          "readings": "ㄊㄚ ㄇㄣ˙",
+          "derived_weight": 18.72,
+          "best_competitor": "他們",
+          "competitor_weight": 1000.0,
+          "competitors": [
+            "他們",
+            "她們"
+          ]
+        },
+        {
+          "derived": "注射",
+          "readings": "ㄓㄨˋ ㄧˋ",
+          "derived_weight": 14.68,
+          "best_competitor": "注意",
+          "competitor_weight": 200.0,
+          "competitors": [
+            "注意"
+          ]
+        },
+        {
+          "derived": "牠們",
+          "readings": "ㄊㄚ ㄇㄣ˙",
+          "derived_weight": 12.82,
+          "best_competitor": "他們",
+          "competitor_weight": 1000.0,
+          "competitors": [
+            "他們",
+            "她們"
+          ]
+        }
+      ]
+    },
+    "coverage_dev": {
+      "wrong_to_correct": 13,
+      "correct_to_wrong": 5,
+      "wrong_to_correct_with_derived_word": 13,
+      "correct_to_wrong_with_derived_word": 5,
+      "correct_to_wrong_examples": [
+        {
+          "id": "coverage:tr04",
+          "gold": "前面在施工請改道",
+          "now_top1": "前面在施公頃改道",
+          "derived_words_in_top1": [
+            "公頃"
+          ]
+        },
+        {
+          "id": "coverage:tm06",
+          "gold": "展覽只到這個星期天",
+          "now_top1": "展覽指導這個星期天",
+          "derived_words_in_top1": [
+            "展覽",
+            "指導",
+            "星期天"
+          ]
+        },
+        {
+          "id": "coverage:tm10",
+          "gold": "我的生日是三月八號",
+          "now_top1": "我的生日是參閱八號",
+          "derived_words_in_top1": [
+            "參閱"
+          ]
+        },
+        {
+          "id": "coverage:tm17",
+          "gold": "我們改成線上開會",
+          "now_top1": "我們改呈現上開會",
+          "derived_words_in_top1": [
+            "呈現"
+          ]
+        },
+        {
+          "id": "coverage:tm23",
+          "gold": "我每天十一點睡覺",
+          "now_top1": "我每天實施點睡覺",
+          "derived_words_in_top1": [
+            "我每天",
+            "實施"
+          ]
+        }
+      ]
+    },
+    "gov_dev": {
+      "wrong_to_correct": 22,
+      "correct_to_wrong": 6,
+      "wrong_to_correct_with_derived_word": 22,
+      "correct_to_wrong_with_derived_word": 6,
+      "correct_to_wrong_examples": [
+        {
+          "id": "moj_law_zh:02a60e975780",
+          "gold": "不服學校申訴決定",
+          "now_top1": "不符學校申訴決定",
+          "derived_words_in_top1": [
+            "不符",
+            "申訴決定"
+          ]
+        },
+        {
+          "id": "dgt_22314:2469cc213d5e",
+          "gold": "該憑證已於",
+          "now_top1": "該憑證已逾",
+          "derived_words_in_top1": [
+            "憑證",
+            "已逾"
+          ]
+        },
+        {
+          "id": "dgt_38262:009237159d95",
+          "gold": "博客來書局",
+          "now_top1": "柏克萊書局",
+          "derived_words_in_top1": [
+            "柏克萊"
+          ]
+        },
+        {
+          "id": "dgt_114846:0d2a1b737be2",
+          "gold": "海膽幼苗的發育和變態",
+          "now_top1": "海膽幼苗的法語褐變態",
+          "derived_words_in_top1": [
+            "海膽",
+            "幼苗",
+            "褐變"
+          ]
+        },
+        {
+          "id": "dgt_175360:1ea6d02b6039",
+          "gold": "我不是機器人",
+          "now_top1": "我不適機器人",
+          "derived_words_in_top1": [
+            "不適"
+          ]
+        },
+        {
+          "id": "dgt_9807:216fe1611bdf",
+          "gold": "乳豬下痢及赤痢",
+          "now_top1": "乳豬下立即斥力",
+          "derived_words_in_top1": [
+            "立即"
+          ]
+        }
+      ]
+    }
+  },
+  "teacher_observation": {
+    "A_gov": {
+      "coverage_dev": {
+        "decoder_top1": 0.47333333333333333,
+        "teacher_top1": 0.6966666666666667,
+        "teacher_vs_decoder_order": {
+          "wrong_to_correct": 74,
+          "correct_to_wrong": 7,
+          "mcnemar_p": 0.0
+        },
+        "latency_p50_ms": 48.49,
+        "latency_p95_ms": 72.48,
+        "fallbacks": 0
+      },
+      "gov_dev": {
+        "decoder_top1": 0.8025,
+        "teacher_top1": 0.86,
+        "teacher_vs_decoder_order": {
+          "wrong_to_correct": 31,
+          "correct_to_wrong": 8,
+          "mcnemar_p": 0.0003
+        },
+        "latency_p50_ms": 55.91,
+        "latency_p95_ms": 73.42,
+        "fallbacks": 0
+      }
+    },
+    "C_daily0.25": {
+      "coverage_dev": {
+        "decoder_top1": 0.6166666666666667,
+        "teacher_top1": 0.78,
+        "teacher_vs_decoder_order": {
+          "wrong_to_correct": 55,
+          "correct_to_wrong": 6,
+          "mcnemar_p": 0.0
+        },
+        "latency_p50_ms": 66.42,
+        "latency_p95_ms": 138.83,
+        "fallbacks": 0,
+        "teacher_vs_A_teacher": {
+          "wrong_to_correct": 31,
+          "correct_to_wrong": 6,
+          "mcnemar_p": 0.0
+        }
+      },
+      "gov_dev": {
+        "decoder_top1": 0.745,
+        "teacher_top1": 0.8475,
+        "teacher_vs_decoder_order": {
+          "wrong_to_correct": 53,
+          "correct_to_wrong": 12,
+          "mcnemar_p": 0.0
+        },
+        "latency_p50_ms": 66.16,
+        "latency_p95_ms": 95.54,
+        "fallbacks": 0,
+        "teacher_vs_A_teacher": {
+          "wrong_to_correct": 5,
+          "correct_to_wrong": 10,
+          "mcnemar_p": 0.3018
+        }
+      }
+    },
+    "E_pmi": {
+      "coverage_dev": {
+        "decoder_top1": 0.6433333333333333,
+        "teacher_top1": 0.78,
+        "teacher_vs_decoder_order": {
+          "wrong_to_correct": 49,
+          "correct_to_wrong": 8,
+          "mcnemar_p": 0.0
+        },
+        "latency_p50_ms": 54.99,
+        "latency_p95_ms": 71.37,
+        "fallbacks": 0,
+        "teacher_vs_A_teacher": {
+          "wrong_to_correct": 37,
+          "correct_to_wrong": 12,
+          "mcnemar_p": 0.0005
+        }
+      },
+      "gov_dev": {
+        "decoder_top1": 0.785,
+        "teacher_top1": 0.86,
+        "teacher_vs_decoder_order": {
+          "wrong_to_correct": 45,
+          "correct_to_wrong": 15,
+          "mcnemar_p": 0.0001
+        },
+        "latency_p50_ms": 54.29,
+        "latency_p95_ms": 71.47,
+        "fallbacks": 0,
+        "teacher_vs_A_teacher": {
+          "wrong_to_correct": 16,
+          "correct_to_wrong": 16,
+          "mcnemar_p": 1.0
+        }
+      }
+    }
+  },
+  "results": {
+    "A_gov": {
+      "coverage_dev": {
+        "metrics": {
+          "items": 300,
+          "recall": {
+            "@1": 0.47333333333333333,
+            "@3": 0.7,
+            "@5": 0.7833333333333333,
+            "@10": 0.8366666666666667
+          },
+          "recall_unlimited": 0.9166666666666666,
+          "reachable": 1.0,
+          "window_recall_top4_families": 0.7466666666666667,
+          "generated_but_outside_top5": 40,
+          "never_generated": 25,
+          "unreachable": 0,
+          "beam_pruned": 25,
+          "mean_candidates": 20.0,
+          "mean_families": 19.956666666666667,
+          "latency_p50_ms": 71.3255499722436,
+          "latency_p95_ms": 185.66283012041828,
+          "oov_rate": 0.0,
+          "reading_coverage": 1.0,
+          "word_coverage": 0.24487179487179486,
+          "top1": 0.47333333333333333,
+          "character_accuracy": 0.9039145907473309,
+          "mrr": 0.5997511562511562
+        }
+      },
+      "gov_dev": {
+        "metrics": {
+          "items": 400,
+          "recall": {
+            "@1": 0.8025,
+            "@3": 0.8875,
+            "@5": 0.915,
+            "@10": 0.945
+          },
+          "recall_unlimited": 0.9775,
+          "reachable": 1.0,
+          "window_recall_top4_families": 0.9075,
+          "generated_but_outside_top5": 25,
+          "never_generated": 9,
+          "unreachable": 0,
+          "beam_pruned": 9,
+          "mean_candidates": 20.0,
+          "mean_families": 19.7925,
+          "latency_p50_ms": 71.1930999532342,
+          "latency_p95_ms": 183.4558201255275,
+          "oov_rate": 0.0,
+          "reading_coverage": 1.0,
+          "word_coverage": null,
+          "top1": 0.8025,
+          "character_accuracy": 0.9455087271179226,
+          "mrr": 0.8521140873015872
+        }
+      },
+      "variant": {
+        "name": "A_gov",
+        "daily_lm": null,
+        "daily_weight": 0.0,
+        "lexicon": "builtin"
+      },
+      "resources": {
+        "gov_lm_mb": 9.27,
+        "daily_lm_mb": 0.0,
+        "total_lm_mb": 9.27,
+        "lexicon_entries": 16759,
+        "lm_load_s": 0.0,
+        "rss_mb": 650.7,
+        "rss_delta_mb": 1.3,
+        "extend_us": 14.364
+      }
+    },
+    "B_daily": {
+      "coverage_dev": {
+        "metrics": {
+          "items": 300,
+          "recall": {
+            "@1": 0.55,
+            "@3": 0.7033333333333334,
+            "@5": 0.7433333333333333,
+            "@10": 0.8133333333333334
+          },
+          "recall_unlimited": 0.9133333333333333,
+          "reachable": 1.0,
+          "window_recall_top4_families": 0.7266666666666667,
+          "generated_but_outside_top5": 51,
+          "never_generated": 26,
+          "unreachable": 0,
+          "beam_pruned": 26,
+          "mean_candidates": 20.0,
+          "mean_families": 19.986666666666668,
+          "latency_p50_ms": 48.37749991565943,
+          "latency_p95_ms": 146.7679200228304,
+          "oov_rate": 0.0,
+          "reading_coverage": 1.0,
+          "word_coverage": 0.24487179487179486,
+          "top1": 0.55,
+          "character_accuracy": 0.9197311190193752,
+          "mrr": 0.6430422817922817
+        }
+      },
+      "gov_dev": {
+        "metrics": {
+          "items": 400,
+          "recall": {
+            "@1": 0.3125,
+            "@3": 0.4175,
+            "@5": 0.4625,
+            "@10": 0.5125
+          },
+          "recall_unlimited": 0.695,
+          "reachable": 1.0,
+          "window_recall_top4_families": 0.4425,
+          "generated_but_outside_top5": 93,
+          "never_generated": 122,
+          "unreachable": 0,
+          "beam_pruned": 122,
+          "mean_candidates": 20.0,
+          "mean_families": 19.9475,
+          "latency_p50_ms": 44.31094997562468,
+          "latency_p95_ms": 137.8914400120265,
+          "oov_rate": 0.0,
+          "reading_coverage": 1.0,
+          "word_coverage": null,
+          "top1": 0.3125,
+          "character_accuracy": 0.7326521924223074,
+          "mrr": 0.38134549543808455
+        }
+      },
+      "variant": {
+        "name": "B_daily",
+        "daily_lm": "daily_production",
+        "daily_weight": 1.0,
+        "lexicon": "builtin"
+      },
+      "resources": {
+        "gov_lm_mb": 9.27,
+        "daily_lm_mb": 0.84,
+        "total_lm_mb": 10.11,
+        "lexicon_entries": 16759,
+        "lm_load_s": 0.356,
+        "rss_mb": 660.6,
+        "rss_delta_mb": 9.9,
+        "extend_us": 2.917
+      }
+    },
+    "C_daily0.25": {
+      "coverage_dev": {
+        "metrics": {
+          "items": 300,
+          "recall": {
+            "@1": 0.6166666666666667,
+            "@3": 0.7966666666666666,
+            "@5": 0.86,
+            "@10": 0.9
+          },
+          "recall_unlimited": 0.96,
+          "reachable": 1.0,
+          "window_recall_top4_families": 0.8433333333333334,
+          "generated_but_outside_top5": 30,
+          "never_generated": 12,
+          "unreachable": 0,
+          "beam_pruned": 12,
+          "mean_candidates": 20.0,
+          "mean_families": 19.953333333333333,
+          "latency_p50_ms": 100.37419991567731,
+          "latency_p95_ms": 254.68611496035012,
+          "oov_rate": 0.0,
+          "reading_coverage": 1.0,
+          "word_coverage": 0.24487179487179486,
+          "top1": 0.6166666666666667,
+          "character_accuracy": 0.9351522340846185,
+          "mrr": 0.7200737734487734
+        }
+      },
+      "gov_dev": {
+        "metrics": {
+          "items": 400,
+          "recall": {
+            "@1": 0.745,
+            "@3": 0.8675,
+            "@5": 0.8975,
+            "@10": 0.92
+          },
+          "recall_unlimited": 0.9675,
+          "reachable": 1.0,
+          "window_recall_top4_families": 0.8875,
+          "generated_but_outside_top5": 28,
+          "never_generated": 13,
+          "unreachable": 0,
+          "beam_pruned": 13,
+          "mean_candidates": 20.0,
+          "mean_families": 19.815,
+          "latency_p50_ms": 80.69049997720867,
+          "latency_p95_ms": 213.16760497866176,
+          "oov_rate": 0.0,
+          "reading_coverage": 1.0,
+          "word_coverage": null,
+          "top1": 0.745,
+          "character_accuracy": 0.9289059174116645,
+          "mrr": 0.8137820049102945
+        }
+      },
+      "variant": {
+        "name": "C_daily0.25",
+        "daily_lm": "daily_production",
+        "daily_weight": 0.25,
+        "lexicon": "builtin"
+      },
+      "resources": {
+        "gov_lm_mb": 9.27,
+        "daily_lm_mb": 0.84,
+        "total_lm_mb": 10.11,
+        "lexicon_entries": 16759,
+        "lm_load_s": 0.0,
+        "rss_mb": 661.1,
+        "rss_delta_mb": 0.5,
+        "extend_us": 15.187
+      }
+    },
+    "C_daily0.5": {
+      "coverage_dev": {
+        "metrics": {
+          "items": 300,
+          "recall": {
+            "@1": 0.6066666666666667,
+            "@3": 0.81,
+            "@5": 0.8566666666666667,
+            "@10": 0.9066666666666666
+          },
+          "recall_unlimited": 0.9633333333333334,
+          "reachable": 1.0,
+          "window_recall_top4_families": 0.8433333333333334,
+          "generated_but_outside_top5": 32,
+          "never_generated": 11,
+          "unreachable": 0,
+          "beam_pruned": 11,
+          "mean_candidates": 20.0,
+          "mean_families": 19.963333333333335,
+          "latency_p50_ms": 83.57390004675835,
+          "latency_p95_ms": 232.02463000779974,
+          "oov_rate": 0.0,
+          "reading_coverage": 1.0,
+          "word_coverage": 0.24487179487179486,
+          "top1": 0.6066666666666667,
+          "character_accuracy": 0.933570581257414,
+          "mrr": 0.7212027122487649
+        }
+      },
+      "gov_dev": {
+        "metrics": {
+          "items": 400,
+          "recall": {
+            "@1": 0.715,
+            "@3": 0.8525,
+            "@5": 0.8825,
+            "@10": 0.9125
+          },
+          "recall_unlimited": 0.96,
+          "reachable": 1.0,
+          "window_recall_top4_families": 0.8675,
+          "generated_but_outside_top5": 31,
+          "never_generated": 16,
+          "unreachable": 0,
+          "beam_pruned": 16,
+          "mean_candidates": 20.0,
+          "mean_families": 19.82,
+          "latency_p50_ms": 65.37715008016676,
+          "latency_p95_ms": 183.01183481235054,
+          "oov_rate": 0.0,
+          "reading_coverage": 1.0,
+          "word_coverage": null,
+          "top1": 0.715,
+          "character_accuracy": 0.9148573861217539,
+          "mrr": 0.7858045634920632
+        }
+      },
+      "variant": {
+        "name": "C_daily0.5",
+        "daily_lm": "daily_production",
+        "daily_weight": 0.5,
+        "lexicon": "builtin"
+      },
+      "resources": {
+        "gov_lm_mb": 9.27,
+        "daily_lm_mb": 0.84,
+        "total_lm_mb": 10.11,
+        "lexicon_entries": 16759,
+        "lm_load_s": 0.0,
+        "rss_mb": 660.9,
+        "rss_delta_mb": -0.2,
+        "extend_us": 10.508
+      }
+    },
+    "C_daily0.75": {
+      "coverage_dev": {
+        "metrics": {
+          "items": 300,
+          "recall": {
+            "@1": 0.64,
+            "@3": 0.7966666666666666,
+            "@5": 0.8566666666666667,
+            "@10": 0.91
+          },
+          "recall_unlimited": 0.9633333333333334,
+          "reachable": 1.0,
+          "window_recall_top4_families": 0.8233333333333334,
+          "generated_but_outside_top5": 32,
+          "never_generated": 11,
+          "unreachable": 0,
+          "beam_pruned": 11,
+          "mean_candidates": 20.0,
+          "mean_families": 19.963333333333335,
+          "latency_p50_ms": 77.86129997111857,
+          "latency_p95_ms": 219.1528099123389,
+          "oov_rate": 0.0,
+          "reading_coverage": 1.0,
+          "word_coverage": 0.24487179487179486,
+          "top1": 0.64,
+          "character_accuracy": 0.9391063661526295,
+          "mrr": 0.7350425834342245
+        }
+      },
+      "gov_dev": {
+        "metrics": {
+          "items": 400,
+          "recall": {
+            "@1": 0.6675,
+            "@3": 0.8025,
+            "@5": 0.8525,
+            "@10": 0.88
+          },
+          "recall_unlimited": 0.9475,
+          "reachable": 1.0,
+          "window_recall_top4_families": 0.83,
+          "generated_but_outside_top5": 38,
+          "never_generated": 21,
+          "unreachable": 0,
+          "beam_pruned": 21,
+          "mean_candidates": 20.0,
+          "mean_families": 19.8275,
+          "latency_p50_ms": 76.05100004002452,
+          "latency_p95_ms": 191.4285149890928,
+          "oov_rate": 0.0,
+          "reading_coverage": 1.0,
+          "word_coverage": null,
+          "top1": 0.6675,
+          "character_accuracy": 0.8991060025542784,
+          "mrr": 0.7471693162788364
+        }
+      },
+      "variant": {
+        "name": "C_daily0.75",
+        "daily_lm": "daily_production",
+        "daily_weight": 0.75,
+        "lexicon": "builtin"
+      },
+      "resources": {
+        "gov_lm_mb": 9.27,
+        "daily_lm_mb": 0.84,
+        "total_lm_mb": 10.11,
+        "lexicon_entries": 16759,
+        "lm_load_s": 0.0,
+        "rss_mb": 661.1,
+        "rss_delta_mb": 0.2,
+        "extend_us": 16.855
+      }
+    },
+    "G_oasst1_zh_prompter": {
+      "coverage_dev": {
+        "metrics": {
+          "items": 300,
+          "recall": {
+            "@1": 0.49666666666666665,
+            "@3": 0.6866666666666666,
+            "@5": 0.75,
+            "@10": 0.7933333333333333
+          },
+          "recall_unlimited": 0.89,
+          "reachable": 1.0,
+          "window_recall_top4_families": 0.7233333333333334,
+          "generated_but_outside_top5": 42,
+          "never_generated": 33,
+          "unreachable": 0,
+          "beam_pruned": 33,
+          "mean_candidates": 20.0,
+          "mean_families": 19.953333333333333,
+          "latency_p50_ms": 70.3196000540629,
+          "latency_p95_ms": 198.19143504137176,
+          "oov_rate": 0.0,
+          "reading_coverage": 1.0,
+          "word_coverage": 0.24487179487179486,
+          "top1": 0.49666666666666665,
+          "character_accuracy": 0.9043100039541321,
+          "mrr": 0.6057067483170425
+        }
+      },
+      "gov_dev": {
+        "metrics": {
+          "items": 400,
+          "recall": {
+            "@1": 0.77,
+            "@3": 0.8675,
+            "@5": 0.8825,
+            "@10": 0.905
+          },
+          "recall_unlimited": 0.96,
+          "reachable": 1.0,
+          "window_recall_top4_families": 0.8725,
+          "generated_but_outside_top5": 31,
+          "never_generated": 16,
+          "unreachable": 0,
+          "beam_pruned": 16,
+          "mean_candidates": 20.0,
+          "mean_families": 19.875,
+          "latency_p50_ms": 72.92035000864416,
+          "latency_p95_ms": 194.18831496732295,
+          "oov_rate": 0.0,
+          "reading_coverage": 1.0,
+          "word_coverage": null,
+          "top1": 0.77,
+          "character_accuracy": 0.9369944657300979,
+          "mrr": 0.8245425061050059
+        }
+      },
+      "variant": {
+        "name": "G_oasst1_zh_prompter",
+        "daily_lm": "oasst1_zh_prompter",
+        "daily_weight": 0.25,
+        "lexicon": "builtin"
+      },
+      "resources": {
+        "gov_lm_mb": 9.27,
+        "daily_lm_mb": 0.02,
+        "total_lm_mb": 9.29,
+        "lexicon_entries": 16759,
+        "lm_load_s": 0.007,
+        "rss_mb": 661.0,
+        "rss_delta_mb": -0.1,
+        "extend_us": 13.988
+      }
+    },
+    "H_daily_all": {
+      "coverage_dev": {
+        "metrics": {
+          "items": 300,
+          "recall": {
+            "@1": 0.6133333333333333,
+            "@3": 0.7966666666666666,
+            "@5": 0.86,
+            "@10": 0.9
+          },
+          "recall_unlimited": 0.96,
+          "reachable": 1.0,
+          "window_recall_top4_families": 0.8433333333333334,
+          "generated_but_outside_top5": 30,
+          "never_generated": 12,
+          "unreachable": 0,
+          "beam_pruned": 12,
+          "mean_candidates": 20.0,
+          "mean_families": 19.953333333333333,
+          "latency_p50_ms": 87.005449924618,
+          "latency_p95_ms": 222.3771651275456,
+          "oov_rate": 0.0,
+          "reading_coverage": 1.0,
+          "word_coverage": 0.24487179487179486,
+          "top1": 0.6133333333333333,
+          "character_accuracy": 0.9347568208778173,
+          "mrr": 0.7184209956709956
+        }
+      },
+      "gov_dev": {
+        "metrics": {
+          "items": 400,
+          "recall": {
+            "@1": 0.7425,
+            "@3": 0.8675,
+            "@5": 0.8975,
+            "@10": 0.92
+          },
+          "recall_unlimited": 0.9675,
+          "reachable": 1.0,
+          "window_recall_top4_families": 0.8875,
+          "generated_but_outside_top5": 28,
+          "never_generated": 13,
+          "unreachable": 0,
+          "beam_pruned": 13,
+          "mean_candidates": 20.0,
+          "mean_families": 19.815,
+          "latency_p50_ms": 72.60010007303208,
+          "latency_p95_ms": 192.14415985625226,
+          "oov_rate": 0.0,
+          "reading_coverage": 1.0,
+          "word_coverage": null,
+          "top1": 0.7425,
+          "character_accuracy": 0.9284802043422733,
+          "mrr": 0.8125320049102944
+        }
+      },
+      "variant": {
+        "name": "H_daily_all",
+        "daily_lm": "daily_all",
+        "daily_weight": 0.25,
+        "lexicon": "builtin"
+      },
+      "resources": {
+        "gov_lm_mb": 9.27,
+        "daily_lm_mb": 0.84,
+        "total_lm_mb": 10.11,
+        "lexicon_entries": 16759,
+        "lm_load_s": 0.229,
+        "rss_mb": 684.5,
+        "rss_delta_mb": 23.5,
+        "extend_us": 16.303
+      }
+    },
+    "E_raw_freq": {
+      "coverage_dev": {
+        "metrics": {
+          "items": 300,
+          "recall": {
+            "@1": 0.66,
+            "@3": 0.8133333333333334,
+            "@5": 0.8566666666666667,
+            "@10": 0.8766666666666667
+          },
+          "recall_unlimited": 0.9466666666666667,
+          "reachable": 1.0,
+          "window_recall_top4_families": 0.8466666666666667,
+          "generated_but_outside_top5": 27,
+          "never_generated": 16,
+          "unreachable": 0,
+          "beam_pruned": 16,
+          "mean_candidates": 20.0,
+          "mean_families": 19.966666666666665,
+          "latency_p50_ms": 85.36264998838305,
+          "latency_p95_ms": 255.70656519848856,
+          "oov_rate": 0.0,
+          "reading_coverage": 1.0,
+          "word_coverage": 0.7589743589743589,
+          "top1": 0.66,
+          "character_accuracy": 0.9351522340846185,
+          "mrr": 0.7451222986536455
+        }
+      },
+      "gov_dev": {
+        "metrics": {
+          "items": 400,
+          "recall": {
+            "@1": 0.815,
+            "@3": 0.9025,
+            "@5": 0.91,
+            "@10": 0.93
+          },
+          "recall_unlimited": 0.985,
+          "reachable": 1.0,
+          "window_recall_top4_families": 0.91,
+          "generated_but_outside_top5": 30,
+          "never_generated": 6,
+          "unreachable": 0,
+          "beam_pruned": 6,
+          "mean_candidates": 20.0,
+          "mean_families": 19.87,
+          "latency_p50_ms": 76.81255007628351,
+          "latency_p95_ms": 219.65412008576084,
+          "oov_rate": 0.0,
+          "reading_coverage": 1.0,
+          "word_coverage": null,
+          "top1": 0.815,
+          "character_accuracy": 0.9467858663260962,
+          "mrr": 0.8622331532846242
+        }
+      },
+      "variant": {
+        "name": "E_raw_freq",
+        "daily_lm": "daily_production",
+        "daily_weight": 0.25,
+        "lexicon": "raw_freq"
+      },
+      "resources": {
+        "gov_lm_mb": 9.27,
+        "daily_lm_mb": 0.84,
+        "total_lm_mb": 10.11,
+        "lexicon_entries": 135915,
+        "lm_load_s": 0.0,
+        "rss_mb": 1888.5,
+        "rss_delta_mb": -16.6,
+        "extend_us": 15.72
+      }
+    },
+    "E_doc_freq": {
+      "coverage_dev": {
+        "metrics": {
+          "items": 300,
+          "recall": {
+            "@1": 0.66,
+            "@3": 0.8133333333333334,
+            "@5": 0.8566666666666667,
+            "@10": 0.8766666666666667
+          },
+          "recall_unlimited": 0.9466666666666667,
+          "reachable": 1.0,
+          "window_recall_top4_families": 0.8466666666666667,
+          "generated_but_outside_top5": 27,
+          "never_generated": 16,
+          "unreachable": 0,
+          "beam_pruned": 16,
+          "mean_candidates": 20.0,
+          "mean_families": 19.966666666666665,
+          "latency_p50_ms": 85.12705005705357,
+          "latency_p95_ms": 241.70175986364487,
+          "oov_rate": 0.0,
+          "reading_coverage": 1.0,
+          "word_coverage": 0.7589743589743589,
+          "top1": 0.66,
+          "character_accuracy": 0.9351522340846185,
+          "mrr": 0.745147551178898
+        }
+      },
+      "gov_dev": {
+        "metrics": {
+          "items": 400,
+          "recall": {
+            "@1": 0.815,
+            "@3": 0.9025,
+            "@5": 0.91,
+            "@10": 0.93
+          },
+          "recall_unlimited": 0.985,
+          "reachable": 1.0,
+          "window_recall_top4_families": 0.91,
+          "generated_but_outside_top5": 30,
+          "never_generated": 6,
+          "unreachable": 0,
+          "beam_pruned": 6,
+          "mean_candidates": 20.0,
+          "mean_families": 19.8675,
+          "latency_p50_ms": 80.21620009094477,
+          "latency_p95_ms": 216.97988508967634,
+          "oov_rate": 0.0,
+          "reading_coverage": 1.0,
+          "word_coverage": null,
+          "top1": 0.815,
+          "character_accuracy": 0.9467858663260962,
+          "mrr": 0.8622331532846242
+        }
+      },
+      "variant": {
+        "name": "E_doc_freq",
+        "daily_lm": "daily_production",
+        "daily_weight": 0.25,
+        "lexicon": "doc_freq"
+      },
+      "resources": {
+        "gov_lm_mb": 9.27,
+        "daily_lm_mb": 0.84,
+        "total_lm_mb": 10.11,
+        "lexicon_entries": 132826,
+        "lm_load_s": 0.0,
+        "rss_mb": 1995.3,
+        "rss_delta_mb": -15.9,
+        "extend_us": 15.614
+      }
+    },
+    "E_pmi": {
+      "coverage_dev": {
+        "metrics": {
+          "items": 300,
+          "recall": {
+            "@1": 0.6433333333333333,
+            "@3": 0.8166666666666667,
+            "@5": 0.8633333333333333,
+            "@10": 0.8866666666666667
+          },
+          "recall_unlimited": 0.95,
+          "reachable": 1.0,
+          "window_recall_top4_families": 0.8466666666666667,
+          "generated_but_outside_top5": 26,
+          "never_generated": 15,
+          "unreachable": 0,
+          "beam_pruned": 15,
+          "mean_candidates": 20.0,
+          "mean_families": 19.973333333333333,
+          "latency_p50_ms": 85.03715007100254,
+          "latency_p95_ms": 252.5928650051356,
+          "oov_rate": 0.0,
+          "reading_coverage": 1.0,
+          "word_coverage": 0.5653846153846154,
+          "top1": 0.6433333333333333,
+          "character_accuracy": 0.9383155397390273,
+          "mrr": 0.7393117729220671
+        }
+      },
+      "gov_dev": {
+        "metrics": {
+          "items": 400,
+          "recall": {
+            "@1": 0.785,
+            "@3": 0.895,
+            "@5": 0.9175,
+            "@10": 0.9375
+          },
+          "recall_unlimited": 0.98,
+          "reachable": 1.0,
+          "window_recall_top4_families": 0.9075,
+          "generated_but_outside_top5": 25,
+          "never_generated": 8,
+          "unreachable": 0,
+          "beam_pruned": 8,
+          "mean_candidates": 20.0,
+          "mean_families": 19.8475,
+          "latency_p50_ms": 77.89615006186068,
+          "latency_p95_ms": 230.02783985575653,
+          "oov_rate": 0.0,
+          "reading_coverage": 1.0,
+          "word_coverage": null,
+          "top1": 0.785,
+          "character_accuracy": 0.9399744572158365,
+          "mrr": 0.8462424877002084
+        }
+      },
+      "variant": {
+        "name": "E_pmi",
+        "daily_lm": "daily_production",
+        "daily_weight": 0.25,
+        "lexicon": "pmi"
+      },
+      "resources": {
+        "gov_lm_mb": 9.27,
+        "daily_lm_mb": 0.84,
+        "total_lm_mb": 10.11,
+        "lexicon_entries": 58111,
+        "lm_load_s": 0.0,
+        "rss_mb": 2070.7,
+        "rss_delta_mb": -3.9,
+        "extend_us": 16.881
+      }
+    },
+    "E_daily_weighted": {
+      "coverage_dev": {
+        "metrics": {
+          "items": 300,
+          "recall": {
+            "@1": 0.6566666666666666,
+            "@3": 0.83,
+            "@5": 0.88,
+            "@10": 0.9066666666666666
+          },
+          "recall_unlimited": 0.9766666666666667,
+          "reachable": 1.0,
+          "window_recall_top4_families": 0.8633333333333333,
+          "generated_but_outside_top5": 29,
+          "never_generated": 7,
+          "unreachable": 0,
+          "beam_pruned": 7,
+          "mean_candidates": 20.0,
+          "mean_families": 19.953333333333333,
+          "latency_p50_ms": 78.9891000604257,
+          "latency_p95_ms": 243.81077483994912,
+          "oov_rate": 0.0,
+          "reading_coverage": 1.0,
+          "word_coverage": 0.6102564102564103,
+          "top1": 0.6566666666666666,
+          "character_accuracy": 0.9426650850138395,
+          "mrr": 0.754225482850483
+        }
+      },
+      "gov_dev": {
+        "metrics": {
+          "items": 400,
+          "recall": {
+            "@1": 0.77,
+            "@3": 0.8775,
+            "@5": 0.91,
+            "@10": 0.94
+          },
+          "recall_unlimited": 0.9825,
+          "reachable": 1.0,
+          "window_recall_top4_families": 0.895,
+          "generated_but_outside_top5": 29,
+          "never_generated": 7,
+          "unreachable": 0,
+          "beam_pruned": 7,
+          "mean_candidates": 20.0,
+          "mean_families": 19.86,
+          "latency_p50_ms": 76.48675004020333,
+          "latency_p95_ms": 207.01153487898398,
+          "oov_rate": 0.0,
+          "reading_coverage": 1.0,
+          "word_coverage": null,
+          "top1": 0.77,
+          "character_accuracy": 0.9378458918688803,
+          "mrr": 0.8331259202398908
+        }
+      },
+      "variant": {
+        "name": "E_daily_weighted",
+        "daily_lm": "daily_production",
+        "daily_weight": 0.25,
+        "lexicon": "daily_weighted"
+      },
+      "resources": {
+        "gov_lm_mb": 9.27,
+        "daily_lm_mb": 0.84,
+        "total_lm_mb": 10.11,
+        "lexicon_entries": 37712,
+        "lm_load_s": 0.0,
+        "rss_mb": 2138.8,
+        "rss_delta_mb": -0.7,
+        "extend_us": 15.043
+      }
+    },
+    "E_interpolated": {
+      "coverage_dev": {
+        "metrics": {
+          "items": 300,
+          "recall": {
+            "@1": 0.6466666666666666,
+            "@3": 0.8233333333333334,
+            "@5": 0.8566666666666667,
+            "@10": 0.9
+          },
+          "recall_unlimited": 0.9633333333333334,
+          "reachable": 1.0,
+          "window_recall_top4_families": 0.8466666666666667,
+          "generated_but_outside_top5": 32,
+          "never_generated": 11,
+          "unreachable": 0,
+          "beam_pruned": 11,
+          "mean_candidates": 20.0,
+          "mean_families": 19.97,
+          "latency_p50_ms": 82.42604997940361,
+          "latency_p95_ms": 228.47543500829494,
+          "oov_rate": 0.0,
+          "reading_coverage": 1.0,
+          "word_coverage": 0.6051282051282051,
+          "top1": 0.6466666666666666,
+          "character_accuracy": 0.9387109529458284,
+          "mrr": 0.7445580081683024
+        }
+      },
+      "gov_dev": {
+        "metrics": {
+          "items": 400,
+          "recall": {
+            "@1": 0.785,
+            "@3": 0.8775,
+            "@5": 0.91,
+            "@10": 0.93
+          },
+          "recall_unlimited": 0.98,
+          "reachable": 1.0,
+          "window_recall_top4_families": 0.895,
+          "generated_but_outside_top5": 28,
+          "never_generated": 8,
+          "unreachable": 0,
+          "beam_pruned": 8,
+          "mean_candidates": 20.0,
+          "mean_families": 19.845,
+          "latency_p50_ms": 74.56710003316402,
+          "latency_p95_ms": 198.24658500729123,
+          "oov_rate": 0.0,
+          "reading_coverage": 1.0,
+          "word_coverage": null,
+          "top1": 0.785,
+          "character_accuracy": 0.9416773094934014,
+          "mrr": 0.8400027319494232
+        }
+      },
+      "variant": {
+        "name": "E_interpolated",
+        "daily_lm": "daily_production",
+        "daily_weight": 0.25,
+        "lexicon": "interpolated"
+      },
+      "resources": {
+        "gov_lm_mb": 9.27,
+        "daily_lm_mb": 0.84,
+        "total_lm_mb": 10.11,
+        "lexicon_entries": 58451,
+        "lm_load_s": 0.0,
+        "rss_mb": 2230.1,
+        "rss_delta_mb": -3.5,
+        "extend_us": 15.683
+      }
+    }
+  },
+  "raw_file": "benchmarks/results/daily_v1_raw.json",
+  "ablation_file": "benchmarks/results/daily_v1_ablation.json"
+}

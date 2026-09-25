@@ -1,0 +1,28 @@
+{
+  "name": "V0.2_TEST_GATE",
+  "created_at": "2026-09-25T19:04:16+08:00",
+  "source_commit": "c6f1cbc65fa980fc741c98f830ef5367d2d9287e",
+  "semantic_freeze": {
+    "file": "benchmarks/frozen/V0.2_SEMANTIC.json",
+    "sha256": "c2010ec2ae48d3b2d6b39f73fad0c605933344b0e32846f44f0b274994bb4019",
+    "verified": true
+  },
+  "test_plan": {
+    "file": "benchmarks/frozen/v0.2_test_plan.json",
+    "sha256": "2cec92c799f5c4f30b610976bd74fcae55a3f8aa317a7b7687b54eeee9b1e723"
+  },
+  "decision_plan": {
+    "file": "benchmarks/frozen/v0.2_sealed_decision_plan.json",
+    "sha256": "cc1b0c008dafe4bbeff47febcd4b30b1b514229f988da5af7a98e19e56525ec4"
+  },
+  "statement": "The v0.2 configuration (S5_tatoeba_common_voice) was selected on DEV and semantically frozen before any TEST-V1 item was authored, extracted or read. No TEST-V1 case has been used to choose or modify the configuration, and the v0.1 TEST sets are not used to select anything for v0.2. The TEST generation plan and the decision plan are frozen here, before TEST-V1 exists.",
+  "files": {
+    "benchmarks/frozen/V0.2_SEMANTIC.json": "c2010ec2ae48d3b2d6b39f73fad0c605933344b0e32846f44f0b274994bb4019",
+    "benchmarks/frozen/v0.2_sealed_decision_plan.json": "cc1b0c008dafe4bbeff47febcd4b30b1b514229f988da5af7a98e19e56525ec4",
+    "benchmarks/frozen/v0.2_test_plan.json": "2cec92c799f5c4f30b610976bd74fcae55a3f8aa317a7b7687b54eeee9b1e723",
+    "src/zaoseq_bopomofo/evaluation/freeze.py": "dbfa6180a6714985645062ec2a2d6d855972faa2923537a0168f64861ee74ba4",
+    "src/zaoseq_bopomofo/evaluation/sealed_v02.py": "fdd29cc79523b35c2a49e49daeddbb6f76c9a22b1eb7348b770cdb7b533c5618",
+    "src/zaoseq_bopomofo/evaluation/semantic_freeze.py": "f2e04144ff79202f662168057a57d4737fd1cdb0c69a74ea7b49cf7fdb7f8c5c",
+    "src/zaoseq_bopomofo/evaluation/testsets.py": "f8a8696ea0a03211518793f1f6ef5d60afc661f1e84a6ca31f2d7c1f870e5293"
+  }
+}

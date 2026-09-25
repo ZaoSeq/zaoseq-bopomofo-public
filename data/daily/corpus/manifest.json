@@ -1,0 +1,343 @@
+{
+  "schema": "zaoseq-bopomofo/daily-corpus/v1",
+  "sources": [
+    "mdc_common_voice_zh_tw_27_0",
+    "oasst1_zh_prompter",
+    "tatoeba_cmn_hant"
+  ],
+  "approval_scope": {
+    "mdc_common_voice_zh_tw_27_0": "production",
+    "oasst1_zh_prompter": "dev_experiment",
+    "tatoeba_cmn_hant": "production"
+  },
+  "split_policy": "document-level sha256 hash (5% test, 5% dev, 90% train); the daily test split is not used this round",
+  "exclusion_references": {
+    "coverage_dev_v1.0": 300,
+    "coverage_dev_v1.1": 300,
+    "hand_dev_sanity": 131,
+    "gov_dev_corpus_split": 15852,
+    "reference_v0_1_test_gov_corpus_split": 12492,
+    "reference_v0_1_test_everyday": 264,
+    "reference_v0_1_test_gov": 800,
+    "reference_v0_1_test_typo": 1583
+  },
+  "quality": {
+    "mdc_common_voice_zh_tw_27_0": {
+      "documents": 20863,
+      "documents_dropped": {
+        "too_short_or_low_han": 883
+      },
+      "nfc_changed_documents": 0,
+      "sentences_seen": 19993,
+      "sentences_kept": 19822,
+      "sentences_dropped": {
+        "eval_overlap": 61,
+        "cross_split_near_dup": 33,
+        "non_standard_char": 21,
+        "duplicate_other_daily_source": 19,
+        "duplicate_in_source": 19,
+        "simplified": 14,
+        "weird_unicode": 4
+      },
+      "simplified_rate": 0.0007,
+      "traditional_ratio_mean_all_seen": 0.9998,
+      "han_ratio_mean_kept": 0.9925,
+      "han_chars_kept": 157569,
+      "length_han_chars": {
+        "mean": 7.95,
+        "median": 8.0,
+        "p95": 13,
+        "buckets": {
+          "04-07": 9632,
+          "08-15": 9994,
+          "16-31": 196
+        }
+      },
+      "weird_unicode": {
+        "compatibility_or_radical": 2,
+        "bopomofo": 2
+      },
+      "top_simplified_markers": {
+        "内": 9,
+        "心里": 2,
+        "没": 1,
+        "城里": 1,
+        "诗": 1
+      },
+      "top_non_standard_chars": {
+        "裏": 6,
+        "値": 3,
+        "麽": 3,
+        "丶": 1,
+        "尙": 1,
+        "綫": 1,
+        "靭": 1,
+        "宀": 1,
+        "説": 1,
+        "衆": 1,
+        "爲": 1,
+        "肽": 1,
+        "酶": 1,
+        "堃": 1
+      },
+      "profanity_hits_kept": {
+        "媽的": 5,
+        "去死": 2,
+        "混蛋": 2,
+        "白癡": 1,
+        "他媽的": 1,
+        "靠北": 1
+      },
+      "source_concentration": {
+        "contributors": 0,
+        "top1_share": null,
+        "top10_share": null
+      },
+      "template_prefixes_ge_20": {},
+      "splits": {
+        "dev": 968,
+        "test": 951,
+        "train": 17903
+      },
+      "eval_overlap_by_reference": {
+        "gov_dev_corpus_split:shared_8gram": 28,
+        "reference_v0_1_test_gov_corpus_split:shared_8gram": 25,
+        "gov_dev_corpus_split:near_duplicate": 3,
+        "reference_v0_1_test_everyday:near_duplicate": 2,
+        "reference_v0_1_test_gov:near_duplicate": 2,
+        "reference_v0_1_test_gov_corpus_split:near_duplicate": 1
+      }
+    },
+    "oasst1_zh_prompter": {
+      "documents": 1263,
+      "documents_dropped": {
+        "too_short_or_low_han": 151,
+        "markup_or_code": 3
+      },
+      "nfc_changed_documents": 0,
+      "sentences_seen": 1540,
+      "sentences_kept": 181,
+      "sentences_dropped": {
+        "simplified": 1356,
+        "duplicate_other_daily_source": 3
+      },
+      "simplified_rate": 0.8805,
+      "traditional_ratio_mean_all_seen": 0.7542,
+      "han_ratio_mean_kept": 0.8786,
+      "han_chars_kept": 2819,
+      "length_han_chars": {
+        "mean": 15.57,
+        "median": 13,
+        "p95": 37,
+        "buckets": {
+          "04-07": 33,
+          "08-15": 80,
+          "16-31": 54,
+          "32+": 14
+        }
+      },
+      "weird_unicode": {},
+      "top_simplified_markers": {
+        "个": 225,
+        "吗": 221,
+        "这": 190,
+        "什么": 185,
+        "为": 143,
+        "请": 133,
+        "来": 106,
+        "会": 96,
+        "对": 94,
+        "写": 93,
+        "问": 93,
+        "国": 87,
+        "说": 84,
+        "时": 78,
+        "现": 77
+      },
+      "top_non_standard_chars": {},
+      "profanity_hits_kept": {},
+      "source_concentration": {
+        "contributors": 40,
+        "top1_share": 0.3425,
+        "top10_share": 0.8066
+      },
+      "template_prefixes_ge_20": {},
+      "splits": {
+        "dev": 13,
+        "test": 7,
+        "train": 161
+      },
+      "eval_overlap_by_reference": {}
+    },
+    "tatoeba_cmn_hant": {
+      "documents": 39743,
+      "documents_dropped": {
+        "too_short_or_low_han": 1059,
+        "email": 3,
+        "long_number": 2
+      },
+      "nfc_changed_documents": 0,
+      "sentences_seen": 39720,
+      "sentences_kept": 38807,
+      "sentences_dropped": {
+        "non_standard_char": 479,
+        "simplified": 183,
+        "duplicate_in_source": 114,
+        "cross_split_near_dup": 88,
+        "eval_overlap": 31,
+        "weird_unicode": 18
+      },
+      "simplified_rate": 0.0046,
+      "traditional_ratio_mean_all_seen": 0.9984,
+      "han_ratio_mean_kept": 0.8824,
+      "han_chars_kept": 411217,
+      "length_han_chars": {
+        "mean": 10.6,
+        "median": 9,
+        "p95": 21,
+        "buckets": {
+          "04-07": 11619,
+          "08-15": 21988,
+          "16-31": 4774,
+          "32+": 426
+        }
+      },
+      "weird_unicode": {
+        "U+200B": 89,
+        "halfwidth_kana_or_emoji": 3
+      },
+      "top_simplified_markers": {
+        "没": 45,
+        "着": 20,
+        "批准": 6,
+        "别": 5,
+        "们": 5,
+        "盗": 4,
+        "时": 3,
+        "一只": 3,
+        "给": 3,
+        "那里": 3,
+        "个": 3,
+        "亲": 3,
+        "来": 2,
+        "帮": 2,
+        "彻": 2
+      },
+      "top_non_standard_chars": {
+        "裏": 328,
+        "爲": 76,
+        "麽": 17,
+        "円": 5,
+        "説": 5,
+        "髪": 4,
+        "幚": 3,
+        "絶": 3,
+        "衞": 2,
+        "犠": 2,
+        "銹": 2,
+        "奬": 1,
+        "鉄": 1,
+        "亜": 1,
+        "駡": 1
+      },
+      "profanity_hits_kept": {
+        "媽的": 16,
+        "他媽的": 5,
+        "白癡": 2,
+        "混蛋": 2,
+        "去死": 1
+      },
+      "source_concentration": {
+        "contributors": 209,
+        "top1_share": 0.2679,
+        "top10_share": 0.9129
+      },
+      "template_prefixes_ge_20": {},
+      "splits": {
+        "dev": 1911,
+        "test": 1946,
+        "train": 34950
+      },
+      "eval_overlap_by_reference": {
+        "hand_dev_sanity:near_duplicate": 11,
+        "coverage_dev_v1.0:near_duplicate": 6,
+        "gov_dev_corpus_split:shared_8gram": 4,
+        "reference_v0_1_test_everyday:near_duplicate": 3,
+        "hand_dev_sanity:shared_8gram": 2,
+        "reference_v0_1_test_gov_corpus_split:shared_8gram": 2,
+        "coverage_dev_v1.0:shared_8gram": 2,
+        "reference_v0_1_test_everyday:shared_8gram": 1
+      }
+    }
+  },
+  "sentence_files_sha256": {
+    "corpus/mdc_common_voice_zh_tw_27_0/sentences.jsonl": "d39846e8aff1a2c64d3a384a1713af0fffb268b1ca271552f76c93b8bf995be5",
+    "corpus/oasst1_zh_prompter/sentences.jsonl": "872ff0afaea3e28ac716841d015eafc9eca20c8571675ed14e2b4ba74b208c26",
+    "corpus/tatoeba_cmn_hant/sentences.jsonl": "5d64b29aa59f0b7976058a7321b549506a706710195b2da40c85d456a0aad421"
+  },
+  "language_models": {
+    "daily_all": {
+      "train_sentences": 53014,
+      "char_tokens": 614494,
+      "char_vocabulary": 4040,
+      "char_bigrams": 125216,
+      "char_trigrams_kept": 65559,
+      "min_trigram_count": 2,
+      "sources": [
+        "mdc_common_voice_zh_tw_27_0",
+        "oasst1_zh_prompter",
+        "tatoeba_cmn_hant"
+      ],
+      "production_eligible": false
+    },
+    "daily_production": {
+      "train_sentences": 52853,
+      "char_tokens": 611570,
+      "char_vocabulary": 4034,
+      "char_bigrams": 124741,
+      "char_trigrams_kept": 65265,
+      "min_trigram_count": 2,
+      "sources": [
+        "mdc_common_voice_zh_tw_27_0",
+        "tatoeba_cmn_hant"
+      ],
+      "production_eligible": true
+    },
+    "mdc_common_voice_zh_tw_27_0": {
+      "train_sentences": 17903,
+      "char_tokens": 161375,
+      "char_vocabulary": 3236,
+      "char_bigrams": 55988,
+      "char_trigrams_kept": 16842,
+      "min_trigram_count": 2,
+      "sources": [
+        "mdc_common_voice_zh_tw_27_0"
+      ],
+      "production_eligible": true
+    },
+    "oasst1_zh_prompter": {
+      "train_sentences": 161,
+      "char_tokens": 2924,
+      "char_vocabulary": 664,
+      "char_bigrams": 2038,
+      "char_trigrams_kept": 227,
+      "min_trigram_count": 2,
+      "sources": [
+        "oasst1_zh_prompter"
+      ],
+      "production_eligible": false
+    },
+    "tatoeba_cmn_hant": {
+      "train_sentences": 34950,
+      "char_tokens": 450195,
+      "char_vocabulary": 3685,
+      "char_bigrams": 90790,
+      "char_trigrams_kept": 47616,
+      "min_trigram_count": 2,
+      "sources": [
+        "tatoeba_cmn_hant"
+      ],
+      "production_eligible": true
+    }
+  }
+}

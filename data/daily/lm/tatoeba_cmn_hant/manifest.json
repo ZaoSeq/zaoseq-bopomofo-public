@@ -1,0 +1,12 @@
+{
+  "train_sentences": 34950,
+  "char_tokens": 450195,
+  "char_vocabulary": 3685,
+  "char_bigrams": 90790,
+  "char_trigrams_kept": 47616,
+  "min_trigram_count": 2,
+  "sources": [
+    "tatoeba_cmn_hant"
+  ],
+  "production_eligible": true
+}

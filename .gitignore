@@ -18,3 +18,10 @@ data/corpus/**/sentences.jsonl
 data/corpus/**/*.gz
 release/
 build/
+.dev.vars
+.dev.vars.*
+*.pem
+*.key
+data/daily/corpus/*/
+data/daily/lm/**/*.gz
+data/daily/lexicon/

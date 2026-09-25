@@ -1,0 +1,30 @@
+{
+  "environment": {
+    "platform": "Windows-11-10.0.26200-SP0",
+    "processor": "Intel64 Family 6 Model 151 Stepping 2, GenuineIntel",
+    "physical_cores": 12,
+    "logical_cores": 20,
+    "ram_gb": 31.8,
+    "python": "3.12.3",
+    "numpy": "2.3.1",
+    "torch": "2.5.1+cu121",
+    "gpu": "NVIDIA GeForce RTX 4070 SUPER",
+    "pid": 8576
+  },
+  "config": "round2_winner",
+  "cases": 700,
+  "cost": {
+    "entries_after_dev": 2362533,
+    "bytes_total": 892280283,
+    "bytes_per_entry": 377.7,
+    "stats": {
+      "capacity": null,
+      "entries": 2362533,
+      "hits": 2060544,
+      "misses": 2362533,
+      "evictions": 0,
+      "hit_rate": 0.4659
+    }
+  },
+  "measured_at": "2026-09-25T09:06:16+0800"
+}

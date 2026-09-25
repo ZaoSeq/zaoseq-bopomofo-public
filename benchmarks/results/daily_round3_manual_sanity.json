@@ -1,0 +1,186 @@
+{
+ "note": "observation only: not used for selection, tuning or accuracy",
+ "systems": {
+  "V0": "frozen V0",
+  "round3_winner": {
+   "daily_lm": "daily_production",
+   "daily_weight": 0.5,
+   "lexicon": "R2_known_word__L5_doc_frequency__daily_only.bin",
+   "lm_cache_entries": 22000
+  }
+ },
+ "observations": {
+  "V0": [
+   {
+    "input": "再去台北玩",
+    "expected": "我想要再去台北玩",
+    "decoder_top": [
+     "我想要在去台北完",
+     "我想要在去臺北完",
+     "我想要再去台北完",
+     "我想要再去臺北完",
+     "我想要在趣台北完"
+    ],
+    "expected_decoder_rank": 17
+   },
+   {
+    "input": "西門町嗎（輕聲）",
+    "expected": "你要去西門町嗎",
+    "decoder_top": [
+     "你要去西門町嗎",
+     "你要去西門丁嗎",
+     "你要去西門釘嗎",
+     "你要去西門叮嗎",
+     "你要去西門仃嗎"
+    ],
+    "expected_decoder_rank": 1
+   },
+   {
+    "input": "西門町嗎（一聲）",
+    "expected": "你要去西門町嗎",
+    "decoder_top": [
+     "你要去西門町媽",
+     "你要去西門丁媽",
+     "你要去西門釘媽",
+     "你要去西門叮媽",
+     "你要去西門仃媽"
+    ],
+    "expected_decoder_rank": null
+   },
+   {
+    "input": "今天要幹嘛",
+    "expected": "你今天要幹嘛",
+    "decoder_top": [
+     "你今天要幹麻",
+     "你今天要幹麼",
+     "你今天要淦麻",
+     "你今天要贛麻",
+     "你今天要榦麻"
+    ],
+    "expected_decoder_rank": 7
+   },
+   {
+    "input": "等等再回你",
+    "expected": "我等等再回你",
+    "decoder_top": [
+     "我等等在回你",
+     "我等等再回你",
+     "我等等載回你",
+     "我等等在回妳",
+     "我等等在回擬"
+    ],
+    "expected_decoder_rank": 2
+   },
+   {
+    "input": "吃飯嗎（輕聲）",
+    "expected": "你有吃飯嗎",
+    "decoder_top": [
+     "你有吃飯嗎",
+     "你有吃飯麼",
+     "你友吃飯嗎",
+     "妳有吃飯嗎",
+     "擬有吃飯嗎"
+    ],
+    "expected_decoder_rank": 1
+   },
+   {
+    "input": "吃飯嗎（一聲）",
+    "expected": "你有吃飯嗎",
+    "decoder_top": [
+     "你有吃飯媽",
+     "你有吃飯摩",
+     "你有吃飯螞",
+     "你有吃飯嬤",
+     "你友吃飯媽"
+    ],
+    "expected_decoder_rank": null
+   }
+  ],
+  "round3_winner": [
+   {
+    "input": "再去台北玩",
+    "expected": "我想要再去台北玩",
+    "decoder_top": [
+     "我想要在去台北完",
+     "我想要再去台北完",
+     "我想要再去臺北完",
+     "我想要在去臺北完",
+     "我想要在去台北玩"
+    ],
+    "expected_decoder_rank": 6
+   },
+   {
+    "input": "西門町嗎（輕聲）",
+    "expected": "你要去西門町嗎",
+    "decoder_top": [
+     "你要去西門町嗎",
+     "你要去西門町麼",
+     "你要去西門丁嗎",
+     "你要去西門釘嗎",
+     "你藥去西門町嗎"
+    ],
+    "expected_decoder_rank": 1
+   },
+   {
+    "input": "西門町嗎（一聲）",
+    "expected": "你要去西門町嗎",
+    "decoder_top": [
+     "你要去西門町媽",
+     "你要去西門町摩",
+     "你要去西門丁媽",
+     "你要去西門町螞",
+     "你要去西門町嬤"
+    ],
+    "expected_decoder_rank": null
+   },
+   {
+    "input": "今天要幹嘛",
+    "expected": "你今天要幹嘛",
+    "decoder_top": [
+     "你今天要幹嘛",
+     "你今天要幹麻",
+     "你今天要幹麼",
+     "你今天藥幹嘛",
+     "你今天要淦麻"
+    ],
+    "expected_decoder_rank": 1
+   },
+   {
+    "input": "等等再回你",
+    "expected": "我等等再回你",
+    "decoder_top": [
+     "我等等再回你",
+     "我等等在回你",
+     "我等等再回妳",
+     "我等等載回你",
+     "我等等在回妳"
+    ],
+    "expected_decoder_rank": 1
+   },
+   {
+    "input": "吃飯嗎（輕聲）",
+    "expected": "你有吃飯嗎",
+    "decoder_top": [
+     "你有吃飯嗎",
+     "妳有吃飯嗎",
+     "你友吃飯嗎",
+     "你有吃飯麼",
+     "你那吃飯嗎"
+    ],
+    "expected_decoder_rank": 1
+   },
+   {
+    "input": "吃飯嗎（一聲）",
+    "expected": "你有吃飯嗎",
+    "decoder_top": [
+     "你有吃飯媽",
+     "你有吃飯摩",
+     "妳有吃飯媽",
+     "你有吃飯螞",
+     "你有吃飯嬤"
+    ],
+    "expected_decoder_rank": null
+   }
+  ]
+ }
+}

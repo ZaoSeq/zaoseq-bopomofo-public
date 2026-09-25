@@ -1,0 +1,48 @@
+{
+ "1.0": {
+  "recall": {
+   "@1": 0.47,
+   "@3": 0.6966666666666667,
+   "@5": 0.78,
+   "@10": 0.8333333333333334
+  },
+  "unlimited": 0.9166666666666666,
+  "window": 0.7433333333333333,
+  "cv19": {
+   "item_id": "coverage:cv19",
+   "rank": 17,
+   "final_rank": 17,
+   "window_hit": false,
+   "reachable": true,
+   "first_lost": null,
+   "exact_surface_in_output": true,
+   "candidates": 20,
+   "families": 20,
+   "top1": "你幫我看一下這個字怎麼念",
+   "latency_ms": 80.66259999759495
+  }
+ },
+ "1.1": {
+  "recall": {
+   "@1": 0.47333333333333333,
+   "@3": 0.7,
+   "@5": 0.7833333333333333,
+   "@10": 0.8366666666666667
+  },
+  "unlimited": 0.9166666666666666,
+  "window": 0.7466666666666667,
+  "cv19": {
+   "item_id": "coverage:cv19",
+   "rank": 0,
+   "final_rank": 0,
+   "window_hit": true,
+   "reachable": true,
+   "first_lost": null,
+   "exact_surface_in_output": true,
+   "candidates": 20,
+   "families": 20,
+   "top1": "你幫我看一下這個字怎麼念",
+   "latency_ms": 92.55659999325871
+  }
+ }
+}

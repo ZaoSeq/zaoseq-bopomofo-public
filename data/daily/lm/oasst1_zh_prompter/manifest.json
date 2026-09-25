@@ -1,0 +1,12 @@
+{
+  "train_sentences": 161,
+  "char_tokens": 2924,
+  "char_vocabulary": 664,
+  "char_bigrams": 2038,
+  "char_trigrams_kept": 227,
+  "min_trigram_count": 2,
+  "sources": [
+    "oasst1_zh_prompter"
+  ],
+  "production_eligible": false
+}

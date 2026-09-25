@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "zaoseq-bopomofo"
-version = "0.1.0"
+version = "0.2.0"
 description = "造序注音 ZaoSeq Bopomofo: context-aware candidate ranking for Traditional Chinese Bopomofo input."
 readme = "README.md"
 requires-python = ">=3.10"

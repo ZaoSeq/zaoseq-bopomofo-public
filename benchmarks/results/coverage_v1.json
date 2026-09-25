@@ -1,0 +1,1390 @@
+{
+  "role": "Coverage V1 (DEV only; v0.1 TEST not used)",
+  "v0_equivalence": {
+    "coverage_dev": {
+      "cases": 300,
+      "mismatches": []
+    },
+    "gov_dev": {
+      "cases": 400,
+      "mismatches": []
+    }
+  },
+  "metrics": {
+    "v0": {
+      "coverage_dev": {
+        "items": 300,
+        "recall": {
+          "@1": 0.47,
+          "@3": 0.6966666666666667,
+          "@5": 0.78,
+          "@10": 0.8333333333333334
+        },
+        "recall_unlimited": 0.9166666666666666,
+        "reachable": 1.0,
+        "window_recall_top4_families": 0.7433333333333333,
+        "generated_but_outside_top5": 41,
+        "never_generated": 25,
+        "unreachable": 0,
+        "beam_pruned": 25,
+        "mean_candidates": 20.0,
+        "mean_families": 19.956666666666667,
+        "latency_p50_ms": 82.33890007250011,
+        "latency_p95_ms": 227.89255998795855,
+        "oov_rate": 0.0,
+        "reading_coverage": 1.0,
+        "word_coverage": 0.24487179487179486
+      },
+      "gov_dev": {
+        "items": 400,
+        "recall": {
+          "@1": 0.8025,
+          "@3": 0.8875,
+          "@5": 0.915,
+          "@10": 0.945
+        },
+        "recall_unlimited": 0.9775,
+        "reachable": 1.0,
+        "window_recall_top4_families": 0.9075,
+        "generated_but_outside_top5": 25,
+        "never_generated": 9,
+        "unreachable": 0,
+        "beam_pruned": 9,
+        "mean_candidates": 20.0,
+        "mean_families": 19.7925,
+        "latency_p50_ms": 39.66869995929301,
+        "latency_p95_ms": 141.49252005154256,
+        "oov_rate": 0.0,
+        "reading_coverage": 1.0,
+        "word_coverage": null
+      }
+    },
+    "nbest50": {
+      "coverage_dev": {
+        "items": 300,
+        "recall": {
+          "@1": 0.47,
+          "@3": 0.6966666666666667,
+          "@5": 0.78,
+          "@10": 0.8333333333333334
+        },
+        "recall_unlimited": 0.9166666666666666,
+        "reachable": 1.0,
+        "window_recall_top4_families": 0.7433333333333333,
+        "generated_but_outside_top5": 41,
+        "never_generated": 25,
+        "unreachable": 0,
+        "beam_pruned": 25,
+        "mean_candidates": 49.693333333333335,
+        "mean_families": 49.586666666666666,
+        "latency_p50_ms": 83.99159996770322,
+        "latency_p95_ms": 228.95847505424177,
+        "oov_rate": 0.0,
+        "reading_coverage": 1.0,
+        "word_coverage": 0.24487179487179486
+      },
+      "gov_dev": {
+        "items": 400,
+        "recall": {
+          "@1": 0.8025,
+          "@3": 0.8875,
+          "@5": 0.915,
+          "@10": 0.945
+        },
+        "recall_unlimited": 0.9775,
+        "reachable": 1.0,
+        "window_recall_top4_families": 0.9075,
+        "generated_but_outside_top5": 25,
+        "never_generated": 9,
+        "unreachable": 0,
+        "beam_pruned": 9,
+        "mean_candidates": 49.985,
+        "mean_families": 49.44,
+        "latency_p50_ms": 73.75634997151792,
+        "latency_p95_ms": 205.15300999395535,
+        "oov_rate": 0.0,
+        "reading_coverage": 1.0,
+        "word_coverage": null
+      }
+    },
+    "nbest100": {
+      "coverage_dev": {
+        "items": 300,
+        "recall": {
+          "@1": 0.47,
+          "@3": 0.6966666666666667,
+          "@5": 0.78,
+          "@10": 0.8333333333333334
+        },
+        "recall_unlimited": 0.9166666666666666,
+        "reachable": 1.0,
+        "window_recall_top4_families": 0.7433333333333333,
+        "generated_but_outside_top5": 41,
+        "never_generated": 25,
+        "unreachable": 0,
+        "beam_pruned": 25,
+        "mean_candidates": 91.92,
+        "mean_families": 91.76666666666667,
+        "latency_p50_ms": 71.31460006348789,
+        "latency_p95_ms": 185.8287799172104,
+        "oov_rate": 0.0,
+        "reading_coverage": 1.0,
+        "word_coverage": 0.24487179487179486
+      },
+      "gov_dev": {
+        "items": 400,
+        "recall": {
+          "@1": 0.8025,
+          "@3": 0.8875,
+          "@5": 0.915,
+          "@10": 0.945
+        },
+        "recall_unlimited": 0.9775,
+        "reachable": 1.0,
+        "window_recall_top4_families": 0.9075,
+        "generated_but_outside_top5": 25,
+        "never_generated": 9,
+        "unreachable": 0,
+        "beam_pruned": 9,
+        "mean_candidates": 99.56,
+        "mean_families": 98.545,
+        "latency_p50_ms": 67.83269997686148,
+        "latency_p95_ms": 190.8241750090383,
+        "oov_rate": 0.0,
+        "reading_coverage": 1.0,
+        "word_coverage": null
+      }
+    },
+    "beam24": {
+      "coverage_dev": {
+        "items": 300,
+        "recall": {
+          "@1": 0.4666666666666667,
+          "@3": 0.69,
+          "@5": 0.7733333333333333,
+          "@10": 0.82
+        },
+        "recall_unlimited": 0.8866666666666667,
+        "reachable": 1.0,
+        "window_recall_top4_families": 0.7366666666666667,
+        "generated_but_outside_top5": 34,
+        "never_generated": 34,
+        "unreachable": 0,
+        "beam_pruned": 34,
+        "mean_candidates": 20.0,
+        "mean_families": 19.953333333333333,
+        "latency_p50_ms": 40.46080005355179,
+        "latency_p95_ms": 104.08951996359974,
+        "oov_rate": 0.0,
+        "reading_coverage": 1.0,
+        "word_coverage": 0.24487179487179486
+      },
+      "gov_dev": {
+        "items": 400,
+        "recall": {
+          "@1": 0.8025,
+          "@3": 0.88,
+          "@5": 0.9075,
+          "@10": 0.935
+        },
+        "recall_unlimited": 0.9625,
+        "reachable": 1.0,
+        "window_recall_top4_families": 0.9,
+        "generated_but_outside_top5": 22,
+        "never_generated": 15,
+        "unreachable": 0,
+        "beam_pruned": 15,
+        "mean_candidates": 20.0,
+        "mean_families": 19.79,
+        "latency_p50_ms": 36.77970007993281,
+        "latency_p95_ms": 106.07953001745042,
+        "oov_rate": 0.0,
+        "reading_coverage": 1.0,
+        "word_coverage": null
+      }
+    },
+    "beam96": {
+      "coverage_dev": {
+        "items": 300,
+        "recall": {
+          "@1": 0.47,
+          "@3": 0.6966666666666667,
+          "@5": 0.78,
+          "@10": 0.8333333333333334
+        },
+        "recall_unlimited": 0.96,
+        "reachable": 1.0,
+        "window_recall_top4_families": 0.7433333333333333,
+        "generated_but_outside_top5": 54,
+        "never_generated": 12,
+        "unreachable": 0,
+        "beam_pruned": 12,
+        "mean_candidates": 20.0,
+        "mean_families": 19.95,
+        "latency_p50_ms": 141.42379991244525,
+        "latency_p95_ms": 392.290504986886,
+        "oov_rate": 0.0,
+        "reading_coverage": 1.0,
+        "word_coverage": 0.24487179487179486
+      },
+      "gov_dev": {
+        "items": 400,
+        "recall": {
+          "@1": 0.8025,
+          "@3": 0.8875,
+          "@5": 0.915,
+          "@10": 0.945
+        },
+        "recall_unlimited": 0.9825,
+        "reachable": 1.0,
+        "window_recall_top4_families": 0.9075,
+        "generated_but_outside_top5": 27,
+        "never_generated": 7,
+        "unreachable": 0,
+        "beam_pruned": 7,
+        "mean_candidates": 20.0,
+        "mean_families": 19.79,
+        "latency_p50_ms": 128.00014985259622,
+        "latency_p95_ms": 341.0687449853866,
+        "oov_rate": 0.0,
+        "reading_coverage": 1.0,
+        "word_coverage": null
+      }
+    },
+    "beam96_nbest100": {
+      "coverage_dev": {
+        "items": 300,
+        "recall": {
+          "@1": 0.47,
+          "@3": 0.6966666666666667,
+          "@5": 0.78,
+          "@10": 0.8333333333333334
+        },
+        "recall_unlimited": 0.96,
+        "reachable": 1.0,
+        "window_recall_top4_families": 0.7433333333333333,
+        "generated_but_outside_top5": 54,
+        "never_generated": 12,
+        "unreachable": 0,
+        "beam_pruned": 12,
+        "mean_candidates": 99.38666666666667,
+        "mean_families": 99.16666666666667,
+        "latency_p50_ms": 146.10629994422197,
+        "latency_p95_ms": 404.16349497390917,
+        "oov_rate": 0.0,
+        "reading_coverage": 1.0,
+        "word_coverage": 0.24487179487179486
+      },
+      "gov_dev": {
+        "items": 400,
+        "recall": {
+          "@1": 0.8025,
+          "@3": 0.8875,
+          "@5": 0.915,
+          "@10": 0.945
+        },
+        "recall_unlimited": 0.9825,
+        "reachable": 1.0,
+        "window_recall_top4_families": 0.9075,
+        "generated_but_outside_top5": 27,
+        "never_generated": 7,
+        "unreachable": 0,
+        "beam_pruned": 7,
+        "mean_candidates": 99.97,
+        "mean_families": 98.98,
+        "latency_p50_ms": 83.45869998447597,
+        "latency_p95_ms": 281.47691491758445,
+        "oov_rate": 0.0,
+        "reading_coverage": 1.0,
+        "word_coverage": null
+      }
+    },
+    "beam192_nbest100": {
+      "coverage_dev": {
+        "items": 300,
+        "recall": {
+          "@1": 0.47,
+          "@3": 0.6966666666666667,
+          "@5": 0.78,
+          "@10": 0.8333333333333334
+        },
+        "recall_unlimited": 0.98,
+        "reachable": 1.0,
+        "window_recall_top4_families": 0.7433333333333333,
+        "generated_but_outside_top5": 60,
+        "never_generated": 6,
+        "unreachable": 0,
+        "beam_pruned": 6,
+        "mean_candidates": 100.0,
+        "mean_families": 99.77666666666667,
+        "latency_p50_ms": 196.4979999465868,
+        "latency_p95_ms": 690.6201450270602,
+        "oov_rate": 0.0,
+        "reading_coverage": 1.0,
+        "word_coverage": 0.24487179487179486
+      },
+      "gov_dev": {
+        "items": 400,
+        "recall": {
+          "@1": 0.8025,
+          "@3": 0.8875,
+          "@5": 0.915,
+          "@10": 0.945
+        },
+        "recall_unlimited": 0.995,
+        "reachable": 1.0,
+        "window_recall_top4_families": 0.9075,
+        "generated_but_outside_top5": 32,
+        "never_generated": 2,
+        "unreachable": 0,
+        "beam_pruned": 2,
+        "mean_candidates": 100.0,
+        "mean_families": 99.015,
+        "latency_p50_ms": 241.55350006185472,
+        "latency_p95_ms": 688.5227449005467,
+        "oov_rate": 0.0,
+        "reading_coverage": 1.0,
+        "word_coverage": null
+      }
+    },
+    "span8": {
+      "coverage_dev": {
+        "items": 300,
+        "recall": {
+          "@1": 0.30666666666666664,
+          "@3": 0.44666666666666666,
+          "@5": 0.49,
+          "@10": 0.5233333333333333
+        },
+        "recall_unlimited": 0.55,
+        "reachable": 1.0,
+        "window_recall_top4_families": 0.4766666666666667,
+        "generated_but_outside_top5": 18,
+        "never_generated": 135,
+        "unreachable": 0,
+        "beam_pruned": 135,
+        "mean_candidates": 20.0,
+        "mean_families": 19.953333333333333,
+        "latency_p50_ms": 22.942750016227365,
+        "latency_p95_ms": 60.10555508546531,
+        "oov_rate": 0.0,
+        "reading_coverage": 1.0,
+        "word_coverage": 0.24487179487179486
+      },
+      "gov_dev": {
+        "items": 400,
+        "recall": {
+          "@1": 0.3575,
+          "@3": 0.395,
+          "@5": 0.4025,
+          "@10": 0.4125
+        },
+        "recall_unlimited": 0.42,
+        "reachable": 1.0,
+        "window_recall_top4_families": 0.4025,
+        "generated_but_outside_top5": 7,
+        "never_generated": 232,
+        "unreachable": 0,
+        "beam_pruned": 232,
+        "mean_candidates": 20.0,
+        "mean_families": 19.7875,
+        "latency_p50_ms": 15.495749888941646,
+        "latency_p95_ms": 38.57550000539044,
+        "oov_rate": 0.0,
+        "reading_coverage": 1.0,
+        "word_coverage": null
+      }
+    },
+    "span16": {
+      "coverage_dev": {
+        "items": 300,
+        "recall": {
+          "@1": 0.44,
+          "@3": 0.6533333333333333,
+          "@5": 0.7233333333333334,
+          "@10": 0.7666666666666667
+        },
+        "recall_unlimited": 0.8333333333333334,
+        "reachable": 1.0,
+        "window_recall_top4_families": 0.6966666666666667,
+        "generated_but_outside_top5": 33,
+        "never_generated": 50,
+        "unreachable": 0,
+        "beam_pruned": 50,
+        "mean_candidates": 20.0,
+        "mean_families": 19.956666666666667,
+        "latency_p50_ms": 40.40824994444847,
+        "latency_p95_ms": 89.1169899958186,
+        "oov_rate": 0.0,
+        "reading_coverage": 1.0,
+        "word_coverage": 0.24487179487179486
+      },
+      "gov_dev": {
+        "items": 400,
+        "recall": {
+          "@1": 0.6825,
+          "@3": 0.735,
+          "@5": 0.7575,
+          "@10": 0.775
+        },
+        "recall_unlimited": 0.8,
+        "reachable": 1.0,
+        "window_recall_top4_families": 0.745,
+        "generated_but_outside_top5": 17,
+        "never_generated": 80,
+        "unreachable": 0,
+        "beam_pruned": 80,
+        "mean_candidates": 20.0,
+        "mean_families": 19.8,
+        "latency_p50_ms": 29.14350014179945,
+        "latency_p95_ms": 74.68768015969542,
+        "oov_rate": 0.0,
+        "reading_coverage": 1.0,
+        "word_coverage": null
+      }
+    },
+    "span32": {
+      "coverage_dev": {
+        "items": 300,
+        "recall": {
+          "@1": 0.4666666666666667,
+          "@3": 0.6866666666666666,
+          "@5": 0.77,
+          "@10": 0.8233333333333334
+        },
+        "recall_unlimited": 0.9033333333333333,
+        "reachable": 1.0,
+        "window_recall_top4_families": 0.7333333333333333,
+        "generated_but_outside_top5": 40,
+        "never_generated": 29,
+        "unreachable": 0,
+        "beam_pruned": 29,
+        "mean_candidates": 20.0,
+        "mean_families": 19.956666666666667,
+        "latency_p50_ms": 59.98539994470775,
+        "latency_p95_ms": 134.77402514545253,
+        "oov_rate": 0.0,
+        "reading_coverage": 1.0,
+        "word_coverage": 0.24487179487179486
+      },
+      "gov_dev": {
+        "items": 400,
+        "recall": {
+          "@1": 0.76,
+          "@3": 0.84,
+          "@5": 0.8575,
+          "@10": 0.885
+        },
+        "recall_unlimited": 0.915,
+        "reachable": 1.0,
+        "window_recall_top4_families": 0.85,
+        "generated_but_outside_top5": 23,
+        "never_generated": 34,
+        "unreachable": 0,
+        "beam_pruned": 34,
+        "mean_candidates": 20.0,
+        "mean_families": 19.7925,
+        "latency_p50_ms": 48.04805002640933,
+        "latency_p95_ms": 120.93860491877403,
+        "oov_rate": 0.0,
+        "reading_coverage": 1.0,
+        "word_coverage": null
+      }
+    },
+    "lexslots16": {
+      "coverage_dev": {
+        "items": 300,
+        "recall": {
+          "@1": 0.47,
+          "@3": 0.6966666666666667,
+          "@5": 0.78,
+          "@10": 0.8333333333333334
+        },
+        "recall_unlimited": 0.9166666666666666,
+        "reachable": 1.0,
+        "window_recall_top4_families": 0.7433333333333333,
+        "generated_but_outside_top5": 41,
+        "never_generated": 25,
+        "unreachable": 0,
+        "beam_pruned": 25,
+        "mean_candidates": 20.0,
+        "mean_families": 19.956666666666667,
+        "latency_p50_ms": 105.60279991477728,
+        "latency_p95_ms": 265.80908504547557,
+        "oov_rate": 0.0,
+        "reading_coverage": 1.0,
+        "word_coverage": 0.24487179487179486
+      },
+      "gov_dev": {
+        "items": 400,
+        "recall": {
+          "@1": 0.8025,
+          "@3": 0.8875,
+          "@5": 0.915,
+          "@10": 0.945
+        },
+        "recall_unlimited": 0.9775,
+        "reachable": 1.0,
+        "window_recall_top4_families": 0.9075,
+        "generated_but_outside_top5": 25,
+        "never_generated": 9,
+        "unreachable": 0,
+        "beam_pruned": 9,
+        "mean_candidates": 20.0,
+        "mean_families": 19.7925,
+        "latency_p50_ms": 88.50740001071244,
+        "latency_p95_ms": 235.0057150120843,
+        "oov_rate": 0.0,
+        "reading_coverage": 1.0,
+        "word_coverage": null
+      }
+    },
+    "lexslots32": {
+      "coverage_dev": {
+        "items": 300,
+        "recall": {
+          "@1": 0.47,
+          "@3": 0.6966666666666667,
+          "@5": 0.78,
+          "@10": 0.8333333333333334
+        },
+        "recall_unlimited": 0.9166666666666666,
+        "reachable": 1.0,
+        "window_recall_top4_families": 0.7433333333333333,
+        "generated_but_outside_top5": 41,
+        "never_generated": 25,
+        "unreachable": 0,
+        "beam_pruned": 25,
+        "mean_candidates": 20.0,
+        "mean_families": 19.956666666666667,
+        "latency_p50_ms": 131.76224997732788,
+        "latency_p95_ms": 349.5453950017691,
+        "oov_rate": 0.0,
+        "reading_coverage": 1.0,
+        "word_coverage": 0.24487179487179486
+      },
+      "gov_dev": {
+        "items": 400,
+        "recall": {
+          "@1": 0.8025,
+          "@3": 0.8875,
+          "@5": 0.915,
+          "@10": 0.945
+        },
+        "recall_unlimited": 0.9775,
+        "reachable": 1.0,
+        "window_recall_top4_families": 0.9075,
+        "generated_but_outside_top5": 25,
+        "never_generated": 9,
+        "unreachable": 0,
+        "beam_pruned": 9,
+        "mean_candidates": 20.0,
+        "mean_families": 19.7925,
+        "latency_p50_ms": 111.22215003706515,
+        "latency_p95_ms": 316.7619347921572,
+        "oov_rate": 0.0,
+        "reading_coverage": 1.0,
+        "word_coverage": null
+      }
+    },
+    "tonevar": {
+      "coverage_dev": {
+        "items": 300,
+        "recall": {
+          "@1": 0.45666666666666667,
+          "@3": 0.68,
+          "@5": 0.7566666666666667,
+          "@10": 0.81
+        },
+        "recall_unlimited": 0.9066666666666666,
+        "reachable": 1.0,
+        "window_recall_top4_families": 0.7133333333333334,
+        "generated_but_outside_top5": 45,
+        "never_generated": 28,
+        "unreachable": 0,
+        "beam_pruned": 28,
+        "mean_candidates": 20.0,
+        "mean_families": 19.956666666666667,
+        "latency_p50_ms": 85.26914997491986,
+        "latency_p95_ms": 216.68886012630537,
+        "oov_rate": 0.0,
+        "reading_coverage": 1.0,
+        "word_coverage": 0.24487179487179486
+      },
+      "gov_dev": {
+        "items": 400,
+        "recall": {
+          "@1": 0.8025,
+          "@3": 0.8825,
+          "@5": 0.9125,
+          "@10": 0.945
+        },
+        "recall_unlimited": 0.9775,
+        "reachable": 1.0,
+        "window_recall_top4_families": 0.9075,
+        "generated_but_outside_top5": 26,
+        "never_generated": 9,
+        "unreachable": 0,
+        "beam_pruned": 9,
+        "mean_candidates": 20.0,
+        "mean_families": 19.79,
+        "latency_p50_ms": 65.54035004228354,
+        "latency_p95_ms": 180.79328497406095,
+        "oov_rate": 0.0,
+        "reading_coverage": 1.0,
+        "word_coverage": null
+      }
+    },
+    "prune_lexical": {
+      "coverage_dev": {
+        "items": 300,
+        "recall": {
+          "@1": 0.23666666666666666,
+          "@3": 0.33666666666666667,
+          "@5": 0.37,
+          "@10": 0.38666666666666666
+        },
+        "recall_unlimited": 0.4033333333333333,
+        "reachable": 1.0,
+        "window_recall_top4_families": 0.35,
+        "generated_but_outside_top5": 10,
+        "never_generated": 179,
+        "unreachable": 0,
+        "beam_pruned": 179,
+        "mean_candidates": 20.0,
+        "mean_families": 20.0,
+        "latency_p50_ms": 72.8817000053823,
+        "latency_p95_ms": 189.95307491859424,
+        "oov_rate": 0.0,
+        "reading_coverage": 1.0,
+        "word_coverage": 0.24487179487179486
+      },
+      "gov_dev": {
+        "items": 400,
+        "recall": {
+          "@1": 0.2975,
+          "@3": 0.315,
+          "@5": 0.3175,
+          "@10": 0.3225
+        },
+        "recall_unlimited": 0.3275,
+        "reachable": 1.0,
+        "window_recall_top4_families": 0.3175,
+        "generated_but_outside_top5": 4,
+        "never_generated": 269,
+        "unreachable": 0,
+        "beam_pruned": 269,
+        "mean_candidates": 20.0,
+        "mean_families": 19.7875,
+        "latency_p50_ms": 62.93935002759099,
+        "latency_p95_ms": 170.67959001287818,
+        "oov_rate": 0.0,
+        "reading_coverage": 1.0,
+        "word_coverage": null
+      }
+    },
+    "derived_c50_pmi3_w10": {
+      "coverage_dev": {
+        "items": 300,
+        "recall": {
+          "@1": 0.4866666666666667,
+          "@3": 0.6933333333333334,
+          "@5": 0.7733333333333333,
+          "@10": 0.8266666666666667
+        },
+        "recall_unlimited": 0.9133333333333333,
+        "reachable": 1.0,
+        "window_recall_top4_families": 0.74,
+        "generated_but_outside_top5": 42,
+        "never_generated": 26,
+        "unreachable": 0,
+        "beam_pruned": 26,
+        "mean_candidates": 20.0,
+        "mean_families": 19.94333333333333,
+        "latency_p50_ms": 65.64470008015633,
+        "latency_p95_ms": 203.43499497976154,
+        "oov_rate": 0.0,
+        "reading_coverage": 1.0,
+        "word_coverage": 0.5435897435897435
+      },
+      "gov_dev": {
+        "items": 400,
+        "recall": {
+          "@1": 0.8125,
+          "@3": 0.9025,
+          "@5": 0.925,
+          "@10": 0.9525
+        },
+        "recall_unlimited": 0.9875,
+        "reachable": 1.0,
+        "window_recall_top4_families": 0.925,
+        "generated_but_outside_top5": 25,
+        "never_generated": 5,
+        "unreachable": 0,
+        "beam_pruned": 5,
+        "mean_candidates": 20.0,
+        "mean_families": 19.82,
+        "latency_p50_ms": 72.60185002814978,
+        "latency_p95_ms": 211.34705517906684,
+        "oov_rate": 0.0,
+        "reading_coverage": 1.0,
+        "word_coverage": null
+      }
+    },
+    "derived_c20_pmi3_w10": {
+      "coverage_dev": {
+        "items": 300,
+        "recall": {
+          "@1": 0.49333333333333335,
+          "@3": 0.6933333333333334,
+          "@5": 0.7666666666666667,
+          "@10": 0.82
+        },
+        "recall_unlimited": 0.9133333333333333,
+        "reachable": 1.0,
+        "window_recall_top4_families": 0.74,
+        "generated_but_outside_top5": 44,
+        "never_generated": 26,
+        "unreachable": 0,
+        "beam_pruned": 26,
+        "mean_candidates": 20.0,
+        "mean_families": 19.953333333333333,
+        "latency_p50_ms": 73.34634999278933,
+        "latency_p95_ms": 224.02108511887494,
+        "oov_rate": 0.0,
+        "reading_coverage": 1.0,
+        "word_coverage": 0.6192307692307693
+      },
+      "gov_dev": {
+        "items": 400,
+        "recall": {
+          "@1": 0.8375,
+          "@3": 0.9075,
+          "@5": 0.9275,
+          "@10": 0.95
+        },
+        "recall_unlimited": 0.9875,
+        "reachable": 1.0,
+        "window_recall_top4_families": 0.9275,
+        "generated_but_outside_top5": 24,
+        "never_generated": 5,
+        "unreachable": 0,
+        "beam_pruned": 5,
+        "mean_candidates": 20.0,
+        "mean_families": 19.8275,
+        "latency_p50_ms": 67.37080006860197,
+        "latency_p95_ms": 198.59402986476175,
+        "oov_rate": 0.0,
+        "reading_coverage": 1.0,
+        "word_coverage": null
+      }
+    },
+    "derived_c20_pmi5_w10": {
+      "coverage_dev": {
+        "items": 300,
+        "recall": {
+          "@1": 0.4866666666666667,
+          "@3": 0.7066666666666667,
+          "@5": 0.7766666666666666,
+          "@10": 0.8433333333333334
+        },
+        "recall_unlimited": 0.93,
+        "reachable": 1.0,
+        "window_recall_top4_families": 0.7533333333333333,
+        "generated_but_outside_top5": 46,
+        "never_generated": 21,
+        "unreachable": 0,
+        "beam_pruned": 21,
+        "mean_candidates": 20.0,
+        "mean_families": 19.953333333333333,
+        "latency_p50_ms": 71.69474998954684,
+        "latency_p95_ms": 198.78312007058415,
+        "oov_rate": 0.0,
+        "reading_coverage": 1.0,
+        "word_coverage": 0.5166666666666667
+      },
+      "gov_dev": {
+        "items": 400,
+        "recall": {
+          "@1": 0.83,
+          "@3": 0.8975,
+          "@5": 0.9275,
+          "@10": 0.945
+        },
+        "recall_unlimited": 0.985,
+        "reachable": 1.0,
+        "window_recall_top4_families": 0.9175,
+        "generated_but_outside_top5": 23,
+        "never_generated": 6,
+        "unreachable": 0,
+        "beam_pruned": 6,
+        "mean_candidates": 20.0,
+        "mean_families": 19.82,
+        "latency_p50_ms": 67.73309991694987,
+        "latency_p95_ms": 196.57480501336974,
+        "oov_rate": 0.0,
+        "reading_coverage": 1.0,
+        "word_coverage": null
+      }
+    },
+    "derived_c50_pmi3_w3": {
+      "coverage_dev": {
+        "items": 300,
+        "recall": {
+          "@1": 0.49,
+          "@3": 0.6966666666666667,
+          "@5": 0.7733333333333333,
+          "@10": 0.8266666666666667
+        },
+        "recall_unlimited": 0.92,
+        "reachable": 1.0,
+        "window_recall_top4_families": 0.7466666666666667,
+        "generated_but_outside_top5": 44,
+        "never_generated": 24,
+        "unreachable": 0,
+        "beam_pruned": 24,
+        "mean_candidates": 20.0,
+        "mean_families": 19.94333333333333,
+        "latency_p50_ms": 77.76489993557334,
+        "latency_p95_ms": 217.79792982852092,
+        "oov_rate": 0.0,
+        "reading_coverage": 1.0,
+        "word_coverage": 0.5435897435897435
+      },
+      "gov_dev": {
+        "items": 400,
+        "recall": {
+          "@1": 0.8175,
+          "@3": 0.9025,
+          "@5": 0.9275,
+          "@10": 0.9575
+        },
+        "recall_unlimited": 0.9875,
+        "reachable": 1.0,
+        "window_recall_top4_families": 0.925,
+        "generated_but_outside_top5": 24,
+        "never_generated": 5,
+        "unreachable": 0,
+        "beam_pruned": 5,
+        "mean_candidates": 20.0,
+        "mean_families": 19.8175,
+        "latency_p50_ms": 67.0089500490576,
+        "latency_p95_ms": 189.31656503118572,
+        "oov_rate": 0.0,
+        "reading_coverage": 1.0,
+        "word_coverage": null
+      }
+    }
+  },
+  "oracle_lexicon_diagnostic": {
+    "note": "upper bound only: Coverage-DEV gold words added to the lexicon; not an adoptable configuration",
+    "words_added": 515,
+    "coverage_dev": {
+      "items": 300,
+      "recall": {
+        "@1": 0.7166666666666667,
+        "@3": 0.8966666666666666,
+        "@5": 0.9433333333333334,
+        "@10": 0.9666666666666667
+      },
+      "recall_unlimited": 0.9933333333333333,
+      "reachable": 1.0,
+      "window_recall_top4_families": 0.9266666666666666,
+      "generated_but_outside_top5": 15,
+      "never_generated": 2,
+      "unreachable": 0,
+      "beam_pruned": 2,
+      "mean_candidates": 20.0,
+      "mean_families": 19.963333333333335,
+      "latency_p50_ms": 72.6340499240905,
+      "latency_p95_ms": 196.6263999929652,
+      "oov_rate": 0.0,
+      "reading_coverage": 1.0,
+      "word_coverage": 0.24487179487179486
+    }
+  },
+  "taxonomy_v0": {
+    "coverage_dev": {
+      "cases_considered": 300,
+      "missing_or_outside_top5_or_window": 77,
+      "by_category": {
+        "lexical_missing": {
+          "count": 32,
+          "share": 0.416
+        },
+        "pronunciation_variant_missing": {
+          "count": 0,
+          "share": 0.0
+        },
+        "segmentation_missing": {
+          "count": 0,
+          "share": 0.0
+        },
+        "beam_pruned": {
+          "count": 11,
+          "share": 0.143
+        },
+        "score_pruned": {
+          "count": 17,
+          "share": 0.221
+        },
+        "proper_noun": {
+          "count": 4,
+          "share": 0.052
+        },
+        "colloquial_word": {
+          "count": 2,
+          "share": 0.026
+        },
+        "orthographic_variant": {
+          "count": 0,
+          "share": 0.0
+        },
+        "character_reading_missing": {
+          "count": 0,
+          "share": 0.0
+        },
+        "candidate_family_issue": {
+          "count": 11,
+          "share": 0.143
+        },
+        "other": {
+          "count": 0,
+          "share": 0.0
+        }
+      },
+      "by_stage": {
+        "generated_ranked_low": 27,
+        "beam_pruned": 25,
+        "outside_output": 14,
+        "top5": 11
+      },
+      "category_x_stage": {
+        "beam_pruned|beam_pruned": 11,
+        "candidate_family_issue|top5": 11,
+        "colloquial_word|generated_ranked_low": 1,
+        "colloquial_word|outside_output": 1,
+        "lexical_missing|beam_pruned": 12,
+        "lexical_missing|generated_ranked_low": 13,
+        "lexical_missing|outside_output": 7,
+        "proper_noun|beam_pruned": 2,
+        "proper_noun|generated_ranked_low": 2,
+        "score_pruned|generated_ranked_low": 11,
+        "score_pruned|outside_output": 6
+      },
+      "examples": {
+        "score_pruned": [
+          {
+            "id": "coverage:cv03",
+            "gold": "門口有人在按電鈴",
+            "v0_top1": "門口有人在案電齡",
+            "stage": "outside_output",
+            "detail": "single-character choice at position 5 (按)"
+          },
+          {
+            "id": "coverage:cv19",
+            "gold": "你幫我看一下這個字怎麼唸",
+            "v0_top1": "你幫我看一下這個字怎麼念",
+            "stage": "generated_ranked_low",
+            "detail": "single-character choice at position 11 (唸)"
+          },
+          {
+            "id": "coverage:cv21",
+            "gold": "小心地板很滑",
+            "v0_top1": "小心地板很華",
+            "stage": "generated_ranked_low",
+            "detail": "single-character choice at position 5 (滑)"
+          },
+          {
+            "id": "coverage:sc01",
+            "gold": "下堂課在三樓教室",
+            "v0_top1": "下塘可在三樓教是",
+            "stage": "generated_ranked_low",
+            "detail": "single-character choice at position 1 (堂)"
+          }
+        ],
+        "candidate_family_issue": [
+          {
+            "id": "coverage:cv06",
+            "gold": "你的手機在響",
+            "v0_top1": "你的手機在想",
+            "stage": "top5",
+            "detail": "gold in top-5 surfaces but not in top-4 families"
+          },
+          {
+            "id": "coverage:cv10",
+            "gold": "我們等等一起去散步",
+            "v0_top1": "我們等等一起去三不",
+            "stage": "top5",
+            "detail": "gold in top-5 surfaces but not in top-4 families"
+          },
+          {
+            "id": "coverage:sc04",
+            "gold": "助教會在週三批改作業",
+            "v0_top1": "駐教會在週三批改作業",
+            "stage": "top5",
+            "detail": "gold in top-5 surfaces but not in top-4 families"
+          },
+          {
+            "id": "coverage:wk16",
+            "gold": "我被調到行銷部",
+            "v0_top1": "我被釣到行銷不",
+            "stage": "top5",
+            "detail": "gold in top-5 surfaces but not in top-4 families"
+          }
+        ],
+        "beam_pruned": [
+          {
+            "id": "coverage:cv22",
+            "gold": "我去倒一下垃圾",
+            "v0_top1": "我去到一下垃圾",
+            "stage": "beam_pruned",
+            "detail": "single-character choice at position 2 (倒)"
+          },
+          {
+            "id": "coverage:tc25",
+            "gold": "我把訊息設成靜音",
+            "v0_top1": "我把訊息色呈境因",
+            "stage": "beam_pruned",
+            "detail": "single-character choice at position 4 (設)"
+          },
+          {
+            "id": "coverage:tr20",
+            "gold": "下一站是終點站",
+            "v0_top1": "下一站式中點站",
+            "stage": "beam_pruned",
+            "detail": "single-character choice at position 3 (是)"
+          },
+          {
+            "id": "coverage:tr24",
+            "gold": "我們搭渡輪去小琉球",
+            "v0_top1": "我們答度輪去小琉球",
+            "stage": "beam_pruned",
+            "detail": "single-character choice at position 2 (搭)"
+          }
+        ],
+        "lexical_missing": [
+          {
+            "id": "coverage:sc05",
+            "gold": "圖書館的自習室客滿了",
+            "v0_top1": "圖書館的自習是可滿了",
+            "stage": "beam_pruned",
+            "detail": "自習室 not in lexicon"
+          },
+          {
+            "id": "coverage:sc18",
+            "gold": "畢業專題的口試在下午",
+            "v0_top1": "畢業專題的口是在下午",
+            "stage": "generated_ranked_low",
+            "detail": "口試 not in lexicon"
+          },
+          {
+            "id": "coverage:sc24",
+            "gold": "我報名了英檢中級",
+            "v0_top1": "我報名了應檢中及",
+            "stage": "generated_ranked_low",
+            "detail": "英檢 not in lexicon"
+          },
+          {
+            "id": "coverage:wk02",
+            "gold": "這份企劃書明天要交",
+            "v0_top1": "這份器畫書明天要交",
+            "stage": "outside_output",
+            "detail": "企劃書 not in lexicon"
+          }
+        ],
+        "proper_noun": [
+          {
+            "id": "coverage:nm03",
+            "gold": "嘉義雞肉飯是我的最愛",
+            "v0_top1": "家疫機肉飯是我的最愛",
+            "stage": "beam_pruned",
+            "detail": "嘉義 (in lexicon: False)"
+          },
+          {
+            "id": "coverage:nm07",
+            "gold": "我們去清境農場看綿羊",
+            "v0_top1": "我們去清淨農場看綿羊",
+            "stage": "generated_ranked_low",
+            "detail": "清境 (in lexicon: False)"
+          },
+          {
+            "id": "coverage:nm24",
+            "gold": "我們去野柳看女王頭",
+            "v0_top1": "我們去也柳看女王投",
+            "stage": "generated_ranked_low",
+            "detail": "野柳 (in lexicon: False)"
+          },
+          {
+            "id": "coverage:nm25",
+            "gold": "周杰倫的演唱會很難搶票",
+            "v0_top1": "調節論的演唱會很難強票",
+            "stage": "beam_pruned",
+            "detail": "周杰倫 (in lexicon: False)"
+          }
+        ],
+        "colloquial_word": [
+          {
+            "id": "coverage:ct02",
+            "gold": "你在幹嘛",
+            "v0_top1": "你在幹麻",
+            "stage": "outside_output",
+            "detail": "幹嘛 (in lexicon: False)"
+          },
+          {
+            "id": "coverage:ct15",
+            "gold": "這家蠻好吃的",
+            "v0_top1": "這家鰻好吃的",
+            "stage": "generated_ranked_low",
+            "detail": "蠻 (in lexicon: True)"
+          }
+        ]
+      }
+    },
+    "gov_dev": {
+      "cases_considered": 400,
+      "missing_or_outside_top5_or_window": 37,
+      "by_category": {
+        "lexical_missing": {
+          "count": 0,
+          "share": 0.0
+        },
+        "pronunciation_variant_missing": {
+          "count": 0,
+          "share": 0.0
+        },
+        "segmentation_missing": {
+          "count": 0,
+          "share": 0.0
+        },
+        "beam_pruned": {
+          "count": 9,
+          "share": 0.243
+        },
+        "score_pruned": {
+          "count": 25,
+          "share": 0.676
+        },
+        "proper_noun": {
+          "count": 0,
+          "share": 0.0
+        },
+        "colloquial_word": {
+          "count": 0,
+          "share": 0.0
+        },
+        "orthographic_variant": {
+          "count": 0,
+          "share": 0.0
+        },
+        "character_reading_missing": {
+          "count": 0,
+          "share": 0.0
+        },
+        "candidate_family_issue": {
+          "count": 3,
+          "share": 0.081
+        },
+        "other": {
+          "count": 0,
+          "share": 0.0
+        }
+      },
+      "by_stage": {
+        "generated_ranked_low": 16,
+        "outside_output": 9,
+        "beam_pruned": 9,
+        "top5": 3
+      },
+      "category_x_stage": {
+        "beam_pruned|beam_pruned": 9,
+        "candidate_family_issue|top5": 3,
+        "score_pruned|generated_ranked_low": 16,
+        "score_pruned|outside_output": 9
+      },
+      "examples": {
+        "score_pruned": [
+          {
+            "id": "moj_law_zh:021ad412da52",
+            "gold": "擬及執行事項",
+            "v0_top1": "你及執行事項",
+            "stage": "generated_ranked_low",
+            "detail": "single-character choice at position 0"
+          },
+          {
+            "id": "moj_law_zh:024d0e126df2",
+            "gold": "但於辦理卸",
+            "v0_top1": "但於辦理解",
+            "stage": "outside_output",
+            "detail": "single-character choice at position 4"
+          },
+          {
+            "id": "moj_law_zh:031f173aa15d",
+            "gold": "至第十項",
+            "v0_top1": "至地時向",
+            "stage": "outside_output",
+            "detail": "single-character choice at position 1"
+          },
+          {
+            "id": "moj_law_zh:052663e5a11a",
+            "gold": "私設娼館",
+            "v0_top1": "私設昌管",
+            "stage": "outside_output",
+            "detail": "single-character choice at position 2"
+          }
+        ],
+        "beam_pruned": [
+          {
+            "id": "moj_law_zh:02aef5c853a6",
+            "gold": "十三則至十八則旱田",
+            "v0_top1": "十三責至十八責和田",
+            "stage": "beam_pruned",
+            "detail": "single-character choice at position 2"
+          },
+          {
+            "id": "dgt_45362:07f44b60eca3",
+            "gold": "國家自定預期貢獻",
+            "v0_top1": "國家自訂預期共見",
+            "stage": "beam_pruned",
+            "detail": "single-character choice at position 3"
+          },
+          {
+            "id": "dgt_22314:0f50847b9fc3",
+            "gold": "防焊劑層",
+            "v0_top1": "肪含技層",
+            "stage": "beam_pruned",
+            "detail": "single-character choice at position 0"
+          },
+          {
+            "id": "dgt_9807:123e6c90d369",
+            "gold": "德富黴素",
+            "v0_top1": "德副沒數",
+            "stage": "beam_pruned",
+            "detail": "single-character choice at position 1"
+          }
+        ],
+        "candidate_family_issue": [
+          {
+            "id": "dgt_11838:1579f88bc5d9",
+            "gold": "隔震建築物",
+            "v0_top1": "隔陳建築物",
+            "stage": "top5",
+            "detail": "gold in top-5 surfaces but not in top-4 families"
+          },
+          {
+            "id": "dgt_11838:2d6c3598d64b",
+            "gold": "如刑事警察局",
+            "v0_top1": "如行事警察局",
+            "stage": "top5",
+            "detail": "gold in top-5 surfaces but not in top-4 families"
+          },
+          {
+            "id": "dgt_7505:084dff9124ae",
+            "gold": "示範如何運用",
+            "v0_top1": "是飯如何運用",
+            "stage": "top5",
+            "detail": "gold in top-5 surfaces but not in top-4 families"
+          }
+        ]
+      }
+    }
+  },
+  "timing_breakdown_v0": {
+    "lexicon_lookup": 0.009,
+    "lm_scoring": 0.637,
+    "beam_sort_prune": 0.032,
+    "kbest_finalize": 0.009,
+    "candidate_family": 0.001,
+    "other_lattice_overhead": 0.313,
+    "mean_total_ms_instrumented": 88.43
+  },
+  "derived_lexicon": {
+    "derived_c50_pmi3_w10": {
+      "stats": {
+        "bigram_words": 8032,
+        "trigram_words": 10060,
+        "entries": 26637,
+        "ambiguous_words": 6268,
+        "skipped_too_many_readings": 1731
+      },
+      "lexicon_size": 43396
+    },
+    "derived_c20_pmi3_w10": {
+      "stats": {
+        "bigram_words": 13546,
+        "trigram_words": 26219,
+        "entries": 58899,
+        "ambiguous_words": 14104,
+        "skipped_too_many_readings": 4108
+      },
+      "lexicon_size": 75658
+    },
+    "derived_c20_pmi5_w10": {
+      "stats": {
+        "bigram_words": 7258,
+        "trigram_words": 13315,
+        "entries": 31015,
+        "ambiguous_words": 7616,
+        "skipped_too_many_readings": 1846
+      },
+      "lexicon_size": 47774
+    },
+    "derived_c50_pmi3_w3": {
+      "stats": {
+        "bigram_words": 8032,
+        "trigram_words": 10060,
+        "entries": 26637,
+        "ambiguous_words": 6268,
+        "skipped_too_many_readings": 1731
+      },
+      "lexicon_size": 43396
+    }
+  },
+  "teacher_observation": {
+    "coverage_dev": {
+      "v0": {
+        "decoder_order_top1": 0.47,
+        "fine_tuned_laya_top1": 0.6933
+      },
+      "derived_c20_pmi5_w10": {
+        "decoder_order_top1": 0.4867,
+        "fine_tuned_laya_top1": 0.71
+      },
+      "paired_decoder_order_top1": {
+        "fixed": 9,
+        "broken": 4,
+        "mcnemar_p": 0.2668
+      },
+      "paired_fine_tuned_laya_top1": {
+        "fixed": 12,
+        "broken": 7,
+        "mcnemar_p": 0.3593
+      }
+    },
+    "gov_dev": {
+      "v0": {
+        "decoder_order_top1": 0.8025,
+        "fine_tuned_laya_top1": 0.86
+      },
+      "derived_c20_pmi5_w10": {
+        "decoder_order_top1": 0.83,
+        "fine_tuned_laya_top1": 0.86
+      },
+      "paired_decoder_order_top1": {
+        "fixed": 18,
+        "broken": 7,
+        "mcnemar_p": 0.0433
+      },
+      "paired_fine_tuned_laya_top1": {
+        "fixed": 12,
+        "broken": 12,
+        "mcnemar_p": 1.0
+      }
+    }
+  },
+  "raw_files": [
+    "benchmarks/results/coverage_v1_raw.json",
+    "benchmarks/results/coverage_v1_derived.json",
+    "benchmarks/results/coverage_v1_teacher.json"
+  ]
+}

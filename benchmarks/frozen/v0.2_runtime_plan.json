@@ -1,0 +1,38 @@
+{
+  "name": "ZaoSeq Bopomofo v0.2 runtime closure plan",
+  "frozen_at": "2026-09-25",
+  "written_before": "any runtime-closure measurement",
+  "scope": "Select and freeze the production LM cache capacity for the sealed-PASS v0.2 final system and record its runtime profile. Nothing semantic changes: candidates, scores and teacher picks are fixed by benchmarks/frozen/V0.2_SEMANTIC.json and the cache is output-equivalent.",
+  "references": {
+    "semantic_freeze": "benchmarks/frozen/V0.2_SEMANTIC.json",
+    "sealed_test": "benchmarks/frozen/V0.2_SEALED.json",
+    "protocol_and_rule": "benchmarks/frozen/v0.2_round3_addendum.json (cache_policy and quiet_latency, unchanged)"
+  },
+  "system": "round3_winner = S5_tatoeba_common_voice exactly as locked in V0.2_SEMANTIC.json",
+  "protocol": "unchanged from the Round 3 addendum: Coverage-DEV v1.1 (300) then GOV-DEV (400) in fixed order; 20 warm-up cases; 5 repetitions; one fresh process per run; decoder-only for every capacity candidate (disabled, bounded_8mb 22000, bounded_16mb 44000, bounded_32mb 88000, unbounded_reference); teacher-only and end-to-end (frozen Laya K=4) at the selected capacity",
+  "selection_rule": "the addendum rule verbatim: only bounded capacities are eligible; median over repetitions of per-repetition decoder-only p50 / p95 / p99; acceptable if p50 <= 1.05 * best_p50, p95 <= 1.05 * best_p95, p99 <= 1.10 * best_p99; choose the smallest acceptable capacity; the result is accepted whatever it is",
+  "environment_preconditions": {
+    "E1_power_plan": "Windows power plan is High performance / Ultimate Performance (not Balanced / Power saver)",
+    "E2_no_interactive_load": "none of these processes is running: ChatGPT, codex*, obs*, chrome, msedge (browser), Discord, ms-teams / Teams, LINE, WINWORD, Taskmgr, steam; the desktop app hosting the measuring session is allowed",
+    "E3_cpu_stability": "40 timed runs of a fixed pure-Python workload: max / median <= 1.15 and coefficient of variation <= 0.05",
+    "E4_idle_cpu": "system CPU utilization averaged over 10 s (before the probe) <= 5%",
+    "E5_idle_gpu": "GPU utilization <= 5%",
+    "when": "checked immediately before the benchmark; E1-E3 checked again immediately after it"
+  },
+  "measurement_validity": {
+    "V1_output_equivalence": "every capacity gives the same output signature (candidate texts and scores on all 700 cases)",
+    "V2_decoder_repetition_spread": "for every capacity, max / min over the 5 per-repetition p50 values <= 1.20 and the same for p95",
+    "V3_teacher_repetition_spread": "at the selected capacity, max / min of the per-repetition teacher-only p50 <= 1.20 and of the end-to-end p50 <= 1.20",
+    "V4_environment_after": "E1, E2 and E3 still hold after the benchmark"
+  },
+  "decision": {
+    "RUNTIME_READY": "all preconditions and validity checks hold; the rule's capacity is frozen in benchmarks/frozen/V0.2_RUNTIME.json",
+    "BLOCKER": "a precondition fails before the benchmark starts; nothing is measured or selected",
+    "MEASUREMENT_INVALID": "a validity check fails; the run is kept as evidence, no capacity is frozen, and a new run needs a quiet machine"
+  },
+  "outputs": {
+    "results": "benchmarks/results/v0.2_runtime_cache_<tag>.json (never overwritten)",
+    "freeze": "benchmarks/frozen/V0.2_RUNTIME.json: production cache capacity, runtime config, environment, latency and memory, output-equivalence evidence, semantic and sealed references"
+  },
+  "not_claimed": "latency on other machines; the numbers describe this machine under the recorded environment"
+}

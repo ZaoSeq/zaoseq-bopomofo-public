@@ -1,4 +1,4 @@
-造序注音 ZaoSeq Bopomofo — public core v0.1.0
+造序注音 ZaoSeq Bopomofo — public core
 Copyright 2026 ZaoSeq Technologies (造序科技，籌備中)
 
 The source code in this repository (src/, tests/) is licensed under the Apache License, Version 2.0.
@@ -15,7 +15,19 @@ Data in data/ and benchmarks/ is NOT covered by the Apache License unless stated
   Manifests and statistics derived from Taiwan government open datasets, each under the license recorded
   for that source in data/sources.json and data/SOURCES.md (Open Government Data License, version 1.0).
 
-- data/builtin/, benchmarks/ (hand-written evaluation sets and results)
+- data/daily/
+  Source audit records, manifests and statistics for daily-language corpora. No third-party corpus text is included.
+  Tatoeba (https://tatoeba.org): CC BY 2.0 FR; data/daily/attribution/ lists the authors that must be credited.
+  Mozilla Common Voice Scripted Speech 27.0 - Chinese (Taiwan), obtained from Mozilla Data Collective
+  (https://mozilladatacollective.com/datasets/cmu5wkw5i00c6o107jnm3t51u): CC0 1.0. Only sentence ids and sentence
+  text were used, never speaker data. The platform terms do not allow re-hosting, so no Common Voice data is included.
+  Unicode Unihan database (Unicode License v3) is used only to detect simplified characters; it is not included.
+
+- benchmarks/test/gov.jsonl, benchmarks/test_v1/gov.jsonl
+  Clauses taken from Taiwan government open datasets, under the license recorded for each source in data/sources.json
+  (Open Government Data License, version 1.0).
+
+- data/builtin/ and the other files in benchmarks/ (evaluation sets written for this project and results)
   Written by the ZaoSeq Bopomofo project and licensed under the Apache License, Version 2.0.
 
 This distribution does not contain any model weights. The production contextual ranker, its training code

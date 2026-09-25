@@ -1,0 +1,12 @@
+{
+  "train_sentences": 17903,
+  "char_tokens": 161375,
+  "char_vocabulary": 3236,
+  "char_bigrams": 55988,
+  "char_trigrams_kept": 16842,
+  "min_trigram_count": 2,
+  "sources": [
+    "mdc_common_voice_zh_tw_27_0"
+  ],
+  "production_eligible": true
+}

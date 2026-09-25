@@ -1,0 +1,53 @@
+{
+  "name": "Coverage-DEV v1.1",
+  "role": "DEV for candidate generation / decoder coverage; not a sealed test",
+  "provenance": "hand-written by the ZaoSeq Bopomofo project; not rewritten from v0.1 TEST sentences and not modelled on any decoder failure case; word segmentation and proper-noun / colloquial tags are manual",
+  "license": "Apache-2.0 (project-authored)",
+  "items": 300,
+  "characters": 2529,
+  "with_left_context": 26,
+  "by_category": {
+    "conversation": 25,
+    "homophone": 25,
+    "long_composition": 25,
+    "names_places": 25,
+    "school": 25,
+    "segmentation": 25,
+    "shopping_food": 25,
+    "social_chat": 25,
+    "technology": 25,
+    "time_schedule": 25,
+    "transport": 25,
+    "work": 25
+  },
+  "proper_noun_words": 29,
+  "colloquial_words": 12,
+  "files": {
+    "benchmarks/coverage_v1_1/source.tsv": "085bce6f4d349cf359a07ca4919ac82f5bb1ee3002f9003d2db3f01f3c6c2c8f",
+    "benchmarks/coverage_v1_1/coverage_dev.jsonl": "ee81518e977d64424ec9bf5b2cdd369346b656841eff7dc15caa97fd239c628b"
+  },
+  "leakage": {
+    "method": "char 4-gram MinHash LSH, Jaccard >= 0.6, Han-only normalized text",
+    "checked_against": [
+      "corpus splits train / dev / test",
+      "benchmarks/dev + benchmarks/sanity",
+      "v0.1 TEST-EVERYDAY and TEST-GOV (leakage check only)",
+      "Coverage-DEV itself"
+    ],
+    "index_size": 264558,
+    "external_hits": {},
+    "internal_hits": []
+  },
+  "reading_convention": "MOE: 一／不 tone sandhi, particles neutral; CNS base tone when the neutral reading is absent",
+  "parent": {
+    "version": "1.0",
+    "manifest": "benchmarks/coverage_v1/MANIFEST.json",
+    "source_sha256": "81f9d4240f15211e50c861f831beb075dcec592c6ec71c6351106dbde96ee97f"
+  },
+  "changes": [
+    "cv19：「念」與「唸」在臺灣皆為通行寫法，新增「念」為可接受答案；v1.0 會把「念」判為錯誤。其餘 299 句不變。"
+  ],
+  "changed_items": [
+    "coverage:cv19"
+  ]
+}

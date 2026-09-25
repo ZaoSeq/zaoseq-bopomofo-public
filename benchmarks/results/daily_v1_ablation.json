@@ -1,0 +1,86 @@
+{
+  "note": "diagnostic only, not a selection candidate: selected E word list (pmi) with every derived word at the median weight 10",
+  "E_pmi_flat10": {
+    "coverage_dev": {
+      "metrics": {
+        "items": 300,
+        "recall": {
+          "@1": 0.65,
+          "@3": 0.82,
+          "@5": 0.8633333333333333,
+          "@10": 0.8933333333333333
+        },
+        "recall_unlimited": 0.96,
+        "reachable": 1.0,
+        "window_recall_top4_families": 0.85,
+        "generated_but_outside_top5": 29,
+        "never_generated": 12,
+        "unreachable": 0,
+        "beam_pruned": 12,
+        "mean_candidates": 20.0,
+        "mean_families": 19.976666666666667,
+        "latency_p50_ms": 92.0283499872312,
+        "latency_p95_ms": 343.9795999671334,
+        "oov_rate": 0.0,
+        "reading_coverage": 1.0,
+        "word_coverage": 0.5653846153846154,
+        "top1": 0.65,
+        "character_accuracy": 0.941083432186635,
+        "mrr": 0.7446165204621088
+      }
+    },
+    "gov_dev": {
+      "metrics": {
+        "items": 400,
+        "recall": {
+          "@1": 0.785,
+          "@3": 0.8975,
+          "@5": 0.9175,
+          "@10": 0.94
+        },
+        "recall_unlimited": 0.9825,
+        "reachable": 1.0,
+        "window_recall_top4_families": 0.91,
+        "generated_but_outside_top5": 26,
+        "never_generated": 7,
+        "unreachable": 0,
+        "beam_pruned": 7,
+        "mean_candidates": 20.0,
+        "mean_families": 19.8325,
+        "latency_p50_ms": 86.6039500106126,
+        "latency_p95_ms": 296.56811516033474,
+        "oov_rate": 0.0,
+        "reading_coverage": 1.0,
+        "word_coverage": null,
+        "top1": 0.785,
+        "character_accuracy": 0.9395487441464453,
+        "mrr": 0.8463868329383036
+      }
+    },
+    "variant": {
+      "name": "E_pmi_flat10",
+      "daily_lm": "daily_production",
+      "daily_weight": 0.25,
+      "lexicon": "pmi_flat10"
+    },
+    "resources": {
+      "gov_lm_mb": 9.27,
+      "daily_lm_mb": 0.84,
+      "total_lm_mb": 10.11,
+      "lexicon_entries": 58111,
+      "lm_load_s": 0.194,
+      "rss_mb": 1342.0,
+      "rss_delta_mb": 10.6,
+      "extend_us": 18.352
+    }
+  },
+  "resource_snapshot_fresh_process": {
+    "rss_start_mb": 39.4,
+    "v0_load_s": 4.65,
+    "rss_after_v0_mb": 335.8,
+    "daily_lm_load_s": 0.21,
+    "rss_after_daily_lm_mb": 345.9,
+    "derived_lexicon_load_s": 3.16,
+    "rss_after_derived_lexicon_mb": 693.3
+  }
+}

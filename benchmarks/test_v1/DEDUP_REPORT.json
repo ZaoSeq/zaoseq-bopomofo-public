@@ -1,0 +1,2428 @@
+{
+ "method": "EvaluationGuard (char 4-gram MinHash-LSH, exact Jaccard >= 0.6, shared 8-gram containment) + within-TEST index",
+ "reference_sizes": {
+  "gov_train": 235019,
+  "gov_dev_split_test": 15852,
+  "gov_dev_split_old_test_documents": 10338,
+  "daily_mdc_common_voice_zh_tw_27_0": 19822,
+  "daily_oasst1_zh_prompter": 181,
+  "daily_tatoeba_cmn_hant": 38807,
+  "coverage_dev_v1.0": 300,
+  "coverage_dev_v1.1": 300,
+  "manual_dev_and_sanity_seeds": 131,
+  "v0_1_test_everyday": 264,
+  "v0_1_test_gov": 800,
+  "v0_1_typo_reference": 1583,
+  "round3_manual_sanity": 7
+ },
+ "everyday": {
+  "authored": 547,
+  "kept": 480,
+  "removed": 34,
+  "unused_spares": 33,
+  "removed_by_reference": {
+   "coverage_dev_v1.0": 9,
+   "v0_1_test_everyday": 13,
+   "daily_tatoeba_cmn_hant": 8,
+   "manual_dev_and_sanity_seeds": 1,
+   "gov_train": 2,
+   "daily_mdc_common_voice_zh_tw_27_0": 1
+  },
+  "decisions": [
+   {
+    "item": "v1-everyday:conv01",
+    "status": "removed",
+    "reference": "coverage_dev_v1.0",
+    "matched": "coverage:cv11",
+    "kind": "near_duplicate"
+   },
+   {
+    "item": "v1-everyday:conv05",
+    "status": "removed",
+    "reference": "v0_1_test_everyday",
+    "matched": "everyday:g05",
+    "kind": "shared_8gram"
+   },
+   {
+    "item": "v1-everyday:conv33",
+    "status": "unused_spare"
+   },
+   {
+    "item": "v1-everyday:conv34",
+    "status": "unused_spare"
+   },
+   {
+    "item": "v1-everyday:school06",
+    "status": "removed",
+    "reference": "v0_1_test_everyday",
+    "matched": "everyday:c04",
+    "kind": "near_duplicate"
+   },
+   {
+    "item": "v1-everyday:school07",
+    "status": "removed",
+    "reference": "v0_1_test_everyday",
+    "matched": "everyday:c15",
+    "kind": "near_duplicate"
+   },
+   {
+    "item": "v1-everyday:school33",
+    "status": "unused_spare"
+   },
+   {
+    "item": "v1-everyday:school34",
+    "status": "unused_spare"
+   },
+   {
+    "item": "v1-everyday:work08",
+    "status": "removed",
+    "reference": "v0_1_test_everyday",
+    "matched": "everyday:w01",
+    "kind": "near_duplicate"
+   },
+   {
+    "item": "v1-everyday:work32",
+    "status": "unused_spare"
+   },
+   {
+    "item": "v1-everyday:work33",
+    "status": "unused_spare"
+   },
+   {
+    "item": "v1-everyday:work34",
+    "status": "unused_spare"
+   },
+   {
+    "item": "v1-everyday:tech01",
+    "status": "removed",
+    "reference": "v0_1_test_everyday",
+    "matched": "everyday:t22",
+    "kind": "near_duplicate"
+   },
+   {
+    "item": "v1-everyday:tech14",
+    "status": "removed",
+    "reference": "v0_1_test_everyday",
+    "matched": "everyday:t14",
+    "kind": "near_duplicate"
+   },
+   {
+    "item": "v1-everyday:tech33",
+    "status": "unused_spare"
+   },
+   {
+    "item": "v1-everyday:tech34",
+    "status": "unused_spare"
+   },
+   {
+    "item": "v1-everyday:trans04",
+    "status": "removed",
+    "reference": "v0_1_test_everyday",
+    "matched": "everyday:r05",
+    "kind": "near_duplicate"
+   },
+   {
+    "item": "v1-everyday:trans19",
+    "status": "removed",
+    "reference": "coverage_dev_v1.0",
+    "matched": "coverage:tr24",
+    "kind": "near_duplicate"
+   },
+   {
+    "item": "v1-everyday:trans21",
+    "status": "removed",
+    "reference": "v0_1_test_everyday",
+    "matched": "everyday:r20",
+    "kind": "shared_8gram"
+   },
+   {
+    "item": "v1-everyday:trans34",
+    "status": "unused_spare"
+   },
+   {
+    "item": "v1-everyday:shop26",
+    "status": "removed",
+    "reference": "v0_1_test_everyday",
+    "matched": "everyday:p11",
+    "kind": "near_duplicate"
+   },
+   {
+    "item": "v1-everyday:shop27",
+    "status": "removed",
+    "reference": "coverage_dev_v1.0",
+    "matched": "coverage:fd14",
+    "kind": "near_duplicate"
+   },
+   {
+    "item": "v1-everyday:shop33",
+    "status": "unused_spare"
+   },
+   {
+    "item": "v1-everyday:shop34",
+    "status": "unused_spare"
+   },
+   {
+    "item": "v1-everyday:food05",
+    "status": "removed",
+    "reference": "v0_1_test_everyday",
+    "matched": "everyday:d16",
+    "kind": "near_duplicate"
+   },
+   {
+    "item": "v1-everyday:food06",
+    "status": "removed",
+    "reference": "coverage_dev_v1.0",
+    "matched": "coverage:fd06",
+    "kind": "near_duplicate"
+   },
+   {
+    "item": "v1-everyday:food09",
+    "status": "removed",
+    "reference": "coverage_dev_v1.0",
+    "matched": "coverage:fd07",
+    "kind": "near_duplicate"
+   },
+   {
+    "item": "v1-everyday:food34",
+    "status": "unused_spare"
+   },
+   {
+    "item": "v1-everyday:sched31",
+    "status": "unused_spare"
+   },
+   {
+    "item": "v1-everyday:sched32",
+    "status": "unused_spare"
+   },
+   {
+    "item": "v1-everyday:sched33",
+    "status": "unused_spare"
+   },
+   {
+    "item": "v1-everyday:sched34",
+    "status": "unused_spare"
+   },
+   {
+    "item": "v1-everyday:social08",
+    "status": "removed",
+    "reference": "daily_tatoeba_cmn_hant",
+    "matched": "train:13535361",
+    "kind": "near_duplicate"
+   },
+   {
+    "item": "v1-everyday:social29",
+    "status": "removed",
+    "reference": "daily_tatoeba_cmn_hant",
+    "matched": "train:769640",
+    "kind": "near_duplicate"
+   },
+   {
+    "item": "v1-everyday:social33",
+    "status": "unused_spare"
+   },
+   {
+    "item": "v1-everyday:social34",
+    "status": "unused_spare"
+   },
+   {
+    "item": "v1-everyday:family31",
+    "status": "unused_spare"
+   },
+   {
+    "item": "v1-everyday:family32",
+    "status": "unused_spare"
+   },
+   {
+    "item": "v1-everyday:family33",
+    "status": "unused_spare"
+   },
+   {
+    "item": "v1-everyday:family34",
+    "status": "unused_spare"
+   },
+   {
+    "item": "v1-everyday:place06",
+    "status": "removed",
+    "reference": "v0_1_test_everyday",
+    "matched": "everyday:n12",
+    "kind": "near_duplicate"
+   },
+   {
+    "item": "v1-everyday:place10",
+    "status": "removed",
+    "reference": "v0_1_test_everyday",
+    "matched": "everyday:n22",
+    "kind": "near_duplicate"
+   },
+   {
+    "item": "v1-everyday:place33",
+    "status": "unused_spare"
+   },
+   {
+    "item": "v1-everyday:place34",
+    "status": "unused_spare"
+   },
+   {
+    "item": "v1-everyday:name11",
+    "status": "removed",
+    "reference": "daily_tatoeba_cmn_hant",
+    "matched": "test:6047134",
+    "kind": "shared_8gram"
+   },
+   {
+    "item": "v1-everyday:name26",
+    "status": "removed",
+    "reference": "coverage_dev_v1.0",
+    "matched": "coverage:nm05",
+    "kind": "near_duplicate"
+   },
+   {
+    "item": "v1-everyday:name33",
+    "status": "unused_spare"
+   },
+   {
+    "item": "v1-everyday:name34",
+    "status": "unused_spare"
+   },
+   {
+    "item": "v1-everyday:func02",
+    "status": "removed",
+    "reference": "daily_tatoeba_cmn_hant",
+    "matched": "train:900696",
+    "kind": "near_duplicate"
+   },
+   {
+    "item": "v1-everyday:func03",
+    "status": "removed",
+    "reference": "daily_tatoeba_cmn_hant",
+    "matched": "dev:826276",
+    "kind": "near_duplicate"
+   },
+   {
+    "item": "v1-everyday:func05",
+    "status": "removed",
+    "reference": "manual_dev_and_sanity_seeds",
+    "matched": "dev:t037",
+    "kind": "near_duplicate"
+   },
+   {
+    "item": "v1-everyday:func11",
+    "status": "removed",
+    "reference": "daily_tatoeba_cmn_hant",
+    "matched": "train:842394",
+    "kind": "near_duplicate"
+   },
+   {
+    "item": "v1-everyday:func22",
+    "status": "removed",
+    "reference": "daily_tatoeba_cmn_hant",
+    "matched": "train:2345934",
+    "kind": "near_duplicate"
+   },
+   {
+    "item": "v1-everyday:func36",
+    "status": "unused_spare"
+   },
+   {
+    "item": "v1-everyday:func37",
+    "status": "unused_spare"
+   },
+   {
+    "item": "v1-everyday:homo05",
+    "status": "removed",
+    "reference": "v0_1_test_everyday",
+    "matched": "everyday:c11",
+    "kind": "near_duplicate"
+   },
+   {
+    "item": "v1-everyday:homo09",
+    "status": "removed",
+    "reference": "coverage_dev_v1.0",
+    "matched": "coverage:sc19",
+    "kind": "near_duplicate"
+   },
+   {
+    "item": "v1-everyday:homo27",
+    "status": "removed",
+    "reference": "gov_train",
+    "matched": "dgt_11838:row2316",
+    "kind": "shared_8gram"
+   },
+   {
+    "item": "v1-everyday:homo34",
+    "status": "unused_spare"
+   },
+   {
+    "item": "v1-everyday:seg06",
+    "status": "removed",
+    "reference": "gov_train",
+    "matched": "dgt_94024:row480",
+    "kind": "shared_8gram"
+   },
+   {
+    "item": "v1-everyday:seg08",
+    "status": "removed",
+    "reference": "coverage_dev_v1.0",
+    "matched": "coverage:sg02",
+    "kind": "near_duplicate"
+   },
+   {
+    "item": "v1-everyday:seg23",
+    "status": "removed",
+    "reference": "daily_mdc_common_voice_zh_tw_27_0",
+    "matched": "train:ff1afb66c425ded6e2f11cbcf0f549d12f78f1579edbb196395517f3a8b80679",
+    "kind": "near_duplicate"
+   },
+   {
+    "item": "v1-everyday:seg34",
+    "status": "unused_spare"
+   },
+   {
+    "item": "v1-everyday:long08",
+    "status": "removed",
+    "reference": "coverage_dev_v1.0",
+    "matched": "coverage:lg08",
+    "kind": "shared_8gram"
+   },
+   {
+    "item": "v1-everyday:long20",
+    "status": "removed",
+    "reference": "daily_tatoeba_cmn_hant",
+    "matched": "train:13573277",
+    "kind": "shared_8gram"
+   },
+   {
+    "item": "v1-everyday:long33",
+    "status": "unused_spare"
+   },
+   {
+    "item": "v1-everyday:long34",
+    "status": "unused_spare"
+   }
+  ]
+ },
+ "gov": {
+  "kept": 211,
+  "removed": 282,
+  "removed_by_reference": {
+   "gov_train": 240,
+   "test_v1": 29,
+   "gov_dev_split_test": 7,
+   "v0_1_test_gov": 5,
+   "gov_dev_split_old_test_documents": 1
+  },
+  "stats": {
+   "government_faq": {
+    "fresh_sentences": 599,
+    "rejected_ambiguous_polyphone": 862,
+    "sentences_in_v0_1_test_documents": 915,
+    "eligible_clauses": 71,
+    "removed_leakage": 41,
+    "removed_within_test": 2,
+    "selected": 28,
+    "documents": 25
+   },
+   "public_service": {
+    "fresh_sentences": 634,
+    "rejected_ambiguous_polyphone": 1024,
+    "sentences_in_v0_1_test_documents": 1019,
+    "eligible_clauses": 95,
+    "removed_leakage": 28,
+    "removed_within_test": 6,
+    "selected": 59,
+    "documents": 46
+   },
+   "press_release": {
+    "sentences_in_v0_1_test_documents": 1474,
+    "fresh_sentences": 904,
+    "rejected_ambiguous_polyphone": 1849,
+    "eligible_clauses": 420,
+    "removed_leakage": 184,
+    "removed_within_test": 21,
+    "selected": 124,
+    "documents": 63
+   },
+   "legal": {
+    "sentences_in_v0_1_test_documents": 6930,
+    "fresh_sentences": 17
+   }
+  },
+  "decisions": [
+   {
+    "item": "v1-gov:dgt_11838:009f257069a7",
+    "status": "removed",
+    "reference": "gov_train",
+    "matched": "dgt_7505:row48",
+    "kind": "shared_8gram"
+   },
+   {
+    "item": "v1-gov:dgt_11838:05e9da06a6a2",
+    "status": "removed",
+    "reference": "gov_train",
+    "matched": "dgt_11838:row2459",
+    "kind": "shared_8gram"
+   },
+   {
+    "item": "v1-gov:dgt_11838:07836fbc88bc",
+    "status": "removed",
+    "reference": "gov_train",
+    "matched": "moj_law_zh:總統副總統選舉罷免法（新 84.08.09 制定）",
+    "kind": "near_duplicate"
+   },
+   {
+    "item": "v1-gov:dgt_24107:0b610fb59235",
+    "status": "removed",
+    "reference": "gov_train",
+    "matched": "moj_law_zh:國有財產法",
+    "kind": "shared_8gram"
+   },
+   {
+    "item": "v1-gov:dgt_11838:0cce9b41a343",
+    "status": "removed",
+    "reference": "gov_train",
+    "matched": "dgt_11838:row178",
+    "kind": "shared_8gram"
+   },
+   {
+    "item": "v1-gov:dgt_11838:0d9dc4d67275",
+    "status": "removed",
+    "reference": "gov_train",
+    "matched": "dgt_11838:row2583",
+    "kind": "shared_8gram"
+   },
+   {
+    "item": "v1-gov:dgt_11838:2195428d8e0e",
+    "status": "removed",
+    "reference": "gov_train",
+    "matched": "dgt_11838:row517",
+    "kind": "shared_8gram"
+   },
+   {
+    "item": "v1-gov:dgt_11024:27c678ccc863",
+    "status": "removed",
+    "reference": "gov_train",
+    "matched": "dgt_11024:row34",
+    "kind": "shared_8gram"
+   },
+   {
+    "item": "v1-gov:dgt_11838:330bf25b2395",
+    "status": "removed",
+    "reference": "gov_train",
+    "matched": "dgt_11838:row976",
+    "kind": "near_duplicate"
+   },
+   {
+    "item": "v1-gov:dgt_11838:330bf25b2395",
+    "status": "removed",
+    "reference": "gov_train",
+    "matched": "dgt_11838:row976",
+    "kind": "near_duplicate"
+   },
+   {
+    "item": "v1-gov:dgt_11838:347a3735f9ac",
+    "status": "removed",
+    "reference": "gov_train",
+    "matched": "dgt_11838:row67",
+    "kind": "shared_8gram"
+   },
+   {
+    "item": "v1-gov:dgt_11838:364bf30ed882",
+    "status": "removed",
+    "reference": "gov_train",
+    "matched": "dgt_11838:row144",
+    "kind": "shared_8gram"
+   },
+   {
+    "item": "v1-gov:dgt_11838:38c44e214be8",
+    "status": "removed",
+    "reference": "gov_train",
+    "matched": "dgt_11838:row2709",
+    "kind": "near_duplicate"
+   },
+   {
+    "item": "v1-gov:dgt_41245:4789a41afdec",
+    "status": "removed",
+    "reference": "gov_train",
+    "matched": "moj_law_zh:公司法",
+    "kind": "near_duplicate"
+   },
+   {
+    "item": "v1-gov:dgt_11838:57488436a80a",
+    "status": "removed",
+    "reference": "gov_train",
+    "matched": "dgt_11838:row2057",
+    "kind": "shared_8gram"
+   },
+   {
+    "item": "v1-gov:dgt_11024:5e6ce2e46fe2",
+    "status": "removed",
+    "reference": "gov_train",
+    "matched": "moj_law_zh:企業併購法",
+    "kind": "shared_8gram"
+   },
+   {
+    "item": "v1-gov:dgt_11024:65ce1a73f754",
+    "status": "removed",
+    "reference": "gov_train",
+    "matched": "dgt_11024:row259",
+    "kind": "shared_8gram"
+   },
+   {
+    "item": "v1-gov:dgt_11838:78a71db6f823",
+    "status": "removed",
+    "reference": "test_v1",
+    "matched": "v1-gov:dgt_11838:4fd631012a10",
+    "kind": "shared_8gram"
+   },
+   {
+    "item": "v1-gov:archives_edoc_faq:810b72367054",
+    "status": "removed",
+    "reference": "gov_train",
+    "matched": "archives_edoc_faq:row45",
+    "kind": "shared_8gram"
+   },
+   {
+    "item": "v1-gov:dgt_11838:87f828b70d8e",
+    "status": "removed",
+    "reference": "gov_dev_split_test",
+    "matched": "moj_law_zh:人民團體法",
+    "kind": "near_duplicate"
+   },
+   {
+    "item": "v1-gov:dgt_11838:8a2bfc336f16",
+    "status": "removed",
+    "reference": "gov_train",
+    "matched": "moj_law_zh:農會法",
+    "kind": "near_duplicate"
+   },
+   {
+    "item": "v1-gov:dgt_11838:8e007460a033",
+    "status": "removed",
+    "reference": "gov_train",
+    "matched": "dgt_11838:row1183",
+    "kind": "shared_8gram"
+   },
+   {
+    "item": "v1-gov:dgt_11024:91e82e38ee8d",
+    "status": "removed",
+    "reference": "gov_train",
+    "matched": "dgt_11024:row120",
+    "kind": "shared_8gram"
+   },
+   {
+    "item": "v1-gov:dgt_24107:943a7590cef1",
+    "status": "removed",
+    "reference": "gov_train",
+    "matched": "dgt_24107:row0",
+    "kind": "shared_8gram"
+   },
+   {
+    "item": "v1-gov:dgt_11838:99938d1a0724",
+    "status": "removed",
+    "reference": "gov_train",
+    "matched": "dgt_11838:row596",
+    "kind": "shared_8gram"
+   },
+   {
+    "item": "v1-gov:dgt_11838:99ae6a5dfd1d",
+    "status": "removed",
+    "reference": "gov_train",
+    "matched": "dgt_11838:row178",
+    "kind": "shared_8gram"
+   },
+   {
+    "item": "v1-gov:dgt_11024:a2b1e4817894",
+    "status": "removed",
+    "reference": "gov_train",
+    "matched": "moj_law_zh:公務員懲戒法",
+    "kind": "shared_8gram"
+   },
+   {
+    "item": "v1-gov:dgt_123084:a3dee3178ec0",
+    "status": "removed",
+    "reference": "gov_train",
+    "matched": "moj_law_zh:平均地權條例",
+    "kind": "near_duplicate"
+   },
+   {
+    "item": "v1-gov:dgt_11838:a95c143aae3e",
+    "status": "removed",
+    "reference": "gov_dev_split_test",
+    "matched": "dgt_11838:row1633",
+    "kind": "shared_8gram"
+   },
+   {
+    "item": "v1-gov:dgt_25520:a9aeeafd2ae6",
+    "status": "removed",
+    "reference": "gov_train",
+    "matched": "moj_law_zh:加值型及非加值型營業稅法",
+    "kind": "near_duplicate"
+   },
+   {
+    "item": "v1-gov:dgt_11838:bb90cc3181f4",
+    "status": "removed",
+    "reference": "v0_1_test_gov",
+    "matched": "gov:dgt_11838:22ec45484ff7",
+    "kind": "near_duplicate"
+   },
+   {
+    "item": "v1-gov:dgt_11838:be81edaf8cdd",
+    "status": "removed",
+    "reference": "v0_1_test_gov",
+    "matched": "gov:dgt_11838:35604ab1d5fb",
+    "kind": "near_duplicate"
+   },
+   {
+    "item": "v1-gov:dgt_11024:c19e54a54208",
+    "status": "removed",
+    "reference": "gov_train",
+    "matched": "moj_law_zh:企業併購法",
+    "kind": "shared_8gram"
+   },
+   {
+    "item": "v1-gov:dgt_11838:caf6b3cc8603",
+    "status": "removed",
+    "reference": "gov_train",
+    "matched": "dgt_11838:row67",
+    "kind": "shared_8gram"
+   },
+   {
+    "item": "v1-gov:dgt_22314:cfbd75cb8315",
+    "status": "removed",
+    "reference": "gov_train",
+    "matched": "dgt_22314:row198",
+    "kind": "shared_8gram"
+   },
+   {
+    "item": "v1-gov:dgt_11838:d3bc88656cd8",
+    "status": "removed",
+    "reference": "gov_train",
+    "matched": "dgt_11838:row517",
+    "kind": "shared_8gram"
+   },
+   {
+    "item": "v1-gov:dgt_11838:e0942eca3dbf",
+    "status": "removed",
+    "reference": "gov_train",
+    "matched": "dgt_11838:row178",
+    "kind": "shared_8gram"
+   },
+   {
+    "item": "v1-gov:dgt_11838:e7ff41b0016e",
+    "status": "removed",
+    "reference": "test_v1",
+    "matched": "v1-gov:dgt_11838:c2f3f3a684d7",
+    "kind": "near_duplicate"
+   },
+   {
+    "item": "v1-gov:dgt_11838:f37a97c1c213",
+    "status": "removed",
+    "reference": "gov_train",
+    "matched": "dgt_11838:row2709",
+    "kind": "near_duplicate"
+   },
+   {
+    "item": "v1-gov:dgt_11024:f5bae2019b2d",
+    "status": "removed",
+    "reference": "gov_train",
+    "matched": "dgt_11024:row95",
+    "kind": "shared_8gram"
+   },
+   {
+    "item": "v1-gov:dgt_11838:f5e3100b6677",
+    "status": "removed",
+    "reference": "gov_train",
+    "matched": "dgt_11838:row891",
+    "kind": "shared_8gram"
+   },
+   {
+    "item": "v1-gov:dgt_11838:f895eaaa45cd",
+    "status": "removed",
+    "reference": "v0_1_test_gov",
+    "matched": "gov:dgt_11838:0b07f4a66314",
+    "kind": "near_duplicate"
+   },
+   {
+    "item": "v1-gov:dgt_11838:fb816afd74bc",
+    "status": "removed",
+    "reference": "v0_1_test_gov",
+    "matched": "gov:dgt_11838:22ec45484ff7",
+    "kind": "near_duplicate"
+   },
+   {
+    "item": "v1-gov:dgt_24392:000a30c618ff",
+    "status": "removed",
+    "reference": "gov_train",
+    "matched": "dgt_24392:row24",
+    "kind": "shared_8gram"
+   },
+   {
+    "item": "v1-gov:dgt_7301:078b98d3a291",
+    "status": "removed",
+    "reference": "gov_train",
+    "matched": "dgt_7301:row602",
+    "kind": "near_duplicate"
+   },
+   {
+    "item": "v1-gov:dgt_24392:2391dac4afd2",
+    "status": "removed",
+    "reference": "gov_train",
+    "matched": "dgt_24392:row9782",
+    "kind": "near_duplicate"
+   },
+   {
+    "item": "v1-gov:dgt_110972:2747dd91f34f",
+    "status": "removed",
+    "reference": "gov_train",
+    "matched": "dgt_110972:row44",
+    "kind": "shared_8gram"
+   },
+   {
+    "item": "v1-gov:dgt_11519:2a60dca24518",
+    "status": "removed",
+    "reference": "gov_train",
+    "matched": "dgt_11519:row270",
+    "kind": "shared_8gram"
+   },
+   {
+    "item": "v1-gov:dgt_11519:2a60dca24518",
+    "status": "removed",
+    "reference": "gov_train",
+    "matched": "dgt_11519:row270",
+    "kind": "shared_8gram"
+   },
+   {
+    "item": "v1-gov:dgt_110972:47a25ba940e3",
+    "status": "removed",
+    "reference": "gov_train",
+    "matched": "dgt_110972:row132",
+    "kind": "shared_8gram"
+   },
+   {
+    "item": "v1-gov:dgt_171525:49fa798aa5c9",
+    "status": "removed",
+    "reference": "gov_train",
+    "matched": "dgt_171525:row383",
+    "kind": "shared_8gram"
+   },
+   {
+    "item": "v1-gov:dgt_114846:4f6bbd1c7581",
+    "status": "removed",
+    "reference": "test_v1",
+    "matched": "v1-gov:dgt_114846:1c9241f3a90b",
+    "kind": "near_duplicate"
+   },
+   {
+    "item": "v1-gov:dgt_123080:5747d8728119",
+    "status": "removed",
+    "reference": "gov_train",
+    "matched": "dgt_11838:row41",
+    "kind": "shared_8gram"
+   },
+   {
+    "item": "v1-gov:dgt_177465:700ca28a9f79",
+    "status": "removed",
+    "reference": "gov_train",
+    "matched": "dgt_11838:row758",
+    "kind": "shared_8gram"
+   },
+   {
+    "item": "v1-gov:dgt_171525:7a9eec491896",
+    "status": "removed",
+    "reference": "gov_train",
+    "matched": "dgt_171525:row383",
+    "kind": "shared_8gram"
+   },
+   {
+    "item": "v1-gov:dgt_171525:8b3839c06364",
+    "status": "removed",
+    "reference": "gov_train",
+    "matched": "moj_law_zh:房屋稅條例",
+    "kind": "shared_8gram"
+   },
+   {
+    "item": "v1-gov:dgt_9536:8c5b374dbddf",
+    "status": "removed",
+    "reference": "test_v1",
+    "matched": "v1-gov:dgt_9536:1cb4f22e0529",
+    "kind": "shared_8gram"
+   },
+   {
+    "item": "v1-gov:dgt_7301:a6eedb7a6d77",
+    "status": "removed",
+    "reference": "test_v1",
+    "matched": "v1-gov:dgt_7301:a19fd63e616d",
+    "kind": "shared_8gram"
+   },
+   {
+    "item": "v1-gov:dgt_114846:ab99de298748",
+    "status": "removed",
+    "reference": "gov_train",
+    "matched": "dgt_114846:row446",
+    "kind": "shared_8gram"
+   },
+   {
+    "item": "v1-gov:dgt_24392:b166bf9ca237",
+    "status": "removed",
+    "reference": "gov_train",
+    "matched": "dgt_24392:row5970",
+    "kind": "shared_8gram"
+   },
+   {
+    "item": "v1-gov:dgt_114846:b9af87281dc4",
+    "status": "removed",
+    "reference": "test_v1",
+    "matched": "v1-gov:dgt_114846:b37ee9bcdba9",
+    "kind": "shared_8gram"
+   },
+   {
+    "item": "v1-gov:dgt_14519:ba6a9ff46ba6",
+    "status": "removed",
+    "reference": "v0_1_test_gov",
+    "matched": "gov:dgt_14519:5cc11340a579",
+    "kind": "near_duplicate"
+   },
+   {
+    "item": "v1-gov:dgt_177465:c6acd5b74042",
+    "status": "removed",
+    "reference": "gov_train",
+    "matched": "dgt_11838:row758",
+    "kind": "shared_8gram"
+   },
+   {
+    "item": "v1-gov:dgt_24392:ca4cc45abfce",
+    "status": "removed",
+    "reference": "test_v1",
+    "matched": "v1-gov:dgt_24392:7f9983d94052",
+    "kind": "near_duplicate"
+   },
+   {
+    "item": "v1-gov:dgt_171525:ca90abbb9139",
+    "status": "removed",
+    "reference": "gov_train",
+    "matched": "moj_law_zh:菸酒管理法",
+    "kind": "near_duplicate"
+   },
+   {
+    "item": "v1-gov:dgt_24392:cc4b97dfb53f",
+    "status": "removed",
+    "reference": "gov_train",
+    "matched": "dgt_24392:row5970",
+    "kind": "shared_8gram"
+   },
+   {
+    "item": "v1-gov:dgt_24392:cd218f407e38",
+    "status": "removed",
+    "reference": "gov_train",
+    "matched": "dgt_24392:row101",
+    "kind": "shared_8gram"
+   },
+   {
+    "item": "v1-gov:dgt_24392:da09c30d7705",
+    "status": "removed",
+    "reference": "gov_train",
+    "matched": "dgt_24392:row9760",
+    "kind": "shared_8gram"
+   },
+   {
+    "item": "v1-gov:dgt_24392:db8370881374",
+    "status": "removed",
+    "reference": "gov_train",
+    "matched": "dgt_24392:row9569",
+    "kind": "near_duplicate"
+   },
+   {
+    "item": "v1-gov:dgt_7301:ddf0ccbac441",
+    "status": "removed",
+    "reference": "gov_train",
+    "matched": "dgt_7301:row3",
+    "kind": "shared_8gram"
+   },
+   {
+    "item": "v1-gov:dgt_24392:e19a302c2c1f",
+    "status": "removed",
+    "reference": "gov_train",
+    "matched": "dgt_24392:row3156",
+    "kind": "shared_8gram"
+   },
+   {
+    "item": "v1-gov:dgt_24392:e2ec886d8056",
+    "status": "removed",
+    "reference": "gov_train",
+    "matched": "dgt_24392:row9569",
+    "kind": "near_duplicate"
+   },
+   {
+    "item": "v1-gov:dgt_11519:e3c6824294b1",
+    "status": "removed",
+    "reference": "gov_train",
+    "matched": "dgt_11519:row270",
+    "kind": "near_duplicate"
+   },
+   {
+    "item": "v1-gov:dgt_11519:e3c6824294b1",
+    "status": "removed",
+    "reference": "gov_train",
+    "matched": "dgt_11519:row284",
+    "kind": "near_duplicate"
+   },
+   {
+    "item": "v1-gov:dgt_114846:e966ec195859",
+    "status": "removed",
+    "reference": "test_v1",
+    "matched": "v1-gov:dgt_114846:b3dc7659695f",
+    "kind": "near_duplicate"
+   },
+   {
+    "item": "v1-gov:dgt_14519:f3f4e38afa03",
+    "status": "removed",
+    "reference": "gov_train",
+    "matched": "dgt_14519:row2",
+    "kind": "shared_8gram"
+   },
+   {
+    "item": "v1-gov:dgt_114846:f41b370ea509",
+    "status": "removed",
+    "reference": "gov_train",
+    "matched": "dgt_114846:row39",
+    "kind": "shared_8gram"
+   },
+   {
+    "item": "v1-gov:mofa_press_zh:008043a46b99",
+    "status": "removed",
+    "reference": "gov_train",
+    "matched": "mofa_press_zh:item191",
+    "kind": "shared_8gram"
+   },
+   {
+    "item": "v1-gov:dgt_7505:01e9df80685c",
+    "status": "removed",
+    "reference": "gov_train",
+    "matched": "dgt_7505:row28",
+    "kind": "shared_8gram"
+   },
+   {
+    "item": "v1-gov:mofa_press_zh:02a184f6aa70",
+    "status": "removed",
+    "reference": "gov_train",
+    "matched": "mofa_press_zh:item866",
+    "kind": "shared_8gram"
+   },
+   {
+    "item": "v1-gov:dgt_7505:037aa9f7ff2e",
+    "status": "removed",
+    "reference": "gov_train",
+    "matched": "dgt_7505:row812",
+    "kind": "shared_8gram"
+   },
+   {
+    "item": "v1-gov:dgt_6421:03da7674bf65",
+    "status": "removed",
+    "reference": "gov_train",
+    "matched": "dgt_175903:row44",
+    "kind": "shared_8gram"
+   },
+   {
+    "item": "v1-gov:dgt_7505:063133993c46",
+    "status": "removed",
+    "reference": "gov_train",
+    "matched": "dgt_7505:row640",
+    "kind": "shared_8gram"
+   },
+   {
+    "item": "v1-gov:dgt_55229:08777c21a048",
+    "status": "removed",
+    "reference": "gov_train",
+    "matched": "dgt_55229:row0",
+    "kind": "shared_8gram"
+   },
+   {
+    "item": "v1-gov:dgt_7505:08883a9502ed",
+    "status": "removed",
+    "reference": "gov_train",
+    "matched": "moj_law_zh:陸海空軍軍官士官任職條例",
+    "kind": "shared_8gram"
+   },
+   {
+    "item": "v1-gov:dgt_7505:08e8be45e043",
+    "status": "removed",
+    "reference": "gov_train",
+    "matched": "dgt_7505:row92",
+    "kind": "shared_8gram"
+   },
+   {
+    "item": "v1-gov:dgt_175903:0af9d1746cab",
+    "status": "removed",
+    "reference": "gov_train",
+    "matched": "dgt_175903:row604",
+    "kind": "shared_8gram"
+   },
+   {
+    "item": "v1-gov:dgt_55229:0b6dc87cab57",
+    "status": "removed",
+    "reference": "gov_train",
+    "matched": "dgt_55229:row385",
+    "kind": "shared_8gram"
+   },
+   {
+    "item": "v1-gov:dgt_7505:0b70311e0485",
+    "status": "removed",
+    "reference": "gov_train",
+    "matched": "dgt_7505:row102",
+    "kind": "shared_8gram"
+   },
+   {
+    "item": "v1-gov:dgt_94024:0d7e6529596f",
+    "status": "removed",
+    "reference": "gov_train",
+    "matched": "dgt_174199:row46",
+    "kind": "shared_8gram"
+   },
+   {
+    "item": "v1-gov:dgt_94024:0f148c79cd98",
+    "status": "removed",
+    "reference": "gov_train",
+    "matched": "dgt_94024:row28",
+    "kind": "near_duplicate"
+   },
+   {
+    "item": "v1-gov:dgt_25848:136f26baab25",
+    "status": "removed",
+    "reference": "gov_train",
+    "matched": "dgt_25848:row20",
+    "kind": "shared_8gram"
+   },
+   {
+    "item": "v1-gov:dgt_55229:1403ce330d67",
+    "status": "removed",
+    "reference": "gov_train",
+    "matched": "dgt_55229:row331",
+    "kind": "shared_8gram"
+   },
+   {
+    "item": "v1-gov:mofa_press_zh:14c24c0ba7f6",
+    "status": "removed",
+    "reference": "gov_train",
+    "matched": "mofa_press_zh:item171",
+    "kind": "shared_8gram"
+   },
+   {
+    "item": "v1-gov:dgt_94024:18bbf7e422cf",
+    "status": "removed",
+    "reference": "gov_train",
+    "matched": "dgt_94024:row71",
+    "kind": "shared_8gram"
+   },
+   {
+    "item": "v1-gov:dgt_55229:19d53114330b",
+    "status": "removed",
+    "reference": "gov_dev_split_test",
+    "matched": "dgt_55229:row559",
+    "kind": "shared_8gram"
+   },
+   {
+    "item": "v1-gov:dgt_94024:1a2ea25159d1",
+    "status": "removed",
+    "reference": "gov_train",
+    "matched": "dgt_22927:row59",
+    "kind": "shared_8gram"
+   },
+   {
+    "item": "v1-gov:dgt_7505:1aae533fc61a",
+    "status": "removed",
+    "reference": "test_v1",
+    "matched": "v1-gov:dgt_7505:0ffe747523de",
+    "kind": "shared_8gram"
+   },
+   {
+    "item": "v1-gov:dgt_7505:1ae08ccec253",
+    "status": "removed",
+    "reference": "gov_train",
+    "matched": "dgt_7505:row608",
+    "kind": "near_duplicate"
+   },
+   {
+    "item": "v1-gov:dgt_6421:1b737eb2f580",
+    "status": "removed",
+    "reference": "gov_dev_split_old_test_documents",
+    "matched": "dgt_6421:row62",
+    "kind": "shared_8gram"
+   },
+   {
+    "item": "v1-gov:dgt_7505:1e1703e7f817",
+    "status": "removed",
+    "reference": "gov_train",
+    "matched": "mofa_press_zh:item855",
+    "kind": "shared_8gram"
+   },
+   {
+    "item": "v1-gov:dgt_175903:209f952a6eee",
+    "status": "removed",
+    "reference": "gov_train",
+    "matched": "dgt_175903:row38",
+    "kind": "shared_8gram"
+   },
+   {
+    "item": "v1-gov:dgt_55229:20aa7afb2222",
+    "status": "removed",
+    "reference": "gov_train",
+    "matched": "dgt_55229:row0",
+    "kind": "shared_8gram"
+   },
+   {
+    "item": "v1-gov:mofa_press_zh:21147ff61133",
+    "status": "removed",
+    "reference": "gov_train",
+    "matched": "mofa_press_zh:item58",
+    "kind": "shared_8gram"
+   },
+   {
+    "item": "v1-gov:dgt_55229:21aed941772e",
+    "status": "removed",
+    "reference": "gov_train",
+    "matched": "dgt_55229:row327",
+    "kind": "shared_8gram"
+   },
+   {
+    "item": "v1-gov:dgt_55229:222f3eca128e",
+    "status": "removed",
+    "reference": "gov_train",
+    "matched": "dgt_55229:row327",
+    "kind": "shared_8gram"
+   },
+   {
+    "item": "v1-gov:mofa_press_zh:23383551be46",
+    "status": "removed",
+    "reference": "gov_train",
+    "matched": "mofa_press_zh:item604",
+    "kind": "shared_8gram"
+   },
+   {
+    "item": "v1-gov:dgt_55229:261562af16fc",
+    "status": "removed",
+    "reference": "gov_train",
+    "matched": "dgt_55229:row0",
+    "kind": "shared_8gram"
+   },
+   {
+    "item": "v1-gov:mofa_press_zh:26b8e31ed5af",
+    "status": "removed",
+    "reference": "gov_train",
+    "matched": "mofa_press_zh:item440",
+    "kind": "shared_8gram"
+   },
+   {
+    "item": "v1-gov:dgt_6421:27694bdb2540",
+    "status": "removed",
+    "reference": "gov_train",
+    "matched": "dgt_6421:row16",
+    "kind": "shared_8gram"
+   },
+   {
+    "item": "v1-gov:mofa_press_zh:27e0f690d697",
+    "status": "removed",
+    "reference": "gov_train",
+    "matched": "mofa_press_zh:item58",
+    "kind": "shared_8gram"
+   },
+   {
+    "item": "v1-gov:mofa_press_zh:27e81638e71b",
+    "status": "removed",
+    "reference": "test_v1",
+    "matched": "v1-gov:mofa_press_zh:27e81638e71b",
+    "kind": "near_duplicate"
+   },
+   {
+    "item": "v1-gov:dgt_7505:283813fea8db",
+    "status": "removed",
+    "reference": "gov_train",
+    "matched": "dgt_7505:row399",
+    "kind": "shared_8gram"
+   },
+   {
+    "item": "v1-gov:dgt_55229:29cc52574dd2",
+    "status": "removed",
+    "reference": "gov_train",
+    "matched": "dgt_11838:row1131",
+    "kind": "shared_8gram"
+   },
+   {
+    "item": "v1-gov:dgt_175903:2a749a230cd0",
+    "status": "removed",
+    "reference": "gov_train",
+    "matched": "dgt_175903:row30",
+    "kind": "shared_8gram"
+   },
+   {
+    "item": "v1-gov:mofa_press_zh:2c0cd9845916",
+    "status": "removed",
+    "reference": "gov_train",
+    "matched": "mofa_press_zh:item58",
+    "kind": "shared_8gram"
+   },
+   {
+    "item": "v1-gov:dgt_6421:2cec91ed3c86",
+    "status": "removed",
+    "reference": "gov_train",
+    "matched": "dgt_6421:row72",
+    "kind": "shared_8gram"
+   },
+   {
+    "item": "v1-gov:dgt_94024:2d245045934b",
+    "status": "removed",
+    "reference": "test_v1",
+    "matched": "v1-gov:dgt_94024:1abe6cb50111",
+    "kind": "shared_8gram"
+   },
+   {
+    "item": "v1-gov:dgt_7505:2d3ce94d2ea5",
+    "status": "removed",
+    "reference": "gov_train",
+    "matched": "dgt_7505:row822",
+    "kind": "shared_8gram"
+   },
+   {
+    "item": "v1-gov:dgt_175903:2d4c0121bffc",
+    "status": "removed",
+    "reference": "gov_train",
+    "matched": "dgt_175903:row38",
+    "kind": "shared_8gram"
+   },
+   {
+    "item": "v1-gov:dgt_175903:2e12b5e37a59",
+    "status": "removed",
+    "reference": "gov_train",
+    "matched": "dgt_175903:row332",
+    "kind": "shared_8gram"
+   },
+   {
+    "item": "v1-gov:mofa_press_zh:2f5111655bfa",
+    "status": "removed",
+    "reference": "gov_train",
+    "matched": "mofa_press_zh:item153",
+    "kind": "shared_8gram"
+   },
+   {
+    "item": "v1-gov:dgt_7505:2ff01cacc0ba",
+    "status": "removed",
+    "reference": "gov_train",
+    "matched": "dgt_7505:row608",
+    "kind": "near_duplicate"
+   },
+   {
+    "item": "v1-gov:dgt_25848:3000a6b789f3",
+    "status": "removed",
+    "reference": "gov_train",
+    "matched": "dgt_25848:row26",
+    "kind": "shared_8gram"
+   },
+   {
+    "item": "v1-gov:mofa_press_zh:30ad0b9b8049",
+    "status": "removed",
+    "reference": "gov_train",
+    "matched": "mofa_press_zh:item58",
+    "kind": "shared_8gram"
+   },
+   {
+    "item": "v1-gov:mofa_press_zh:320d46ff8e3b",
+    "status": "removed",
+    "reference": "gov_train",
+    "matched": "mofa_press_zh:item2",
+    "kind": "shared_8gram"
+   },
+   {
+    "item": "v1-gov:dgt_175903:33df4c46177c",
+    "status": "removed",
+    "reference": "gov_train",
+    "matched": "dgt_175903:row160",
+    "kind": "shared_8gram"
+   },
+   {
+    "item": "v1-gov:dgt_94024:359e3d5970ab",
+    "status": "removed",
+    "reference": "gov_train",
+    "matched": "dgt_94024:row634",
+    "kind": "shared_8gram"
+   },
+   {
+    "item": "v1-gov:mofa_press_zh:366aaffa464f",
+    "status": "removed",
+    "reference": "gov_train",
+    "matched": "mofa_press_zh:item69",
+    "kind": "shared_8gram"
+   },
+   {
+    "item": "v1-gov:mofa_press_zh:37356c36bff4",
+    "status": "removed",
+    "reference": "gov_train",
+    "matched": "mofa_press_zh:item653",
+    "kind": "shared_8gram"
+   },
+   {
+    "item": "v1-gov:dgt_175903:3b6061cae4ce",
+    "status": "removed",
+    "reference": "gov_dev_split_test",
+    "matched": "dgt_175903:row483",
+    "kind": "near_duplicate"
+   },
+   {
+    "item": "v1-gov:dgt_55229:3c618db5e12a",
+    "status": "removed",
+    "reference": "gov_train",
+    "matched": "dgt_55229:row375",
+    "kind": "shared_8gram"
+   },
+   {
+    "item": "v1-gov:dgt_175903:3d4ca74e589e",
+    "status": "removed",
+    "reference": "gov_train",
+    "matched": "dgt_175903:row687",
+    "kind": "shared_8gram"
+   },
+   {
+    "item": "v1-gov:dgt_175903:3d4ca74e589e",
+    "status": "removed",
+    "reference": "gov_train",
+    "matched": "dgt_175903:row687",
+    "kind": "shared_8gram"
+   },
+   {
+    "item": "v1-gov:dgt_55229:3d4f2c623873",
+    "status": "removed",
+    "reference": "gov_train",
+    "matched": "dgt_55229:row375",
+    "kind": "shared_8gram"
+   },
+   {
+    "item": "v1-gov:dgt_6421:3d67b2653a75",
+    "status": "removed",
+    "reference": "gov_train",
+    "matched": "dgt_175903:row44",
+    "kind": "shared_8gram"
+   },
+   {
+    "item": "v1-gov:dgt_55229:3d9094df7ce0",
+    "status": "removed",
+    "reference": "gov_train",
+    "matched": "dgt_55229:row512",
+    "kind": "shared_8gram"
+   },
+   {
+    "item": "v1-gov:dgt_175903:3e9712dc1899",
+    "status": "removed",
+    "reference": "gov_train",
+    "matched": "dgt_175903:row11",
+    "kind": "shared_8gram"
+   },
+   {
+    "item": "v1-gov:mofa_press_zh:3eb2a75ebb76",
+    "status": "removed",
+    "reference": "gov_train",
+    "matched": "mofa_press_zh:item58",
+    "kind": "shared_8gram"
+   },
+   {
+    "item": "v1-gov:dgt_175903:40ce72d30be9",
+    "status": "removed",
+    "reference": "gov_train",
+    "matched": "dgt_175903:row620",
+    "kind": "near_duplicate"
+   },
+   {
+    "item": "v1-gov:mofa_press_zh:416496c5a3fe",
+    "status": "removed",
+    "reference": "gov_train",
+    "matched": "mofa_press_zh:item102",
+    "kind": "shared_8gram"
+   },
+   {
+    "item": "v1-gov:dgt_55229:435fed47da8f",
+    "status": "removed",
+    "reference": "gov_train",
+    "matched": "dgt_55229:row53",
+    "kind": "shared_8gram"
+   },
+   {
+    "item": "v1-gov:mofa_press_zh:454dd5c8e2ef",
+    "status": "removed",
+    "reference": "gov_train",
+    "matched": "mofa_press_zh:item47",
+    "kind": "shared_8gram"
+   },
+   {
+    "item": "v1-gov:dgt_7505:4562b67a4e41",
+    "status": "removed",
+    "reference": "gov_train",
+    "matched": "dgt_7505:row549",
+    "kind": "shared_8gram"
+   },
+   {
+    "item": "v1-gov:dgt_94024:470ccd09ddab",
+    "status": "removed",
+    "reference": "gov_train",
+    "matched": "dgt_94024:row1133",
+    "kind": "shared_8gram"
+   },
+   {
+    "item": "v1-gov:dgt_55229:496a305599b8",
+    "status": "removed",
+    "reference": "gov_train",
+    "matched": "dgt_55229:row215",
+    "kind": "shared_8gram"
+   },
+   {
+    "item": "v1-gov:dgt_175903:49df1cbdbddb",
+    "status": "removed",
+    "reference": "gov_train",
+    "matched": "dgt_175903:row1",
+    "kind": "shared_8gram"
+   },
+   {
+    "item": "v1-gov:dgt_175903:4d5e0ffe3408",
+    "status": "removed",
+    "reference": "gov_train",
+    "matched": "dgt_175903:row433",
+    "kind": "shared_8gram"
+   },
+   {
+    "item": "v1-gov:dgt_55229:51556cea0493",
+    "status": "removed",
+    "reference": "gov_train",
+    "matched": "dgt_55229:row99",
+    "kind": "shared_8gram"
+   },
+   {
+    "item": "v1-gov:dgt_55229:51cbdb77aede",
+    "status": "removed",
+    "reference": "gov_train",
+    "matched": "dgt_55229:row362",
+    "kind": "near_duplicate"
+   },
+   {
+    "item": "v1-gov:dgt_55229:52d12d4b808e",
+    "status": "removed",
+    "reference": "gov_train",
+    "matched": "dgt_55229:row44",
+    "kind": "shared_8gram"
+   },
+   {
+    "item": "v1-gov:dgt_94024:54e12edcbb51",
+    "status": "removed",
+    "reference": "gov_train",
+    "matched": "dgt_94024:row498",
+    "kind": "shared_8gram"
+   },
+   {
+    "item": "v1-gov:dgt_55229:5583e78091f2",
+    "status": "removed",
+    "reference": "gov_train",
+    "matched": "dgt_55229:row176",
+    "kind": "shared_8gram"
+   },
+   {
+    "item": "v1-gov:dgt_6421:560075cf7b13",
+    "status": "removed",
+    "reference": "gov_train",
+    "matched": "dgt_175903:row44",
+    "kind": "shared_8gram"
+   },
+   {
+    "item": "v1-gov:dgt_55229:5764298bc9a6",
+    "status": "removed",
+    "reference": "gov_train",
+    "matched": "dgt_55229:row386",
+    "kind": "shared_8gram"
+   },
+   {
+    "item": "v1-gov:dgt_175903:5842d52c4ca2",
+    "status": "removed",
+    "reference": "gov_train",
+    "matched": "dgt_175903:row642",
+    "kind": "shared_8gram"
+   },
+   {
+    "item": "v1-gov:dgt_175903:5910a13528fb",
+    "status": "removed",
+    "reference": "test_v1",
+    "matched": "v1-gov:dgt_175903:5910a13528fb",
+    "kind": "near_duplicate"
+   },
+   {
+    "item": "v1-gov:dgt_55229:5a06b5bbab01",
+    "status": "removed",
+    "reference": "gov_train",
+    "matched": "dgt_55229:row93",
+    "kind": "shared_8gram"
+   },
+   {
+    "item": "v1-gov:dgt_7505:5bcc36c117fb",
+    "status": "removed",
+    "reference": "gov_train",
+    "matched": "dgt_7505:row202",
+    "kind": "shared_8gram"
+   },
+   {
+    "item": "v1-gov:dgt_7505:5bd1a39a100e",
+    "status": "removed",
+    "reference": "gov_train",
+    "matched": "dgt_7505:row28",
+    "kind": "shared_8gram"
+   },
+   {
+    "item": "v1-gov:mofa_press_zh:5f2c505cb02e",
+    "status": "removed",
+    "reference": "gov_train",
+    "matched": "mofa_press_zh:item468",
+    "kind": "shared_8gram"
+   },
+   {
+    "item": "v1-gov:dgt_7505:6005081d7bda",
+    "status": "removed",
+    "reference": "gov_train",
+    "matched": "dgt_7505:row72",
+    "kind": "shared_8gram"
+   },
+   {
+    "item": "v1-gov:dgt_55229:60e4a6d3934a",
+    "status": "removed",
+    "reference": "gov_train",
+    "matched": "dgt_55229:row371",
+    "kind": "near_duplicate"
+   },
+   {
+    "item": "v1-gov:mofa_press_zh:6222d44712cb",
+    "status": "removed",
+    "reference": "gov_train",
+    "matched": "mofa_press_zh:item5",
+    "kind": "shared_8gram"
+   },
+   {
+    "item": "v1-gov:mofa_press_zh:623c89525667",
+    "status": "removed",
+    "reference": "gov_train",
+    "matched": "mofa_press_zh:item957",
+    "kind": "shared_8gram"
+   },
+   {
+    "item": "v1-gov:dgt_7505:64c86512f96b",
+    "status": "removed",
+    "reference": "gov_train",
+    "matched": "dgt_7505:row72",
+    "kind": "shared_8gram"
+   },
+   {
+    "item": "v1-gov:dgt_7505:65a4fc083802",
+    "status": "removed",
+    "reference": "gov_train",
+    "matched": "dgt_7505:row102",
+    "kind": "shared_8gram"
+   },
+   {
+    "item": "v1-gov:dgt_175903:69bce3c2ae9d",
+    "status": "removed",
+    "reference": "test_v1",
+    "matched": "v1-gov:dgt_175903:10ebac8316a1",
+    "kind": "near_duplicate"
+   },
+   {
+    "item": "v1-gov:dgt_55229:6b13411f635f",
+    "status": "removed",
+    "reference": "gov_dev_split_test",
+    "matched": "dgt_55229:row137",
+    "kind": "shared_8gram"
+   },
+   {
+    "item": "v1-gov:dgt_55229:6b3872220bb7",
+    "status": "removed",
+    "reference": "gov_train",
+    "matched": "dgt_55229:row20",
+    "kind": "shared_8gram"
+   },
+   {
+    "item": "v1-gov:dgt_55229:6c0e6ec2bf37",
+    "status": "removed",
+    "reference": "gov_train",
+    "matched": "dgt_55229:row399",
+    "kind": "shared_8gram"
+   },
+   {
+    "item": "v1-gov:dgt_94024:6c8f36378b52",
+    "status": "removed",
+    "reference": "gov_train",
+    "matched": "dgt_94024:row1050",
+    "kind": "shared_8gram"
+   },
+   {
+    "item": "v1-gov:mofa_press_zh:6e33c2aecfdf",
+    "status": "removed",
+    "reference": "gov_train",
+    "matched": "mofa_press_zh:item171",
+    "kind": "shared_8gram"
+   },
+   {
+    "item": "v1-gov:dgt_175903:6e8aefb1f614",
+    "status": "removed",
+    "reference": "gov_train",
+    "matched": "dgt_175903:row38",
+    "kind": "shared_8gram"
+   },
+   {
+    "item": "v1-gov:mofa_press_zh:6f5c0724b96c",
+    "status": "removed",
+    "reference": "gov_train",
+    "matched": "mofa_press_zh:item658",
+    "kind": "shared_8gram"
+   },
+   {
+    "item": "v1-gov:dgt_55229:70da77aa3fe2",
+    "status": "removed",
+    "reference": "gov_dev_split_test",
+    "matched": "dgt_55229:row137",
+    "kind": "shared_8gram"
+   },
+   {
+    "item": "v1-gov:dgt_94024:715d3b45bade",
+    "status": "removed",
+    "reference": "gov_train",
+    "matched": "dgt_94024:row65",
+    "kind": "shared_8gram"
+   },
+   {
+    "item": "v1-gov:dgt_55229:7218d78b2406",
+    "status": "removed",
+    "reference": "gov_train",
+    "matched": "dgt_55229:row154",
+    "kind": "shared_8gram"
+   },
+   {
+    "item": "v1-gov:dgt_7505:72806648ca0d",
+    "status": "removed",
+    "reference": "test_v1",
+    "matched": "v1-gov:dgt_7505:65a0345aa67d",
+    "kind": "near_duplicate"
+   },
+   {
+    "item": "v1-gov:dgt_55229:731b0106031e",
+    "status": "removed",
+    "reference": "gov_train",
+    "matched": "dgt_55229:row375",
+    "kind": "shared_8gram"
+   },
+   {
+    "item": "v1-gov:mofa_press_zh:745351ab0dbe",
+    "status": "removed",
+    "reference": "gov_train",
+    "matched": "mofa_press_zh:item416",
+    "kind": "shared_8gram"
+   },
+   {
+    "item": "v1-gov:dgt_94024:74f20093addd",
+    "status": "removed",
+    "reference": "gov_train",
+    "matched": "dgt_94024:row155",
+    "kind": "near_duplicate"
+   },
+   {
+    "item": "v1-gov:dgt_55229:75f4be328a97",
+    "status": "removed",
+    "reference": "gov_train",
+    "matched": "dgt_55229:row399",
+    "kind": "shared_8gram"
+   },
+   {
+    "item": "v1-gov:dgt_175903:765c1a406781",
+    "status": "removed",
+    "reference": "gov_train",
+    "matched": "dgt_175903:row521",
+    "kind": "near_duplicate"
+   },
+   {
+    "item": "v1-gov:dgt_55229:76e690743591",
+    "status": "removed",
+    "reference": "gov_train",
+    "matched": "dgt_55229:row20",
+    "kind": "shared_8gram"
+   },
+   {
+    "item": "v1-gov:dgt_94024:798bf32746fc",
+    "status": "removed",
+    "reference": "gov_train",
+    "matched": "dgt_94024:row728",
+    "kind": "shared_8gram"
+   },
+   {
+    "item": "v1-gov:mofa_press_zh:7a368e254096",
+    "status": "removed",
+    "reference": "gov_train",
+    "matched": "mofa_press_zh:item252",
+    "kind": "shared_8gram"
+   },
+   {
+    "item": "v1-gov:dgt_7505:7ba2052ae476",
+    "status": "removed",
+    "reference": "gov_train",
+    "matched": "dgt_7505:row165",
+    "kind": "shared_8gram"
+   },
+   {
+    "item": "v1-gov:dgt_175903:7eae6128d677",
+    "status": "removed",
+    "reference": "test_v1",
+    "matched": "v1-gov:dgt_175903:121e025fb260",
+    "kind": "near_duplicate"
+   },
+   {
+    "item": "v1-gov:dgt_175903:7ee5ceb180f2",
+    "status": "removed",
+    "reference": "gov_train",
+    "matched": "dgt_175903:row38",
+    "kind": "shared_8gram"
+   },
+   {
+    "item": "v1-gov:mofa_press_zh:7feb1430983f",
+    "status": "removed",
+    "reference": "gov_train",
+    "matched": "mofa_press_zh:item440",
+    "kind": "shared_8gram"
+   },
+   {
+    "item": "v1-gov:mofa_press_zh:7feb1430983f",
+    "status": "removed",
+    "reference": "gov_train",
+    "matched": "mofa_press_zh:item832",
+    "kind": "shared_8gram"
+   },
+   {
+    "item": "v1-gov:dgt_175903:80f321af4d83",
+    "status": "removed",
+    "reference": "gov_train",
+    "matched": "dgt_175903:row547",
+    "kind": "near_duplicate"
+   },
+   {
+    "item": "v1-gov:dgt_55229:82abaeff9ce7",
+    "status": "removed",
+    "reference": "gov_train",
+    "matched": "dgt_55229:row375",
+    "kind": "shared_8gram"
+   },
+   {
+    "item": "v1-gov:mofa_press_zh:83634f4f8338",
+    "status": "removed",
+    "reference": "gov_train",
+    "matched": "mofa_press_zh:item273",
+    "kind": "shared_8gram"
+   },
+   {
+    "item": "v1-gov:mofa_press_zh:84013004a285",
+    "status": "removed",
+    "reference": "gov_train",
+    "matched": "mofa_press_zh:item472",
+    "kind": "shared_8gram"
+   },
+   {
+    "item": "v1-gov:dgt_7505:843fb3ea9c39",
+    "status": "removed",
+    "reference": "gov_train",
+    "matched": "dgt_11024:row30",
+    "kind": "shared_8gram"
+   },
+   {
+    "item": "v1-gov:mofa_press_zh:848a7957ce9b",
+    "status": "removed",
+    "reference": "gov_train",
+    "matched": "mofa_press_zh:item143",
+    "kind": "shared_8gram"
+   },
+   {
+    "item": "v1-gov:dgt_175903:86055e033170",
+    "status": "removed",
+    "reference": "gov_train",
+    "matched": "dgt_175903:row433",
+    "kind": "shared_8gram"
+   },
+   {
+    "item": "v1-gov:dgt_55229:89867e2a3a83",
+    "status": "removed",
+    "reference": "gov_train",
+    "matched": "dgt_55229:row44",
+    "kind": "shared_8gram"
+   },
+   {
+    "item": "v1-gov:dgt_175903:899e58fe31e2",
+    "status": "removed",
+    "reference": "test_v1",
+    "matched": "v1-gov:dgt_175903:10ebac8316a1",
+    "kind": "near_duplicate"
+   },
+   {
+    "item": "v1-gov:dgt_25848:8a3e48d55a15",
+    "status": "removed",
+    "reference": "gov_train",
+    "matched": "dgt_25848:row20",
+    "kind": "shared_8gram"
+   },
+   {
+    "item": "v1-gov:dgt_175903:8a7be3dae5ee",
+    "status": "removed",
+    "reference": "gov_train",
+    "matched": "dgt_175903:row642",
+    "kind": "shared_8gram"
+   },
+   {
+    "item": "v1-gov:dgt_7505:8cf790e82084",
+    "status": "removed",
+    "reference": "gov_train",
+    "matched": "dgt_171525:row255",
+    "kind": "shared_8gram"
+   },
+   {
+    "item": "v1-gov:mofa_press_zh:8d38a60b37ae",
+    "status": "removed",
+    "reference": "gov_train",
+    "matched": "mofa_press_zh:item632",
+    "kind": "shared_8gram"
+   },
+   {
+    "item": "v1-gov:dgt_7505:8d456a6a4bff",
+    "status": "removed",
+    "reference": "gov_train",
+    "matched": "dgt_7505:row608",
+    "kind": "shared_8gram"
+   },
+   {
+    "item": "v1-gov:mofa_press_zh:8f167e0bd528",
+    "status": "removed",
+    "reference": "gov_train",
+    "matched": "mofa_press_zh:item741",
+    "kind": "shared_8gram"
+   },
+   {
+    "item": "v1-gov:dgt_175903:8f86d86d4013",
+    "status": "removed",
+    "reference": "gov_train",
+    "matched": "dgt_175903:row30",
+    "kind": "shared_8gram"
+   },
+   {
+    "item": "v1-gov:dgt_55229:90040635c004",
+    "status": "removed",
+    "reference": "gov_train",
+    "matched": "dgt_55229:row20",
+    "kind": "shared_8gram"
+   },
+   {
+    "item": "v1-gov:dgt_94024:90bc239c9c55",
+    "status": "removed",
+    "reference": "gov_train",
+    "matched": "dgt_94024:row155",
+    "kind": "shared_8gram"
+   },
+   {
+    "item": "v1-gov:dgt_175903:9230deec9518",
+    "status": "removed",
+    "reference": "gov_train",
+    "matched": "dgt_175903:row24",
+    "kind": "shared_8gram"
+   },
+   {
+    "item": "v1-gov:dgt_55229:92fc5cefd2c8",
+    "status": "removed",
+    "reference": "test_v1",
+    "matched": "v1-gov:dgt_55229:1b9aecf4f808",
+    "kind": "shared_8gram"
+   },
+   {
+    "item": "v1-gov:mofa_press_zh:960879d947b1",
+    "status": "removed",
+    "reference": "gov_train",
+    "matched": "mofa_press_zh:item319",
+    "kind": "shared_8gram"
+   },
+   {
+    "item": "v1-gov:dgt_175903:9625470dab22",
+    "status": "removed",
+    "reference": "test_v1",
+    "matched": "v1-gov:dgt_175903:10ebac8316a1",
+    "kind": "near_duplicate"
+   },
+   {
+    "item": "v1-gov:dgt_7505:9897ce67cf28",
+    "status": "removed",
+    "reference": "gov_train",
+    "matched": "dgt_171525:row255",
+    "kind": "shared_8gram"
+   },
+   {
+    "item": "v1-gov:dgt_7505:9b13c01d4147",
+    "status": "removed",
+    "reference": "gov_train",
+    "matched": "dgt_7505:row770",
+    "kind": "shared_8gram"
+   },
+   {
+    "item": "v1-gov:dgt_55229:9bcc313ed2e7",
+    "status": "removed",
+    "reference": "gov_train",
+    "matched": "dgt_55229:row528",
+    "kind": "shared_8gram"
+   },
+   {
+    "item": "v1-gov:mofa_press_zh:9d4b58d42a5f",
+    "status": "removed",
+    "reference": "gov_train",
+    "matched": "mofa_press_zh:item69",
+    "kind": "shared_8gram"
+   },
+   {
+    "item": "v1-gov:dgt_7505:9fb2745a5e8e",
+    "status": "removed",
+    "reference": "gov_train",
+    "matched": "dgt_7505:row88",
+    "kind": "shared_8gram"
+   },
+   {
+    "item": "v1-gov:dgt_175903:a18c51004ce9",
+    "status": "removed",
+    "reference": "gov_train",
+    "matched": "dgt_175903:row1",
+    "kind": "shared_8gram"
+   },
+   {
+    "item": "v1-gov:dgt_7505:a4bad805a963",
+    "status": "removed",
+    "reference": "gov_train",
+    "matched": "dgt_7505:row549",
+    "kind": "shared_8gram"
+   },
+   {
+    "item": "v1-gov:mofa_press_zh:a5be895ace4f",
+    "status": "removed",
+    "reference": "gov_train",
+    "matched": "mofa_press_zh:item99",
+    "kind": "shared_8gram"
+   },
+   {
+    "item": "v1-gov:dgt_175903:a65f0e5d9ad5",
+    "status": "removed",
+    "reference": "test_v1",
+    "matched": "v1-gov:dgt_175903:10ebac8316a1",
+    "kind": "near_duplicate"
+   },
+   {
+    "item": "v1-gov:dgt_7505:a6c48daaaa8b",
+    "status": "removed",
+    "reference": "gov_train",
+    "matched": "dgt_7505:row471",
+    "kind": "shared_8gram"
+   },
+   {
+    "item": "v1-gov:dgt_7505:a6f0abc7603f",
+    "status": "removed",
+    "reference": "gov_train",
+    "matched": "dgt_11519:row20",
+    "kind": "shared_8gram"
+   },
+   {
+    "item": "v1-gov:mofa_press_zh:a8b058964795",
+    "status": "removed",
+    "reference": "gov_train",
+    "matched": "mofa_press_zh:item96",
+    "kind": "shared_8gram"
+   },
+   {
+    "item": "v1-gov:dgt_7505:a94abc390cc6",
+    "status": "removed",
+    "reference": "test_v1",
+    "matched": "v1-gov:dgt_7505:1c473cd298e8",
+    "kind": "shared_8gram"
+   },
+   {
+    "item": "v1-gov:dgt_55229:a9a679db3acf",
+    "status": "removed",
+    "reference": "gov_train",
+    "matched": "dgt_55229:row331",
+    "kind": "shared_8gram"
+   },
+   {
+    "item": "v1-gov:dgt_55229:aa2b336caf84",
+    "status": "removed",
+    "reference": "gov_train",
+    "matched": "dgt_55229:row126",
+    "kind": "shared_8gram"
+   },
+   {
+    "item": "v1-gov:dgt_175903:ad0cc7d8da3e",
+    "status": "removed",
+    "reference": "test_v1",
+    "matched": "v1-gov:dgt_175903:10ebac8316a1",
+    "kind": "near_duplicate"
+   },
+   {
+    "item": "v1-gov:dgt_175903:af6671d05e92",
+    "status": "removed",
+    "reference": "gov_train",
+    "matched": "dgt_175903:row90",
+    "kind": "shared_8gram"
+   },
+   {
+    "item": "v1-gov:dgt_175903:af6671d05e92",
+    "status": "removed",
+    "reference": "gov_train",
+    "matched": "dgt_175903:row90",
+    "kind": "shared_8gram"
+   },
+   {
+    "item": "v1-gov:dgt_175903:af6671d05e92",
+    "status": "removed",
+    "reference": "gov_train",
+    "matched": "dgt_175903:row90",
+    "kind": "shared_8gram"
+   },
+   {
+    "item": "v1-gov:dgt_175903:b0ac80357c00",
+    "status": "removed",
+    "reference": "gov_train",
+    "matched": "dgt_175903:row433",
+    "kind": "shared_8gram"
+   },
+   {
+    "item": "v1-gov:mofa_press_zh:b223891656ee",
+    "status": "removed",
+    "reference": "gov_train",
+    "matched": "mofa_press_zh:item69",
+    "kind": "shared_8gram"
+   },
+   {
+    "item": "v1-gov:dgt_175903:b2f47d4563b6",
+    "status": "removed",
+    "reference": "gov_train",
+    "matched": "dgt_175903:row16",
+    "kind": "shared_8gram"
+   },
+   {
+    "item": "v1-gov:dgt_55229:b6eccceefc16",
+    "status": "removed",
+    "reference": "gov_train",
+    "matched": "dgt_55229:row44",
+    "kind": "shared_8gram"
+   },
+   {
+    "item": "v1-gov:mofa_press_zh:b7d2cfb39cb5",
+    "status": "removed",
+    "reference": "gov_train",
+    "matched": "mofa_press_zh:item96",
+    "kind": "shared_8gram"
+   },
+   {
+    "item": "v1-gov:dgt_55229:b7f01f600510",
+    "status": "removed",
+    "reference": "gov_train",
+    "matched": "dgt_55229:row0",
+    "kind": "shared_8gram"
+   },
+   {
+    "item": "v1-gov:dgt_55229:c2cbf9d4986d",
+    "status": "removed",
+    "reference": "gov_train",
+    "matched": "dgt_55229:row233",
+    "kind": "shared_8gram"
+   },
+   {
+    "item": "v1-gov:dgt_7505:c47977a4f693",
+    "status": "removed",
+    "reference": "gov_train",
+    "matched": "dgt_7505:row85",
+    "kind": "shared_8gram"
+   },
+   {
+    "item": "v1-gov:dgt_7505:c7e683239fd0",
+    "status": "removed",
+    "reference": "gov_train",
+    "matched": "dgt_7505:row84",
+    "kind": "shared_8gram"
+   },
+   {
+    "item": "v1-gov:dgt_7505:c91d1fde2a55",
+    "status": "removed",
+    "reference": "gov_train",
+    "matched": "dgt_7505:row449",
+    "kind": "shared_8gram"
+   },
+   {
+    "item": "v1-gov:dgt_175903:cb195fe7b1fb",
+    "status": "removed",
+    "reference": "gov_train",
+    "matched": "dgt_175903:row56",
+    "kind": "near_duplicate"
+   },
+   {
+    "item": "v1-gov:dgt_7505:cc1583885125",
+    "status": "removed",
+    "reference": "test_v1",
+    "matched": "v1-gov:dgt_7505:0cdf461d6f87",
+    "kind": "near_duplicate"
+   },
+   {
+    "item": "v1-gov:dgt_55229:cc3e3518e1f7",
+    "status": "removed",
+    "reference": "gov_train",
+    "matched": "dgt_55229:row20",
+    "kind": "shared_8gram"
+   },
+   {
+    "item": "v1-gov:dgt_7505:cced8b451035",
+    "status": "removed",
+    "reference": "gov_train",
+    "matched": "dgt_7505:row449",
+    "kind": "shared_8gram"
+   },
+   {
+    "item": "v1-gov:mofa_press_zh:cd05121190e7",
+    "status": "removed",
+    "reference": "gov_train",
+    "matched": "mofa_press_zh:item153",
+    "kind": "shared_8gram"
+   },
+   {
+    "item": "v1-gov:dgt_7505:cd83d7df72a1",
+    "status": "removed",
+    "reference": "gov_train",
+    "matched": "dgt_7505:row453",
+    "kind": "shared_8gram"
+   },
+   {
+    "item": "v1-gov:dgt_7505:cecff38db225",
+    "status": "removed",
+    "reference": "gov_train",
+    "matched": "dgt_7505:row453",
+    "kind": "shared_8gram"
+   },
+   {
+    "item": "v1-gov:mofa_press_zh:cf364dc638fc",
+    "status": "removed",
+    "reference": "gov_train",
+    "matched": "mofa_press_zh:item0",
+    "kind": "shared_8gram"
+   },
+   {
+    "item": "v1-gov:dgt_7505:cffd156b39f0",
+    "status": "removed",
+    "reference": "gov_train",
+    "matched": "dgt_7505:row102",
+    "kind": "shared_8gram"
+   },
+   {
+    "item": "v1-gov:dgt_94024:d18dea9671fa",
+    "status": "removed",
+    "reference": "gov_train",
+    "matched": "dgt_94024:row1009",
+    "kind": "shared_8gram"
+   },
+   {
+    "item": "v1-gov:dgt_175903:d19a4540e3b5",
+    "status": "removed",
+    "reference": "test_v1",
+    "matched": "v1-gov:dgt_175903:10ebac8316a1",
+    "kind": "near_duplicate"
+   },
+   {
+    "item": "v1-gov:dgt_175903:d20af0ae4571",
+    "status": "removed",
+    "reference": "test_v1",
+    "matched": "v1-gov:dgt_175903:121e025fb260",
+    "kind": "near_duplicate"
+   },
+   {
+    "item": "v1-gov:mofa_press_zh:d3edc041d69a",
+    "status": "removed",
+    "reference": "gov_train",
+    "matched": "mofa_press_zh:item43",
+    "kind": "shared_8gram"
+   },
+   {
+    "item": "v1-gov:dgt_7505:d40a43ade9fe",
+    "status": "removed",
+    "reference": "gov_train",
+    "matched": "dgt_7505:row28",
+    "kind": "shared_8gram"
+   },
+   {
+    "item": "v1-gov:dgt_7505:d741d7d27712",
+    "status": "removed",
+    "reference": "gov_train",
+    "matched": "dgt_7505:row812",
+    "kind": "shared_8gram"
+   },
+   {
+    "item": "v1-gov:dgt_7505:d9b2b43efed5",
+    "status": "removed",
+    "reference": "gov_train",
+    "matched": "dgt_7505:row608",
+    "kind": "shared_8gram"
+   },
+   {
+    "item": "v1-gov:dgt_25848:dadc20d601b9",
+    "status": "removed",
+    "reference": "gov_train",
+    "matched": "dgt_25848:row7",
+    "kind": "shared_8gram"
+   },
+   {
+    "item": "v1-gov:dgt_25848:ddbba3b58c17",
+    "status": "removed",
+    "reference": "gov_train",
+    "matched": "dgt_25848:row20",
+    "kind": "shared_8gram"
+   },
+   {
+    "item": "v1-gov:dgt_55229:dee318ab2657",
+    "status": "removed",
+    "reference": "test_v1",
+    "matched": "v1-gov:dgt_55229:3da9e0bfa093",
+    "kind": "shared_8gram"
+   },
+   {
+    "item": "v1-gov:dgt_175903:e12e5710e292",
+    "status": "removed",
+    "reference": "gov_train",
+    "matched": "dgt_175903:row509",
+    "kind": "near_duplicate"
+   },
+   {
+    "item": "v1-gov:dgt_175903:e156ac1d3e92",
+    "status": "removed",
+    "reference": "gov_train",
+    "matched": "dgt_175903:row332",
+    "kind": "near_duplicate"
+   },
+   {
+    "item": "v1-gov:dgt_175903:e42b321abee4",
+    "status": "removed",
+    "reference": "test_v1",
+    "matched": "v1-gov:dgt_175903:252155df4f80",
+    "kind": "shared_8gram"
+   },
+   {
+    "item": "v1-gov:dgt_7505:e5c8481a530f",
+    "status": "removed",
+    "reference": "gov_train",
+    "matched": "dgt_7505:row640",
+    "kind": "shared_8gram"
+   },
+   {
+    "item": "v1-gov:dgt_7505:ec1d9612cffe",
+    "status": "removed",
+    "reference": "gov_train",
+    "matched": "dgt_7505:row812",
+    "kind": "shared_8gram"
+   },
+   {
+    "item": "v1-gov:dgt_7505:ec7da0a55e8a",
+    "status": "removed",
+    "reference": "gov_train",
+    "matched": "dgt_128337:row18",
+    "kind": "shared_8gram"
+   },
+   {
+    "item": "v1-gov:dgt_175903:ee5f5340dd48",
+    "status": "removed",
+    "reference": "test_v1",
+    "matched": "v1-gov:dgt_175903:252155df4f80",
+    "kind": "shared_8gram"
+   },
+   {
+    "item": "v1-gov:dgt_7505:eeb882534fc5",
+    "status": "removed",
+    "reference": "gov_train",
+    "matched": "dgt_7505:row640",
+    "kind": "shared_8gram"
+   },
+   {
+    "item": "v1-gov:dgt_25848:f0cb7fa23754",
+    "status": "removed",
+    "reference": "gov_train",
+    "matched": "dgt_25848:row20",
+    "kind": "shared_8gram"
+   },
+   {
+    "item": "v1-gov:dgt_25848:f1d100801345",
+    "status": "removed",
+    "reference": "gov_train",
+    "matched": "dgt_25848:row18",
+    "kind": "shared_8gram"
+   },
+   {
+    "item": "v1-gov:mofa_press_zh:f28ea7d805f4",
+    "status": "removed",
+    "reference": "gov_train",
+    "matched": "mofa_press_zh:item982",
+    "kind": "shared_8gram"
+   },
+   {
+    "item": "v1-gov:dgt_175903:f3f6ae19db1e",
+    "status": "removed",
+    "reference": "test_v1",
+    "matched": "v1-gov:dgt_175903:10ebac8316a1",
+    "kind": "near_duplicate"
+   },
+   {
+    "item": "v1-gov:dgt_94024:f442cf935210",
+    "status": "removed",
+    "reference": "gov_train",
+    "matched": "dgt_94024:row71",
+    "kind": "near_duplicate"
+   },
+   {
+    "item": "v1-gov:dgt_175903:f483e481c079",
+    "status": "removed",
+    "reference": "gov_train",
+    "matched": "dgt_175903:row1",
+    "kind": "shared_8gram"
+   },
+   {
+    "item": "v1-gov:dgt_7505:f61fe3dcc8bf",
+    "status": "removed",
+    "reference": "gov_train",
+    "matched": "dgt_7505:row776",
+    "kind": "shared_8gram"
+   },
+   {
+    "item": "v1-gov:dgt_7505:f61fe3dcc8bf",
+    "status": "removed",
+    "reference": "gov_train",
+    "matched": "dgt_7505:row812",
+    "kind": "shared_8gram"
+   },
+   {
+    "item": "v1-gov:mofa_press_zh:f6b60179233d",
+    "status": "removed",
+    "reference": "gov_train",
+    "matched": "mofa_press_zh:item704",
+    "kind": "shared_8gram"
+   },
+   {
+    "item": "v1-gov:mofa_press_zh:f72713125160",
+    "status": "removed",
+    "reference": "gov_train",
+    "matched": "mofa_press_zh:item67",
+    "kind": "shared_8gram"
+   },
+   {
+    "item": "v1-gov:dgt_175903:fbbc4e581113",
+    "status": "removed",
+    "reference": "test_v1",
+    "matched": "v1-gov:dgt_175903:121e025fb260",
+    "kind": "near_duplicate"
+   },
+   {
+    "item": "v1-gov:dgt_175903:feca1ce1ca59",
+    "status": "removed",
+    "reference": "gov_dev_split_test",
+    "matched": "dgt_175903:row483",
+    "kind": "shared_8gram"
+   }
+  ]
+ },
+ "final_flagged_items": []
+}

@@ -1,0 +1,47 @@
+{
+  "name": "ZaoSeq Bopomofo v0.2 sealed evaluation decision plan",
+  "frozen_at": "2026-09-25",
+  "written_before": "TEST-V1 was built or read, and before any TEST-V1 result existed",
+  "semantic_freeze": "benchmarks/frozen/V0.2_SEMANTIC.json",
+  "test_plan": "benchmarks/frozen/v0.2_test_plan.json",
+  "systems": {
+    "S1_v01_decoder": "V0 decoder (frozen V0: government LM, builtin lexicon, beam 48, nbest 20) — the v0.1 candidate system",
+    "S2_v02_decoder": "v0.2 semantic-frozen decoder (S5_tatoeba_common_voice), cache-disabled reference path",
+    "S3_v01_final": "frozen fine-tuned Laya (production ranker, K=4) on S1 candidates — the v0.1 final system (FINAL.json 'fine-tuned Laya')",
+    "S4_v02_final": "the same frozen Laya (K=4) on S2 candidates — the v0.2 final system"
+  },
+  "scoring": "a system output is correct iff the CandidateFamily key of its top candidate equals the key of any acceptable text (same as DEV and v0.1 TEST)",
+  "run": "TEST-V1 is evaluated exactly once. All four systems run in that single evaluation. No setting, file or rule may be changed after any TEST-V1 result is seen.",
+  "primary_endpoint": "TEST-V1-EVERYDAY final top-1: S4 vs S3, paired by item",
+  "pass_criteria": {
+    "P1_everyday_improvement": "top1(S4) - top1(S3) on TEST-V1-EVERYDAY >= +0.030",
+    "P2_everyday_significance": "exact two-sided McNemar (binomial) p < 0.05 on the paired S3/S4 correctness of TEST-V1-EVERYDAY",
+    "P3_breaks_do_not_offset": "on TEST-V1-EVERYDAY, correct_to_wrong(S3->S4) <= 0.5 * wrong_to_correct(S3->S4)",
+    "P4_gov_bound": "top1(S4) - top1(S3) on TEST-V1-GOV >= -0.020 (the same bound as the v0.2 selection-plan GOV teacher gate)"
+  },
+  "validity_invariants": {
+    "I1_semantic_freeze": "semantic_freeze verify (including raw sources) passes immediately before the run and again after it",
+    "I2_sealed_files": "benchmarks/frozen/V0.2_SEALED.json verifies (TEST files, manifest, plans, gate, evaluation code unchanged)",
+    "I3_gate": "benchmarks/frozen/V0.2_TEST_GATE.json exists, predates the TEST files, and its hashes still match",
+    "I4_single_run": "the results file does not exist before the run; the runner refuses to run a second time",
+    "I5_determinism": "S2 re-decodes the first 50 TEST-V1-EVERYDAY items a second time with identical candidate texts and scores",
+    "I6_reference_path": "S2 uses the language model without any cache wrapper",
+    "I7_approved_sources": "every production daily source used by S2 is APPROVED with production scope",
+    "I8_leakage": "benchmarks/test_v1/DEDUP_REPORT.json shows 0 flagged items in the final sets"
+  },
+  "decision": {
+    "PROCEDURAL_INVALID": "any validity invariant fails, or the run cannot be completed as planned; the TEST is then treated as REFERENCE and not reused as sealed",
+    "PASS": "all validity invariants hold and P1, P2, P3 and P4 all hold",
+    "FAIL": "all validity invariants hold and at least one of P1-P4 fails; TEST-V1 becomes REFERENCE, a failure taxonomy is reported, and no change is made against this TEST"
+  },
+  "reported_not_gating": [
+    "decoder top-1, MRR, R@3, R@5, R@10, character accuracy, teacher-window coverage (top-4 families) for S1 and S2 on both sets",
+    "final top-1 and character accuracy for S3 and S4 on both sets",
+    "S1 vs S2 decoder paired wrong->correct / correct->wrong and exact McNemar p on both sets",
+    "S3 vs S4 paired counts and exact McNemar p on TEST-V1-GOV",
+    "per-category final top-1 on TEST-V1-EVERYDAY and per-domain on TEST-V1-GOV",
+    "teacher fallback counts",
+    "no latency claim: timings from this run are not release latency"
+  ],
+  "not_a_criterion": "the DEV result (Coverage-DEV teacher 0.800, +0.103 over V0) is not expected to be reproduced; the TEST only has to show that the improvement generalizes"
+}

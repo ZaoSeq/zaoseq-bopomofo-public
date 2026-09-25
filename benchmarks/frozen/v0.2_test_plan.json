@@ -1,0 +1,72 @@
+{
+  "name": "ZaoSeq Bopomofo v0.2 sealed TEST generation plan (TEST-V1)",
+  "frozen_at": "2026-09-25",
+  "written_before": "any TEST-V1 sentence was authored, extracted or decoded",
+  "semantic_freeze": "benchmarks/frozen/V0.2_SEMANTIC.json",
+  "directory": "benchmarks/test_v1",
+  "sets": {
+    "TEST-V1-EVERYDAY": {
+      "file": "benchmarks/test_v1/everyday.jsonl",
+      "source": "benchmarks/test_v1/everyday_source.tsv",
+      "size": 480,
+      "categories": {
+        "conversation": 30,
+        "school": 30,
+        "work": 30,
+        "technology": 30,
+        "transport": 30,
+        "shopping": 30,
+        "food": 30,
+        "schedule": 30,
+        "social_chat": 30,
+        "family_life": 30,
+        "taiwan_places": 30,
+        "names": 30,
+        "function_words": 30,
+        "homophones": 30,
+        "segmentation": 30,
+        "long_multiclause": 30
+      },
+      "authoring": "New everyday Taiwan Mandarin sentences written for this TEST with AI assistance under project-owner direction, one category at a time from the category list above. Not taken from any corpus. Not written from, or as rewrites of, Coverage-DEV items, v0.1 TEST items, manual DEV / sanity seeds, the five Round 3 manual sanity inputs, or any DEV / Round 2 / Round 3 error case. No decoder, language model, lexicon or teacher is run on any sentence before the single sealed evaluation.",
+      "phenomena": "function_words and homophones include natural uses of 在/再, 的/得/地, 是/事, 已/以, 完/玩, 嗎/媽 and similar pairs as ordinary language, not as copies of known errors",
+      "spares": "each category is authored with up to 4 spare sentences after the first 30; a sentence removed by screening is replaced by the next spare of the same category in authored order; the first 30 surviving sentences per category are kept",
+      "text": "Han characters only (no punctuation or Latin letters); 4 to 30 characters; optional left_context for conversational items",
+      "readings": "Ministry of Education dictionary conventions as in v0.1 TEST-EVERYDAY: 一 and 不 carry their sandhi tones; sentence particles and suffixes (的 了 們 嗎 麼 呢 吧 啊 子 個 頭 when unstressed) carry the neutral tone where CNS11643 lists it, otherwise the CNS base tone; other characters use their dictionary tone. Every (character, reading) must exist in CNS11643. Readings are assigned from the text alone.",
+      "acceptable": "the text plus the global alternatives 你/妳 and 週/周; manual alternatives only where two spellings are equally standard; script variants are handled by CandidateFamily"
+    },
+    "TEST-V1-GOV": {
+      "file": "benchmarks/test_v1/gov.jsonl",
+      "source": "government corpus split 'dev', restricted to documents that contributed no item to v0.1 TEST-GOV (benchmarks/test/gov.jsonl)",
+      "why_untouched": "corpus split 'dev' was never used for LM or lexicon training, hard-negative mining, Laya fine-tuning or any DEV evaluation (GOV-DEV is split 'test'); within it only the 800 v0.1 TEST-GOV clauses were ever evaluated, and every document that contributed one is excluded",
+      "domains": {
+        "government_faq": 200,
+        "public_service": 200,
+        "press_release": 200
+      },
+      "legal_excluded": "only 1 of the 71 legal 'dev' documents contributed no v0.1 TEST-GOV item (17 sentences), so legal cannot be sampled at document level; it is excluded and reported",
+      "extraction": "Han runs of 4 to 12 characters; left_context is the preceding text of the same sentence; readings from the rule-based annotator (builtin multi-character words, single-reading CNS characters, single-reading builtin characters); clauses with an ambiguous polyphone are rejected, never guessed",
+      "sampling": "deterministic order by sha256('v0.2-test-v1' + source_id + doc_id + clause); at most 3 clauses per document; up to 200 per domain (fewer if the eligible pool is smaller)"
+    }
+  },
+  "leakage_screening": {
+    "method": "daily.guard.EvaluationGuard: Han-only normalization, character 4-gram MinHash-LSH with exact Jaccard >= 0.6, plus shared-8-gram containment; exact duplicates are a special case",
+    "references": [
+      "government corpus train split",
+      "government corpus 'test' split (GOV-DEV)",
+      "government corpus 'dev' split sentences of documents used by v0.1 TEST-GOV",
+      "daily corpus: Tatoeba train/dev/test, Common Voice 27.0 train/dev/test, OASST1 prompter (all retained sentences)",
+      "Coverage-DEV v1.0 and v1.1",
+      "benchmarks/dev and benchmarks/sanity seeds (manual DEV / sanity)",
+      "v0.1 TEST-EVERYDAY, TEST-GOV and TYPO-REFERENCE-v0 (benchmarks/test)",
+      "the five Round 3 manual sanity inputs (daily.manual_sanity.INPUTS)",
+      "within TEST-V1: every EVERYDAY item against the other EVERYDAY items, and every GOV item against EVERYDAY and earlier GOV items"
+    ],
+    "text_checked": "left_context + text",
+    "rule": "every flagged item is removed (EVERYDAY: replaced by the next spare); the reason and matched reference are written to benchmarks/test_v1/DEDUP_REPORT.json; the final sets must have 0 flagged items"
+  },
+  "outputs": {
+    "manifest": "benchmarks/test_v1/MANIFEST.json (per-file sha256, item counts, category distribution, methodology, created_at, source commit, semantic freeze sha256, gate sha256, dedupe summary)",
+    "seal": "benchmarks/frozen/V0.2_SEALED.json locks the TEST files, manifest, plans, gate, semantic freeze and the evaluation code before the single run"
+  },
+  "not_built": "no TYPO TEST in this stage"
+}
