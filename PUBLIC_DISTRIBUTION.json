@@ -1,13 +1,13 @@
 {
   "schema": "zaoseq-bopomofo/public-distribution/v1",
-  "name": "zaoseq-bopomofo public core",
+  "name": "zaoseq-bopomofo public core v0.3.0 Research Preview",
   "tool": "zaoseq-public-export/1",
-  "policy_sha256": "a3176a066607c44523aac32d3c4f8b5ed3bf1deaeca08f73921c3d1208f11e1e",
-  "exported_at": "2026-09-25T12:31:02+00:00",
+  "policy_sha256": "cb2857cfcac86faa6d45464dbbdd481f59fbdb2bc944d66d53c0df1f7312c149",
+  "exported_at": "2026-10-05T08:47:49+00:00",
   "source": {
     "repository": "ZaoSeq internal zaoseq-bopomofo (private)",
-    "commit": "64fdaa0c400306fe0fbf7a141dde67c0562ce08d",
-    "commit_date": "2026-09-25T20:30:34+08:00",
+    "commit": "ab8a3922dcdc524a227f73ac9d94ddf906caee14",
+    "commit_date": "2026-10-05T16:32:44+08:00",
     "ancestor_tags": [
       "v0.1.0-research-preview"
     ]
@@ -70,9 +70,6 @@
     }
   ],
   "transformed": {
-    ".gitignore": [
-      "replace_text"
-    ],
     "THIRD_PARTY_NOTICES.md": [
       "drop_markdown_sections",
       "replace_text"
@@ -153,6 +150,9 @@
     "src/zaoseq_bopomofo/evaluation/freeze.py": [
       "replace_text"
     ],
+    ".gitignore": [
+      "generated_from_template"
+    ],
     "CHANGELOG.md": [
       "generated_from_template"
     ],
@@ -167,15 +167,21 @@
     ],
     "docs/PUBLIC_BOUNDARY.md": [
       "generated_from_template"
+    ],
+    "docs/RESEARCH_PREVIEW_V0.3.md": [
+      "generated_from_template"
+    ],
+    "examples/decoder_preview.py": [
+      "generated_from_template"
     ]
   },
   "files": {
-    ".gitignore": "436b6379695f6c2486ab469a97dfc0b041752ebf59a71875dadef7bf158e713b",
-    "CHANGELOG.md": "344c3d8c2da0fe072c3b65cc4fef36d58dc968dd2640c80947c66e0e192d8a3c",
+    ".gitignore": "86996e074ec9d035c13de8276f43172c98b5ed1ddda5a09be3eda44c618e0bae",
+    "CHANGELOG.md": "2da466e3e0d133810ed9c264b7a7389dfa612e419dd81c9285abf2b01c1e3602",
     "LICENSE": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
     "NOTICE": "2712060324a08e8740cdd8a338b1a714b9546945dff13e61cf80ecb347ca48dd",
-    "README.md": "d60b23fb16e1824a4deb552c7d66b4425d294a50409f640465c60d37bae4e852",
-    "RELEASE_NOTES.md": "ab1535be103c6d6c0b1104c741f7158c8d03e453143cccf51afea7336fec1d7f",
+    "README.md": "53c43eab3812bb3f4a2eebf76aaf1fad62065c4338ac8e5ade4f541557e352f1",
+    "RELEASE_NOTES.md": "d90bd16a4611119be1e1b1729e0341c9ded6919d479db992c2bb7471b0c2db6e",
     "THIRD_PARTY_NOTICES.md": "f4b0412dedda1300003fb08705e27d57a885554c589b1830b6f48ab1d27c47e8",
     "benchmarks/coverage_v1/MANIFEST.json": "5e749e9a6bdd59614644b10615ea3f4f0e981aa337fd864694649385f4cc17b2",
     "benchmarks/coverage_v1/coverage_dev.jsonl": "c387a11eddcd7f3a5fc0953752ef1117d9ecdb0c911139362a5758646520706f",
@@ -284,9 +290,11 @@
     "docs/CANDIDATE_COVERAGE.md": "fc5ffb8b6c742dd8a20172be28db8a90898f2ac10865aa3492082bd0ddcfe4f7",
     "docs/DAILY_CORPUS.md": "25482df40557c0ebc7ea03240f338c6b6a0c5cbf2f5b0043bef23e796f9768eb",
     "docs/DAILY_CORPUS_ROUND2.md": "0af9a0129d27ab21b0de8ac47592a002ab27008fe4a62383e1672dcac1c431b1",
-    "docs/PUBLIC_BOUNDARY.md": "80aae076fc878f5d4a367c275fb7a781b9c0a834a71a1a536be11b600936ea3a",
-    "pyproject.toml": "94621118b04f4819f7d8bc34079d59d7c13cdef78154f35866b64678d904faf9",
-    "src/zaoseq_bopomofo/__init__.py": "a672711bf1596c456b60118e06bcd12ced797e5216b2dcf41f6a2f80fe6bad8c",
+    "docs/PUBLIC_BOUNDARY.md": "a9d10dc5b6307f407ab9d88fc9d206606bbc087f33f833b02c87a55e9e9b970a",
+    "docs/RESEARCH_PREVIEW_V0.3.md": "da6bff663d234ece8d4961c1e84f86203eed5b16af040390cfd4c86de0638e26",
+    "examples/decoder_preview.py": "a45afe944c550556b023d6720548a1e7e585dd63f5cde2cdcc8a73a1d3fba0cb",
+    "pyproject.toml": "b4f206dbe1dae68836dda5aa74b43156ded470cbd8e6d5408acab3766407c6ff",
+    "src/zaoseq_bopomofo/__init__.py": "f690c2f443b35051408d65c91857fc2d97edef1196f93969a938977c872481dc",
     "src/zaoseq_bopomofo/corpus/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
     "src/zaoseq_bopomofo/corpus/__main__.py": "67294eb010cbb0c4d80d0e85670c521d1053e447ccf3eeb8db036cbbf0b373c9",
     "src/zaoseq_bopomofo/corpus/annotate.py": "ca35660e9edd6f3a8bcd23407ea0aab597e52a4ad4e17e83a09c789d7d27e066",
@@ -326,6 +334,10 @@
     "src/zaoseq_bopomofo/daily/script.py": "fb1e8a7b40ca3d977e9eddc929189b9cb4f471d71ab9f2e9a6aff3b062493cbb",
     "src/zaoseq_bopomofo/daily/selection.py": "6ee3497c33af8b0a20bb7b44733729e0e5097032947740438bf2bb35be2d1f1a",
     "src/zaoseq_bopomofo/daily/sources.py": "61be8566789224afac0ad6530d45edcc712c97a260b4b477737907186f48bc36",
+    "src/zaoseq_bopomofo/decoder_v3/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "src/zaoseq_bopomofo/decoder_v3/lattice.py": "ad3e318da326da85e64b44f8b7ab6ae1b56633d21d39a69e25c64cd19d64a6b1",
+    "src/zaoseq_bopomofo/decoder_v3/ngram.py": "4d937c8d55af36e8b714a0b8c3dba967731b40f2e1bb5e1a7b9cdec8dd99d5c6",
+    "src/zaoseq_bopomofo/decoder_v3/script_guard.py": "bf87596f4445776d8b704035b167dbf5b5ad8f6e555db36a20d97a6074283909",
     "src/zaoseq_bopomofo/decoding/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
     "src/zaoseq_bopomofo/decoding/candidate.py": "50eb57c548e994cbbb56a05763ba2a4dd450eea382012d2e10aeebab32b12c25",
     "src/zaoseq_bopomofo/decoding/correction.py": "a21920006029c66ad2a7e43cf1a8bc3aa259eb201b12f1727234b79c2596454c",
@@ -347,6 +359,7 @@
     "src/zaoseq_bopomofo/evaluation/metrics.py": "e83c58190aaa7d956d9c1aa4001bd4b564143f3c4f00170a6519b193f1580386",
     "src/zaoseq_bopomofo/evaluation/order_bias.py": "9f3127e76dc9d3a72fc3f5e6ade6af7bc2df789a50e42ab21cc8473a0980c723",
     "src/zaoseq_bopomofo/evaluation/testsets.py": "f8a8696ea0a03211518793f1f6ef5d60afc661f1e84a6ca31f2d7c1f870e5293",
+    "src/zaoseq_bopomofo/jsonl.py": "22427052fbeeeecbfda0bf84079cd2060ee8373fb33ed9ff14b6c724a2fee5f2",
     "src/zaoseq_bopomofo/lexicon/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
     "src/zaoseq_bopomofo/lexicon/builder.py": "280ec7837793e7338057629a60cc066681bb6f2adcf5f7faee9b742c540082d6",
     "src/zaoseq_bopomofo/lexicon/entry.py": "a65c88c93623b0477d4ad9a9d2f5608410ae1da6c23900059f1aceec5d7c7826",
@@ -371,6 +384,7 @@
     "tests/test_corpus.py": "9b7442b620b99ce3a8c971d209f0df799daf08ee61e8644bec702fcb4075c614",
     "tests/test_coverage.py": "ba4eb717478166cb6b337574e2ef56af1c507a29b4b1089e2ba6a4b97f63fb8c",
     "tests/test_daily.py": "b504c2bc569fc9faf4ad5873a555387dbf1da6a954fea98b4ca3ef7b2269e75c",
+    "tests/test_decoder_v3.py": "1a8e8fd6f105a7348f44b3f456cbb80e784088c44aef76cd55795bec6be16cd6",
     "tests/test_decoding.py": "fb3a48f455fc2fef827a4e1ec9406327b73310e1a95d11cfc0bac99750ce5da2",
     "tests/test_domains.py": "9d66b8407bd21fd7fde916d93ee0bd4c051b7d7ae67a2469b44b27573a4fafaf",
     "tests/test_evaluation.py": "f72a89bd9c4c737f6c2c1496086c62c24f420d20e5c149e3f72692f54305aed7",

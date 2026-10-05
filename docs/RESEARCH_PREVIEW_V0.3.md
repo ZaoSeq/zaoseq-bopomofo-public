@@ -15,5 +15,3 @@
 公開程式與小型範例可直接執行。元件測試涵蓋語言模型正規化、混合模型前文、decoder 一致性及繁體字形過濾。PUBLIC_DISTRIBUTION.json 提供逐檔 SHA-256 與匯出稽核紀錄。
 
 完整語料須依來源條款自行取得；產品排序模型、權重與部署保留在私密專案，公開程式不提供其重現途徑。本版未發布官方產品延遲或商用輸入法比較。
-
-歷史版本：[v0.2.0](https://github.com/ZaoSeq/zaoseq-bopomofo-public/releases/tag/v0.2.0)。
